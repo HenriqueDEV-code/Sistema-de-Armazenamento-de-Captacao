@@ -97,6 +97,12 @@
     <Compile Include="Captacao\Cadastros.Designer.cs">
       <DependentUpon>Cadastros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Cadastro_Imobiliarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Cadastro_Imobiliarias.Designer.cs">
+      <DependentUpon>Cadastro_Imobiliarias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Painel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,10 +121,18 @@
     <Compile Include="Captacao\Tabela.Designer.cs">
       <DependentUpon>Tabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cap_ImoveisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Captacao\Cadastros.resx">
       <DependentUpon>Cadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Cadastro_Imobiliarias.resx">
+      <DependentUpon>Cadastro_Imobiliarias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Painel.resx">
       <DependentUpon>Painel.cs</DependentUpon>
@@ -139,6 +153,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Cap_ImoveisDataSet.xsc">
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Cap_ImoveisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cap_ImoveisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cap_ImoveisDataSet.xss">
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

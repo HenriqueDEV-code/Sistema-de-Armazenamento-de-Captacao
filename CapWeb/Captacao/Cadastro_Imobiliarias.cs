@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,18 +13,18 @@ using System.Data.SqlClient;
 
 namespace CapWeb.Captacao
 {
-    public partial class Relatorio : MaterialForm
+    public partial class Cadastro_Imobiliarias : MaterialForm
     {
 
         private string DBA;
-        public Relatorio(string DBA)
+        public Cadastro_Imobiliarias(string DBA)
         {
-           this.DBA = DBA;
+            this.DBA = DBA;
             InitializeComponent();
+           
         }
+
+
+        
     }
-
-
-
-
 }

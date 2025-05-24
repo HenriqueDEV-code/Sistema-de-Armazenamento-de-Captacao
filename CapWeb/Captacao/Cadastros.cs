@@ -13,9 +13,10 @@ namespace CapWeb.Captacao
 {
     public partial class Cadastros : MaterialForm
     {
-   
-        public Cadastros()
+        private string DBA;
+        public Cadastros(string DBA)
         {
+            this.DBA = DBA;
            
             InitializeComponent();
         }
