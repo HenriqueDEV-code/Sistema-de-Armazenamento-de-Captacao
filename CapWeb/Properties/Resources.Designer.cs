@@ -63,6 +63,26 @@ namespace CapWeb.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_wi_fi_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-wi-fi-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_wi_fi_50__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-wi-fi-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagem_do_WhatsApp_de_2025_02_28_à_s__19_33_16_f940cc95 {
             get {
                 object obj = ResourceManager.GetObject("Imagem do WhatsApp de 2025-02-28 à(s) 19.33.16_f940cc95", resourceCulture);

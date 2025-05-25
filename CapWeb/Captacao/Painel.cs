@@ -1,25 +1,16 @@
 ﻿using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
+using System.Net.NetworkInformation;
 
 namespace CapWeb.Captacao
 {
     public partial class Painel : MaterialForm
     {
-
         private string DBA;
         private string Status;
-        
+        private Timer timerLoad;
+
         public Painel(string DBA, string Status)
         {
             this.DBA = DBA;
@@ -28,47 +19,96 @@ namespace CapWeb.Captacao
             ON_OFF.Text = Status;
         }
 
-
         private void Cadastro_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Cadastros Janela_Cadastro = new Cadastros(DBA);
-            Janela_Cadastro.FormClosed += (s, args) =>
-            {
-                this.Show();
-                
-            };
-                Janela_Cadastro.Show();
+            Cadastros janelaCadastro = new Cadastros(DBA);
+            janelaCadastro.FormClosed += (s, args) => this.Show();
+            janelaCadastro.Show();
         }
 
         private void Tabela_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Tabela Janela_Tabela = new Tabela(DBA);
-            Janela_Tabela.FormClosed += (s, args) => this.Show();
-            Janela_Tabela.Show();
+            Tabela janelaTabela = new Tabela(DBA);
+            janelaTabela.FormClosed += (s, args) => this.Show();
+            janelaTabela.Show();
         }
 
         private void Relatorio_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Relatorio Janela_Relatorio = new Relatorio(DBA);
-            Janela_Relatorio.FormClosed += (s, args) => this.Show();
-            Janela_Relatorio.Show();
+            Relatorio janelaRelatorio = new Relatorio(DBA);
+            janelaRelatorio.FormClosed += (s, args) => this.Show();
+            janelaRelatorio.Show();
         }
 
         private void Cadastro_Imobiliarias_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            Cadastro_Imobiliarias Janela_Imobiliarias_ = new Cadastro_Imobiliarias(DBA);
-            Janela_Imobiliarias_.FormClosed += (s, args) => this.Show();
-            Janela_Imobiliarias_.Show();
+            Cadastro_Imobiliarias janelaImobiliarias = new Cadastro_Imobiliarias(DBA);
+            janelaImobiliarias.FormClosed += (s, args) => this.Show();
+            janelaImobiliarias.Show();
         }
 
-       
+
+
+
+
+        private void Painel_Load(object sender, EventArgs e)
+        {
+            timerLoad = new Timer();
+            timerLoad.Interval = 1000; // Tempo em milissegundos (1000ms = 1s)
+            timerLoad.Tick += TimerLoad_Tick;
+            timerLoad.Start();
+        }
+
+        private void TimerLoad_Tick(object sender, EventArgs e)
+        {
+            VerificarConexao();
+        }
+
+        /// <summary>
+        /// Verifica se a conexão de internet e VPN estão ativas.
+        /// </summary>
+        /// <returns>True se ambas estiverem ativas; caso contrário, false.</returns>
+        private bool VerificarConexao()
+        {
+            bool internetAtiva = TestarPing("8.8.8.8");    // Testa conexão com a internet
+                    
+
+            bool statusREDE = internetAtiva;
+
+            // Atualiza visualmente os indicadores
+            Conectado_VPN.Visible = statusREDE;
+            Nao_Conectado_VPN.Visible = !statusREDE;
+
+            return statusREDE;
+        }
+
+        /// <summary>
+        /// Testa a conectividade com um endereço IP utilizando o protocolo ICMP (Ping).
+        /// </summary>
+        /// <param name="ip">Endereço IP a ser testado.</param>
+        /// <returns>True se o ping for bem-sucedido; caso contrário, false.</returns>
+        private bool TestarPing(string ip)
+        {
+            try
+            {
+                using (var ping = new Ping())
+                {
+                    var reply = ping.Send(ip, 1000);   // Timeout de 1 segundo
+                    return reply.Status == IPStatus.Success;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
