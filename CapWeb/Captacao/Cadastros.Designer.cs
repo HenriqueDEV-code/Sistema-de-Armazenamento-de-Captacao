@@ -31,42 +31,42 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastros));
             this.label6 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Telefone_Prop = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Nome_Prop = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Complemento = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.UF = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Cidade = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Bairro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numero_residencia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Logradouro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Buscar_Cep = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Informe_Cep = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Descricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.Cadastro = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Valor_IPTU = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Combo_Comissao = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Valor_Imovel = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Combo_Pretensao = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Combo_Tipo_de_imovel = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Button_Salvar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -88,9 +88,9 @@
             // 
             this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox1.Controls.Add(this.guna2TextBox2);
+            this.guna2GroupBox1.Controls.Add(this.Telefone_Prop);
             this.guna2GroupBox1.Controls.Add(this.label1);
-            this.guna2GroupBox1.Controls.Add(this.guna2TextBox1);
+            this.guna2GroupBox1.Controls.Add(this.Nome_Prop);
             this.guna2GroupBox1.Controls.Add(this.label6);
             this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -101,47 +101,27 @@
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Dados do Proprietário";
             // 
-            // guna2TextBox1
+            // Telefone_Prop
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(98, 67);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Nome do proprietário";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(391, 41);
-            this.guna2TextBox1.TabIndex = 10;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(652, 67);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "Telefone do proprietário";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(391, 41);
-            this.guna2TextBox2.TabIndex = 12;
+            this.Telefone_Prop.Animated = true;
+            this.Telefone_Prop.AutoRoundedCorners = true;
+            this.Telefone_Prop.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Telefone_Prop.DefaultText = "";
+            this.Telefone_Prop.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Telefone_Prop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Telefone_Prop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Telefone_Prop.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Telefone_Prop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Telefone_Prop.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Telefone_Prop.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Telefone_Prop.Location = new System.Drawing.Point(652, 67);
+            this.Telefone_Prop.Margin = new System.Windows.Forms.Padding(6);
+            this.Telefone_Prop.Name = "Telefone_Prop";
+            this.Telefone_Prop.PlaceholderText = "Telefone do proprietário";
+            this.Telefone_Prop.SelectedText = "";
+            this.Telefone_Prop.Size = new System.Drawing.Size(391, 41);
+            this.Telefone_Prop.TabIndex = 12;
+            this.Telefone_Prop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefone_Prop_KeyPress);
             // 
             // label1
             // 
@@ -155,25 +135,47 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Telefone: ";
             // 
+            // Nome_Prop
+            // 
+            this.Nome_Prop.Animated = true;
+            this.Nome_Prop.AutoRoundedCorners = true;
+            this.Nome_Prop.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Nome_Prop.DefaultText = "";
+            this.Nome_Prop.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Nome_Prop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Nome_Prop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Nome_Prop.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Nome_Prop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Nome_Prop.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nome_Prop.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Nome_Prop.Location = new System.Drawing.Point(98, 67);
+            this.Nome_Prop.Margin = new System.Windows.Forms.Padding(6);
+            this.Nome_Prop.Name = "Nome_Prop";
+            this.Nome_Prop.PlaceholderText = "Nome do proprietário";
+            this.Nome_Prop.SelectedText = "";
+            this.Nome_Prop.Size = new System.Drawing.Size(391, 41);
+            this.Nome_Prop.TabIndex = 10;
+            this.Nome_Prop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nome_Prop_KeyPress);
+            // 
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox9);
+            this.guna2GroupBox2.Controls.Add(this.Complemento);
             this.guna2GroupBox2.Controls.Add(this.label10);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox8);
+            this.guna2GroupBox2.Controls.Add(this.UF);
             this.guna2GroupBox2.Controls.Add(this.label9);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox7);
+            this.guna2GroupBox2.Controls.Add(this.Cidade);
             this.guna2GroupBox2.Controls.Add(this.label8);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox6);
+            this.guna2GroupBox2.Controls.Add(this.Bairro);
             this.guna2GroupBox2.Controls.Add(this.label7);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox5);
+            this.guna2GroupBox2.Controls.Add(this.numero_residencia);
             this.guna2GroupBox2.Controls.Add(this.label5);
             this.guna2GroupBox2.Controls.Add(this.label4);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox3);
+            this.guna2GroupBox2.Controls.Add(this.Logradouro);
             this.guna2GroupBox2.Controls.Add(this.label2);
-            this.guna2GroupBox2.Controls.Add(this.Cadastro);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox4);
+            this.guna2GroupBox2.Controls.Add(this.Buscar_Cep);
+            this.guna2GroupBox2.Controls.Add(this.Informe_Cep);
             this.guna2GroupBox2.Controls.Add(this.label3);
             this.guna2GroupBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -184,219 +186,27 @@
             this.guna2GroupBox2.TabIndex = 11;
             this.guna2GroupBox2.Text = "Endereço do Imóvel";
             // 
-            // guna2TextBox4
+            // Complemento
             // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.AutoRoundedCorners = true;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(82, 66);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PlaceholderText = "Informe o cep";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(226, 41);
-            this.guna2TextBox4.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label3.Location = new System.Drawing.Point(11, 69);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 30);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "CEP: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label2.Location = new System.Drawing.Point(450, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 30);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Logradouro: ";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.Enabled = false;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(603, 66);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(453, 41);
-            this.guna2TextBox3.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label4.Location = new System.Drawing.Point(1064, 69);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 30);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "-";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label5.Location = new System.Drawing.Point(1090, 71);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 30);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "N°:";
-            // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.Animated = true;
-            this.guna2TextBox5.AutoRoundedCorners = true;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(1147, 68);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PlaceholderText = "Informe o Número";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(177, 41);
-            this.guna2TextBox5.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label7.Location = new System.Drawing.Point(509, 132);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 30);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Bairro:";
-            // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.AutoRoundedCorners = true;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.Enabled = false;
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(606, 129);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(450, 41);
-            this.guna2TextBox6.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label8.Location = new System.Drawing.Point(497, 192);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 30);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Cidade:";
-            // 
-            // guna2TextBox7
-            // 
-            this.guna2TextBox7.Animated = true;
-            this.guna2TextBox7.AutoRoundedCorners = true;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.Enabled = false;
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(606, 190);
-            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PlaceholderText = "";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(450, 41);
-            this.guna2TextBox7.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label9.Location = new System.Drawing.Point(1064, 192);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 30);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "-";
-            // 
-            // guna2TextBox8
-            // 
-            this.guna2TextBox8.Animated = true;
-            this.guna2TextBox8.AutoRoundedCorners = true;
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.Enabled = false;
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(1094, 190);
-            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PlaceholderText = "UF";
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(56, 41);
-            this.guna2TextBox8.TabIndex = 22;
+            this.Complemento.Animated = true;
+            this.Complemento.AutoRoundedCorners = true;
+            this.Complemento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Complemento.DefaultText = "";
+            this.Complemento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Complemento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Complemento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Complemento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Complemento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Complemento.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Complemento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Complemento.Location = new System.Drawing.Point(606, 256);
+            this.Complemento.Margin = new System.Windows.Forms.Padding(6);
+            this.Complemento.Name = "Complemento";
+            this.Complemento.PlaceholderText = "Informe o complemento";
+            this.Complemento.SelectedText = "";
+            this.Complemento.Size = new System.Drawing.Size(453, 41);
+            this.Complemento.TabIndex = 24;
+            this.Complemento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Complemento_KeyPress);
             // 
             // label10
             // 
@@ -410,44 +220,261 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Complemento:";
             // 
-            // guna2TextBox9
+            // UF
             // 
-            this.guna2TextBox9.Animated = true;
-            this.guna2TextBox9.AutoRoundedCorners = true;
-            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox9.DefaultText = "";
-            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Location = new System.Drawing.Point(606, 256);
-            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox9.Name = "guna2TextBox9";
-            this.guna2TextBox9.PlaceholderText = "";
-            this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(453, 41);
-            this.guna2TextBox9.TabIndex = 24;
+            this.UF.Animated = true;
+            this.UF.AutoRoundedCorners = true;
+            this.UF.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UF.DefaultText = "";
+            this.UF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.UF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.UF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UF.Enabled = false;
+            this.UF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UF.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.UF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UF.Location = new System.Drawing.Point(1094, 190);
+            this.UF.Margin = new System.Windows.Forms.Padding(6);
+            this.UF.Name = "UF";
+            this.UF.PlaceholderText = "UF";
+            this.UF.SelectedText = "";
+            this.UF.Size = new System.Drawing.Size(56, 41);
+            this.UF.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label9.Location = new System.Drawing.Point(1064, 192);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 30);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "-";
+            // 
+            // Cidade
+            // 
+            this.Cidade.Animated = true;
+            this.Cidade.AutoRoundedCorners = true;
+            this.Cidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Cidade.DefaultText = "";
+            this.Cidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Cidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Cidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Cidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Cidade.Enabled = false;
+            this.Cidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cidade.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Cidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Cidade.Location = new System.Drawing.Point(606, 190);
+            this.Cidade.Margin = new System.Windows.Forms.Padding(6);
+            this.Cidade.Name = "Cidade";
+            this.Cidade.PlaceholderText = "";
+            this.Cidade.SelectedText = "";
+            this.Cidade.Size = new System.Drawing.Size(450, 41);
+            this.Cidade.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label8.Location = new System.Drawing.Point(497, 192);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 30);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Cidade:";
+            // 
+            // Bairro
+            // 
+            this.Bairro.Animated = true;
+            this.Bairro.AutoRoundedCorners = true;
+            this.Bairro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Bairro.DefaultText = "";
+            this.Bairro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Bairro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Bairro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Bairro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Bairro.Enabled = false;
+            this.Bairro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Bairro.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Bairro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Bairro.Location = new System.Drawing.Point(606, 129);
+            this.Bairro.Margin = new System.Windows.Forms.Padding(6);
+            this.Bairro.Name = "Bairro";
+            this.Bairro.PlaceholderText = "";
+            this.Bairro.SelectedText = "";
+            this.Bairro.Size = new System.Drawing.Size(450, 41);
+            this.Bairro.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label7.Location = new System.Drawing.Point(509, 132);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 30);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Bairro:";
+            // 
+            // numero_residencia
+            // 
+            this.numero_residencia.Animated = true;
+            this.numero_residencia.AutoRoundedCorners = true;
+            this.numero_residencia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numero_residencia.DefaultText = "";
+            this.numero_residencia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.numero_residencia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.numero_residencia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numero_residencia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numero_residencia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numero_residencia.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.numero_residencia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numero_residencia.Location = new System.Drawing.Point(1147, 68);
+            this.numero_residencia.Margin = new System.Windows.Forms.Padding(6);
+            this.numero_residencia.Name = "numero_residencia";
+            this.numero_residencia.PlaceholderText = "Informe o Número";
+            this.numero_residencia.SelectedText = "";
+            this.numero_residencia.Size = new System.Drawing.Size(177, 41);
+            this.numero_residencia.TabIndex = 16;
+            this.numero_residencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero_residencia_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label5.Location = new System.Drawing.Point(1090, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 30);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "N°:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label4.Location = new System.Drawing.Point(1064, 69);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 30);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "-";
+            // 
+            // Logradouro
+            // 
+            this.Logradouro.Animated = true;
+            this.Logradouro.AutoRoundedCorners = true;
+            this.Logradouro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Logradouro.DefaultText = "";
+            this.Logradouro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Logradouro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Logradouro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Logradouro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Logradouro.Enabled = false;
+            this.Logradouro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Logradouro.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Logradouro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Logradouro.Location = new System.Drawing.Point(603, 66);
+            this.Logradouro.Margin = new System.Windows.Forms.Padding(6);
+            this.Logradouro.Name = "Logradouro";
+            this.Logradouro.PlaceholderText = "";
+            this.Logradouro.SelectedText = "";
+            this.Logradouro.Size = new System.Drawing.Size(453, 41);
+            this.Logradouro.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label2.Location = new System.Drawing.Point(450, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 30);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Logradouro: ";
+            // 
+            // Buscar_Cep
+            // 
+            this.Buscar_Cep.BackColor = System.Drawing.Color.Transparent;
+            this.Buscar_Cep.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Buscar_Cep.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Image = ((System.Drawing.Image)(resources.GetObject("Buscar_Cep.Image")));
+            this.Buscar_Cep.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Buscar_Cep.ImageRotate = 0F;
+            this.Buscar_Cep.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.IndicateFocus = true;
+            this.Buscar_Cep.Location = new System.Drawing.Point(335, 72);
+            this.Buscar_Cep.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscar_Cep.Name = "Buscar_Cep";
+            this.Buscar_Cep.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Size = new System.Drawing.Size(34, 29);
+            this.Buscar_Cep.TabIndex = 11;
+            this.Buscar_Cep.UseTransparentBackground = true;
+            this.Buscar_Cep.Click += new System.EventHandler(this.Buscar_Cep_Click);
+            // 
+            // Informe_Cep
+            // 
+            this.Informe_Cep.Animated = true;
+            this.Informe_Cep.AutoRoundedCorners = true;
+            this.Informe_Cep.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Informe_Cep.DefaultText = "";
+            this.Informe_Cep.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Informe_Cep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Informe_Cep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Informe_Cep.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Informe_Cep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Informe_Cep.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Informe_Cep.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Informe_Cep.Location = new System.Drawing.Point(82, 66);
+            this.Informe_Cep.Margin = new System.Windows.Forms.Padding(6);
+            this.Informe_Cep.Name = "Informe_Cep";
+            this.Informe_Cep.PlaceholderText = "Informe o cep";
+            this.Informe_Cep.SelectedText = "";
+            this.Informe_Cep.Size = new System.Drawing.Size(226, 41);
+            this.Informe_Cep.TabIndex = 10;
+            this.Informe_Cep.TextChanged += new System.EventHandler(this.Informe_Cep_TextChanged);
+            this.Informe_Cep.Enter += new System.EventHandler(this.Informe_Cep_Enter);
+            this.Informe_Cep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Informe_Cep_KeyPress);
+            this.Informe_Cep.Leave += new System.EventHandler(this.Informe_Cep_Leave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label3.Location = new System.Drawing.Point(11, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 30);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "CEP: ";
             // 
             // guna2GroupBox3
             // 
             this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox3.Controls.Add(this.guna2TextBox12);
+            this.guna2GroupBox3.Controls.Add(this.Descricao);
             this.guna2GroupBox3.Controls.Add(this.label18);
-            this.guna2GroupBox3.Controls.Add(this.guna2TextBox11);
+            this.guna2GroupBox3.Controls.Add(this.Valor_IPTU);
             this.guna2GroupBox3.Controls.Add(this.label17);
             this.guna2GroupBox3.Controls.Add(this.label16);
-            this.guna2GroupBox3.Controls.Add(this.guna2ComboBox3);
+            this.guna2GroupBox3.Controls.Add(this.Combo_Comissao);
             this.guna2GroupBox3.Controls.Add(this.label15);
             this.guna2GroupBox3.Controls.Add(this.label14);
-            this.guna2GroupBox3.Controls.Add(this.guna2TextBox10);
+            this.guna2GroupBox3.Controls.Add(this.Valor_Imovel);
             this.guna2GroupBox3.Controls.Add(this.label13);
-            this.guna2GroupBox3.Controls.Add(this.guna2ComboBox2);
+            this.guna2GroupBox3.Controls.Add(this.Combo_Pretensao);
             this.guna2GroupBox3.Controls.Add(this.label12);
-            this.guna2GroupBox3.Controls.Add(this.guna2ComboBox1);
+            this.guna2GroupBox3.Controls.Add(this.Combo_Tipo_de_imovel);
             this.guna2GroupBox3.Controls.Add(this.label11);
             this.guna2GroupBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -458,179 +485,27 @@
             this.guna2GroupBox3.TabIndex = 12;
             this.guna2GroupBox3.Text = "Descrição do imóvel";
             // 
-            // label11
+            // Descricao
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label11.Location = new System.Drawing.Point(11, 62);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(187, 30);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Tipo de imóvel:";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 8;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(196, 61);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(214, 36);
-            this.guna2ComboBox1.TabIndex = 25;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label12.Location = new System.Drawing.Point(441, 64);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 30);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Pretensão:";
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 8;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(575, 62);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(214, 36);
-            this.guna2ComboBox2.TabIndex = 27;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label13.Location = new System.Drawing.Point(827, 67);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(197, 30);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Valor do imóvel:";
-            // 
-            // guna2TextBox10
-            // 
-            this.guna2TextBox10.Animated = true;
-            this.guna2TextBox10.AutoRoundedCorners = true;
-            this.guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox10.DefaultText = "";
-            this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(1022, 63);
-            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox10.Name = "guna2TextBox10";
-            this.guna2TextBox10.PlaceholderText = "Informe o valor";
-            this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(244, 41);
-            this.guna2TextBox10.TabIndex = 29;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label14.Location = new System.Drawing.Point(1286, 68);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 30);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Comissão:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label15.Location = new System.Drawing.Point(1265, 66);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(22, 30);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "-";
-            // 
-            // guna2ComboBox3
-            // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 8;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(1426, 67);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(168, 36);
-            this.guna2ComboBox3.TabIndex = 32;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label16.Location = new System.Drawing.Point(1599, 68);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(22, 30);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "-";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label17.Location = new System.Drawing.Point(1619, 69);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 30);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "IPTU:";
-            // 
-            // guna2TextBox11
-            // 
-            this.guna2TextBox11.Animated = true;
-            this.guna2TextBox11.AutoRoundedCorners = true;
-            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox11.DefaultText = "";
-            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(1694, 63);
-            this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox11.Name = "guna2TextBox11";
-            this.guna2TextBox11.PlaceholderText = "Informe o valor";
-            this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.Size = new System.Drawing.Size(164, 41);
-            this.guna2TextBox11.TabIndex = 35;
+            this.Descricao.Animated = true;
+            this.Descricao.BorderRadius = 8;
+            this.Descricao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Descricao.DefaultText = "";
+            this.Descricao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Descricao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Descricao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Descricao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Descricao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Descricao.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Descricao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Descricao.Location = new System.Drawing.Point(154, 179);
+            this.Descricao.Margin = new System.Windows.Forms.Padding(6);
+            this.Descricao.Multiline = true;
+            this.Descricao.Name = "Descricao";
+            this.Descricao.PlaceholderText = "Informa a descrição completa sobre o imóvel desse proprietário";
+            this.Descricao.SelectedText = "";
+            this.Descricao.Size = new System.Drawing.Size(1714, 208);
+            this.Descricao.TabIndex = 37;
             // 
             // label18
             // 
@@ -644,69 +519,209 @@
             this.label18.TabIndex = 36;
             this.label18.Text = "Descrição:";
             // 
-            // guna2TextBox12
+            // Valor_IPTU
             // 
-            this.guna2TextBox12.Animated = true;
-            this.guna2TextBox12.BorderRadius = 8;
-            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox12.DefaultText = "";
-            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Location = new System.Drawing.Point(154, 179);
-            this.guna2TextBox12.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox12.Multiline = true;
-            this.guna2TextBox12.Name = "guna2TextBox12";
-            this.guna2TextBox12.PlaceholderText = "Informa a descrição completa sobre o imóvel desse proprietário";
-            this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.Size = new System.Drawing.Size(1714, 208);
-            this.guna2TextBox12.TabIndex = 37;
+            this.Valor_IPTU.Animated = true;
+            this.Valor_IPTU.AutoRoundedCorners = true;
+            this.Valor_IPTU.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Valor_IPTU.DefaultText = "";
+            this.Valor_IPTU.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Valor_IPTU.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Valor_IPTU.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_IPTU.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_IPTU.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_IPTU.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Valor_IPTU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_IPTU.Location = new System.Drawing.Point(1694, 63);
+            this.Valor_IPTU.Margin = new System.Windows.Forms.Padding(6);
+            this.Valor_IPTU.Name = "Valor_IPTU";
+            this.Valor_IPTU.PlaceholderText = "R$0,00";
+            this.Valor_IPTU.SelectedText = "";
+            this.Valor_IPTU.Size = new System.Drawing.Size(164, 41);
+            this.Valor_IPTU.TabIndex = 35;
+            this.Valor_IPTU.TextChanged += new System.EventHandler(this.Valor_IPTU_TextChanged);
+            this.Valor_IPTU.Enter += new System.EventHandler(this.Valor_IPTU_Enter);
+            this.Valor_IPTU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valor_IPTU_KeyPress);
             // 
-            // guna2Button1
+            // label17
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.Blue;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(1715, 1018);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(153, 55);
-            this.guna2Button1.TabIndex = 38;
-            this.guna2Button1.Text = "&SALVAR";
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label17.Location = new System.Drawing.Point(1619, 69);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(78, 30);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "IPTU:";
             // 
-            // Cadastro
+            // label16
             // 
-            this.Cadastro.BackColor = System.Drawing.Color.Transparent;
-            this.Cadastro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Cadastro.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Cadastro.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro.Image")));
-            this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Cadastro.ImageRotate = 0F;
-            this.Cadastro.ImageSize = new System.Drawing.Size(30, 30);
-            this.Cadastro.IndicateFocus = true;
-            this.Cadastro.Location = new System.Drawing.Point(335, 72);
-            this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
-            this.Cadastro.Name = "Cadastro";
-            this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Cadastro.Size = new System.Drawing.Size(34, 29);
-            this.Cadastro.TabIndex = 11;
-            this.Cadastro.UseTransparentBackground = true;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label16.Location = new System.Drawing.Point(1599, 68);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(22, 30);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "-";
+            // 
+            // Combo_Comissao
+            // 
+            this.Combo_Comissao.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Comissao.BorderRadius = 8;
+            this.Combo_Comissao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Comissao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Comissao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Comissao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Comissao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Combo_Comissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Combo_Comissao.ItemHeight = 30;
+            this.Combo_Comissao.Location = new System.Drawing.Point(1426, 67);
+            this.Combo_Comissao.Name = "Combo_Comissao";
+            this.Combo_Comissao.Size = new System.Drawing.Size(168, 36);
+            this.Combo_Comissao.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label15.Location = new System.Drawing.Point(1265, 66);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(22, 30);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label14.Location = new System.Drawing.Point(1286, 68);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 30);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Comissão:";
+            // 
+            // Valor_Imovel
+            // 
+            this.Valor_Imovel.Animated = true;
+            this.Valor_Imovel.AutoRoundedCorners = true;
+            this.Valor_Imovel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Valor_Imovel.DefaultText = "";
+            this.Valor_Imovel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Valor_Imovel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Valor_Imovel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_Imovel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_Imovel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_Imovel.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Valor_Imovel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_Imovel.Location = new System.Drawing.Point(1022, 63);
+            this.Valor_Imovel.Margin = new System.Windows.Forms.Padding(6);
+            this.Valor_Imovel.Name = "Valor_Imovel";
+            this.Valor_Imovel.PlaceholderText = "R$0,00";
+            this.Valor_Imovel.SelectedText = "";
+            this.Valor_Imovel.Size = new System.Drawing.Size(244, 41);
+            this.Valor_Imovel.TabIndex = 29;
+            this.Valor_Imovel.TextChanged += new System.EventHandler(this.Valor_Imovel_TextChanged);
+            this.Valor_Imovel.Enter += new System.EventHandler(this.Valor_Imovel_Enter);
+            this.Valor_Imovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valor_Imovel_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label13.Location = new System.Drawing.Point(827, 67);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(197, 30);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Valor do imóvel:";
+            // 
+            // Combo_Pretensao
+            // 
+            this.Combo_Pretensao.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Pretensao.BorderRadius = 8;
+            this.Combo_Pretensao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Pretensao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Pretensao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Pretensao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Pretensao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Combo_Pretensao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Combo_Pretensao.ItemHeight = 30;
+            this.Combo_Pretensao.Location = new System.Drawing.Point(575, 62);
+            this.Combo_Pretensao.Name = "Combo_Pretensao";
+            this.Combo_Pretensao.Size = new System.Drawing.Size(214, 36);
+            this.Combo_Pretensao.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label12.Location = new System.Drawing.Point(441, 64);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(136, 30);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Pretensão:";
+            // 
+            // Combo_Tipo_de_imovel
+            // 
+            this.Combo_Tipo_de_imovel.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Tipo_de_imovel.BorderRadius = 8;
+            this.Combo_Tipo_de_imovel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Tipo_de_imovel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Tipo_de_imovel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Tipo_de_imovel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Tipo_de_imovel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Combo_Tipo_de_imovel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Combo_Tipo_de_imovel.ItemHeight = 30;
+            this.Combo_Tipo_de_imovel.Location = new System.Drawing.Point(196, 61);
+            this.Combo_Tipo_de_imovel.Name = "Combo_Tipo_de_imovel";
+            this.Combo_Tipo_de_imovel.Size = new System.Drawing.Size(214, 36);
+            this.Combo_Tipo_de_imovel.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label11.Location = new System.Drawing.Point(11, 62);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(187, 30);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Tipo de imóvel:";
+            // 
+            // Button_Salvar_DBA
+            // 
+            this.Button_Salvar_DBA.BorderColor = System.Drawing.Color.Blue;
+            this.Button_Salvar_DBA.BorderRadius = 10;
+            this.Button_Salvar_DBA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Button_Salvar_DBA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Button_Salvar_DBA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Button_Salvar_DBA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Button_Salvar_DBA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Button_Salvar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.Black;
+            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1715, 1018);
+            this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
+            this.Button_Salvar_DBA.Size = new System.Drawing.Size(153, 55);
+            this.Button_Salvar_DBA.TabIndex = 38;
+            this.Button_Salvar_DBA.Text = "&SALVAR";
             // 
             // Cadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.Button_Salvar_DBA);
             this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
@@ -728,41 +743,41 @@
 
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox Nome_Prop;
+        private Guna.UI2.WinForms.Guna2TextBox Telefone_Prop;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox Informe_Cep;
         private System.Windows.Forms.Label label3;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton Cadastro;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton Buscar_Cep;
+        private Guna.UI2.WinForms.Guna2TextBox numero_residencia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox Logradouro;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2TextBox UF;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2TextBox Cidade;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox Bairro;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
+        private Guna.UI2.WinForms.Guna2TextBox Complemento;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Pretensao;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Tipo_de_imovel;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox11;
+        private Guna.UI2.WinForms.Guna2TextBox Valor_IPTU;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Comissao;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
+        private Guna.UI2.WinForms.Guna2TextBox Valor_Imovel;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox12;
+        private Guna.UI2.WinForms.Guna2TextBox Descricao;
         private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button Button_Salvar_DBA;
     }
 }

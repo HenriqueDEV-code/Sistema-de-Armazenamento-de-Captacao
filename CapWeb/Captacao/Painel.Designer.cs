@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Cadastro_Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Tabela = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LB_Imoveis_Cadastrados = new System.Windows.Forms.Label();
@@ -82,46 +82,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1270, 110);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // Conectado_VPN
-            // 
-            this.Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
-            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50;
-            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Conectado_VPN.ImageRotate = 0F;
-            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
-            this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(1155, 23);
-            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
-            this.Conectado_VPN.Name = "Conectado_VPN";
-            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
-            this.Conectado_VPN.Size = new System.Drawing.Size(33, 29);
-            this.Conectado_VPN.TabIndex = 12;
-            this.Conectado_VPN.UseTransparentBackground = true;
-            this.Conectado_VPN.Visible = false;
-            // 
-            // Nao_Conectado_VPN
-            // 
-            this.Nao_Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Nao_Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
-            this.Nao_Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Nao_Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Nao_Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50__1_;
-            this.Nao_Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Nao_Conectado_VPN.ImageRotate = 0F;
-            this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
-            this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1155, 23);
-            this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
-            this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
-            this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Nao_Conectado_VPN.Size = new System.Drawing.Size(33, 29);
-            this.Nao_Conectado_VPN.TabIndex = 13;
-            this.Nao_Conectado_VPN.UseTransparentBackground = true;
-            this.Nao_Conectado_VPN.Visible = false;
             // 
             // Cadastro_Imobiliarias
             // 
@@ -187,7 +147,7 @@
             // 
             this.Cadastro.BackColor = System.Drawing.Color.Transparent;
             this.Cadastro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Cadastro.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Cadastro.HoverState.ImageSize = new System.Drawing.Size(65, 65);
             this.Cadastro.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro.Image")));
             this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
             this.Cadastro.ImageRotate = 0F;
@@ -195,7 +155,7 @@
             this.Cadastro.Location = new System.Drawing.Point(63, 12);
             this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastro.Name = "Cadastro";
-            this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(65, 65);
             this.Cadastro.Size = new System.Drawing.Size(71, 66);
             this.Cadastro.TabIndex = 0;
             this.Cadastro.UseTransparentBackground = true;
@@ -222,7 +182,7 @@
             this.Tabela.ImageOffset = new System.Drawing.Point(0, 0);
             this.Tabela.ImageRotate = 0F;
             this.Tabela.IndicateFocus = true;
-            this.Tabela.Location = new System.Drawing.Point(400, 12);
+            this.Tabela.Location = new System.Drawing.Point(402, 12);
             this.Tabela.Margin = new System.Windows.Forms.Padding(2);
             this.Tabela.Name = "Tabela";
             this.Tabela.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -243,6 +203,46 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro Proprietário";
             // 
+            // Conectado_VPN
+            // 
+            this.Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
+            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50;
+            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Conectado_VPN.ImageRotate = 0F;
+            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.Conectado_VPN.IndicateFocus = true;
+            this.Conectado_VPN.Location = new System.Drawing.Point(1155, 23);
+            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
+            this.Conectado_VPN.Name = "Conectado_VPN";
+            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.Conectado_VPN.Size = new System.Drawing.Size(33, 29);
+            this.Conectado_VPN.TabIndex = 12;
+            this.Conectado_VPN.UseTransparentBackground = true;
+            this.Conectado_VPN.Visible = false;
+            // 
+            // Nao_Conectado_VPN
+            // 
+            this.Nao_Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Nao_Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
+            this.Nao_Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Nao_Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Nao_Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50__1_;
+            this.Nao_Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Nao_Conectado_VPN.ImageRotate = 0F;
+            this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.Nao_Conectado_VPN.IndicateFocus = true;
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1155, 23);
+            this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
+            this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
+            this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Nao_Conectado_VPN.Size = new System.Drawing.Size(33, 29);
+            this.Nao_Conectado_VPN.TabIndex = 13;
+            this.Nao_Conectado_VPN.UseTransparentBackground = true;
+            this.Nao_Conectado_VPN.Visible = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -262,7 +262,7 @@
             this.panel1.Controls.Add(this.LB_Imoveis_Cadastrados);
             this.panel1.Location = new System.Drawing.Point(16, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 151);
+            this.panel1.Size = new System.Drawing.Size(302, 151);
             this.panel1.TabIndex = 5;
             // 
             // LB_Imoveis_Cadastrados
@@ -284,7 +284,7 @@
             this.panel2.Controls.Add(this.LB_Imoveis_Pagos);
             this.panel2.Location = new System.Drawing.Point(665, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 151);
+            this.panel2.Size = new System.Drawing.Size(297, 151);
             this.panel2.TabIndex = 6;
             // 
             // LB_Imoveis_Pagos
@@ -306,7 +306,7 @@
             this.panel3.Controls.Add(this.LB_Imoveis_Enviados);
             this.panel3.Location = new System.Drawing.Point(340, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 151);
+            this.panel3.Size = new System.Drawing.Size(301, 151);
             this.panel3.TabIndex = 7;
             // 
             // LB_Imoveis_Enviados
