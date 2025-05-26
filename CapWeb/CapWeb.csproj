@@ -124,6 +124,7 @@
     <Compile Include="Captacao\Tabela.Designer.cs">
       <DependentUpon>Tabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Captacao\Cadastros.resx">

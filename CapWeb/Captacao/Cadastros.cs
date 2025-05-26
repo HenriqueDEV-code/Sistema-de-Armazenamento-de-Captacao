@@ -16,6 +16,8 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using System.Linq.Expressions;  // Não pode esquecer de instalar o pacote dele via NuGet
 using System.Web.UI.Design.WebControls.WebParts;
+using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace CapWeb.Captacao
 {
@@ -25,8 +27,8 @@ namespace CapWeb.Captacao
         public Cadastros(string DBA)
         {
             this.DBA = DBA;
-           
             InitializeComponent();
+            Nome_Prop.Focus();
         }
 
        
@@ -254,5 +256,148 @@ namespace CapWeb.Captacao
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Telefone_Prop_TextChanged(object sender, EventArgs e)
+        {
+            // Salva a posição inicial do cursor
+            int cursor = Telefone_Prop.SelectionStart;
+
+            // Remove tudo que não for número
+            string texto = new string(Telefone_Prop.Text.Where(char.IsDigit).ToArray());
+
+            // Limita a 11 dígitos
+            if (texto.Length > 11)
+                texto = texto.Substring(0, 11);
+
+            // Formata o telefone
+            string telefoneFormatado = "";
+
+            if (texto.Length <= 2)
+            {
+                telefoneFormatado = "(" + texto;
+            }
+            else if (texto.Length <= 6)
+            {
+                telefoneFormatado = "(" + texto.Substring(0, 2) + ") " + texto.Substring(2);
+            }
+            else if (texto.Length <= 10)
+            {
+                telefoneFormatado = "(" + texto.Substring(0, 2) + ") " + texto.Substring(2, 4) + "-" + texto.Substring(6);
+            }
+            else
+            {
+                telefoneFormatado = "(" + texto.Substring(0, 2) + ") " + texto.Substring(2, 5) + "-" + texto.Substring(7);
+            }
+
+            // Evita loop infinito: só atualiza se realmente mudou
+            if (Telefone_Prop.Text != telefoneFormatado)
+            {
+                Telefone_Prop.Text = telefoneFormatado;
+
+                // Ajusta cursor para ignorar os caracteres fixos: '(', ')', espaço, '-'
+                int contador = 0;
+
+                for (int i = 0; i < telefoneFormatado.Length && contador < cursor; i++)
+                {
+                    if (char.IsDigit(telefoneFormatado[i]))
+                        contador++;
+                }
+
+                // Posição final: onde está o contador
+                Telefone_Prop.SelectionStart = contador + (telefoneFormatado.Length - texto.Length);
+            }
+        }
+        private void Telefone_Enter(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Telefone_Prop.Text))
+            {
+                Telefone_Prop.Text = "(__) _____-____";
+            }
+            Telefone_Prop.SelectionStart = 1; // Coloca o cursor dentro do parêntese
+        }
+
+        private void Telefone_Leave(object sender, EventArgs e)
+        {
+            // Se não preencheu o telefone, limpa o campo
+            string texto = new string(Telefone_Prop.Text.Where(char.IsDigit).ToArray());
+            if (string.IsNullOrWhiteSpace(texto))
+            {
+                Telefone_Prop.Text = "";
+            }
+        }
+
+        private void Nome_Prop_Load(object sender, EventArgs e)
+        {
+            Nome_Prop.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void Logradouro_Load(object sender, EventArgs e)
+        {
+            Logradouro.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+        private void Bairro_Load(object sender, EventArgs e)
+        {
+            Bairro.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+        private void Cidade_Load(object sender, EventArgs e)
+        {
+
+            Cidade.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void Complemento_Load(object sender, EventArgs e)
+        {
+            Complemento.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+        private void UF_Load(object sender, EventArgs e)
+        {
+            UF.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+        private void Descricao_Load(object sender, EventArgs e)
+        {
+            Descricao.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+
+       
+
+        public void InserirPessoa(Pessoas pessoa, Endereco end, Imobiliaria Imob, Imovel imoveis)
+        {
+           
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string sql = "INSERT INTO Proprietarios (Nome, Telefone) VALUES (@nome, @telefone)";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", pessoa.Nome);
+                    cmd.Parameters.AddWithValue("@telefone", pessoa.Telefone);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+        }
+
+        private void Button_Salvar_DBA_Click(object sender, EventArgs e)
+        {
+            
+
+            
+
+            
+        }
     }
 }
+
