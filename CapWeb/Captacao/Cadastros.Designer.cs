@@ -504,6 +504,7 @@
             // 
             this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GroupBox3.Controls.Add(this.Button_Salvar_DBA);
             this.guna2GroupBox3.Controls.Add(this.Descricao);
             this.guna2GroupBox3.Controls.Add(this.label18);
             this.guna2GroupBox3.Controls.Add(this.Valor_IPTU);
@@ -523,7 +524,7 @@
             this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox3.Location = new System.Drawing.Point(0, 565);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(1919, 447);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(1919, 514);
             this.guna2GroupBox3.TabIndex = 12;
             this.guna2GroupBox3.Text = "Descrição do imóvel";
             // 
@@ -789,7 +790,7 @@
             this.Button_Salvar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.Black;
             this.Button_Salvar_DBA.IndicateFocus = true;
-            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1688, 1018);
+            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1719, 453);
             this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
             this.Button_Salvar_DBA.Size = new System.Drawing.Size(180, 50);
             this.Button_Salvar_DBA.TabIndex = 38;
@@ -803,7 +804,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.Button_Salvar_DBA);
             this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);

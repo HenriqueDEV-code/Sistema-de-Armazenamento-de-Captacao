@@ -370,30 +370,59 @@ namespace CapWeb.Captacao
 
        
 
-        public void InserirPessoa(Pessoas pessoa, Endereco end, Imobiliaria Imob, Imovel imoveis)
+        public void InserirPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
         {
            
+        }
+
+
+        public void SalvarPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
+        {
+            Pessoas pessoas = new Pessoas();
+            Endereco endereco = new Endereco();
+
 
             using (SqlConnection conn = new SqlConnection(DBA))
             {
-                string sql = "INSERT INTO Proprietarios (Nome, Telefone) VALUES (@nome, @telefone)";
+                conn.Open();
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@nome", pessoa.Nome);
-                    cmd.Parameters.AddWithValue("@telefone", pessoa.Telefone);
+                // --Inserir endereço--
+                string QUERY_ENDERECO = @"INSERT INTO Endereco (Logradouro, Numero, Bairro, Cidade, UF, CEP)
+                                        VALUES (@Logradouro, @Numero, @Bairro, @Cidade, @UF, @CEP,);
+                                         SELECT SCOPE_IDENTITY();";
 
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                SqlCommand cmdEndereco = new SqlCommand(QUERY_ENDERECO, conn);
+                cmdEndereco.Parameters.AddWithValue("@Logradouro",end.Logradouro);
+                cmdEndereco.Parameters.AddWithValue("@Numero",end.Numero);
+                cmdEndereco.Parameters.AddWithValue("@Bairro",end.Bairro);
+                cmdEndereco.Parameters.AddWithValue("@Cidade",end.Cidade);
+                cmdEndereco.Parameters.AddWithValue("@UF",end.UF);
+                cmdEndereco.Parameters.AddWithValue("@CEP",end.CEP);
+                int idEndereco = Convert.ToInt32(cmdEndereco.ExecuteScalar());
 
-                }
+                // --Inserir Proprietarios--
+                string QUERY_PROPRIETARIO = @"INSERT INTO Proprietarios (Nome, Telefone, ID_Endereco)
+                                             VALUES (@Nome, @Telefone, @ID_Endereco);
+                                             SELECT SCOOPE_IDENTITY();";
+
+                SqlCommand cmdPROPRIETARIOS = new SqlCommand(QUERY_PROPRIETARIO,conn);
+                cmdPROPRIETARIOS.Parameters.AddWithValue("@Nome",pessoas.Nome);
+                cmdPROPRIETARIOS.Parameters.AddWithValue("@Telefone", pessoas.Telefone);
+                cmdPROPRIETARIOS.Parameters.AddWithValue("@ID_Endereco",idEndereco);
+    
+                int idProrietario = Convert.ToInt32(cmdPROPRIETARIOS.ExecuteScalar());
+
+                // --Iserir Imovel
+
+                string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao, Complemento, IPTU, ID_Endereco, ID_Proprietario)";
+
             }
+
         }
+
 
         private void Button_Salvar_DBA_Click(object sender, EventArgs e)
         {
-            
-
             
 
             
