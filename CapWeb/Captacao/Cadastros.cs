@@ -380,6 +380,7 @@ namespace CapWeb.Captacao
         {
             Pessoas pessoas = new Pessoas();
             Endereco endereco = new Endereco();
+            Imovel imovel = new Imovel();
 
 
             using (SqlConnection conn = new SqlConnection(DBA))
@@ -414,8 +415,22 @@ namespace CapWeb.Captacao
 
                 // --Iserir Imovel
 
-                string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao, Complemento, IPTU, ID_Endereco, ID_Proprietario)";
+                string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao, Complemento, IPTU, ID_Endereco, ID_Proprietario)
+                                       VALUES (@Descricao, @Valor,@Tipo_de_Imovel, @Pretencao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario);";
 
+                SqlCommand cmd_IMOVEL = new SqlCommand(QUERY_IMOVEL,conn);
+                cmd_IMOVEL.Parameters.AddWithValue("@Descricao", imovel.Descricao);
+                cmd_IMOVEL.Parameters.AddWithValue("@Valor", imovel.Valor);
+                cmd_IMOVEL.Parameters.AddWithValue("@Tipo_de_Imovel", imovel.Tipo_de_imovel);
+                cmd_IMOVEL.Parameters.AddWithValue("@Pretensao", imovel.Tipo_de_imovel);
+                cmd_IMOVEL.Parameters.AddWithValue("@Complemento", imovel.Complemento);
+                cmd_IMOVEL.Parameters.AddWithValue("@IPTU", imovel.IPTU);
+                cmd_IMOVEL.Parameters.AddWithValue("@ID_Endereco", idEndereco);
+                cmd_IMOVEL.Parameters.AddWithValue("@ID_Proprietario", idProrietario);
+
+                cmd_IMOVEL.ExecuteNonQuery();
+
+                MessageBox.Show("Dados inseridos com sucesso!");
             }
 
         }
