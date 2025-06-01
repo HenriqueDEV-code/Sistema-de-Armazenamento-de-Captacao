@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.Cadastro_Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.Detalhes = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label3 = new System.Windows.Forms.Label();
             this.Relatorio = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Cadastro = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -56,8 +58,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ON_OFF = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Detalhes = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,12 +82,25 @@
             this.guna2Panel1.Controls.Add(this.Tabela);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(-1, 51);
+            this.guna2Panel1.Location = new System.Drawing.Point(-1, 56);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1601, 110);
+            this.guna2Panel1.Size = new System.Drawing.Size(1921, 105);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(205, 77);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 22);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Detalhes";
             // 
             // Cadastro_Imobiliarias
             // 
@@ -98,14 +111,13 @@
             this.Cadastro_Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
             this.Cadastro_Imobiliarias.ImageRotate = 0F;
             this.Cadastro_Imobiliarias.IndicateFocus = true;
-            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(1642, 12);
+            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(456, 8);
             this.Cadastro_Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastro_Imobiliarias.Name = "Cadastro_Imobiliarias";
             this.Cadastro_Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.Cadastro_Imobiliarias.Size = new System.Drawing.Size(71, 66);
             this.Cadastro_Imobiliarias.TabIndex = 2;
             this.Cadastro_Imobiliarias.UseTransparentBackground = true;
-            this.Cadastro_Imobiliarias.Visible = false;
             this.Cadastro_Imobiliarias.Click += new System.EventHandler(this.Cadastro_Imobiliarias_Click);
             // 
             // label4
@@ -114,13 +126,30 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1598, 80);
+            this.label4.Location = new System.Drawing.Point(407, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cadastro Imobiliárias";
-            this.label4.Visible = false;
+            // 
+            // Detalhes
+            // 
+            this.Detalhes.BackColor = System.Drawing.Color.Transparent;
+            this.Detalhes.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Detalhes.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Detalhes.Image = ((System.Drawing.Image)(resources.GetObject("Detalhes.Image")));
+            this.Detalhes.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Detalhes.ImageRotate = 0F;
+            this.Detalhes.IndicateFocus = true;
+            this.Detalhes.Location = new System.Drawing.Point(208, 8);
+            this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
+            this.Detalhes.Name = "Detalhes";
+            this.Detalhes.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Detalhes.Size = new System.Drawing.Size(71, 66);
+            this.Detalhes.TabIndex = 6;
+            this.Detalhes.UseTransparentBackground = true;
+            this.Detalhes.Click += new System.EventHandler(this.Detalhes_Click);
             // 
             // label3
             // 
@@ -128,13 +157,12 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1798, 80);
+            this.label3.Location = new System.Drawing.Point(629, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Relatório";
-            this.label3.Visible = false;
             // 
             // Relatorio
             // 
@@ -145,14 +173,13 @@
             this.Relatorio.ImageOffset = new System.Drawing.Point(0, 0);
             this.Relatorio.ImageRotate = 0F;
             this.Relatorio.IndicateFocus = true;
-            this.Relatorio.Location = new System.Drawing.Point(1799, 12);
+            this.Relatorio.Location = new System.Drawing.Point(633, 10);
             this.Relatorio.Margin = new System.Windows.Forms.Padding(2);
             this.Relatorio.Name = "Relatorio";
             this.Relatorio.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.Relatorio.Size = new System.Drawing.Size(71, 66);
             this.Relatorio.TabIndex = 4;
             this.Relatorio.UseTransparentBackground = true;
-            this.Relatorio.Visible = false;
             this.Relatorio.Click += new System.EventHandler(this.Relatorio_Click);
             // 
             // Cadastro
@@ -164,7 +191,7 @@
             this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
             this.Cadastro.ImageRotate = 0F;
             this.Cadastro.IndicateFocus = true;
-            this.Cadastro.Location = new System.Drawing.Point(63, 12);
+            this.Cadastro.Location = new System.Drawing.Point(63, 10);
             this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastro.Name = "Cadastro";
             this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(65, 65);
@@ -179,7 +206,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(324, 82);
+            this.label2.Location = new System.Drawing.Point(324, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 22);
@@ -195,7 +222,7 @@
             this.Tabela.ImageOffset = new System.Drawing.Point(0, 0);
             this.Tabela.ImageRotate = 0F;
             this.Tabela.IndicateFocus = true;
-            this.Tabela.Location = new System.Drawing.Point(320, 12);
+            this.Tabela.Location = new System.Drawing.Point(320, 10);
             this.Tabela.Margin = new System.Windows.Forms.Padding(2);
             this.Tabela.Name = "Tabela";
             this.Tabela.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -210,7 +237,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 80);
+            this.label1.Location = new System.Drawing.Point(7, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 22);
@@ -228,7 +255,7 @@
             this.Conectado_VPN.ImageRotate = 0F;
             this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(1566, 20);
+            this.Conectado_VPN.Location = new System.Drawing.Point(1886, 20);
             this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Conectado_VPN.Name = "Conectado_VPN";
             this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
@@ -248,7 +275,7 @@
             this.Nao_Conectado_VPN.ImageRotate = 0F;
             this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1565, 20);
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1885, 20);
             this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
             this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -299,7 +326,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.LB_Imoveis_Pagos);
-            this.panel2.Location = new System.Drawing.Point(874, 148);
+            this.panel2.Location = new System.Drawing.Point(1077, 143);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 151);
             this.panel2.TabIndex = 6;
@@ -323,7 +350,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.LB_Imoveis_Enviados);
-            this.panel3.Location = new System.Drawing.Point(444, 148);
+            this.panel3.Location = new System.Drawing.Point(559, 143);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 151);
             this.panel3.TabIndex = 7;
@@ -361,7 +388,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(442, 123);
+            this.label7.Location = new System.Drawing.Point(555, 118);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 22);
@@ -375,7 +402,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(876, 123);
+            this.label8.Location = new System.Drawing.Point(1079, 118);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 22);
@@ -388,7 +415,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.LB_Imoveis_N_Pagos);
-            this.panel4.Location = new System.Drawing.Point(1310, 148);
+            this.panel4.Location = new System.Drawing.Point(1630, 148);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(274, 151);
             this.panel4.TabIndex = 11;
@@ -413,7 +440,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(1306, 123);
+            this.label9.Location = new System.Drawing.Point(1626, 123);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(170, 22);
@@ -440,7 +467,7 @@
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel5.Location = new System.Drawing.Point(-1, 156);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1601, 445);
+            this.panel5.Size = new System.Drawing.Size(1921, 915);
             this.panel5.TabIndex = 13;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -469,42 +496,11 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "-";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(205, 80);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 22);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Detalhes";
-            // 
-            // Detalhes
-            // 
-            this.Detalhes.BackColor = System.Drawing.Color.Transparent;
-            this.Detalhes.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Detalhes.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Detalhes.Image = ((System.Drawing.Image)(resources.GetObject("Detalhes.Image")));
-            this.Detalhes.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Detalhes.ImageRotate = 0F;
-            this.Detalhes.IndicateFocus = true;
-            this.Detalhes.Location = new System.Drawing.Point(208, 12);
-            this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
-            this.Detalhes.Name = "Detalhes";
-            this.Detalhes.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Detalhes.Size = new System.Drawing.Size(71, 66);
-            this.Detalhes.TabIndex = 6;
-            this.Detalhes.UseTransparentBackground = true;
-            this.Detalhes.Click += new System.EventHandler(this.Detalhes_Click);
-            // 
             // Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 600);
+            this.ClientSize = new System.Drawing.Size(1920, 1070);
             this.Controls.Add(this.Conectado_VPN);
             this.Controls.Add(this.Nao_Conectado_VPN);
             this.Controls.Add(this.panel5);

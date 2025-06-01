@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 // CEP
 using Newtonsoft.Json;
@@ -92,70 +93,108 @@ namespace CapWeb.Captacao
             }
         }
 
+        private void nome_condominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void area_util_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void area_construida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void valor_codominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        // Método genérico para formatação de moeda
+        private void FormatarMoeda(Guna.UI2.WinForms.Guna2TextBox txt)
+        {
+            if (txt.Text.Length < 4)
+            {
+                txt.Text = "R$ 0,00";
+                txt.SelectionStart = txt.Text.Length;
+                return;
+            }
+
+            string texto = txt.Text.Replace("R$", "").Replace(".", "").Replace(",", "").Trim();
+
+            if (decimal.TryParse(texto, out decimal valor))
+            {
+                valor = valor / 100; // Mantém precisão dos centavos
+                txt.Text = "R$ " + valor.ToString("N2", CultureInfo.GetCultureInfo("pt-BR"));
+                txt.SelectionStart = txt.Text.Length;
+            }
+            else
+            {
+                txt.Text = "R$ 0,00";
+                txt.SelectionStart = txt.Text.Length;
+            }
+        }
+
+        private void FormatarMoeda_Enter(Guna.UI2.WinForms.Guna2TextBox txt)
+        {
+            if (string.IsNullOrWhiteSpace(txt.Text))
+            {
+                txt.Text = "R$ 0,00";
+            }
+            txt.SelectionStart = txt.Text.Length;
+        }
+
+        private void valor_codominio_Enter(object sender, EventArgs e)
+        {
+            FormatarMoeda_Enter(valor_codominio);
+        }
+
+        private void valor_codominio_TextChanged(object sender, EventArgs e)
+        {
+
+            valor_codominio.TextChanged -= valor_codominio_TextChanged;
+            FormatarMoeda(valor_codominio);
+            valor_codominio.TextChanged += valor_codominio_TextChanged;
+        }
+
+
         private void Valor_Imovel_Enter(object sender, EventArgs e)
         {
-            if (Valor_Imovel.Text == "")
-            {
-                Valor_Imovel.Text = "R$ 0,00"; 
-            }
-            Valor_Imovel.SelectionStart = Valor_Imovel.Text.Length;
+            FormatarMoeda_Enter(Valor_Imovel);
         }
 
         private void Valor_Imovel_TextChanged(object sender, EventArgs e)
         {
-            if (Valor_Imovel.Text.Length < 4)
-            {
-                Valor_Imovel.Text = "R$ 0,00";
-                Valor_Imovel.SelectionStart = Valor_Imovel.Text.Length;
-                return;
-            }
-
-            string texto = Valor_Imovel.Text.Replace("R$", "").Replace(",", "").Replace(".", "").Trim();
-
-            if (decimal.TryParse(texto, out decimal valor))
-            {
-                valor = valor / 100; // mantem a precisao dos centavos
-                Valor_Imovel.Text = "R$" + valor.ToString("N2");
-                Valor_Imovel.SelectionStart = Valor_Imovel.Text.Length;
-            }
-            else
-            {
-                Valor_Imovel.Text = "R$ 0,00";
-                Valor_Imovel.SelectionStart = Valor_Imovel.Text.Length;
-            }
+            Valor_Imovel.TextChanged -= Valor_Imovel_TextChanged; // Evita loop
+            FormatarMoeda(Valor_Imovel);
+            Valor_Imovel.TextChanged += Valor_Imovel_TextChanged;
         }
 
         private void Valor_IPTU_TextChanged(object sender, EventArgs e)
         {
-            if (Valor_IPTU.Text.Length < 4)
-            {
-                Valor_IPTU.Text = "R$ 0,00";
-                Valor_IPTU.SelectionStart = Valor_IPTU.Text.Length;
-                return;
-            }
-
-            string texto = Valor_IPTU.Text.Replace("R$", "").Replace(",", "").Replace(".", "").Trim();
-
-            if (decimal.TryParse(texto, out decimal valor))
-            {
-                valor = valor / 100; // mantem a precisao dos centavos
-                Valor_IPTU.Text = "R$" + valor.ToString("N2");
-                Valor_IPTU.SelectionStart = Valor_IPTU.Text.Length;
-            }
-            else
-            {
-                Valor_IPTU.Text = "R$ 0,00";
-                Valor_IPTU.SelectionStart = Valor_IPTU.Text.Length;
-            }
+            Valor_IPTU0.TextChanged -= Valor_IPTU_TextChanged;
+            FormatarMoeda(Valor_IPTU0);
+            Valor_IPTU0.TextChanged += Valor_IPTU_TextChanged;
         }
 
         private void Valor_IPTU_Enter(object sender, EventArgs e)
         {
-            if (Valor_IPTU.Text == "")
-            {
-                Valor_IPTU.Text = "R$ 0,00";
-            }
-            Valor_IPTU.SelectionStart = Valor_IPTU.Text.Length;
+            FormatarMoeda_Enter(Valor_IPTU0);
         }
 
         private void Informe_Cep_TextChanged(object sender, EventArgs e)
@@ -368,11 +407,12 @@ namespace CapWeb.Captacao
             Descricao.CharacterCasing = CharacterCasing.Upper;
 
         }
+        private void nome_condominio_Load(object sender, EventArgs e)
+        {
+            nome_condominio.CharacterCasing = CharacterCasing.Upper;
+        }
 
-
-       // -- Salvar Pessoas -- 
-
-      
+        // -- Salvar Pessoas -- 
 
 
         public void SalvarPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
@@ -386,8 +426,8 @@ namespace CapWeb.Captacao
                 try
                 {
                     // -- Inserir Endereco --
-                    string QUERY_ENDERECO = @"INSERT INTO Endereco (Logradouro, Numero, Bairro, Cidade, UF, CEP)
-                                      VALUES (@Logradouro, @Numero, @Bairro, @Cidade, @UF, @CEP);
+                    string QUERY_ENDERECO = @"INSERT INTO Endereco (Logradouro, Numero, Bairro, Cidade, UF, CEP, Nome_Condominio)
+                                      VALUES (@Logradouro, @Numero, @Bairro, @Cidade, @UF, @CEP, @Nome_Condominio);
                                       SELECT SCOPE_IDENTITY();";
 
                     SqlCommand cmdEndereco = new SqlCommand(QUERY_ENDERECO, conn, transaction);
@@ -397,6 +437,7 @@ namespace CapWeb.Captacao
                     cmdEndereco.Parameters.AddWithValue("@Cidade", end.Cidade);
                     cmdEndereco.Parameters.AddWithValue("@UF", end.UF);
                     cmdEndereco.Parameters.AddWithValue("@CEP", end.CEP);
+                    cmdEndereco.Parameters.AddWithValue("@Nome_Condominio", end.Nome_Condominio);
 
                     int idEndereco = Convert.ToInt32(cmdEndereco.ExecuteScalar());
 
@@ -413,8 +454,8 @@ namespace CapWeb.Captacao
                     int idProprietario = Convert.ToInt32(cmdProprietarios.ExecuteScalar());
 
                     // -- Inserir Imovel --
-                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario)
-                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario);";
+                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida)
+                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida);";
 
                     SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
                     cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.Descricao);
@@ -426,6 +467,10 @@ namespace CapWeb.Captacao
                     cmdImovel.Parameters.AddWithValue("@IPTU", imoveis.IPTU);
                     cmdImovel.Parameters.AddWithValue("@ID_Endereco", idEndereco);
                     cmdImovel.Parameters.AddWithValue("@ID_Proprietario", idProprietario);
+                    cmdImovel.Parameters.AddWithValue("@Valor_Condominio", imoveis.Valor_Condominio);
+                    cmdImovel.Parameters.AddWithValue("@Util", imoveis.Util);
+                    cmdImovel.Parameters.AddWithValue("@Contruida", imoveis.Construida);
+                    
 
                     cmdImovel.ExecuteNonQuery();
 
@@ -452,8 +497,13 @@ namespace CapWeb.Captacao
             Cidade.Clear();
             UF.Clear();
             Valor_Imovel.Clear();
-            Valor_IPTU.Clear();
+            Valor_IPTU0.Clear();
             Descricao.Clear();
+            valor_codominio.Clear();
+            area_util1.Clear();
+            area_construida.Clear();
+            nome_condominio.Clear();
+            Complemento.Clear();
         }
 
         bool Error_Nulos()
@@ -509,9 +559,9 @@ namespace CapWeb.Captacao
                 temErro = true;
             }
 
-            if (string.IsNullOrWhiteSpace(Valor_IPTU.Text))
+            if (string.IsNullOrWhiteSpace(Valor_IPTU0.Text))
             {
-                ERROR_Dados_Nulos.SetError(Valor_IPTU, "Campo obrigatório.");
+                ERROR_Dados_Nulos.SetError(Valor_IPTU0, "Campo obrigatório.");
                 temErro = true;
             }
 
@@ -519,6 +569,11 @@ namespace CapWeb.Captacao
             {
                 ERROR_Dados_Nulos.SetError(Descricao, "Campo obrigatório.");
                 temErro = true;
+            }
+            if (string.IsNullOrWhiteSpace(area_util1.Text))
+            {
+                ERROR_Dados_Nulos.SetError(area_util1, "Campo obrigatório.");
+                temErro=true;
             }
            
 
@@ -535,7 +590,6 @@ namespace CapWeb.Captacao
                 return;  // Impede de salvar
             }
 
-
             Pessoas pessoa = new Pessoas
             {
                 Nome = Nome_Prop.Text,
@@ -549,38 +603,31 @@ namespace CapWeb.Captacao
                 Bairro = Bairro.Text,
                 Cidade = Cidade.Text,
                 UF = UF.Text,
-                CEP = Informe_Cep.Text
+                CEP = Informe_Cep.Text,
+                Nome_Condominio = nome_condominio.Text
             };
-            string IPTU_Limpo = Regex.Replace(Valor_IPTU.Text, @"[^\d]", "");
-            decimal valorIPTU;
-            if (!decimal.TryParse(IPTU_Limpo, out valorIPTU))
-            {
-                MessageBox.Show("Valor do IPTU inválido!");
-                return;
-            }
 
-            string Real_Limpo = Regex.Replace(Valor_Imovel.Text, @"[^\d]", "");
-            decimal valorReal;
-            if (!decimal.TryParse(Real_Limpo, out valorReal))
-            {
-                MessageBox.Show("Valor do Real inválido!");
-                return;
-            }
+           
 
             Imovel imovel = new Imovel
             {
                 Descricao = Descricao.Text,
-                Valor = valorReal,
+                Valor = Valor_Imovel.Text,                // Ex: "R$ 1.234,56"
                 Tipo_de_imovel = Combo_Tipo_de_imovel.Text,
                 Pretensao = Combo_Pretensao.Text,
                 Comissao = Combo_Comissao.Text,
                 Complemento = Complemento.Text,
-                IPTU = valorIPTU
+                IPTU = Valor_IPTU0.Text,                   // Ex: "R$ 987,65"
+                Valor_Condominio = valor_codominio.Text,  // Ex: "R$ 432,10"
+                Util = area_util1.Text,
+                Construida = area_construida.Text
             };
 
             SalvarPessoa(pessoa, endereco, imovel);
-            Clear();    
+            Clear();
         }
+
+       
     }
 }
 

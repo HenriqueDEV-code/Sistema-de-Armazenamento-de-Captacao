@@ -50,6 +50,7 @@ namespace CapWeb
         private string uf;
         private string cep;
         private int numero;
+        private string nome_condominio;
 
         public string Logradouro
         {
@@ -78,6 +79,11 @@ namespace CapWeb
         {
             get { return cep; }
             set { cep = value; }
+        }
+        public string Nome_Condominio
+        {
+            get { return nome_condominio; }
+            set { nome_condominio = value; }
         }
 
         public int Numero
@@ -129,8 +135,11 @@ namespace CapWeb
         private string pretensao;
         private string comissao;
         private string complemento;
-        private decimal valor;
-        private decimal iptu;
+        private string util;
+        private string construida;
+        private string valor;
+        private string iptu;
+        private string valor_condominio;
 
         public string Descricao
         {
@@ -158,17 +167,33 @@ namespace CapWeb
             get{ return complemento; }
             set { complemento = value; }
         }
-        public decimal Valor
+        public string Valor
         {
             get { return valor;}
             set { valor = value; }
         }
-        public decimal IPTU
+        public string IPTU
         {
             get { return iptu;}
             set { iptu = value; }
         }
 
+        public string Valor_Condominio
+        {
+            get { return valor_condominio; }
+            set { valor_condominio = value; }
+        }
+
+        public string Util
+        {
+            get { return util; }
+            set { util = value; }
+        }
+        public string Construida
+        {
+            get { return construida; }
+            set { construida = value; }
+        }
 
     }
 }

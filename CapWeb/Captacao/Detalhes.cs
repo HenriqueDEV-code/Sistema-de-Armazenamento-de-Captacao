@@ -12,12 +12,14 @@ using System.Text.RegularExpressions;
 using System.Net.NetworkInformation;
 using System.Data.SqlClient;
 using System.Security.AccessControl;
+using System.Globalization;
 
 namespace CapWeb.Captacao
 {
     public partial class Detalhes : MaterialForm
     {
         private string DBA;
+        private DataTable resultado = new DataTable();
         public Detalhes(string DBA)
         {
             InitializeComponent();
@@ -98,6 +100,7 @@ namespace CapWeb.Captacao
                 E_Prop.Cidade AS Cidade_Proprietario,
                 E_Prop.UF AS UF_Proprietario,
                 E_Prop.CEP AS CEP_Proprietario,
+                E_Prop.Nome_Condominio AS NOME_Condominio,
                 I.Descricao,
                 I.Valor,
                 I.Tipo_de_Imovel,
@@ -105,6 +108,9 @@ namespace CapWeb.Captacao
                 I.Comissao,
                 I.Complemento AS Complemento_Imovel,
                 I.IPTU,
+                I.Util AS util,
+                I.Contruida AS construida,
+                I.Valor_Condominio AS valor_Cond,
                 E_Imovel.Logradouro AS Logradouro_Imovel,
                 E_Imovel.Numero AS Numero_Imovel,
                 E_Imovel.Bairro AS Bairro_Imovel,
@@ -148,52 +154,55 @@ namespace CapWeb.Captacao
                     detalhes.AppendLine("Proprietário");
                     detalhes.AppendLine(row["Nome_Proprietario"].ToString());
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
                     detalhes.AppendLine("Telefone");
                     detalhes.AppendLine(row["Telefone"].ToString());
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
                     detalhes.AppendLine("Endereço Completo");
                     detalhes.AppendLine($"{row["Logradouro_Proprietario"]} - {row["Numero_Proprietario"]}");
                     detalhes.AppendLine($"{row["Bairro_Proprietario"]}");
                     detalhes.AppendLine($"{row["Cidade_Proprietario"]}");
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
-                    // -- Nome do condominio
-
+                    detalhes.AppendLine(new string('-', 100)); // Separador
+                    
+                    detalhes.AppendLine("Nome do condomínio");
+                    detalhes.AppendLine(row["NOME_Condominio"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
                     detalhes.AppendLine("Número do Imóvel (quadra e lote/apartamento/casa");
                     detalhes.AppendLine(row["Complemento_Imovel"].ToString());
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
                     detalhes.AppendLine("Descrição do Imóvel");
                     detalhes.AppendLine(row["Descricao"].ToString());
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
-                    detalhes.AppendLine("Tipo / Pretensão");
-                    detalhes.AppendLine($"{row["Tipo_de_Imovel"]} / {row["Pretensao"]}");
+                    detalhes.AppendLine("Tamanho da área útil / constuída e terreno");
+                    detalhes.AppendLine($"{row["util"]} m2 / {row["construida"]} m2");
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
-                    detalhes.AppendLine("Valor");
-                    detalhes.AppendLine(row["Valor"].ToString());
+                    detalhes.AppendLine("Valor do condomínio");
+                    detalhes.AppendLine(row["valor_Cond"].ToString());
                     detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
-
-                    detalhes.AppendLine("Comissão");
-                    detalhes.AppendLine(row["Comissao"].ToString());
-                    detalhes.AppendLine();
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
                     detalhes.AppendLine("IPTU");
                     detalhes.AppendLine(row["IPTU"].ToString());
                     detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 100)); // Separador
 
-                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine("Valor do imóvel com ou sem comissão");
+                    detalhes.AppendLine($"{row["Valor"]} - {row["Comissao"]}");
+                    detalhes.AppendLine($"{row["Tipo_de_Imovel"]} - {row["Pretensao"]}");
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 100)); // Separador
                     detalhes.AppendLine();
 
                 }
@@ -206,6 +215,85 @@ namespace CapWeb.Captacao
            
         }
 
+        private void extrair_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Arquivo de texto (*.txt)|*.txt";
+            saveFileDialog.Title = "Salvar Arquivo de Detalhes";
+            saveFileDialog.FileName = "detalhes_imovel.txt";
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    StringBuilder detalhes = new StringBuilder();
+
+                    foreach (DataRow row in resultado.Rows)
+                    {
+                        detalhes.AppendLine("Proprietário");
+                        detalhes.AppendLine(row["Nome_Proprietario"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Telefone");
+                        detalhes.AppendLine(row["Telefone"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Endereço Completo");
+                        detalhes.AppendLine($"{row["Logradouro_Proprietario"]} - {row["Numero_Proprietario"]}");
+                        detalhes.AppendLine($"{row["Bairro_Proprietario"]}");
+                        detalhes.AppendLine($"{row["Cidade_Proprietario"]}");
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Nome do condomínio");
+                        detalhes.AppendLine(row["NOME_Condominio"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Número do Imóvel (quadra e lote/apartamento/casa");
+                        detalhes.AppendLine(row["Complemento_Imovel"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Descrição do Imóvel");
+                        detalhes.AppendLine(row["Descricao"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Tamanho da área útil / construída e terreno");
+                        detalhes.AppendLine($"{row["util"]} m2 / {row["construida"]} m2");
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Valor do condomínio");
+                        detalhes.AppendLine(row["valor_Cond"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("IPTU");
+                        detalhes.AppendLine(row["IPTU"].ToString());
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+
+                        detalhes.AppendLine("Valor do imóvel com ou sem comissão");
+                        detalhes.AppendLine($"{row["Valor"]} - {row["Comissao"]}");
+                        detalhes.AppendLine($"{row["Tipo_de_Imovel"]} - {row["Pretensao"]}");
+                        detalhes.AppendLine();
+                        detalhes.AppendLine(new string('-', 100)); // Separador
+                        detalhes.AppendLine();
+                    }
+
+                    System.IO.File.WriteAllText(saveFileDialog.FileName, detalhes.ToString());
+
+                    MessageBox.Show("Arquivo exportado com sucesso!", "Exportação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao exportar: " + ex.Message);
+                }
+            }
+        }
     }
 }
