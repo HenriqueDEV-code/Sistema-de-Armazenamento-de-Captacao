@@ -55,6 +55,15 @@ namespace CapWeb.Captacao
             janelaImobiliarias.Show();
         }
 
+        private void Detalhes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Detalhes janeladetalhes = new Detalhes(DBA);
+            janeladetalhes.FormClosed += (s, args) => this.Show();
+            janeladetalhes.Show();
+        }
+
 
 
 
@@ -120,5 +129,7 @@ namespace CapWeb.Captacao
         {
 
         }
+
+        
     }
 }

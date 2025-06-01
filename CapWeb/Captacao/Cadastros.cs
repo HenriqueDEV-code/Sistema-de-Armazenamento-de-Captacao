@@ -370,12 +370,9 @@ namespace CapWeb.Captacao
         }
 
 
-       
+       // -- Salvar Pessoas -- 
 
-        public void InserirPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
-        {
-           
-        }
+      
 
 
         public void SalvarPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
@@ -416,14 +413,15 @@ namespace CapWeb.Captacao
                     int idProprietario = Convert.ToInt32(cmdProprietarios.ExecuteScalar());
 
                     // -- Inserir Imovel --
-                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao, Complemento, IPTU, ID_Endereco, ID_Proprietario)
-                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario);";
+                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario)
+                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario);";
 
                     SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
                     cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.Descricao);
                     cmdImovel.Parameters.AddWithValue("@Valor", imoveis.Valor);
                     cmdImovel.Parameters.AddWithValue("@Tipo_de_Imovel", imoveis.Tipo_de_imovel);
                     cmdImovel.Parameters.AddWithValue("@Pretensao", imoveis.Pretensao);
+                    cmdImovel.Parameters.AddWithValue("@Comissao", imoveis.Comissao);
                     cmdImovel.Parameters.AddWithValue("@Complemento", imoveis.Complemento);
                     cmdImovel.Parameters.AddWithValue("@IPTU", imoveis.IPTU);
                     cmdImovel.Parameters.AddWithValue("@ID_Endereco", idEndereco);
@@ -458,9 +456,85 @@ namespace CapWeb.Captacao
             Descricao.Clear();
         }
 
+        bool Error_Nulos()
+        {
+            bool temErro = false;
+            ERROR_Dados_Nulos.Clear();  // Limpa erros anteriores
+
+            if (string.IsNullOrWhiteSpace(Nome_Prop.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Nome_Prop, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Telefone_Prop.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Telefone_Prop, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Informe_Cep.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Informe_Cep, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(numero_residencia.Text))
+            {
+                ERROR_Dados_Nulos.SetError(numero_residencia, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Combo_Tipo_de_imovel.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Combo_Tipo_de_imovel, "Campo obrigatóro.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Combo_Pretensao.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Combo_Pretensao, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Valor_Imovel.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Valor_Imovel, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Combo_Comissao.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Combo_Comissao, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Valor_IPTU.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Valor_IPTU, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(Descricao.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Descricao, "Campo obrigatório.");
+                temErro = true;
+            }
+           
+
+            return temErro;
+        }
+
+
 
         private void Button_Salvar_DBA_Click(object sender, EventArgs e)
         {
+            if (Error_Nulos())
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;  // Impede de salvar
+            }
+
 
             Pessoas pessoa = new Pessoas
             {
@@ -499,6 +573,7 @@ namespace CapWeb.Captacao
                 Valor = valorReal,
                 Tipo_de_imovel = Combo_Tipo_de_imovel.Text,
                 Pretensao = Combo_Pretensao.Text,
+                Comissao = Combo_Comissao.Text,
                 Complemento = Complemento.Text,
                 IPTU = valorIPTU
             };

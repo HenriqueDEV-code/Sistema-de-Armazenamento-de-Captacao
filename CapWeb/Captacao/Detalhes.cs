@@ -1,0 +1,211 @@
+﻿using MaterialSkin.Controls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Net.NetworkInformation;
+using System.Data.SqlClient;
+using System.Security.AccessControl;
+
+namespace CapWeb.Captacao
+{
+    public partial class Detalhes : MaterialForm
+    {
+        private string DBA;
+        public Detalhes(string DBA)
+        {
+            InitializeComponent();
+            this.DBA = DBA;
+        }
+
+        private void Nome_Prop_Busca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Nome_Prop_Busca_Load(object sender, EventArgs e)
+        {
+            Nome_Prop_Busca.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void Detalhes_Busca_Load(object sender, EventArgs e)
+        {
+            Detalhes_Busca.CharacterCasing = CharacterCasing.Upper;
+
+        }
+
+        private List<string> ObertCidades()
+        {
+            List<string> cidades = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT DISTINCT Cidade FROM Endereco ORDER BY Cidade";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read()) 
+                        {
+                            if (reader["Cidade"] != DBNull.Value)
+                            {
+                                cidades.Add(reader["Cidade"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            return cidades;
+        }
+
+        private void Preencher_ComboBox_Cidades()
+        {
+            var cidades = ObertCidades();
+            Combo_Cidade_Busca.Items.Clear();
+            Combo_Cidade_Busca.Items.AddRange(cidades.ToArray());
+        }
+        private void Detalhes_Load(object sender, EventArgs e)
+        {
+            Preencher_ComboBox_Cidades();
+            Combo_Cidade_Busca.Text = "Selecione a cidade";
+
+        }
+
+       private DataTable FiltrarDetalhes(string nome, string cidade)
+        {
+            DataTable dt = new DataTable();
+            
+            using (SqlConnection con = new SqlConnection(DBA))
+            {
+                string SQL = @"
+                                SELECT 
+                P.Nome AS Nome_Proprietario,
+                P.Telefone,
+                E_Prop.Logradouro AS Logradouro_Proprietario,
+                E_Prop.Numero AS Numero_Proprietario,
+                E_Prop.Bairro AS Bairro_Proprietario,
+                E_Prop.Cidade AS Cidade_Proprietario,
+                E_Prop.UF AS UF_Proprietario,
+                E_Prop.CEP AS CEP_Proprietario,
+                I.Descricao,
+                I.Valor,
+                I.Tipo_de_Imovel,
+                I.Pretensao,
+                I.Comissao,
+                I.Complemento AS Complemento_Imovel,
+                I.IPTU,
+                E_Imovel.Logradouro AS Logradouro_Imovel,
+                E_Imovel.Numero AS Numero_Imovel,
+                E_Imovel.Bairro AS Bairro_Imovel,
+                E_Imovel.Cidade AS Cidade_Imovel,
+                E_Imovel.UF AS UF_Imovel,
+                E_Imovel.CEP AS CEP_Imovel
+            FROM Proprietarios P
+            INNER JOIN Endereco E_Prop ON P.ID_Endereco = E_Prop.ID_End
+            INNER JOIN Imovel I ON P.ID = I.ID_Proprietario
+            INNER JOIN Endereco E_Imovel ON I.ID_Endereco = E_Imovel.ID_End
+            WHERE P.Nome LIKE @nome AND E_Prop.Cidade = @cidade;
+                              ";
+                using (SqlCommand cmd = new SqlCommand(SQL, con))
+                {
+                    cmd.Parameters.AddWithValue("@nome", "%" + nome);
+                    cmd.Parameters.AddWithValue("@cidade", cidade);
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
+
+        private void Button_Buscar_DBA_Click(object sender, EventArgs e)
+        {
+            string nome = Nome_Prop_Busca.Text;
+            string cidade = Combo_Cidade_Busca.SelectedItem.ToString();
+
+            DataTable resultado = FiltrarDetalhes(nome, cidade);
+
+            if (resultado.Rows.Count > 0)
+            {
+                StringBuilder detalhes = new StringBuilder();
+
+                foreach (DataRow row in resultado.Rows)
+                {
+                    detalhes.AppendLine("Proprietário");
+                    detalhes.AppendLine(row["Nome_Proprietario"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Telefone");
+                    detalhes.AppendLine(row["Telefone"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Endereço Completo");
+                    detalhes.AppendLine($"{row["Logradouro_Proprietario"]} - {row["Numero_Proprietario"]}");
+                    detalhes.AppendLine($"{row["Bairro_Proprietario"]}");
+                    detalhes.AppendLine($"{row["Cidade_Proprietario"]}");
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    // -- Nome do condominio
+
+
+                    detalhes.AppendLine("Número do Imóvel (quadra e lote/apartamento/casa");
+                    detalhes.AppendLine(row["Complemento_Imovel"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Descrição do Imóvel");
+                    detalhes.AppendLine(row["Descricao"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Tipo / Pretensão");
+                    detalhes.AppendLine($"{row["Tipo_de_Imovel"]} / {row["Pretensao"]}");
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Valor");
+                    detalhes.AppendLine(row["Valor"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("Comissão");
+                    detalhes.AppendLine(row["Comissao"].ToString());
+                    detalhes.AppendLine();
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+
+                    detalhes.AppendLine("IPTU");
+                    detalhes.AppendLine(row["IPTU"].ToString());
+                    detalhes.AppendLine();
+
+                    detalhes.AppendLine(new string('-', 50)); // Separador
+                    detalhes.AppendLine();
+
+                }
+                Detalhes_Busca.Text = detalhes.ToString();
+            }
+            else
+            {
+                Detalhes_Busca.Text = "Nenhum resultado encontrado.";
+            }
+           
+        }
+
+
+    }
+}

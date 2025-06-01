@@ -106,6 +106,12 @@
     <Compile Include="Captacao\Cadastro_Imobiliarias.Designer.cs">
       <DependentUpon>Cadastro_Imobiliarias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Detalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Detalhes.Designer.cs">
+      <DependentUpon>Detalhes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Painel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Cadastro_Imobiliarias.resx">
       <DependentUpon>Cadastro_Imobiliarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Detalhes.resx">
+      <DependentUpon>Detalhes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Painel.resx">
       <DependentUpon>Painel.cs</DependentUpon>

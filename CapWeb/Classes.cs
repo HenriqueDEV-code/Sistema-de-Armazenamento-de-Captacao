@@ -127,6 +127,7 @@ namespace CapWeb
         private string descricao;
         private string tipo_de_imovel;
         private string pretensao;
+        private string comissao;
         private string complemento;
         private decimal valor;
         private decimal iptu;
@@ -146,6 +147,12 @@ namespace CapWeb
             get { return pretensao; }
             set { pretensao = value; }
         }
+        public string Comissao
+        {
+            get { return comissao; }
+            set { comissao = value; }
+        }
+
         public string Complemento
         {
             get{ return complemento; }
