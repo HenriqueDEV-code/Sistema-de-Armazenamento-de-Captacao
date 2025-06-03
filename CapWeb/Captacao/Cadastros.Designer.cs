@@ -53,6 +53,12 @@
             this.Informe_Cep = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.area_construida = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.area_util1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.valor_codominio = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.Button_Salvar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.Descricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -67,12 +73,6 @@
             this.Combo_Tipo_de_imovel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.valor_codominio = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.area_util1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.area_construida = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -552,6 +552,122 @@
             this.guna2GroupBox3.TabIndex = 12;
             this.guna2GroupBox3.Text = "Descrição do imóvel";
             // 
+            // area_construida
+            // 
+            this.area_construida.Animated = true;
+            this.area_construida.AutoRoundedCorners = true;
+            this.area_construida.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.area_construida.DefaultText = "";
+            this.area_construida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.area_construida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.area_construida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.area_construida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.area_construida.FillColor = System.Drawing.Color.DimGray;
+            this.area_construida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.area_construida.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.area_construida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_construida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.area_construida.Location = new System.Drawing.Point(1761, 64);
+            this.area_construida.Margin = new System.Windows.Forms.Padding(6);
+            this.area_construida.Name = "area_construida";
+            this.area_construida.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_construida.PlaceholderText = "Área constrúida";
+            this.area_construida.SelectedText = "";
+            this.area_construida.Size = new System.Drawing.Size(154, 41);
+            this.area_construida.TabIndex = 31;
+            this.area_construida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_construida_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label16.Location = new System.Drawing.Point(1569, 67);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(199, 30);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "Área construída:";
+            // 
+            // area_util1
+            // 
+            this.area_util1.Animated = true;
+            this.area_util1.AutoRoundedCorners = true;
+            this.area_util1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.area_util1.DefaultText = "";
+            this.area_util1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.area_util1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.area_util1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.area_util1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.area_util1.FillColor = System.Drawing.Color.DimGray;
+            this.area_util1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.area_util1.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.area_util1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_util1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.area_util1.Location = new System.Drawing.Point(1391, 63);
+            this.area_util1.Margin = new System.Windows.Forms.Padding(6);
+            this.area_util1.Name = "area_util1";
+            this.area_util1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_util1.PlaceholderText = "Área útil";
+            this.area_util1.SelectedText = "";
+            this.area_util1.Size = new System.Drawing.Size(140, 41);
+            this.area_util1.TabIndex = 30;
+            this.area_util1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_util_KeyPress);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label15.Location = new System.Drawing.Point(1279, 67);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(114, 30);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Área útil:";
+            // 
+            // valor_codominio
+            // 
+            this.valor_codominio.Animated = true;
+            this.valor_codominio.AutoRoundedCorners = true;
+            this.valor_codominio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.valor_codominio.DefaultText = "";
+            this.valor_codominio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.valor_codominio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.valor_codominio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.valor_codominio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.valor_codominio.FillColor = System.Drawing.Color.DimGray;
+            this.valor_codominio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.valor_codominio.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.valor_codominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.valor_codominio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.valor_codominio.Location = new System.Drawing.Point(1131, 193);
+            this.valor_codominio.Margin = new System.Windows.Forms.Padding(6);
+            this.valor_codominio.Name = "valor_codominio";
+            this.valor_codominio.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.valor_codominio.PlaceholderText = "R$ 0,00";
+            this.valor_codominio.SelectedText = "";
+            this.valor_codominio.Size = new System.Drawing.Size(164, 41);
+            this.valor_codominio.TabIndex = 37;
+            this.valor_codominio.TextChanged += new System.EventHandler(this.valor_codominio_TextChanged);
+            this.valor_codominio.Enter += new System.EventHandler(this.valor_codominio_Enter);
+            this.valor_codominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valor_codominio_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label9.Location = new System.Drawing.Point(867, 197);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(259, 30);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Valor do Condomínio:";
+            // 
             // Button_Salvar_DBA
             // 
             this.Button_Salvar_DBA.Animated = true;
@@ -633,7 +749,7 @@
             this.Valor_IPTU0.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_IPTU0.Name = "Valor_IPTU0";
             this.Valor_IPTU0.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Valor_IPTU0.PlaceholderText = "R$0,00";
+            this.Valor_IPTU0.PlaceholderText = "R$ 0,00";
             this.Valor_IPTU0.SelectedText = "";
             this.Valor_IPTU0.Size = new System.Drawing.Size(216, 41);
             this.Valor_IPTU0.TabIndex = 36;
@@ -706,7 +822,7 @@
             this.Valor_Imovel.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_Imovel.Name = "Valor_Imovel";
             this.Valor_Imovel.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Valor_Imovel.PlaceholderText = "R$0,00";
+            this.Valor_Imovel.PlaceholderText = "R$ 0,00";
             this.Valor_Imovel.SelectedText = "";
             this.Valor_Imovel.Size = new System.Drawing.Size(208, 41);
             this.Valor_Imovel.TabIndex = 35;
@@ -800,122 +916,6 @@
             // 
             this.ERROR_Dados_Nulos.ContainerControl = this;
             this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
-            // 
-            // valor_codominio
-            // 
-            this.valor_codominio.Animated = true;
-            this.valor_codominio.AutoRoundedCorners = true;
-            this.valor_codominio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.valor_codominio.DefaultText = "";
-            this.valor_codominio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.valor_codominio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.valor_codominio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.valor_codominio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.valor_codominio.FillColor = System.Drawing.Color.DimGray;
-            this.valor_codominio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.valor_codominio.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.valor_codominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.valor_codominio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.valor_codominio.Location = new System.Drawing.Point(1131, 193);
-            this.valor_codominio.Margin = new System.Windows.Forms.Padding(6);
-            this.valor_codominio.Name = "valor_codominio";
-            this.valor_codominio.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.valor_codominio.PlaceholderText = "R$0,00";
-            this.valor_codominio.SelectedText = "";
-            this.valor_codominio.Size = new System.Drawing.Size(164, 41);
-            this.valor_codominio.TabIndex = 37;
-            this.valor_codominio.TextChanged += new System.EventHandler(this.valor_codominio_TextChanged);
-            this.valor_codominio.Enter += new System.EventHandler(this.valor_codominio_Enter);
-            this.valor_codominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valor_codominio_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(867, 197);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(259, 30);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Valor do Condomínio:";
-            // 
-            // area_util1
-            // 
-            this.area_util1.Animated = true;
-            this.area_util1.AutoRoundedCorners = true;
-            this.area_util1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.area_util1.DefaultText = "";
-            this.area_util1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.area_util1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.area_util1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_util1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_util1.FillColor = System.Drawing.Color.DimGray;
-            this.area_util1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.area_util1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.area_util1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.area_util1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.area_util1.Location = new System.Drawing.Point(1391, 63);
-            this.area_util1.Margin = new System.Windows.Forms.Padding(6);
-            this.area_util1.Name = "area_util1";
-            this.area_util1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.area_util1.PlaceholderText = "Área útil";
-            this.area_util1.SelectedText = "";
-            this.area_util1.Size = new System.Drawing.Size(140, 41);
-            this.area_util1.TabIndex = 30;
-            this.area_util1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_util_KeyPress);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label15.Location = new System.Drawing.Point(1279, 67);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 30);
-            this.label15.TabIndex = 48;
-            this.label15.Text = "Área útil:";
-            // 
-            // area_construida
-            // 
-            this.area_construida.Animated = true;
-            this.area_construida.AutoRoundedCorners = true;
-            this.area_construida.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.area_construida.DefaultText = "";
-            this.area_construida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.area_construida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.area_construida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_construida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_construida.FillColor = System.Drawing.Color.DimGray;
-            this.area_construida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.area_construida.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.area_construida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.area_construida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.area_construida.Location = new System.Drawing.Point(1761, 64);
-            this.area_construida.Margin = new System.Windows.Forms.Padding(6);
-            this.area_construida.Name = "area_construida";
-            this.area_construida.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.area_construida.PlaceholderText = "Área constrúida";
-            this.area_construida.SelectedText = "";
-            this.area_construida.Size = new System.Drawing.Size(154, 41);
-            this.area_construida.TabIndex = 31;
-            this.area_construida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_construida_KeyPress);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label16.Location = new System.Drawing.Point(1569, 67);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(199, 30);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "Área construída:";
             // 
             // Cadastros
             // 

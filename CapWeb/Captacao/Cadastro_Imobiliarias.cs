@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 
 namespace CapWeb.Captacao
@@ -126,37 +127,51 @@ namespace CapWeb.Captacao
             Nome_Respon_Imobiliaria.CharacterCasing = CharacterCasing.Upper;
         }
 
+        // Método genérico para formatação de moeda
+        private void FormatarMoeda(Guna.UI2.WinForms.Guna2TextBox txt)
+        {
+            if (txt.Text.Length < 4)
+            {
+                txt.Text = "R$ 0,00";
+                txt.SelectionStart = txt.Text.Length;
+                return;
+            }
+
+            string texto = txt.Text.Replace("R$", "").Replace(".", "").Replace(",", "").Trim();
+
+            if (decimal.TryParse(texto, out decimal valor))
+            {
+                valor = valor / 100; // Mantém precisão dos centavos
+                txt.Text = "R$ " + valor.ToString("N2", CultureInfo.GetCultureInfo("pt-BR"));
+                txt.SelectionStart = txt.Text.Length;
+            }
+            else
+            {
+                txt.Text = "R$ 0,00";
+                txt.SelectionStart = txt.Text.Length;
+            }
+        }
+
+
+        private void FormatarMoeda_Enter(Guna.UI2.WinForms.Guna2TextBox txt)
+        {
+            if (string.IsNullOrWhiteSpace(txt.Text))
+            {
+                txt.Text = "R$ 0,00";
+            }
+            txt.SelectionStart = txt.Text.Length;
+        }
+
         private void Valor_Enter(object sender, EventArgs e)
         {
-            if (Valor.Text == "")
-            {
-                Valor.Text = "R$ 0,00";
-            }
-            Valor.SelectionStart = Valor.Text.Length;
+            FormatarMoeda_Enter(Valor);
         }
 
         private void Valor_TextChanged(object sender, EventArgs e)
         {
-            if (Valor.Text.Length < 4)
-            {
-                Valor.Text = "R$ 0,00";
-                Valor.SelectionStart = Valor.Text.Length;
-                return;
-            }
-
-            string texto = Valor.Text.Replace("R$", "").Replace(",", "").Replace(".", "").Trim();
-
-            if (decimal.TryParse(texto, out decimal valor))
-            {
-                valor = valor / 100; // mantem a precisao dos centavos
-                Valor.Text = "R$" + valor.ToString("N2");
-                Valor.SelectionStart = Valor.Text.Length;
-            }
-            else
-            {
-                Valor.Text = "R$ 0,00";
-                Valor.SelectionStart = Valor.Text.Length;
-            }
+            Valor.TextChanged -= Valor_TextChanged;
+            FormatarMoeda(Valor);
+            Valor.TextChanged += Valor_TextChanged;
         }
     }
 }

@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalhes));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.extrair = new Guna.UI2.WinForms.Guna2Button();
             this.Button_Buscar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.Detalhes_Busca = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -36,8 +39,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Nome_Prop_Busca = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.extrair = new Guna.UI2.WinForms.Guna2Button();
+            this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +62,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1128, 694);
             this.panel1.TabIndex = 0;
+            // 
+            // extrair
+            // 
+            this.extrair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.extrair.Animated = true;
+            this.extrair.AutoRoundedCorners = true;
+            this.extrair.BackColor = System.Drawing.Color.Transparent;
+            this.extrair.BorderColor = System.Drawing.Color.Blue;
+            this.extrair.BorderRadius = 24;
+            this.extrair.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.extrair.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.extrair.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.extrair.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.extrair.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.extrair.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.extrair.ForeColor = System.Drawing.Color.Black;
+            this.extrair.IndicateFocus = true;
+            this.extrair.Location = new System.Drawing.Point(963, 632);
+            this.extrair.Name = "extrair";
+            this.extrair.Size = new System.Drawing.Size(153, 50);
+            this.extrair.TabIndex = 41;
+            this.extrair.Text = "&Extrair";
+            this.extrair.UseTransparentBackground = true;
+            this.extrair.Click += new System.EventHandler(this.extrair_Click);
             // 
             // Button_Buscar_DBA
             // 
@@ -197,29 +225,10 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Nome: ";
             // 
-            // extrair
+            // ERROR_Dados_Nulos
             // 
-            this.extrair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.extrair.Animated = true;
-            this.extrair.AutoRoundedCorners = true;
-            this.extrair.BackColor = System.Drawing.Color.Transparent;
-            this.extrair.BorderColor = System.Drawing.Color.Blue;
-            this.extrair.BorderRadius = 24;
-            this.extrair.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.extrair.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.extrair.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.extrair.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.extrair.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.extrair.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.extrair.ForeColor = System.Drawing.Color.Black;
-            this.extrair.IndicateFocus = true;
-            this.extrair.Location = new System.Drawing.Point(963, 632);
-            this.extrair.Name = "extrair";
-            this.extrair.Size = new System.Drawing.Size(153, 50);
-            this.extrair.TabIndex = 41;
-            this.extrair.Text = "&Extrair";
-            this.extrair.UseTransparentBackground = true;
-            this.extrair.Click += new System.EventHandler(this.extrair_Click);
+            this.ERROR_Dados_Nulos.ContainerControl = this;
+            this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
             // 
             // Detalhes
             // 
@@ -234,6 +243,7 @@
             this.Load += new System.EventHandler(this.Detalhes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +259,6 @@
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2Button Button_Buscar_DBA;
         private Guna.UI2.WinForms.Guna2Button extrair;
+        private System.Windows.Forms.ErrorProvider ERROR_Dados_Nulos;
     }
 }

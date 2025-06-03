@@ -85,7 +85,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 56);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1921, 105);
+            this.guna2Panel1.Size = new System.Drawing.Size(1901, 105);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -255,7 +255,7 @@
             this.Conectado_VPN.ImageRotate = 0F;
             this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(1886, 20);
+            this.Conectado_VPN.Location = new System.Drawing.Point(1866, 20);
             this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Conectado_VPN.Name = "Conectado_VPN";
             this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
@@ -275,7 +275,7 @@
             this.Nao_Conectado_VPN.ImageRotate = 0F;
             this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1885, 20);
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1865, 20);
             this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
             this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -326,7 +326,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.LB_Imoveis_Pagos);
-            this.panel2.Location = new System.Drawing.Point(1077, 143);
+            this.panel2.Location = new System.Drawing.Point(1071, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 151);
             this.panel2.TabIndex = 6;
@@ -350,7 +350,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.LB_Imoveis_Enviados);
-            this.panel3.Location = new System.Drawing.Point(559, 143);
+            this.panel3.Location = new System.Drawing.Point(544, 148);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 151);
             this.panel3.TabIndex = 7;
@@ -388,7 +388,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(555, 118);
+            this.label7.Location = new System.Drawing.Point(540, 123);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 22);
@@ -402,7 +402,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(1079, 118);
+            this.label8.Location = new System.Drawing.Point(1073, 123);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 22);
@@ -415,7 +415,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.LB_Imoveis_N_Pagos);
-            this.panel4.Location = new System.Drawing.Point(1630, 148);
+            this.panel4.Location = new System.Drawing.Point(1610, 148);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(274, 151);
             this.panel4.TabIndex = 11;
@@ -440,7 +440,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(1626, 123);
+            this.label9.Location = new System.Drawing.Point(1606, 123);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(170, 22);
@@ -467,7 +467,7 @@
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel5.Location = new System.Drawing.Point(-1, 156);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1921, 915);
+            this.panel5.Size = new System.Drawing.Size(1901, 795);
             this.panel5.TabIndex = 13;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -500,7 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1070);
+            this.ClientSize = new System.Drawing.Size(1900, 950);
             this.Controls.Add(this.Conectado_VPN);
             this.Controls.Add(this.Nao_Conectado_VPN);
             this.Controls.Add(this.panel5);
