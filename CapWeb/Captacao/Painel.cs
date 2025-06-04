@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
+using System.Data.SqlClient;
 
 namespace CapWeb.Captacao
 {
@@ -74,11 +75,13 @@ namespace CapWeb.Captacao
             timerLoad.Interval = 1000; // Tempo em milissegundos (1000ms = 1s)
             timerLoad.Tick += TimerLoad_Tick;
             timerLoad.Start();
+            
         }
 
         private void TimerLoad_Tick(object sender, EventArgs e)
         {
             VerificarConexao();
+            AtualizarTotalProprietarios();
         }
 
         /// <summary>
@@ -120,16 +123,68 @@ namespace CapWeb.Captacao
             }
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        
+        private int Contar_Proprietarios()
+        {
+            int quantidade = 0;
+
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT COUNT(*) FROM Proprietarios";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        quantidade = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao contar proprietários: " + ex.Message);
+                    }
+                }
+            }
+            return quantidade;
+        }
+
+        private int Contar_Imobiliarias()
+        {
+            int quantidade = 0;
+
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT COUNT(*) FROM Imobiliaria";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        quantidade = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao contar proprietários: " + ex.Message);
+                    }
+                }
+            }
+            return quantidade;
+        }
+
+
+        private void AtualizarTotalProprietarios()
+        {
+            int total = Contar_Proprietarios();
+            int totalImob = Contar_Imobiliarias();
+            LB_Imoveis_Cadastrados.Text = $"{total}";
+            LB_Imobiliarias_Cadastradas.Text = $"{totalImob}";
+        }
     }
 }

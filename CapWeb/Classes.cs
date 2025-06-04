@@ -99,7 +99,7 @@ namespace CapWeb
         private string nome_imobiliaria;
         private string nome_responsavel;
         private string telefone_imobiliaria;
-        private decimal valor_cobrado;
+        private string valor_cobrado;
 
         public string Nome_Imobiliaria
         {
@@ -113,7 +113,7 @@ namespace CapWeb
             set { nome_responsavel = value; }
         }
 
-        public decimal Valor_cobrado
+        public string Valor_cobrado
         {
             get { return valor_cobrado; }
             set {  valor_cobrado = value; }

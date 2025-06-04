@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_Imobiliarias));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.Salvar = new Guna.UI2.WinForms.Guna2Button();
             this.Valor = new Guna.UI2.WinForms.Guna2TextBox();
@@ -38,7 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Nome_Imobiliaria = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -85,6 +89,7 @@
             this.Salvar.TabIndex = 39;
             this.Salvar.Text = "&SALVAR";
             this.Salvar.UseTransparentBackground = true;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // Valor
             // 
@@ -244,6 +249,11 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Nome: ";
             // 
+            // ERROR_Dados_Nulos
+            // 
+            this.ERROR_Dados_Nulos.ContainerControl = this;
+            this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
+            // 
             // Cadastro_Imobiliarias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +267,7 @@
             this.Text = "Cadastro_Imobiliarias";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +284,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Valor;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button Salvar;
+        private System.Windows.Forms.ErrorProvider ERROR_Dados_Nulos;
     }
 }

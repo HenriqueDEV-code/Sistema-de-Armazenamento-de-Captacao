@@ -130,6 +130,16 @@
     <Compile Include="Captacao\Tabela.Designer.cs">
       <DependentUpon>Tabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cap_Imoveis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cap_Imoveis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cap_ImoveisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +171,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Cap_Imoveis.xsc">
+      <DependentUpon>Cap_Imoveis.xsd</DependentUpon>
+    </None>
+    <None Include="Cap_Imoveis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cap_Imoveis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cap_Imoveis.xss">
+      <DependentUpon>Cap_Imoveis.xsd</DependentUpon>
+    </None>
+    <None Include="Cap_ImoveisDataSet.xsc">
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Cap_ImoveisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cap_ImoveisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cap_ImoveisDataSet.xss">
+      <DependentUpon>Cap_ImoveisDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

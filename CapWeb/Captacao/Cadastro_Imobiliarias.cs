@@ -173,5 +173,105 @@ namespace CapWeb.Captacao
             FormatarMoeda(Valor);
             Valor.TextChanged += Valor_TextChanged;
         }
+
+        // -- Salvar Imobiliarias
+
+        public void Salvar_Imobiliaria(Imobiliaria imob)
+        {
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                conn.Open();
+
+                SqlTransaction transaction = conn.BeginTransaction();
+
+
+                try
+                {
+                    // -- Inserir Imobiliaria -- 
+
+                    string QUERY_IMOBILIARIA = @"INSERT INTO Imobiliaria (Nome_Imobiliaria, Nome_Responsavel, Telefone_Imobiliaria, Valor_Cobrado)
+                                                VALUES (@Nome_Imobiliaria, @Nome_Responsavel, @Telefone_Imobiliaria, @Valor_Cobrado);
+                                                 SELECT SCOPE_IDENTITY();";
+
+                    SqlCommand cmdImobiliaria = new SqlCommand(QUERY_IMOBILIARIA, conn, transaction);
+                    cmdImobiliaria.Parameters.AddWithValue("@Nome_Imobiliaria", imob.Nome_Imobiliaria);
+                    cmdImobiliaria.Parameters.AddWithValue("@Nome_Responsavel", imob.Nome_Responsavel);
+                    cmdImobiliaria.Parameters.AddWithValue("@Telefone_Imobiliaria", imob.Telefone_Imobiliaria);
+                    cmdImobiliaria.Parameters.AddWithValue("@Valor_Cobrado", imob.Valor_cobrado);
+
+                    int idImobiliaria = Convert.ToInt32(cmdImobiliaria.ExecuteScalar());
+                   
+                    transaction.Commit();
+
+                    MessageBox.Show("Dados inseridos com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show($"Erro ao inserir dados: {ex.Message}");
+                }
+            }
+        }
+
+
+        void Clear()
+        {
+            Nome_Imobiliaria.Clear();
+            Nome_Respon_Imobiliaria.Clear();
+            Telefone_imobiliaria.Clear();
+            Valor.Clear();
+        }
+
+        bool Error_Nulos()
+        {
+            bool temErro = false;
+            ERROR_Dados_Nulos.Clear();  // Limpa erros anteriores
+
+            if (string.IsNullOrWhiteSpace(Nome_Imobiliaria.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Nome_Imobiliaria, "Campo obrigatório.");
+                temErro = true;
+            }
+            if (string.IsNullOrWhiteSpace(Nome_Respon_Imobiliaria.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Nome_Respon_Imobiliaria, "Campo obrigatório.");
+                temErro = true;
+            }
+            if (string.IsNullOrWhiteSpace(Telefone_imobiliaria.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Telefone_imobiliaria, "Campo obrigatório.");
+                temErro = true;
+            }
+            if (string.IsNullOrWhiteSpace(Valor.Text))
+            {
+                ERROR_Dados_Nulos.SetError(Valor, "Campo obrigatório.");
+                temErro = true;
+            }
+
+            return temErro;
+        }
+
+
+
+        private void Salvar_Click(object sender, EventArgs e)
+        {
+            if (Error_Nulos())
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;  // Impede de salvar
+            }
+
+            Imobiliaria imob = new Imobiliaria
+            {
+                Nome_Imobiliaria = Nome_Imobiliaria.Text,
+                Nome_Responsavel = Nome_Respon_Imobiliaria.Text,
+                Telefone_Imobiliaria = Telefone_imobiliaria.Text,
+                Valor_cobrado = Valor.Text
+            };
+
+            Salvar_Imobiliaria(imob);
+            Clear();
+
+        }
     }
 }

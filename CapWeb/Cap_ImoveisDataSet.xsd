@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Cap_ImoveisDataSet" targetNamespace="http://tempuri.org/Cap_ImoveisDataSet.xsd" xmlns:mstns="http://tempuri.org/Cap_ImoveisDataSet.xsd" xmlns="http://tempuri.org/Cap_ImoveisDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Cap_ImoveisConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Cap_ImoveisConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapWeb.Properties.Settings.GlobalReference.Default.Cap_ImoveisConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EnderecoTableAdapter" GeneratorDataComponentClassName="EnderecoTableAdapter" Name="Endereco" UserDataComponentName="EnderecoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cap_ImoveisConnectionString (Settings)" DbObjectName="Cap_Imoveis.dbo.Endereco" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Logradouro, Numero, Bairro, Cidade, Nome_Condominio FROM dbo.Endereco</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Logradouro" DataSetColumn="Logradouro" />
+              <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
+              <Mapping SourceColumn="Bairro" DataSetColumn="Bairro" />
+              <Mapping SourceColumn="Cidade" DataSetColumn="Cidade" />
+              <Mapping SourceColumn="Nome_Condominio" DataSetColumn="Nome_Condominio" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImovelTableAdapter" GeneratorDataComponentClassName="ImovelTableAdapter" Name="Imovel" UserDataComponentName="ImovelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cap_ImoveisConnectionString (Settings)" DbObjectName="Cap_Imoveis.dbo.Imovel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Descricao, Valor, Tipo_de_Imovel, Pretensao, Comissao, Complemento, IPTU, Valor_Condominio, Util, Contruida FROM dbo.Imovel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="Valor" DataSetColumn="Valor" />
+              <Mapping SourceColumn="Tipo_de_Imovel" DataSetColumn="Tipo_de_Imovel" />
+              <Mapping SourceColumn="Pretensao" DataSetColumn="Pretensao" />
+              <Mapping SourceColumn="Comissao" DataSetColumn="Comissao" />
+              <Mapping SourceColumn="Complemento" DataSetColumn="Complemento" />
+              <Mapping SourceColumn="IPTU" DataSetColumn="IPTU" />
+              <Mapping SourceColumn="Valor_Condominio" DataSetColumn="Valor_Condominio" />
+              <Mapping SourceColumn="Util" DataSetColumn="Util" />
+              <Mapping SourceColumn="Contruida" DataSetColumn="Contruida" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Proprietario_ImobiliariaTableAdapter" GeneratorDataComponentClassName="Proprietario_ImobiliariaTableAdapter" Name="Proprietario_Imobiliaria" UserDataComponentName="Proprietario_ImobiliariaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cap_ImoveisConnectionString (Settings)" DbObjectName="Cap_Imoveis.dbo.Proprietario_Imobiliaria" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Proprietario_Imobiliaria] WHERE (([ID_Proprietario] = @Original_ID_Proprietario) AND ([ID_Imobiliaria] = @Original_ID_Imobiliaria))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_Proprietario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Proprietario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_Imobiliaria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Imobiliaria" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Proprietario_Imobiliaria] ([ID_Proprietario], [ID_Imobiliaria]) VALUES (@ID_Proprietario, @ID_Imobiliaria);
+SELECT ID_Proprietario, ID_Imobiliaria FROM Proprietario_Imobiliaria WHERE (ID_Imobiliaria = @ID_Imobiliaria) AND (ID_Proprietario = @ID_Proprietario)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID_Proprietario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Proprietario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID_Imobiliaria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Imobiliaria" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Proprietario, ID_Imobiliaria FROM dbo.Proprietario_Imobiliaria</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Proprietario_Imobiliaria] SET [ID_Proprietario] = @ID_Proprietario, [ID_Imobiliaria] = @ID_Imobiliaria WHERE (([ID_Proprietario] = @Original_ID_Proprietario) AND ([ID_Imobiliaria] = @Original_ID_Imobiliaria));
+SELECT ID_Proprietario, ID_Imobiliaria FROM Proprietario_Imobiliaria WHERE (ID_Imobiliaria = @ID_Imobiliaria) AND (ID_Proprietario = @ID_Proprietario)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID_Proprietario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Proprietario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID_Imobiliaria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Imobiliaria" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_Proprietario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Proprietario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_Imobiliaria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_Imobiliaria" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Proprietario" DataSetColumn="ID_Proprietario" />
+              <Mapping SourceColumn="ID_Imobiliaria" DataSetColumn="ID_Imobiliaria" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProprietariosTableAdapter" GeneratorDataComponentClassName="ProprietariosTableAdapter" Name="Proprietarios" UserDataComponentName="ProprietariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cap_ImoveisConnectionString (Settings)" DbObjectName="Cap_Imoveis.dbo.Proprietarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Proprietarios] WHERE (([ID] = @Original_ID) AND ([Nome] = @Original_Nome) AND ([Telefone] = @Original_Telefone))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Nome, Telefone FROM dbo.Proprietarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Proprietarios] SET [Nome] = @Nome, [Telefone] = @Telefone WHERE (([ID] = @Original_ID) AND ([Nome] = @Original_Nome) AND ([Telefone] = @Original_Telefone));
+SELECT ID, Nome, Telefone FROM Proprietarios WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Telefone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Telefone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Cap_Imoveis.dbo.Proprietarios" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Cap_ImoveisDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Cap_ImoveisDataSet" msprop:Generator_DataSetName="Cap_ImoveisDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Endereco" msprop:Generator_RowEvHandlerName="EnderecoRowChangeEventHandler" msprop:Generator_RowDeletedName="EnderecoRowDeleted" msprop:Generator_RowDeletingName="EnderecoRowDeleting" msprop:Generator_RowEvArgName="EnderecoRowChangeEvent" msprop:Generator_TablePropName="Endereco" msprop:Generator_RowChangedName="EnderecoRowChanged" msprop:Generator_RowChangingName="EnderecoRowChanging" msprop:Generator_TableClassName="EnderecoDataTable" msprop:Generator_RowClassName="EnderecoRow" msprop:Generator_TableVarName="tableEndereco" msprop:Generator_UserTableName="Endereco">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logradouro" msprop:Generator_ColumnPropNameInRow="Logradouro" msprop:Generator_ColumnPropNameInTable="LogradouroColumn" msprop:Generator_ColumnVarNameInTable="columnLogradouro" msprop:Generator_UserColumnName="Logradouro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_UserColumnName="Numero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bairro" msprop:Generator_ColumnPropNameInRow="Bairro" msprop:Generator_ColumnPropNameInTable="BairroColumn" msprop:Generator_ColumnVarNameInTable="columnBairro" msprop:Generator_UserColumnName="Bairro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_UserColumnName="Cidade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nome_Condominio" msprop:Generator_ColumnPropNameInRow="Nome_Condominio" msprop:Generator_ColumnPropNameInTable="Nome_CondominioColumn" msprop:Generator_ColumnVarNameInTable="columnNome_Condominio" msprop:Generator_UserColumnName="Nome_Condominio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Imovel" msprop:Generator_RowEvHandlerName="ImovelRowChangeEventHandler" msprop:Generator_RowDeletedName="ImovelRowDeleted" msprop:Generator_RowDeletingName="ImovelRowDeleting" msprop:Generator_RowEvArgName="ImovelRowChangeEvent" msprop:Generator_TablePropName="Imovel" msprop:Generator_RowChangedName="ImovelRowChanged" msprop:Generator_RowChangingName="ImovelRowChanging" msprop:Generator_TableClassName="ImovelDataTable" msprop:Generator_RowClassName="ImovelRow" msprop:Generator_TableVarName="tableImovel" msprop:Generator_UserTableName="Imovel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Descricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_UserColumnName="Valor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo_de_Imovel" msprop:Generator_ColumnPropNameInRow="Tipo_de_Imovel" msprop:Generator_ColumnPropNameInTable="Tipo_de_ImovelColumn" msprop:Generator_ColumnVarNameInTable="columnTipo_de_Imovel" msprop:Generator_UserColumnName="Tipo_de_Imovel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pretensao" msprop:Generator_ColumnPropNameInRow="Pretensao" msprop:Generator_ColumnPropNameInTable="PretensaoColumn" msprop:Generator_ColumnVarNameInTable="columnPretensao" msprop:Generator_UserColumnName="Pretensao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comissao" msprop:Generator_ColumnPropNameInRow="Comissao" msprop:Generator_ColumnPropNameInTable="ComissaoColumn" msprop:Generator_ColumnVarNameInTable="columnComissao" msprop:Generator_UserColumnName="Comissao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Complemento" msprop:Generator_ColumnPropNameInRow="Complemento" msprop:Generator_ColumnPropNameInTable="ComplementoColumn" msprop:Generator_ColumnVarNameInTable="columnComplemento" msprop:Generator_UserColumnName="Complemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPTU" msprop:Generator_ColumnPropNameInRow="IPTU" msprop:Generator_ColumnPropNameInTable="IPTUColumn" msprop:Generator_ColumnVarNameInTable="columnIPTU" msprop:Generator_UserColumnName="IPTU">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valor_Condominio" msprop:Generator_ColumnPropNameInRow="Valor_Condominio" msprop:Generator_ColumnPropNameInTable="Valor_CondominioColumn" msprop:Generator_ColumnVarNameInTable="columnValor_Condominio" msprop:Generator_UserColumnName="Valor_Condominio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Util" msprop:Generator_ColumnPropNameInRow="Util" msprop:Generator_ColumnPropNameInTable="UtilColumn" msprop:Generator_ColumnVarNameInTable="columnUtil" msprop:Generator_UserColumnName="Util">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contruida" msprop:Generator_ColumnPropNameInRow="Contruida" msprop:Generator_ColumnPropNameInTable="ContruidaColumn" msprop:Generator_ColumnVarNameInTable="columnContruida" msprop:Generator_UserColumnName="Contruida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proprietario_Imobiliaria" msprop:Generator_RowEvHandlerName="Proprietario_ImobiliariaRowChangeEventHandler" msprop:Generator_RowDeletedName="Proprietario_ImobiliariaRowDeleted" msprop:Generator_RowDeletingName="Proprietario_ImobiliariaRowDeleting" msprop:Generator_RowEvArgName="Proprietario_ImobiliariaRowChangeEvent" msprop:Generator_TablePropName="Proprietario_Imobiliaria" msprop:Generator_RowChangedName="Proprietario_ImobiliariaRowChanged" msprop:Generator_RowChangingName="Proprietario_ImobiliariaRowChanging" msprop:Generator_TableClassName="Proprietario_ImobiliariaDataTable" msprop:Generator_RowClassName="Proprietario_ImobiliariaRow" msprop:Generator_TableVarName="tableProprietario_Imobiliaria" msprop:Generator_UserTableName="Proprietario_Imobiliaria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Proprietario" msprop:Generator_ColumnPropNameInRow="ID_Proprietario" msprop:Generator_ColumnPropNameInTable="ID_ProprietarioColumn" msprop:Generator_ColumnVarNameInTable="columnID_Proprietario" msprop:Generator_UserColumnName="ID_Proprietario" type="xs:int" />
+              <xs:element name="ID_Imobiliaria" msprop:Generator_ColumnPropNameInRow="ID_Imobiliaria" msprop:Generator_ColumnPropNameInTable="ID_ImobiliariaColumn" msprop:Generator_ColumnVarNameInTable="columnID_Imobiliaria" msprop:Generator_UserColumnName="ID_Imobiliaria" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proprietarios" msprop:Generator_RowEvHandlerName="ProprietariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProprietariosRowDeleted" msprop:Generator_RowDeletingName="ProprietariosRowDeleting" msprop:Generator_RowEvArgName="ProprietariosRowChangeEvent" msprop:Generator_TablePropName="Proprietarios" msprop:Generator_RowChangedName="ProprietariosRowChanged" msprop:Generator_RowChangingName="ProprietariosRowChanging" msprop:Generator_TableClassName="ProprietariosDataTable" msprop:Generator_RowClassName="ProprietariosRow" msprop:Generator_TableVarName="tableProprietarios" msprop:Generator_UserTableName="Proprietarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Nome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_UserColumnName="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_UserColumnName="Telefone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Proprietario_Imobiliaria" />
+      <xs:field xpath="mstns:ID_Proprietario" />
+      <xs:field xpath="mstns:ID_Imobiliaria" />
+    </xs:unique>
+    <xs:unique name="Proprietarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Proprietarios" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_PI_Proprietario" msdata:parent="Proprietarios" msdata:child="Proprietario_Imobiliaria" msdata:parentkey="ID" msdata:childkey="ID_Proprietario" msprop:Generator_UserParentTable="Proprietarios" msprop:Generator_UserChildTable="Proprietario_Imobiliaria" msprop:Generator_RelationVarName="relationFK_PI_Proprietario" msprop:Generator_UserRelationName="FK_PI_Proprietario" msprop:Generator_ChildPropName="GetProprietario_ImobiliariaRows" msprop:Generator_ParentPropName="ProprietariosRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
