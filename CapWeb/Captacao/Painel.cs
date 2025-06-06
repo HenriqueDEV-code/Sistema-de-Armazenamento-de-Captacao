@@ -65,8 +65,14 @@ namespace CapWeb.Captacao
             janeladetalhes.Show();
         }
 
+        private void Imobiliarias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
 
-
+            Vincular_Imob janelaImobiliarias = new Vincular_Imob(DBA);
+            janelaImobiliarias.FormClosed += (s, args) => this.Show();
+            janelaImobiliarias.Show();
+        }
 
 
         private void Painel_Load(object sender, EventArgs e)
@@ -186,5 +192,7 @@ namespace CapWeb.Captacao
             LB_Imoveis_Cadastrados.Text = $"{total}";
             LB_Imobiliarias_Cadastradas.Text = $"{totalImob}";
         }
+
+        
     }
 }

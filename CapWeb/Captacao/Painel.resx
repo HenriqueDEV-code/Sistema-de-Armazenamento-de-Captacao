@@ -118,6 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Imobiliarias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAABDpJREFUeF7tmk2MZFMYhq9/8ROkVd37vqe6itZImiDpIISlxFr8LGyxsJbYEokZ
+        drO0ZmOQSSRmpseOBYKIn2HBSgbTEiaNhPgbeSffuU5/6lZNuqprbpXzJF+665z3nL7fe88599xTXRSZ
+        TCaTyWQymUxmVpBcJvkqyZ8sDpC83usWEiUP4AeSJ9MA8KPqvH7hsDuvhN8IIfQUJA9a2X6vXzhsyJ9U
+        4kmZpoRGwtZ29QJC8vgIA45vVy8YVVXdSnLTktWwV+KKQ1a2KY1vN/esr6+fB+BJAL/7xW9I/EFy7+rq
+        6gW+n7mk1+vdRvKoJfenkuv1eqskXwLwrYLki1a21zTSHlVb39/cMOSun1ZCJG8B8FFq2GAwuNDrWs2k
+        SezUvDPOtC98UiNnym5d7LRNnTpKEsBTu32BQwzeB+Air5spIYTb/Qo/jbvehB8NAL4EcLfX7TpK8kw+
+        stxo+IvkCzMbDXbXP5/VXW9iV0bD2tra+SSfs82JElyYAPCNbpZy9HnX2LD+T+MFiz0+7xpzSaI7fd28
+        A+Au5aYcfV1NdMmXLwpj8xsrmHPG5tck6HQ6lwBYT6PT6VReF1leXr7G62PoEVYUxblR2+/3rxjVlxat
+        bre7kpaVZXmj79dHWZYXp21EU341TQKSR2Kdi7d1Mak2hHAzyb+HaOsA8EzUA/gYwImqqgZpPxHt+Ky/
+        O/QZwMO+v4Y4OKSvU3W+vKZJQPJTq9Ou7wPbhPxsyZwgeV3UVlV1r2m3pPUB4B0A90S9tVc/bxZFcVb9
+        R/+tf0X1IYT79bksyxtIvpX091VyHfHvvE/ycd9XU341TYJoQAjhpli2tLR0KYDXrc2BWJ4YcKjuYATR
+        AEvisSH12wzwVFV1n7V/zdd5mvKraRIMM0Bo7mp4AvitKIpzVDaJARo1fiq02gAtZkpeJsTt8AQGbNjP
+        I+lUaLUBJB+0Nl/Esp0aEEK4luT3+h3Ao0l9ewwg+UQI4QGSD2nbDOBXu+BHojYxYFhs9vt9pH1HAwaD
+        weXWt3RbAPpW3yoDfGj+P59qRxkA4Fi32y1TfWqAfd5v+g1NhbYZsGEXeNg+f+fP73c6BaIBVVV10qnQ
+        KgOSTc/ZiSnbnreTGiCStUVT4d02GqAyrQO6S1+no2AaBlj5qTsfo3UGaBQA+MTa1KNgigZcmXyP2EoD
+        6qGqUaAjKpWdxlb4PWliH00GiDjK2mDAYT3y/Apua8GHJH+JCWivYAeV9fD1AeDp2AHJz/QfI9FAD4CX
+        1V/ToaudUeplaZ+v8zTlV9Mk0Ilrr9cLvlzotdM/28uyvNq/nsbQ22LcNouVlZXLtPKn7VNkjH8d9pRl
+        eVWTgSlN+dWMFcw5Y/MbK5hzxuYXD0V1gOjr5h19Z2C5HfN1NToyji4tcDzr866xL0b2JMfjCxO680p+
+        5BcjmUwmk8lkMpnM/4d/APUztye2g7l/AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="Cadastro_Imobiliarias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

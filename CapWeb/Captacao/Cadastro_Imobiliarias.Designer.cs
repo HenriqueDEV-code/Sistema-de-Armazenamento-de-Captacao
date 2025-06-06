@@ -264,7 +264,7 @@
             this.Name = "Cadastro_Imobiliarias";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro_Imobiliarias";
+            this.Text = "Cadastro de Imobiliárias";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).EndInit();

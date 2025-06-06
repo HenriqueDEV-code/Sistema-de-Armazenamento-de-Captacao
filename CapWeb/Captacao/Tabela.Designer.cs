@@ -38,22 +38,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tabela));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cap_Imoveis = new CapWeb.Cap_Imoveis();
-            this.proprietariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proprietariosTableAdapter = new CapWeb.Cap_ImoveisTableAdapters.ProprietariosTableAdapter();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proprietariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cap_Imoveis = new CapWeb.Cap_Imoveis();
+            this.proprietariosTableAdapter = new CapWeb.Cap_ImoveisTableAdapters.ProprietariosTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.enderecoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enderecoTableAdapter = new CapWeb.Cap_ImoveisTableAdapters.EnderecoTableAdapter();
-            this.logradouroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeCondominioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.imovelTableAdapter = new CapWeb.Cap_ImoveisTableAdapters.ImovelTableAdapter();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipodeImovelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +55,16 @@
             this.complementoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iPTUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorCondominioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imovelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imovelTableAdapter = new CapWeb.Cap_ImoveisTableAdapters.ImovelTableAdapter();
+            this.logradouroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeCondominioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cap_Imoveis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proprietariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cap_Imoveis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enderecoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -112,20 +112,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(244, 886);
             this.dataGridView1.TabIndex = 0;
             // 
-            // cap_Imoveis
-            // 
-            this.cap_Imoveis.DataSetName = "Cap_Imoveis";
-            this.cap_Imoveis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proprietariosBindingSource
-            // 
-            this.proprietariosBindingSource.DataMember = "Proprietarios";
-            this.proprietariosBindingSource.DataSource = this.cap_Imoveis;
-            // 
-            // proprietariosTableAdapter
-            // 
-            this.proprietariosTableAdapter.ClearBeforeFill = true;
-            // 
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
@@ -137,6 +123,20 @@
             this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            // 
+            // proprietariosBindingSource
+            // 
+            this.proprietariosBindingSource.DataMember = "Proprietarios";
+            this.proprietariosBindingSource.DataSource = this.cap_Imoveis;
+            // 
+            // cap_Imoveis
+            // 
+            this.cap_Imoveis.DataSetName = "Cap_Imoveis";
+            this.cap_Imoveis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proprietariosTableAdapter
+            // 
+            this.proprietariosTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView2
             // 
@@ -183,36 +183,6 @@
             // 
             this.enderecoTableAdapter.ClearBeforeFill = true;
             // 
-            // logradouroDataGridViewTextBoxColumn
-            // 
-            this.logradouroDataGridViewTextBoxColumn.DataPropertyName = "Logradouro";
-            this.logradouroDataGridViewTextBoxColumn.HeaderText = "Logradouro";
-            this.logradouroDataGridViewTextBoxColumn.Name = "logradouroDataGridViewTextBoxColumn";
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            // 
-            // bairroDataGridViewTextBoxColumn
-            // 
-            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            // 
-            // nomeCondominioDataGridViewTextBoxColumn
-            // 
-            this.nomeCondominioDataGridViewTextBoxColumn.DataPropertyName = "Nome_Condominio";
-            this.nomeCondominioDataGridViewTextBoxColumn.HeaderText = "Nome_Condominio";
-            this.nomeCondominioDataGridViewTextBoxColumn.Name = "nomeCondominioDataGridViewTextBoxColumn";
-            // 
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
@@ -251,15 +221,6 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(842, 886);
             this.dataGridView3.TabIndex = 2;
-            // 
-            // imovelBindingSource
-            // 
-            this.imovelBindingSource.DataMember = "Imovel";
-            this.imovelBindingSource.DataSource = this.cap_Imoveis;
-            // 
-            // imovelTableAdapter
-            // 
-            this.imovelTableAdapter.ClearBeforeFill = true;
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
@@ -309,6 +270,47 @@
             this.valorCondominioDataGridViewTextBoxColumn.HeaderText = "Valor_Condominio";
             this.valorCondominioDataGridViewTextBoxColumn.Name = "valorCondominioDataGridViewTextBoxColumn";
             // 
+            // imovelBindingSource
+            // 
+            this.imovelBindingSource.DataMember = "Imovel";
+            this.imovelBindingSource.DataSource = this.cap_Imoveis;
+            // 
+            // imovelTableAdapter
+            // 
+            this.imovelTableAdapter.ClearBeforeFill = true;
+            // 
+            // logradouroDataGridViewTextBoxColumn
+            // 
+            this.logradouroDataGridViewTextBoxColumn.DataPropertyName = "Logradouro";
+            this.logradouroDataGridViewTextBoxColumn.HeaderText = "Logradouro";
+            this.logradouroDataGridViewTextBoxColumn.Name = "logradouroDataGridViewTextBoxColumn";
+            this.logradouroDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // bairroDataGridViewTextBoxColumn
+            // 
+            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "Bairro";
+            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
+            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            // 
+            // nomeCondominioDataGridViewTextBoxColumn
+            // 
+            this.nomeCondominioDataGridViewTextBoxColumn.DataPropertyName = "Nome_Condominio";
+            this.nomeCondominioDataGridViewTextBoxColumn.HeaderText = "Nome_Condominio";
+            this.nomeCondominioDataGridViewTextBoxColumn.Name = "nomeCondominioDataGridViewTextBoxColumn";
+            // 
             // Tabela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,8 +327,8 @@
             this.Text = "Tabela";
             this.Load += new System.EventHandler(this.Tabela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cap_Imoveis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proprietariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cap_Imoveis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enderecoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -346,11 +348,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource enderecoBindingSource;
         private Cap_ImoveisTableAdapters.EnderecoTableAdapter enderecoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logradouroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeCondominioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource imovelBindingSource;
         private Cap_ImoveisTableAdapters.ImovelTableAdapter imovelTableAdapter;
@@ -362,5 +359,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn complementoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iPTUDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorCondominioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logradouroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeCondominioDataGridViewTextBoxColumn;
     }
 }

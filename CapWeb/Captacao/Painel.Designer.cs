@@ -30,18 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.Cadastro_Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.Detalhes = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.Relatorio = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.Cadastro = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.Tabela = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LB_Imoveis_Cadastrados = new System.Windows.Forms.Label();
@@ -58,6 +52,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ON_OFF = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Cadastro_Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Detalhes = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Relatorio = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Cadastro = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Tabela = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +73,8 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.guna2Panel1.Controls.Add(this.Imobiliarias);
+            this.guna2Panel1.Controls.Add(this.label12);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.Cadastro_Imobiliarias);
             this.guna2Panel1.Controls.Add(this.label4);
@@ -89,6 +93,19 @@
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(602, 74);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 22);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Imobiliária";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -102,24 +119,6 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "Detalhes";
             // 
-            // Cadastro_Imobiliarias
-            // 
-            this.Cadastro_Imobiliarias.BackColor = System.Drawing.Color.Transparent;
-            this.Cadastro_Imobiliarias.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Cadastro_Imobiliarias.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Cadastro_Imobiliarias.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro_Imobiliarias.Image")));
-            this.Cadastro_Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Cadastro_Imobiliarias.ImageRotate = 0F;
-            this.Cadastro_Imobiliarias.IndicateFocus = true;
-            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(456, 8);
-            this.Cadastro_Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
-            this.Cadastro_Imobiliarias.Name = "Cadastro_Imobiliarias";
-            this.Cadastro_Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Cadastro_Imobiliarias.Size = new System.Drawing.Size(71, 66);
-            this.Cadastro_Imobiliarias.TabIndex = 2;
-            this.Cadastro_Imobiliarias.UseTransparentBackground = true;
-            this.Cadastro_Imobiliarias.Click += new System.EventHandler(this.Cadastro_Imobiliarias_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -132,24 +131,6 @@
             this.label4.Size = new System.Drawing.Size(177, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cadastro Imobiliárias";
-            // 
-            // Detalhes
-            // 
-            this.Detalhes.BackColor = System.Drawing.Color.Transparent;
-            this.Detalhes.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Detalhes.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Detalhes.Image = ((System.Drawing.Image)(resources.GetObject("Detalhes.Image")));
-            this.Detalhes.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Detalhes.ImageRotate = 0F;
-            this.Detalhes.IndicateFocus = true;
-            this.Detalhes.Location = new System.Drawing.Point(208, 8);
-            this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
-            this.Detalhes.Name = "Detalhes";
-            this.Detalhes.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Detalhes.Size = new System.Drawing.Size(71, 66);
-            this.Detalhes.TabIndex = 6;
-            this.Detalhes.UseTransparentBackground = true;
-            this.Detalhes.Click += new System.EventHandler(this.Detalhes_Click);
             // 
             // label3
             // 
@@ -165,43 +146,6 @@
             this.label3.Text = "Relatório";
             this.label3.Visible = false;
             // 
-            // Relatorio
-            // 
-            this.Relatorio.BackColor = System.Drawing.Color.Transparent;
-            this.Relatorio.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Relatorio.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Relatorio.Image = ((System.Drawing.Image)(resources.GetObject("Relatorio.Image")));
-            this.Relatorio.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Relatorio.ImageRotate = 0F;
-            this.Relatorio.IndicateFocus = true;
-            this.Relatorio.Location = new System.Drawing.Point(1804, 8);
-            this.Relatorio.Margin = new System.Windows.Forms.Padding(2);
-            this.Relatorio.Name = "Relatorio";
-            this.Relatorio.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Relatorio.Size = new System.Drawing.Size(71, 66);
-            this.Relatorio.TabIndex = 4;
-            this.Relatorio.UseTransparentBackground = true;
-            this.Relatorio.Visible = false;
-            this.Relatorio.Click += new System.EventHandler(this.Relatorio_Click);
-            // 
-            // Cadastro
-            // 
-            this.Cadastro.BackColor = System.Drawing.Color.Transparent;
-            this.Cadastro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Cadastro.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Cadastro.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro.Image")));
-            this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Cadastro.ImageRotate = 0F;
-            this.Cadastro.IndicateFocus = true;
-            this.Cadastro.Location = new System.Drawing.Point(63, 10);
-            this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
-            this.Cadastro.Name = "Cadastro";
-            this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(65, 65);
-            this.Cadastro.Size = new System.Drawing.Size(71, 66);
-            this.Cadastro.TabIndex = 0;
-            this.Cadastro.UseTransparentBackground = true;
-            this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -215,24 +159,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Tabela";
             // 
-            // Tabela
-            // 
-            this.Tabela.BackColor = System.Drawing.Color.Transparent;
-            this.Tabela.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Tabela.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Tabela.Image = ((System.Drawing.Image)(resources.GetObject("Tabela.Image")));
-            this.Tabela.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Tabela.ImageRotate = 0F;
-            this.Tabela.IndicateFocus = true;
-            this.Tabela.Location = new System.Drawing.Point(320, 10);
-            this.Tabela.Margin = new System.Windows.Forms.Padding(2);
-            this.Tabela.Name = "Tabela";
-            this.Tabela.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Tabela.Size = new System.Drawing.Size(71, 66);
-            this.Tabela.TabIndex = 2;
-            this.Tabela.UseTransparentBackground = true;
-            this.Tabela.Click += new System.EventHandler(this.Tabela_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -245,46 +171,6 @@
             this.label1.Size = new System.Drawing.Size(181, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro Proprietário";
-            // 
-            // Conectado_VPN
-            // 
-            this.Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
-            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50;
-            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Conectado_VPN.ImageRotate = 0F;
-            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
-            this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(1866, 20);
-            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
-            this.Conectado_VPN.Name = "Conectado_VPN";
-            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
-            this.Conectado_VPN.Size = new System.Drawing.Size(33, 29);
-            this.Conectado_VPN.TabIndex = 12;
-            this.Conectado_VPN.UseTransparentBackground = true;
-            this.Conectado_VPN.Visible = false;
-            // 
-            // Nao_Conectado_VPN
-            // 
-            this.Nao_Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Nao_Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
-            this.Nao_Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Nao_Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Nao_Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50__1_;
-            this.Nao_Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Nao_Conectado_VPN.ImageRotate = 0F;
-            this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
-            this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1865, 20);
-            this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
-            this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
-            this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Nao_Conectado_VPN.Size = new System.Drawing.Size(33, 29);
-            this.Nao_Conectado_VPN.TabIndex = 13;
-            this.Nao_Conectado_VPN.UseTransparentBackground = true;
-            this.Nao_Conectado_VPN.Visible = false;
             // 
             // label5
             // 
@@ -332,6 +218,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 151);
             this.panel2.TabIndex = 6;
+            this.panel2.Visible = false;
             // 
             // LB_Imoveis_Envi
             // 
@@ -410,6 +297,7 @@
             this.label8.Size = new System.Drawing.Size(149, 22);
             this.label8.TabIndex = 10;
             this.label8.Text = "Imóveis Enviados";
+            this.label8.Visible = false;
             // 
             // panel4
             // 
@@ -421,6 +309,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(274, 151);
             this.panel4.TabIndex = 11;
+            this.panel4.Visible = false;
             // 
             // LB_Imoveis_N_Envi
             // 
@@ -448,6 +337,7 @@
             this.label9.Size = new System.Drawing.Size(193, 22);
             this.label9.TabIndex = 12;
             this.label9.Text = "Imóveis NÃO Enviados";
+            this.label9.Visible = false;
             // 
             // panel5
             // 
@@ -496,6 +386,156 @@
             this.label11.Size = new System.Drawing.Size(22, 30);
             this.label11.TabIndex = 16;
             this.label11.Text = "-";
+            // 
+            // Conectado_VPN
+            // 
+            this.Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
+            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50;
+            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Conectado_VPN.ImageRotate = 0F;
+            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.Conectado_VPN.IndicateFocus = true;
+            this.Conectado_VPN.Location = new System.Drawing.Point(1866, 20);
+            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
+            this.Conectado_VPN.Name = "Conectado_VPN";
+            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.Conectado_VPN.Size = new System.Drawing.Size(33, 29);
+            this.Conectado_VPN.TabIndex = 12;
+            this.Conectado_VPN.UseTransparentBackground = true;
+            this.Conectado_VPN.Visible = false;
+            // 
+            // Nao_Conectado_VPN
+            // 
+            this.Nao_Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Nao_Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
+            this.Nao_Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Nao_Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Nao_Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_wi_fi_50__1_;
+            this.Nao_Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Nao_Conectado_VPN.ImageRotate = 0F;
+            this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.Nao_Conectado_VPN.IndicateFocus = true;
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1865, 20);
+            this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
+            this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
+            this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Nao_Conectado_VPN.Size = new System.Drawing.Size(33, 29);
+            this.Nao_Conectado_VPN.TabIndex = 13;
+            this.Nao_Conectado_VPN.UseTransparentBackground = true;
+            this.Nao_Conectado_VPN.Visible = false;
+            // 
+            // Imobiliarias
+            // 
+            this.Imobiliarias.BackColor = System.Drawing.Color.Transparent;
+            this.Imobiliarias.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Imobiliarias.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Imobiliarias.Image = ((System.Drawing.Image)(resources.GetObject("Imobiliarias.Image")));
+            this.Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Imobiliarias.ImageRotate = 0F;
+            this.Imobiliarias.IndicateFocus = true;
+            this.Imobiliarias.Location = new System.Drawing.Point(606, 10);
+            this.Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
+            this.Imobiliarias.Name = "Imobiliarias";
+            this.Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Imobiliarias.Size = new System.Drawing.Size(71, 66);
+            this.Imobiliarias.TabIndex = 8;
+            this.Imobiliarias.UseTransparentBackground = true;
+            this.Imobiliarias.Click += new System.EventHandler(this.Imobiliarias_Click);
+            // 
+            // Cadastro_Imobiliarias
+            // 
+            this.Cadastro_Imobiliarias.BackColor = System.Drawing.Color.Transparent;
+            this.Cadastro_Imobiliarias.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Cadastro_Imobiliarias.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Cadastro_Imobiliarias.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro_Imobiliarias.Image")));
+            this.Cadastro_Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Cadastro_Imobiliarias.ImageRotate = 0F;
+            this.Cadastro_Imobiliarias.IndicateFocus = true;
+            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(456, 8);
+            this.Cadastro_Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
+            this.Cadastro_Imobiliarias.Name = "Cadastro_Imobiliarias";
+            this.Cadastro_Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Cadastro_Imobiliarias.Size = new System.Drawing.Size(71, 66);
+            this.Cadastro_Imobiliarias.TabIndex = 2;
+            this.Cadastro_Imobiliarias.UseTransparentBackground = true;
+            this.Cadastro_Imobiliarias.Click += new System.EventHandler(this.Cadastro_Imobiliarias_Click);
+            // 
+            // Detalhes
+            // 
+            this.Detalhes.BackColor = System.Drawing.Color.Transparent;
+            this.Detalhes.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Detalhes.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Detalhes.Image = ((System.Drawing.Image)(resources.GetObject("Detalhes.Image")));
+            this.Detalhes.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Detalhes.ImageRotate = 0F;
+            this.Detalhes.IndicateFocus = true;
+            this.Detalhes.Location = new System.Drawing.Point(208, 8);
+            this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
+            this.Detalhes.Name = "Detalhes";
+            this.Detalhes.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Detalhes.Size = new System.Drawing.Size(71, 66);
+            this.Detalhes.TabIndex = 6;
+            this.Detalhes.UseTransparentBackground = true;
+            this.Detalhes.Click += new System.EventHandler(this.Detalhes_Click);
+            // 
+            // Relatorio
+            // 
+            this.Relatorio.BackColor = System.Drawing.Color.Transparent;
+            this.Relatorio.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Relatorio.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Relatorio.Image = ((System.Drawing.Image)(resources.GetObject("Relatorio.Image")));
+            this.Relatorio.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Relatorio.ImageRotate = 0F;
+            this.Relatorio.IndicateFocus = true;
+            this.Relatorio.Location = new System.Drawing.Point(1804, 8);
+            this.Relatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.Relatorio.Name = "Relatorio";
+            this.Relatorio.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Relatorio.Size = new System.Drawing.Size(71, 66);
+            this.Relatorio.TabIndex = 4;
+            this.Relatorio.UseTransparentBackground = true;
+            this.Relatorio.Visible = false;
+            this.Relatorio.Click += new System.EventHandler(this.Relatorio_Click);
+            // 
+            // Cadastro
+            // 
+            this.Cadastro.BackColor = System.Drawing.Color.Transparent;
+            this.Cadastro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Cadastro.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Cadastro.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Cadastro.Image = ((System.Drawing.Image)(resources.GetObject("Cadastro.Image")));
+            this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Cadastro.ImageRotate = 0F;
+            this.Cadastro.IndicateFocus = true;
+            this.Cadastro.Location = new System.Drawing.Point(63, 10);
+            this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
+            this.Cadastro.Name = "Cadastro";
+            this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(65, 65);
+            this.Cadastro.Size = new System.Drawing.Size(71, 66);
+            this.Cadastro.TabIndex = 0;
+            this.Cadastro.UseTransparentBackground = true;
+            this.Cadastro.Click += new System.EventHandler(this.Cadastro_Click);
+            // 
+            // Tabela
+            // 
+            this.Tabela.BackColor = System.Drawing.Color.Transparent;
+            this.Tabela.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Tabela.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Tabela.Image = ((System.Drawing.Image)(resources.GetObject("Tabela.Image")));
+            this.Tabela.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Tabela.ImageRotate = 0F;
+            this.Tabela.IndicateFocus = true;
+            this.Tabela.Location = new System.Drawing.Point(320, 10);
+            this.Tabela.Margin = new System.Windows.Forms.Padding(2);
+            this.Tabela.Name = "Tabela";
+            this.Tabela.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Tabela.Size = new System.Drawing.Size(71, 66);
+            this.Tabela.TabIndex = 2;
+            this.Tabela.UseTransparentBackground = true;
+            this.Tabela.Click += new System.EventHandler(this.Tabela_Click);
             // 
             // Painel
             // 
@@ -560,5 +600,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton Nao_Conectado_VPN;
         private System.Windows.Forms.Label label10;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton Detalhes;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton Imobiliarias;
+        private System.Windows.Forms.Label label12;
     }
 }
