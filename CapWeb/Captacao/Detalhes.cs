@@ -285,6 +285,5 @@ namespace CapWeb.Captacao
 
             return detalhes.ToString();
         }
-
     }
 }

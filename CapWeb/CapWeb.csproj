@@ -130,6 +130,12 @@
     <Compile Include="Captacao\Tabela.Designer.cs">
       <DependentUpon>Tabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Valores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Valores.Designer.cs">
+      <DependentUpon>Valores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Vincular_Imob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Tabela.resx">
       <DependentUpon>Tabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Valores.resx">
+      <DependentUpon>Valores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Vincular_Imob.resx">
       <DependentUpon>Vincular_Imob.cs</DependentUpon>
