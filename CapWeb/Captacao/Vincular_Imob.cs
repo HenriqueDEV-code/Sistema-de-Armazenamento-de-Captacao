@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace CapWeb.Captacao
 {
@@ -165,19 +167,42 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 conn.Open();
+
+                // Buscar o valor cobrado da imobiliária
+                string sqlValor = "SELECT Valor_Cobrado FROM Imobiliaria WHERE ID_Imobiliaria = @id";
+                SqlCommand cmdValor = new SqlCommand(sqlValor, conn);
+                cmdValor.Parameters.AddWithValue("@id", idImobiliaria);
+                object valorObj = cmdValor.ExecuteScalar();
+
+                string valorCobradoStr = valorObj != null ? valorObj.ToString() : "R$ 0,00";
+
+                // Converter para decimal, removendo "R$"
+                decimal valorCobradoDecimal = 0;
+                decimal.TryParse(
+                    valorCobradoStr.Replace("R$", "").Trim(),
+                    NumberStyles.Any,
+                    new CultureInfo("pt-BR"),
+                    out valorCobradoDecimal
+                );
+
+                // Inserir na tabela se não existir
                 string sql = @"
-            IF NOT EXISTS (SELECT 1 FROM Proprietario_Imobiliaria 
-                           WHERE ID_Proprietario = @idP AND ID_Imobiliaria = @idI)
+            IF NOT EXISTS (
+                SELECT 1 FROM Proprietario_Imobiliaria 
+                WHERE ID_Proprietario = @idP AND ID_Imobiliaria = @idI
+            )
             BEGIN
-                INSERT INTO Proprietario_Imobiliaria (ID_Proprietario, ID_Imobiliaria) 
-                VALUES (@idP, @idI)
+                INSERT INTO Proprietario_Imobiliaria 
+                (ID_Proprietario, ID_Imobiliaria, Valor)
+                VALUES (@idP, @idI, @valor)
             END";
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlCommand cmdInsert = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idP", idProprietario);
-                    cmd.Parameters.AddWithValue("@idI", idImobiliaria);
-                    cmd.ExecuteNonQuery();
+                    cmdInsert.Parameters.AddWithValue("@idP", idProprietario);
+                    cmdInsert.Parameters.AddWithValue("@idI", idImobiliaria);
+                    cmdInsert.Parameters.AddWithValue("@valor", valorCobradoDecimal);
+                    cmdInsert.ExecuteNonQuery();
                 }
             }
         }

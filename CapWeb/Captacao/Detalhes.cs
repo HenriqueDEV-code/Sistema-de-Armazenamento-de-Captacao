@@ -134,6 +134,7 @@ namespace CapWeb.Captacao
                 I.IPTU,
                 I.Util AS util,
                 I.Contruida AS construida,
+                I.Terreno AS terreno,
                 I.Valor_Condominio AS valor_Cond,
                 E_Imovel.Logradouro AS Logradouro_Imovel,
                 E_Imovel.Numero AS Numero_Imovel,
@@ -260,8 +261,8 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
-                detalhes.AppendLine("Tamanho da área (útil / construída e terreno):");
-                detalhes.AppendLine($"{row["util"]} m2 / {row["construida"]} m2");
+                detalhes.AppendLine("Tamanho da área (útil / construída / terreno):");
+                detalhes.AppendLine($"{row["util"]} m2 / {row["construida"]} m2/ {row["terreno"]} m2");
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
@@ -285,6 +286,5 @@ namespace CapWeb.Captacao
 
             return detalhes.ToString();
         }
-
     }
 }

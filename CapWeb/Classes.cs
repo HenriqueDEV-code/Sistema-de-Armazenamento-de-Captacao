@@ -137,6 +137,7 @@ namespace CapWeb
         private string complemento;
         private string util;
         private string construida;
+        private string total;
         private string valor;
         private string iptu;
         private string valor_condominio;
@@ -195,5 +196,10 @@ namespace CapWeb
             set { construida = value; }
         }
 
+        public string Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
     }
 }

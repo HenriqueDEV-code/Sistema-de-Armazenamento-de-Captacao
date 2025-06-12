@@ -150,9 +150,9 @@
             this.label18.Location = new System.Drawing.Point(27, 107);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(392, 30);
+            this.label18.Size = new System.Drawing.Size(389, 30);
             this.label18.TabIndex = 38;
-            this.label18.Text = "Detalhes do Imóvel e Proprietário";
+            this.label18.Text = "Detalhes do imóvel e proprietário";
             // 
             // Combo_Cidade_Busca
             // 

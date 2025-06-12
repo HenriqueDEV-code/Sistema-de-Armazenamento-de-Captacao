@@ -31,7 +31,7 @@ namespace CapWeb.Captacao
 
         private void Tabela_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Tabela janelaTabela = new Tabela(DBA);
             janelaTabela.FormClosed += (s, args) => this.Show();
@@ -49,7 +49,7 @@ namespace CapWeb.Captacao
 
         private void Cadastro_Imobiliarias_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Cadastro_Imobiliarias janelaImobiliarias = new Cadastro_Imobiliarias(DBA);
             janelaImobiliarias.FormClosed += (s, args) => this.Show();
@@ -58,7 +58,7 @@ namespace CapWeb.Captacao
 
         private void Detalhes_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Detalhes janeladetalhes = new Detalhes(DBA);
             janeladetalhes.FormClosed += (s, args) => this.Show();
@@ -67,13 +67,29 @@ namespace CapWeb.Captacao
 
         private void Imobiliarias_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Vincular_Imob janelaImobiliarias = new Vincular_Imob(DBA);
             janelaImobiliarias.FormClosed += (s, args) => this.Show();
             janelaImobiliarias.Show();
         }
 
+        private void Financa_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+
+            Valores janelaValores = new Valores(DBA);
+            janelaValores.FormClosed += (s, args) => this.Show();
+            janelaValores.Show();
+        }
+        private void Excluir_Imob_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+
+            Excluir_Imob janelaExcluir = new Excluir_Imob(DBA);
+            janelaExcluir.FormClosed += (s, args) => this.Show();
+            janelaExcluir.Show();
+        }
 
         private void Painel_Load(object sender, EventArgs e)
         {
@@ -193,6 +209,6 @@ namespace CapWeb.Captacao
             LB_Imobiliarias_Cadastradas.Text = $"{totalImob}";
         }
 
-        
+       
     }
 }

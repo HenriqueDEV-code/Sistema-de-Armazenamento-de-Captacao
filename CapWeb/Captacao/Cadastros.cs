@@ -108,6 +108,13 @@ namespace CapWeb.Captacao
                 e.Handled = true;
             }
         }
+        private void Area_Total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void area_construida_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -454,8 +461,8 @@ namespace CapWeb.Captacao
                     int idProprietario = Convert.ToInt32(cmdProprietarios.ExecuteScalar());
 
                     // -- Inserir Imovel --
-                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida)
-                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida);";
+                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida, Terreno)
+                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida, @Terreno);";
 
                     SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
                     cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.Descricao);
@@ -470,6 +477,7 @@ namespace CapWeb.Captacao
                     cmdImovel.Parameters.AddWithValue("@Valor_Condominio", imoveis.Valor_Condominio);
                     cmdImovel.Parameters.AddWithValue("@Util", imoveis.Util);
                     cmdImovel.Parameters.AddWithValue("@Contruida", imoveis.Construida);
+                    cmdImovel.Parameters.AddWithValue("@Terreno", imoveis.Total);
                     
 
                     cmdImovel.ExecuteNonQuery();
@@ -502,6 +510,7 @@ namespace CapWeb.Captacao
             valor_codominio.Clear();
             area_util1.Clear();
             area_construida.Clear();
+            Area_Total.Clear();
             nome_condominio.Clear();
             Complemento.Clear();
         }
@@ -570,13 +579,7 @@ namespace CapWeb.Captacao
                 ERROR_Dados_Nulos.SetError(Descricao, "Campo obrigatório.");
                 temErro = true;
             }
-            if (string.IsNullOrWhiteSpace(area_util1.Text))
-            {
-                ERROR_Dados_Nulos.SetError(area_util1, "Campo obrigatório.");
-                temErro=true;
-            }
-           
-
+          
             return temErro;
         }
 
@@ -620,14 +623,15 @@ namespace CapWeb.Captacao
                 IPTU = Valor_IPTU0.Text,                   // Ex: "R$ 987,65"
                 Valor_Condominio = valor_codominio.Text,  // Ex: "R$ 432,10"
                 Util = area_util1.Text,
-                Construida = area_construida.Text
+                Construida = area_construida.Text,
+                Total = Area_Total.Text
             };
 
             SalvarPessoa(pessoa, endereco, imovel);
             Clear();
         }
 
-       
+     
     }
 }
 

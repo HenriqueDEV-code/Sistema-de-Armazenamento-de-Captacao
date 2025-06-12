@@ -112,6 +112,12 @@
     <Compile Include="Captacao\Detalhes.Designer.cs">
       <DependentUpon>Detalhes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Excluir_Imob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Excluir_Imob.Designer.cs">
+      <DependentUpon>Excluir_Imob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Painel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="Captacao\Tabela.Designer.cs">
       <DependentUpon>Tabela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Captacao\Valores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Valores.Designer.cs">
+      <DependentUpon>Valores.cs</DependentUpon>
     </Compile>
     <Compile Include="Captacao\Vincular_Imob.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <EmbeddedResource Include="Captacao\Detalhes.resx">
       <DependentUpon>Detalhes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Excluir_Imob.resx">
+      <DependentUpon>Excluir_Imob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Painel.resx">
       <DependentUpon>Painel.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Tabela.resx">
       <DependentUpon>Tabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Valores.resx">
+      <DependentUpon>Valores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Vincular_Imob.resx">
       <DependentUpon>Vincular_Imob.cs</DependentUpon>

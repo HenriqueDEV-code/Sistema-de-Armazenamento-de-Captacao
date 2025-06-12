@@ -150,7 +150,7 @@
             this.Nome_Respon_Imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Nome_Respon_Imobiliaria.Name = "Nome_Respon_Imobiliaria";
             this.Nome_Respon_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Nome_Respon_Imobiliaria.PlaceholderText = "Nome do Responsável";
+            this.Nome_Respon_Imobiliaria.PlaceholderText = "Nome do responsável";
             this.Nome_Respon_Imobiliaria.SelectedText = "";
             this.Nome_Respon_Imobiliaria.Size = new System.Drawing.Size(391, 41);
             this.Nome_Respon_Imobiliaria.TabIndex = 14;
@@ -189,7 +189,7 @@
             this.Telefone_imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Telefone_imobiliaria.Name = "Telefone_imobiliaria";
             this.Telefone_imobiliaria.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Telefone_imobiliaria.PlaceholderText = "Telefone do proprietário";
+            this.Telefone_imobiliaria.PlaceholderText = "Telefone do corretor";
             this.Telefone_imobiliaria.SelectedText = "";
             this.Telefone_imobiliaria.Size = new System.Drawing.Size(391, 41);
             this.Telefone_imobiliaria.TabIndex = 12;
@@ -229,7 +229,7 @@
             this.Nome_Imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Nome_Imobiliaria.Name = "Nome_Imobiliaria";
             this.Nome_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Nome_Imobiliaria.PlaceholderText = "Nome da Imobiliária";
+            this.Nome_Imobiliaria.PlaceholderText = "Nome da imobiliária";
             this.Nome_Imobiliaria.SelectedText = "";
             this.Nome_Imobiliaria.Size = new System.Drawing.Size(391, 41);
             this.Nome_Imobiliaria.TabIndex = 10;
