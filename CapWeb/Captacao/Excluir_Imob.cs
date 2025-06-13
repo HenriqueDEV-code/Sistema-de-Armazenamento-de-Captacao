@@ -117,6 +117,7 @@ namespace CapWeb.Captacao
                             MessageBox.Show("Nenhuma imobiliária foi excluída.");
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
