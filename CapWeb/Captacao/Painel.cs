@@ -86,10 +86,6 @@ namespace CapWeb.Captacao
         {
             //this.Hide();
 
-            Excluir_Imob janelaExcluir = new Excluir_Imob(DBA);
-            janelaExcluir.FormClosed += (s, args) => this.Show();
-            janelaExcluir.Show();
-        }
 
         private void Painel_Load(object sender, EventArgs e)
         {

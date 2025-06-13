@@ -37,12 +37,14 @@
             this.Nome_Imov = new Guna.UI2.WinForms.Guna2TextBox();
             this.Valor_Total = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Nome_Imov = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DB_TABELA_VALORES_IMOBIIARIAS = new System.Windows.Forms.DataGridView();
             this.siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Button_Pesquisar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.Combo_Lista_Imobiliarias = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Pago = new Guna.UI2.WinForms.Guna2Button();
             this.cap_ImoveisDataSet = new CapWeb.Cap_ImoveisDataSet();
             this.proprietarioImobiliariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proprietario_ImobiliariaTableAdapter = new CapWeb.Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter();
@@ -143,33 +145,7 @@
             this.label2.Location = new System.Drawing.Point(4, 426);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 30);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Quantidade total:";
-            // 
-            // Nome_Imov
-            // 
-            this.Nome_Imov.BorderRadius = 2;
-            this.Nome_Imov.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Nome_Imov.DefaultText = "";
-            this.Nome_Imov.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Nome_Imov.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Nome_Imov.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Imov.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Imov.Enabled = false;
-            this.Nome_Imov.FillColor = System.Drawing.Color.Silver;
-            this.Nome_Imov.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nome_Imov.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Nome_Imov.ForeColor = System.Drawing.Color.DimGray;
-            this.Nome_Imov.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nome_Imov.Location = new System.Drawing.Point(88, 52);
-            this.Nome_Imov.Margin = new System.Windows.Forms.Padding(6);
-            this.Nome_Imov.Name = "Nome_Imov";
-            this.Nome_Imov.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.Nome_Imov.PlaceholderText = "";
-            this.Nome_Imov.SelectedText = "";
-            this.Nome_Imov.Size = new System.Drawing.Size(463, 41);
-            this.Nome_Imov.TabIndex = 12;
             // 
             // Valor_Total
             // 
@@ -207,9 +183,7 @@
             this.label1.Location = new System.Drawing.Point(305, 426);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 30);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Valor total:";
             // 
             // label6
             // 
@@ -261,7 +235,6 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(244, 30);
             this.label12.TabIndex = 28;
-            this.label12.Text = "Informa a imóbiliaria";
             // 
             // Button_Pesquisar_DBA
             // 
@@ -302,6 +275,29 @@
             this.Combo_Lista_Imobiliarias.Name = "Combo_Lista_Imobiliarias";
             this.Combo_Lista_Imobiliarias.Size = new System.Drawing.Size(331, 36);
             this.Combo_Lista_Imobiliarias.TabIndex = 29;
+            // 
+            // Pago
+            // 
+            this.Pago.Animated = true;
+            this.Pago.AutoRoundedCorners = true;
+            this.Pago.BackColor = System.Drawing.Color.Transparent;
+            this.Pago.BorderColor = System.Drawing.Color.Blue;
+            this.Pago.BorderRadius = 20;
+            this.Pago.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Pago.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Pago.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Pago.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Pago.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Pago.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Pago.ForeColor = System.Drawing.Color.Black;
+            this.Pago.IndicateFocus = true;
+            this.Pago.Location = new System.Drawing.Point(446, 485);
+            this.Pago.Name = "Pago";
+            this.Pago.Size = new System.Drawing.Size(120, 42);
+            this.Pago.TabIndex = 49;
+            this.Pago.Text = "&PAGO";
+            this.Pago.UseTransparentBackground = true;
+            this.Pago.Click += new System.EventHandler(this.Pago_Click);
             // 
             // cap_ImoveisDataSet
             // 
