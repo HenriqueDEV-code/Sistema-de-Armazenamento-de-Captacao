@@ -82,9 +82,14 @@ namespace CapWeb.Captacao
             janelaValores.FormClosed += (s, args) => this.Show();
             janelaValores.Show();
         }
-        private void Excluir_Imob_Click(object sender, EventArgs e)
+        private void Excluir_Click(object sender, EventArgs e)
         {
             //this.Hide();
+
+            Excluir_Imob janelaExcluir = new Excluir_Imob(DBA);
+            janelaExcluir.FormClosed += (s, args) => this.Show();
+            janelaExcluir.Show();
+        }
 
 
         private void Painel_Load(object sender, EventArgs e)
@@ -205,6 +210,6 @@ namespace CapWeb.Captacao
             LB_Imobiliarias_Cadastradas.Text = $"{totalImob}";
         }
 
-       
+        
     }
 }

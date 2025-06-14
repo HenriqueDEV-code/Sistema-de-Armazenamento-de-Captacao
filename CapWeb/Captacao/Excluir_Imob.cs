@@ -67,7 +67,7 @@ namespace CapWeb.Captacao
             string nomeImobiliaria = Combo_Lista_Imobiliarias.SelectedItem.ToString();
 
             DialogResult confirmacao = MessageBox.Show(
-                $"Tem certeza que deseja excluir a imobiliária '{nomeImobiliaria}'?\nOs vínculos com proprietários serão removidos.",
+                $"Tem certeza que deseja excluir a imobiliária '{nomeImobiliaria}'?\nOs vínculos com proprietários e outros registros serão removidos.",
                 "Confirmação de Exclusão",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
@@ -83,15 +83,28 @@ namespace CapWeb.Captacao
 
                 try
                 {
-                    // 1. Remove o vínculo dos proprietários
-                    string desvincularSQL = @"
+                    // 0. Remove vínculos da tabela intermediária Proprietario_Imobiliaria
+                    string desvincularTabelaIntermediaria = @"
+                DELETE FROM Proprietario_Imobiliaria
+                WHERE ID_Imobiliaria IN (
+                    SELECT ID_Imobiliaria FROM Imobiliaria WHERE Nome_Imobiliaria = @Nome
+                )";
+
+                    using (SqlCommand cmd = new SqlCommand(desvincularTabelaIntermediaria, conn, transacao))
+                    {
+                        cmd.Parameters.AddWithValue("@Nome", nomeImobiliaria);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // 1. Remove o vínculo dos proprietários (seta como NULL)
+                    string desvincularProprietarios = @"
                 UPDATE Proprietarios
                 SET ID_Imobiliaria = NULL
                 WHERE ID_Imobiliaria IN (
                     SELECT ID_Imobiliaria FROM Imobiliaria WHERE Nome_Imobiliaria = @Nome
                 )";
 
-                    using (SqlCommand cmd = new SqlCommand(desvincularSQL, conn, transacao))
+                    using (SqlCommand cmd = new SqlCommand(desvincularProprietarios, conn, transacao))
                     {
                         cmd.Parameters.AddWithValue("@Nome", nomeImobiliaria);
                         cmd.ExecuteNonQuery();
@@ -117,7 +130,6 @@ namespace CapWeb.Captacao
                             MessageBox.Show("Nenhuma imobiliária foi excluída.");
                         }
                     }
-
                 }
                 catch (Exception ex)
                 {

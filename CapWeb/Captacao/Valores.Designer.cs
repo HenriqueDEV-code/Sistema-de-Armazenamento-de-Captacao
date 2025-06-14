@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneGroupBox2 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.Pago = new Guna.UI2.WinForms.Guna2Button();
@@ -37,17 +38,17 @@
             this.Nome_Imov = new Guna.UI2.WinForms.Guna2TextBox();
             this.Valor_Total = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Nome_Imov = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DB_TABELA_VALORES_IMOBIIARIAS = new System.Windows.Forms.DataGridView();
             this.siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Button_Pesquisar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.Combo_Lista_Imobiliarias = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Pago = new Guna.UI2.WinForms.Guna2Button();
             this.cap_ImoveisDataSet = new CapWeb.Cap_ImoveisDataSet();
             this.proprietarioImobiliariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proprietario_ImobiliariaTableAdapter = new CapWeb.Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
             this.siticoneGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DB_TABELA_VALORES_IMOBIIARIAS)).BeginInit();
@@ -70,6 +71,8 @@
             this.siticoneGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneGroupBox2.Controls.Add(this.label4);
+            this.siticoneGroupBox2.Controls.Add(this.label3);
             this.siticoneGroupBox2.Controls.Add(this.Pago);
             this.siticoneGroupBox2.Controls.Add(this.Quantidade_Total);
             this.siticoneGroupBox2.Controls.Add(this.label2);
@@ -145,7 +148,20 @@
             this.label2.Location = new System.Drawing.Point(4, 426);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 30);
             this.label2.TabIndex = 15;
+            // 
+            // Nome_Imov
+            // 
+            this.Nome_Imov.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Nome_Imov.DefaultText = "";
+            this.Nome_Imov.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Nome_Imov.Location = new System.Drawing.Point(97, 54);
+            this.Nome_Imov.Name = "Nome_Imov";
+            this.Nome_Imov.PlaceholderText = "";
+            this.Nome_Imov.SelectedText = "";
+            this.Nome_Imov.Size = new System.Drawing.Size(318, 36);
+            this.Nome_Imov.TabIndex = 50;
             // 
             // Valor_Total
             // 
@@ -162,7 +178,7 @@
             this.Valor_Total.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Valor_Total.ForeColor = System.Drawing.Color.DimGray;
             this.Valor_Total.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Valor_Total.Location = new System.Drawing.Point(448, 420);
+            this.Valor_Total.Location = new System.Drawing.Point(448, 423);
             this.Valor_Total.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_Total.Name = "Valor_Total";
             this.Valor_Total.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -183,6 +199,7 @@
             this.label1.Location = new System.Drawing.Point(305, 426);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 30);
             this.label1.TabIndex = 13;
             // 
             // label6
@@ -202,6 +219,14 @@
             // 
             this.DB_TABELA_VALORES_IMOBIIARIAS.BackgroundColor = System.Drawing.Color.DimGray;
             this.DB_TABELA_VALORES_IMOBIIARIAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle1;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Location = new System.Drawing.Point(9, 102);
             this.DB_TABELA_VALORES_IMOBIIARIAS.Name = "DB_TABELA_VALORES_IMOBIIARIAS";
             this.DB_TABELA_VALORES_IMOBIIARIAS.Size = new System.Drawing.Size(548, 302);
@@ -233,7 +258,7 @@
             this.label12.Location = new System.Drawing.Point(11, 63);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(244, 30);
+            this.label12.Size = new System.Drawing.Size(0, 30);
             this.label12.TabIndex = 28;
             // 
             // Button_Pesquisar_DBA
@@ -276,29 +301,6 @@
             this.Combo_Lista_Imobiliarias.Size = new System.Drawing.Size(331, 36);
             this.Combo_Lista_Imobiliarias.TabIndex = 29;
             // 
-            // Pago
-            // 
-            this.Pago.Animated = true;
-            this.Pago.AutoRoundedCorners = true;
-            this.Pago.BackColor = System.Drawing.Color.Transparent;
-            this.Pago.BorderColor = System.Drawing.Color.Blue;
-            this.Pago.BorderRadius = 20;
-            this.Pago.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Pago.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Pago.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Pago.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Pago.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Pago.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Pago.ForeColor = System.Drawing.Color.Black;
-            this.Pago.IndicateFocus = true;
-            this.Pago.Location = new System.Drawing.Point(446, 485);
-            this.Pago.Name = "Pago";
-            this.Pago.Size = new System.Drawing.Size(120, 42);
-            this.Pago.TabIndex = 49;
-            this.Pago.Text = "&PAGO";
-            this.Pago.UseTransparentBackground = true;
-            this.Pago.Click += new System.EventHandler(this.Pago_Click);
-            // 
             // cap_ImoveisDataSet
             // 
             this.cap_ImoveisDataSet.DataSetName = "Cap_ImoveisDataSet";
@@ -312,6 +314,32 @@
             // proprietario_ImobiliariaTableAdapter
             // 
             this.proprietario_ImobiliariaTableAdapter.ClearBeforeFill = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(4, 428);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 30);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Quantidade total:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(305, 427);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 30);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Valor total:";
             // 
             // Valores
             // 
@@ -356,5 +384,7 @@
         private Cap_ImoveisDataSet cap_ImoveisDataSet;
         private System.Windows.Forms.BindingSource proprietarioImobiliariaBindingSource;
         private Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter proprietario_ImobiliariaTableAdapter;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

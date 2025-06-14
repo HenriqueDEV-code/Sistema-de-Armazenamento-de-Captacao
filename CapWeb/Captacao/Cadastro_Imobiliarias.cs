@@ -181,34 +181,52 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 conn.Open();
-
                 SqlTransaction transaction = conn.BeginTransaction();
-
 
                 try
                 {
-                    // -- Inserir Imobiliaria -- 
+                    // Verificar se já existe uma imobiliária com o mesmo nome
+                    string checarDuplicidade = @"
+                SELECT COUNT(*) 
+                FROM Imobiliaria 
+                WHERE Nome_Imobiliaria = @Nome_Imobiliaria";
 
-                    string QUERY_IMOBILIARIA = @"INSERT INTO Imobiliaria (Nome_Imobiliaria, Nome_Responsavel, Telefone_Imobiliaria, Valor_Cobrado)
-                                                VALUES (@Nome_Imobiliaria, @Nome_Responsavel, @Telefone_Imobiliaria, @Valor_Cobrado);
-                                                 SELECT SCOPE_IDENTITY();";
+                    using (SqlCommand cmdCheck = new SqlCommand(checarDuplicidade, conn, transaction))
+                    {
+                        cmdCheck.Parameters.AddWithValue("@Nome_Imobiliaria", imob.Nome_Imobiliaria);
+                        int qtd = Convert.ToInt32(cmdCheck.ExecuteScalar());
 
-                    SqlCommand cmdImobiliaria = new SqlCommand(QUERY_IMOBILIARIA, conn, transaction);
-                    cmdImobiliaria.Parameters.AddWithValue("@Nome_Imobiliaria", imob.Nome_Imobiliaria);
-                    cmdImobiliaria.Parameters.AddWithValue("@Nome_Responsavel", imob.Nome_Responsavel);
-                    cmdImobiliaria.Parameters.AddWithValue("@Telefone_Imobiliaria", imob.Telefone_Imobiliaria);
-                    cmdImobiliaria.Parameters.AddWithValue("@Valor_Cobrado", imob.Valor_cobrado);
+                        if (qtd > 0)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Já existe uma imobiliária cadastrada com esse nome.", "Duplicidade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
 
-                    int idImobiliaria = Convert.ToInt32(cmdImobiliaria.ExecuteScalar());
-                   
+                    // Inserir nova imobiliária
+                    string QUERY_IMOBILIARIA = @"
+                INSERT INTO Imobiliaria (Nome_Imobiliaria, Nome_Responsavel, Telefone_Imobiliaria, Valor_Cobrado)
+                VALUES (@Nome_Imobiliaria, @Nome_Responsavel, @Telefone_Imobiliaria, @Valor_Cobrado);
+                SELECT SCOPE_IDENTITY();";
+
+                    using (SqlCommand cmdImobiliaria = new SqlCommand(QUERY_IMOBILIARIA, conn, transaction))
+                    {
+                        cmdImobiliaria.Parameters.AddWithValue("@Nome_Imobiliaria", imob.Nome_Imobiliaria);
+                        cmdImobiliaria.Parameters.AddWithValue("@Nome_Responsavel", imob.Nome_Responsavel);
+                        cmdImobiliaria.Parameters.AddWithValue("@Telefone_Imobiliaria", imob.Telefone_Imobiliaria);
+                        cmdImobiliaria.Parameters.AddWithValue("@Valor_Cobrado", imob.Valor_cobrado);
+
+                        int idImobiliaria = Convert.ToInt32(cmdImobiliaria.ExecuteScalar());
+                    }
+
                     transaction.Commit();
-
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    MessageBox.Show($"Erro ao inserir dados: {ex.Message}");
+                    MessageBox.Show($"Erro ao inserir dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
