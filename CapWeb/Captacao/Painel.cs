@@ -194,7 +194,63 @@ namespace CapWeb.Captacao
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao contar proprietários: " + ex.Message);
+                        MessageBox.Show("Erro ao contar imobiliárias: " + ex.Message);
+                    }
+                }
+            }
+            return quantidade;
+        }
+        
+        private int Contar_Vinculo()
+        {
+            int quantidade = 0;
+
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT COUNT(*) FROM Proprietario_Imobiliaria";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        quantidade = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao contar os vinculos: " + ex.Message);
+                    }
+                }
+            }
+            return quantidade;
+        }
+        
+        private int Nao_Vinculado()
+        {
+            int quantidade = 0;
+
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = @"
+    SELECT COUNT(*) 
+    FROM Proprietarios p
+    LEFT JOIN Proprietario_Imobiliaria pi ON p.ID = pi.ID_Proprietario
+    WHERE pi.ID_Proprietario IS NULL
+";
+
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        quantidade = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao contar os vinculos: " + ex.Message);
                     }
                 }
             }
@@ -202,12 +258,84 @@ namespace CapWeb.Captacao
         }
 
 
+        private decimal Valores_Pagos()
+        {
+            decimal totalPago = 0;
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = @"
+            SELECT ISNULL(SUM(Valor), 0)
+            FROM Proprietario_Imobiliaria
+            WHERE Status = 'PAGO'
+        ";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                            totalPago = Convert.ToDecimal(result);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao calcular valores pagos: " + ex.Message);
+                    }
+                }
+            }
+
+            return totalPago;
+        }
+
+        private decimal Valores_Nao_Pagos()
+        {
+            decimal totalNaoPago = 0;
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = @"
+            SELECT ISNULL(SUM(Valor), 0)
+            FROM Proprietario_Imobiliaria
+            WHERE Status = 'NAO PAGO'
+        ";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value)
+                            totalNaoPago = Convert.ToDecimal(result);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao calcular valores pagos: " + ex.Message);
+                    }
+                }
+            }
+
+            return totalNaoPago;
+        }
+
+
+
         private void AtualizarTotalProprietarios()
         {
             int total = Contar_Proprietarios();
             int totalImob = Contar_Imobiliarias();
+            int totalVinculo = Contar_Vinculo();
+            int total_N_vinculado = Nao_Vinculado();
+            decimal total_Pagos = Valores_Pagos();
+            decimal total_N_Pagos = Valores_Nao_Pagos();
             LB_Imoveis_Cadastrados.Text = $"{total}";
             LB_Imobiliarias_Cadastradas.Text = $"{totalImob}";
+            LB_Imoveis_Envi.Text = $"{totalVinculo}";
+            LB_Imoveis_N_Envi.Text = $"{total_N_vinculado}";
+            LB_Imov_Pago.Text = $"R$ {total_Pagos}";
+            LB_Imov_nao_Pago.Text = $"R$ {total_N_Pagos}";
         }
 
         

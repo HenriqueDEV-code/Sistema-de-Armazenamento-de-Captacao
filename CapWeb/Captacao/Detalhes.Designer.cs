@@ -94,7 +94,7 @@
             this.Button_Buscar_DBA.AutoRoundedCorners = true;
             this.Button_Buscar_DBA.BackColor = System.Drawing.Color.Transparent;
             this.Button_Buscar_DBA.BorderColor = System.Drawing.Color.Blue;
-            this.Button_Buscar_DBA.BorderRadius = 24;
+            this.Button_Buscar_DBA.BorderRadius = 19;
             this.Button_Buscar_DBA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Buscar_DBA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_Buscar_DBA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -103,9 +103,9 @@
             this.Button_Buscar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_Buscar_DBA.ForeColor = System.Drawing.Color.Black;
             this.Button_Buscar_DBA.IndicateFocus = true;
-            this.Button_Buscar_DBA.Location = new System.Drawing.Point(945, 35);
+            this.Button_Buscar_DBA.Location = new System.Drawing.Point(963, 42);
             this.Button_Buscar_DBA.Name = "Button_Buscar_DBA";
-            this.Button_Buscar_DBA.Size = new System.Drawing.Size(153, 50);
+            this.Button_Buscar_DBA.Size = new System.Drawing.Size(153, 41);
             this.Button_Buscar_DBA.TabIndex = 40;
             this.Button_Buscar_DBA.Text = "&Buscar";
             this.Button_Buscar_DBA.UseTransparentBackground = true;
@@ -150,15 +150,16 @@
             this.label18.Location = new System.Drawing.Point(27, 107);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(389, 30);
+            this.label18.Size = new System.Drawing.Size(520, 30);
             this.label18.TabIndex = 38;
-            this.label18.Text = "Detalhes do imóvel e proprietário";
+            this.label18.Text = "Detalhes do(os) imóvel(eis) e do proprietário";
             // 
             // Combo_Cidade_Busca
             // 
             this.Combo_Cidade_Busca.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Combo_Cidade_Busca.AutoRoundedCorners = true;
             this.Combo_Cidade_Busca.BackColor = System.Drawing.Color.Transparent;
-            this.Combo_Cidade_Busca.BorderRadius = 8;
+            this.Combo_Cidade_Busca.BorderRadius = 17;
             this.Combo_Cidade_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Cidade_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Combo_Cidade_Busca.FillColor = System.Drawing.Color.DimGray;
@@ -167,9 +168,9 @@
             this.Combo_Cidade_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Combo_Cidade_Busca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Cidade_Busca.ItemHeight = 30;
-            this.Combo_Cidade_Busca.Location = new System.Drawing.Point(646, 43);
+            this.Combo_Cidade_Busca.Location = new System.Drawing.Point(654, 43);
             this.Combo_Cidade_Busca.Name = "Combo_Cidade_Busca";
-            this.Combo_Cidade_Busca.Size = new System.Drawing.Size(280, 36);
+            this.Combo_Cidade_Busca.Size = new System.Drawing.Size(293, 36);
             this.Combo_Cidade_Busca.TabIndex = 27;
             // 
             // label11
@@ -179,7 +180,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(546, 44);
+            this.label11.Location = new System.Drawing.Point(554, 44);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 30);
@@ -238,7 +239,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Detalhes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalhes";
+            this.Text = "Detalhes dos imóveis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Detalhes_Load);
             this.panel1.ResumeLayout(false);

@@ -613,9 +613,9 @@
             this.area_construida.Margin = new System.Windows.Forms.Padding(6);
             this.area_construida.Name = "area_construida";
             this.area_construida.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.area_construida.PlaceholderText = "Área constrúida";
+            this.area_construida.PlaceholderText = "Área construída";
             this.area_construida.SelectedText = "";
-            this.area_construida.Size = new System.Drawing.Size(154, 41);
+            this.area_construida.Size = new System.Drawing.Size(162, 41);
             this.area_construida.TabIndex = 31;
             this.area_construida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_construida_KeyPress);
             // 
@@ -753,7 +753,7 @@
             this.Descricao.Multiline = true;
             this.Descricao.Name = "Descricao";
             this.Descricao.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Descricao.PlaceholderText = "Informa a descrição completa sobre o imóvel desse proprietário";
+            this.Descricao.PlaceholderText = "Informe a descrição completa sobre o imóvel desse proprietário";
             this.Descricao.SelectedText = "";
             this.Descricao.Size = new System.Drawing.Size(1565, 255);
             this.Descricao.TabIndex = 39;
@@ -935,7 +935,8 @@
             "CASA",
             "APARTAMENTO",
             "TERRENO",
-            ""});
+            "FLAT",
+            "KITNET"});
             this.Combo_Tipo_de_imovel.Location = new System.Drawing.Point(196, 61);
             this.Combo_Tipo_de_imovel.Name = "Combo_Tipo_de_imovel";
             this.Combo_Tipo_de_imovel.Size = new System.Drawing.Size(229, 36);
@@ -971,7 +972,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Cadastros";
-            this.Text = "Cadastros";
+            this.Text = "Cadastro de imóveis e proprietários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();

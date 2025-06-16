@@ -89,7 +89,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(244, 30);
             this.label12.TabIndex = 28;
-            this.label12.Text = "Informa a imóbiliaria";
+            this.label12.Text = "Informe a imóbiliaria";
             // 
             // Button_Selecionar_DBA
             // 
@@ -112,6 +112,7 @@
             this.Button_Selecionar_DBA.TabIndex = 48;
             this.Button_Selecionar_DBA.Text = "&Selecionar";
             this.Button_Selecionar_DBA.UseTransparentBackground = true;
+            this.Button_Selecionar_DBA.Visible = false;
             // 
             // Combo_Lista_Imobiliarias
             // 

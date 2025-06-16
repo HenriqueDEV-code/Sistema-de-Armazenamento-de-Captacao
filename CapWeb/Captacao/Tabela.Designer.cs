@@ -81,7 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.Excluir_Cadastro);
-            this.panel1.Location = new System.Drawing.Point(-1, 844);
+            this.panel1.Location = new System.Drawing.Point(-1, 840);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1865, 102);
             this.panel1.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.Excluir_Cadastro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Excluir_Cadastro.ForeColor = System.Drawing.Color.Black;
             this.Excluir_Cadastro.IndicateFocus = true;
-            this.Excluir_Cadastro.Location = new System.Drawing.Point(1676, 17);
+            this.Excluir_Cadastro.Location = new System.Drawing.Point(1679, 31);
             this.Excluir_Cadastro.Name = "Excluir_Cadastro";
             this.Excluir_Cadastro.Size = new System.Drawing.Size(183, 59);
             this.Excluir_Cadastro.TabIndex = 50;
@@ -114,13 +114,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1863, 946);
+            this.ClientSize = new System.Drawing.Size(1863, 942);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Tabela";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tabela";
             this.Load += new System.EventHandler(this.Tabela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).EndInit();

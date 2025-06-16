@@ -66,7 +66,7 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(1104, 344);
             this.guna2GroupBox1.TabIndex = 11;
-            this.guna2GroupBox1.Text = "Dados do Proprietário";
+            this.guna2GroupBox1.Text = "Dados das imobiliárias ou dos corretores";
             // 
             // Salvar
             // 
@@ -264,7 +264,7 @@
             this.Name = "Cadastro_Imobiliarias";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Imobiliárias";
+            this.Text = "Cadastro de imobiliárias e corretores";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).EndInit();

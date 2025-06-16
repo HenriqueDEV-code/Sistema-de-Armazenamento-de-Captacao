@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Excluir = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Financa = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label13 = new System.Windows.Forms.Label();
             this.Imobiliarias = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,20 +60,24 @@
             this.LB_Imoveis_N_Envi = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.LB_Imov_nao_Pago = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.LB_Imov_Pago = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.ON_OFF = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.Financa = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Excluir = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label14 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -97,9 +105,71 @@
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 56);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1901, 107);
+            this.guna2Panel1.Size = new System.Drawing.Size(1915, 107);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // Excluir
+            // 
+            this.Excluir.BackColor = System.Drawing.Color.Transparent;
+            this.Excluir.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Excluir.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Excluir.Image = ((System.Drawing.Image)(resources.GetObject("Excluir.Image")));
+            this.Excluir.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Excluir.ImageRotate = 0F;
+            this.Excluir.IndicateFocus = true;
+            this.Excluir.Location = new System.Drawing.Point(1344, 2);
+            this.Excluir.Margin = new System.Windows.Forms.Padding(2);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Excluir.Size = new System.Drawing.Size(71, 68);
+            this.Excluir.TabIndex = 12;
+            this.Excluir.UseTransparentBackground = true;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(1299, 77);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(158, 22);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Excluir imobiliárias";
+            // 
+            // Financa
+            // 
+            this.Financa.BackColor = System.Drawing.Color.Transparent;
+            this.Financa.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Financa.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Financa.Image = ((System.Drawing.Image)(resources.GetObject("Financa.Image")));
+            this.Financa.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Financa.ImageRotate = 0F;
+            this.Financa.IndicateFocus = true;
+            this.Financa.Location = new System.Drawing.Point(1103, 2);
+            this.Financa.Margin = new System.Windows.Forms.Padding(2);
+            this.Financa.Name = "Financa";
+            this.Financa.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Financa.Size = new System.Drawing.Size(71, 66);
+            this.Financa.TabIndex = 10;
+            this.Financa.UseTransparentBackground = true;
+            this.Financa.Click += new System.EventHandler(this.Financa_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(1105, 78);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 22);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Valores";
             // 
             // Imobiliarias
             // 
@@ -329,14 +399,13 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.LB_Imoveis_Envi);
-            this.panel2.Location = new System.Drawing.Point(707, 148);
+            this.panel2.Location = new System.Drawing.Point(960, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 151);
             this.panel2.TabIndex = 6;
-            this.panel2.Visible = false;
             // 
             // LB_Imoveis_Envi
             // 
@@ -354,10 +423,10 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.BackColor = System.Drawing.Color.Pink;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.LB_Imobiliarias_Cadastradas);
-            this.panel3.Location = new System.Drawing.Point(359, 148);
+            this.panel3.Location = new System.Drawing.Point(342, 148);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 151);
             this.panel3.TabIndex = 7;
@@ -384,9 +453,9 @@
             this.label6.Location = new System.Drawing.Point(12, 123);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 22);
+            this.label6.Size = new System.Drawing.Size(173, 22);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Imóveis Cadastrados";
+            this.label6.Text = "Imóveis cadastrados";
             // 
             // label7
             // 
@@ -395,12 +464,12 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(355, 123);
+            this.label7.Location = new System.Drawing.Point(338, 123);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 22);
+            this.label7.Size = new System.Drawing.Size(202, 22);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Imobiliarias Cadastradas";
+            this.label7.Text = "Imobiliárias cadastradas";
             // 
             // label8
             // 
@@ -409,25 +478,23 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(709, 123);
+            this.label8.Location = new System.Drawing.Point(962, 123);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 22);
+            this.label8.Size = new System.Drawing.Size(147, 22);
             this.label8.TabIndex = 10;
-            this.label8.Text = "Imóveis Enviados";
-            this.label8.Visible = false;
+            this.label8.Text = "Imóveis enviados";
             // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.LB_Imoveis_N_Envi);
-            this.panel4.Location = new System.Drawing.Point(1050, 148);
+            this.panel4.Location = new System.Drawing.Point(665, 148);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(274, 151);
             this.panel4.TabIndex = 11;
-            this.panel4.Visible = false;
             // 
             // LB_Imoveis_N_Envi
             // 
@@ -449,20 +516,22 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(1046, 123);
+            this.label9.Location = new System.Drawing.Point(661, 123);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 22);
+            this.label9.Size = new System.Drawing.Size(191, 22);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Imóveis NÃO Enviados";
-            this.label9.Visible = false;
+            this.label9.Text = "Imóveis NÃO enviados";
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.ON_OFF);
             this.panel5.Controls.Add(this.label9);
@@ -477,8 +546,84 @@
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel5.Location = new System.Drawing.Point(-1, 156);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1901, 795);
+            this.panel5.Size = new System.Drawing.Size(1915, 795);
             this.panel5.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label15.Location = new System.Drawing.Point(1274, 123);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(168, 22);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Imóveis NÃO pagos";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.LB_Imov_nao_Pago);
+            this.panel6.Location = new System.Drawing.Point(1278, 148);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(274, 151);
+            this.panel6.TabIndex = 20;
+            // 
+            // LB_Imov_nao_Pago
+            // 
+            this.LB_Imov_nao_Pago.AutoSize = true;
+            this.LB_Imov_nao_Pago.BackColor = System.Drawing.Color.Transparent;
+            this.LB_Imov_nao_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
+            this.LB_Imov_nao_Pago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LB_Imov_nao_Pago.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imov_nao_Pago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_Imov_nao_Pago.Name = "LB_Imov_nao_Pago";
+            this.LB_Imov_nao_Pago.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imov_nao_Pago.TabIndex = 10;
+            this.LB_Imov_nao_Pago.Text = ".";
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.BackColor = System.Drawing.Color.Lime;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.LB_Imov_Pago);
+            this.panel7.Location = new System.Drawing.Point(1578, 148);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(297, 151);
+            this.panel7.TabIndex = 18;
+            // 
+            // LB_Imov_Pago
+            // 
+            this.LB_Imov_Pago.AutoSize = true;
+            this.LB_Imov_Pago.BackColor = System.Drawing.Color.Transparent;
+            this.LB_Imov_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
+            this.LB_Imov_Pago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LB_Imov_Pago.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imov_Pago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_Imov_Pago.Name = "LB_Imov_Pago";
+            this.LB_Imov_Pago.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imov_Pago.TabIndex = 10;
+            this.LB_Imov_Pago.Text = ".";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label18.Location = new System.Drawing.Point(1576, 123);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(124, 22);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Imóveis pagos";
             // 
             // ON_OFF
             // 
@@ -516,7 +661,7 @@
             this.Conectado_VPN.ImageRotate = 0F;
             this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(1866, 20);
+            this.Conectado_VPN.Location = new System.Drawing.Point(1880, 20);
             this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Conectado_VPN.Name = "Conectado_VPN";
             this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
@@ -536,7 +681,7 @@
             this.Nao_Conectado_VPN.ImageRotate = 0F;
             this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1865, 20);
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(1879, 20);
             this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
             this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -545,73 +690,11 @@
             this.Nao_Conectado_VPN.UseTransparentBackground = true;
             this.Nao_Conectado_VPN.Visible = false;
             // 
-            // Financa
-            // 
-            this.Financa.BackColor = System.Drawing.Color.Transparent;
-            this.Financa.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Financa.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Financa.Image = ((System.Drawing.Image)(resources.GetObject("Financa.Image")));
-            this.Financa.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Financa.ImageRotate = 0F;
-            this.Financa.IndicateFocus = true;
-            this.Financa.Location = new System.Drawing.Point(1103, 2);
-            this.Financa.Margin = new System.Windows.Forms.Padding(2);
-            this.Financa.Name = "Financa";
-            this.Financa.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Financa.Size = new System.Drawing.Size(71, 66);
-            this.Financa.TabIndex = 10;
-            this.Financa.UseTransparentBackground = true;
-            this.Financa.Click += new System.EventHandler(this.Financa_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(1105, 78);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 22);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Valores";
-            // 
-            // Excluir
-            // 
-            this.Excluir.BackColor = System.Drawing.Color.Transparent;
-            this.Excluir.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Excluir.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Excluir.Image = ((System.Drawing.Image)(resources.GetObject("Excluir.Image")));
-            this.Excluir.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Excluir.ImageRotate = 0F;
-            this.Excluir.IndicateFocus = true;
-            this.Excluir.Location = new System.Drawing.Point(1344, 2);
-            this.Excluir.Margin = new System.Windows.Forms.Padding(2);
-            this.Excluir.Name = "Excluir";
-            this.Excluir.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Excluir.Size = new System.Drawing.Size(71, 68);
-            this.Excluir.TabIndex = 12;
-            this.Excluir.UseTransparentBackground = true;
-            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(1299, 77);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(158, 22);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Excluir imobiliárias";
-            // 
             // Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1900, 950);
+            this.ClientSize = new System.Drawing.Size(1914, 950);
             this.Controls.Add(this.Conectado_VPN);
             this.Controls.Add(this.Nao_Conectado_VPN);
             this.Controls.Add(this.panel5);
@@ -635,6 +718,10 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -676,5 +763,11 @@
         private System.Windows.Forms.Label label13;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton Excluir;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label LB_Imov_nao_Pago;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label LB_Imov_Pago;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -229,6 +229,8 @@ namespace CapWeb.Captacao
 
             foreach (DataRow row in tabela.Rows)
             {
+                detalhes.AppendLine(new string('=', 100));
+               
                 detalhes.AppendLine("Proprietário:");
                 detalhes.AppendLine(row["Nome_Proprietario"].ToString());
                 detalhes.AppendLine();
@@ -261,8 +263,8 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
-                detalhes.AppendLine("Tamanho da área (útil / construída / terreno):");
-                detalhes.AppendLine($"{row["util"]} m2 / {row["construida"]} m2/ {row["terreno"]} m2");
+                detalhes.AppendLine("Tamanho da área (útil | construída | terreno):");
+                detalhes.AppendLine($"Área útil: {row["util"]} m² | Área construída: {row["construida"]} m² | Área total: {row["terreno"]} m²");
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
@@ -280,7 +282,7 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine($"{row["Valor"]} - {row["Comissao"]}");
                 detalhes.AppendLine($"{row["Tipo_de_Imovel"]} - {row["Pretensao"]}");
                 detalhes.AppendLine();
-                detalhes.AppendLine(new string('-', 100));
+                detalhes.AppendLine(new string('=', 100));
                 detalhes.AppendLine();
             }
 

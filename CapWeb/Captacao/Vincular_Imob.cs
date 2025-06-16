@@ -40,7 +40,7 @@ namespace CapWeb.Captacao
                 daImob.Fill(dtImob);
 
                 // 2. Obter lista de Proprietários
-                string sqlProprietarios = "SELECT ID, Nome FROM Proprietarios";
+                string sqlProprietarios = "SELECT ID, Nome FROM Proprietarios ORDER BY ID DESC";
                 SqlDataAdapter daProp = new SqlDataAdapter(sqlProprietarios, conn);
                 DataTable dtProp = new DataTable();
                 daProp.Fill(dtProp);

@@ -55,10 +55,10 @@ namespace CapWeb.Captacao
         i.Util AS [Área Útil],
         i.Contruida AS [Área Construída],
         i.Terreno AS [Área Terreno]
-     
     FROM Proprietarios p
     INNER JOIN Imovel i ON i.ID_Proprietario = p.ID
     INNER JOIN Endereco e ON e.ID_End = i.ID_Endereco
+    ORDER BY p.ID DESC
             ";
 
                 try
@@ -160,7 +160,7 @@ namespace CapWeb.Captacao
                     }
 
                     transaction.Commit();
-                    MessageBox.Show("Proprietário, imóvel e endereço excluídos com sucesso!");
+                    MessageBox.Show("Cadastro excluído com sucesso.");
                     Carregar_Tabela(); // Atualiza o DataGridView
                 }
                 catch (Exception ex)
