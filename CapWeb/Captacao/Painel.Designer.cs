@@ -70,6 +70,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label16 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -528,6 +529,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel7);
@@ -690,6 +692,19 @@
             this.Nao_Conectado_VPN.UseTransparentBackground = true;
             this.Nao_Conectado_VPN.Visible = false;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(18, 649);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(945, 120);
+            this.label16.TabIndex = 22;
+            this.label16.Text = resources.GetString("label16.Text");
+            // 
             // Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,5 +784,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label LB_Imov_Pago;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
     }
 }

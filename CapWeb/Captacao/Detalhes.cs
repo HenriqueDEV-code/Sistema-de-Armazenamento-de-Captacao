@@ -25,17 +25,37 @@ namespace CapWeb.Captacao
         {
             InitializeComponent();
             this.DBA = DBA;
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
+
         }
 
+        // <<< Novo método para detectar tecla pressionada
+        private void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Acionar busca com F5
+            if (e.KeyCode == Keys.F5)
+            {
+                Button_Buscar_DBA.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F6)
+            {
+                extrair.PerformClick();
+                e.Handled = true;
+            }
+            
+        }
 
         bool Error_Nulos()
         {
             bool temErro = false;
             ERROR_Dados_Nulos.Clear();  // Limpa erros anteriores
 
-            if (string.IsNullOrWhiteSpace(Nome_Prop_Busca.Text))
+            if (string.IsNullOrWhiteSpace(Combo_Nome_Prop_Busca.Text))
             {
-                ERROR_Dados_Nulos.SetError(Nome_Prop_Busca, "Campo obrigatório.");
+                ERROR_Dados_Nulos.SetError(Combo_Nome_Prop_Busca, "Campo obrigatório.");
                 temErro = true;
             }
             if (string.IsNullOrWhiteSpace(Combo_Cidade_Busca.Text))
@@ -47,27 +67,39 @@ namespace CapWeb.Captacao
             return temErro;
         }
 
-
-
-        private void Nome_Prop_Busca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void Nome_Prop_Busca_Load(object sender, EventArgs e)
-        {
-            Nome_Prop_Busca.CharacterCasing = CharacterCasing.Upper;
-            
-        }
-
         private void Detalhes_Busca_Load(object sender, EventArgs e)
         {
             Detalhes_Busca.CharacterCasing = CharacterCasing.Upper;
 
         }
+
+        private List<string> ObterNomesProprietarios()
+        {
+            List<string> nomes = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT DISTINCT Nome FROM Proprietarios ORDER BY Nome";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader["Nome"] != DBNull.Value)
+                            {
+                                nomes.Add(reader["Nome"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+
+            return nomes;
+        }
+
 
         private List<string> ObertCidades()
         {
@@ -95,6 +127,14 @@ namespace CapWeb.Captacao
             return cidades;
         }
 
+        private void Preencher_ComboBox_Proprietarios()
+        {
+            var nomes = ObterNomesProprietarios();
+            Combo_Nome_Prop_Busca.Items.Clear();
+            Combo_Nome_Prop_Busca.Items.AddRange(nomes.ToArray());
+        }
+
+
         private void Preencher_ComboBox_Cidades()
         {
             var cidades = ObertCidades();
@@ -104,7 +144,10 @@ namespace CapWeb.Captacao
         private void Detalhes_Load(object sender, EventArgs e)
         {
             Preencher_ComboBox_Cidades();
+            Preencher_ComboBox_Proprietarios();
+
             Combo_Cidade_Busca.Text = "Selecione a cidade";
+            Combo_Nome_Prop_Busca.Text = "Selecione o nome";
 
         }
 
@@ -170,7 +213,7 @@ namespace CapWeb.Captacao
                 MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
                 return;  // Impede de salvar
             }
-            string nome = Nome_Prop_Busca.Text;
+            string nome = Combo_Nome_Prop_Busca.Text;
             string cidade = Combo_Cidade_Busca.SelectedItem.ToString();
 
             resultado = FiltrarDetalhes(nome, cidade);
@@ -288,5 +331,7 @@ namespace CapWeb.Captacao
 
             return detalhes.ToString();
         }
+
+       
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastros));
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.Telefone_Prop = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Nome_Prop = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,7 +63,7 @@
             this.Button_Salvar_DBA = new Guna.UI2.WinForms.Guna2Button();
             this.Descricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.Valor_IPTU0 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Valor_IPTU = new Guna.UI2.WinForms.Guna2TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Combo_Comissao = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -75,10 +74,11 @@
             this.Combo_Tipo_de_imovel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.guna2GroupBox1.SuspendLayout();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -93,23 +93,6 @@
             this.label6.Size = new System.Drawing.Size(96, 30);
             this.label6.TabIndex = 9;
             this.label6.Text = "Nome: ";
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GroupBox1.Controls.Add(this.Telefone_Prop);
-            this.guna2GroupBox1.Controls.Add(this.label1);
-            this.guna2GroupBox1.Controls.Add(this.Nome_Prop);
-            this.guna2GroupBox1.Controls.Add(this.label6);
-            this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 63);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1939, 146);
-            this.guna2GroupBox1.TabIndex = 10;
-            this.guna2GroupBox1.Text = "Dados do Proprietário";
             // 
             // Telefone_Prop
             // 
@@ -133,7 +116,7 @@
             this.Telefone_Prop.PlaceholderText = "Telefone do proprietário";
             this.Telefone_Prop.SelectedText = "";
             this.Telefone_Prop.Size = new System.Drawing.Size(391, 41);
-            this.Telefone_Prop.TabIndex = 12;
+            this.Telefone_Prop.TabIndex = 2;
             this.Telefone_Prop.TextChanged += new System.EventHandler(this.Telefone_Prop_TextChanged);
             this.Telefone_Prop.Enter += new System.EventHandler(this.Telefone_Enter);
             this.Telefone_Prop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefone_Prop_KeyPress);
@@ -174,7 +157,7 @@
             this.Nome_Prop.PlaceholderText = "Nome do proprietário";
             this.Nome_Prop.SelectedText = "";
             this.Nome_Prop.Size = new System.Drawing.Size(391, 41);
-            this.Nome_Prop.TabIndex = 10;
+            this.Nome_Prop.TabIndex = 1;
             this.Nome_Prop.Load += new System.EventHandler(this.Nome_Prop_Load);
             this.Nome_Prop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nome_Prop_KeyPress);
             // 
@@ -229,7 +212,7 @@
             this.nome_condominio.PlaceholderText = "Informe o nome do condomínio";
             this.nome_condominio.SelectedText = "";
             this.nome_condominio.Size = new System.Drawing.Size(493, 41);
-            this.nome_condominio.TabIndex = 26;
+            this.nome_condominio.TabIndex = 6;
             this.nome_condominio.Load += new System.EventHandler(this.nome_condominio_Load);
             this.nome_condominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nome_condominio_KeyPress);
             // 
@@ -268,7 +251,7 @@
             this.Complemento.PlaceholderText = "Informe o complemento";
             this.Complemento.SelectedText = "";
             this.Complemento.Size = new System.Drawing.Size(453, 41);
-            this.Complemento.TabIndex = 24;
+            this.Complemento.TabIndex = 5;
             this.Complemento.Load += new System.EventHandler(this.Complemento_Load);
             this.Complemento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Complemento_KeyPress);
             // 
@@ -408,7 +391,7 @@
             this.numero_residencia.PlaceholderText = "Informe o número";
             this.numero_residencia.SelectedText = "";
             this.numero_residencia.Size = new System.Drawing.Size(177, 41);
-            this.numero_residencia.TabIndex = 16;
+            this.numero_residencia.TabIndex = 4;
             this.numero_residencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero_residencia_KeyPress);
             // 
             // label5
@@ -503,7 +486,7 @@
             this.Informe_Cep.PlaceholderText = "Informe o cep";
             this.Informe_Cep.SelectedText = "";
             this.Informe_Cep.Size = new System.Drawing.Size(226, 41);
-            this.Informe_Cep.TabIndex = 10;
+            this.Informe_Cep.TabIndex = 3;
             this.Informe_Cep.TextChanged += new System.EventHandler(this.Informe_Cep_TextChanged);
             this.Informe_Cep.Enter += new System.EventHandler(this.Informe_Cep_Enter);
             this.Informe_Cep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Informe_Cep_KeyPress);
@@ -537,7 +520,7 @@
             this.guna2GroupBox3.Controls.Add(this.Button_Salvar_DBA);
             this.guna2GroupBox3.Controls.Add(this.Descricao);
             this.guna2GroupBox3.Controls.Add(this.label18);
-            this.guna2GroupBox3.Controls.Add(this.Valor_IPTU0);
+            this.guna2GroupBox3.Controls.Add(this.Valor_IPTU);
             this.guna2GroupBox3.Controls.Add(this.label17);
             this.guna2GroupBox3.Controls.Add(this.Combo_Comissao);
             this.guna2GroupBox3.Controls.Add(this.label14);
@@ -578,7 +561,7 @@
             this.Area_Total.PlaceholderText = "Área terreno";
             this.Area_Total.SelectedText = "";
             this.Area_Total.Size = new System.Drawing.Size(173, 41);
-            this.Area_Total.TabIndex = 32;
+            this.Area_Total.TabIndex = 11;
             this.Area_Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Area_Total_KeyPress);
             // 
             // label19
@@ -616,7 +599,7 @@
             this.area_construida.PlaceholderText = "Área construída";
             this.area_construida.SelectedText = "";
             this.area_construida.Size = new System.Drawing.Size(162, 41);
-            this.area_construida.TabIndex = 31;
+            this.area_construida.TabIndex = 10;
             this.area_construida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_construida_KeyPress);
             // 
             // label16
@@ -654,7 +637,7 @@
             this.area_util1.PlaceholderText = "Área útil";
             this.area_util1.SelectedText = "";
             this.area_util1.Size = new System.Drawing.Size(140, 41);
-            this.area_util1.TabIndex = 30;
+            this.area_util1.TabIndex = 9;
             this.area_util1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.area_util_KeyPress);
             // 
             // label15
@@ -692,7 +675,7 @@
             this.valor_codominio.PlaceholderText = "R$ 0,00";
             this.valor_codominio.SelectedText = "";
             this.valor_codominio.Size = new System.Drawing.Size(164, 41);
-            this.valor_codominio.TabIndex = 37;
+            this.valor_codominio.TabIndex = 14;
             this.valor_codominio.TextChanged += new System.EventHandler(this.valor_codominio_TextChanged);
             this.valor_codominio.Enter += new System.EventHandler(this.valor_codominio_Enter);
             this.valor_codominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valor_codominio_KeyPress);
@@ -728,7 +711,7 @@
             this.Button_Salvar_DBA.Location = new System.Drawing.Point(1728, 453);
             this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
             this.Button_Salvar_DBA.Size = new System.Drawing.Size(180, 50);
-            this.Button_Salvar_DBA.TabIndex = 47;
+            this.Button_Salvar_DBA.TabIndex = 17;
             this.Button_Salvar_DBA.Text = "&SALVAR";
             this.Button_Salvar_DBA.UseTransparentBackground = true;
             this.Button_Salvar_DBA.Click += new System.EventHandler(this.Button_Salvar_DBA_Click);
@@ -756,7 +739,7 @@
             this.Descricao.PlaceholderText = "Informe a descrição completa sobre o imóvel desse proprietário";
             this.Descricao.SelectedText = "";
             this.Descricao.Size = new System.Drawing.Size(1565, 255);
-            this.Descricao.TabIndex = 39;
+            this.Descricao.TabIndex = 16;
             this.Descricao.Load += new System.EventHandler(this.Descricao_Load);
             // 
             // label18
@@ -772,32 +755,32 @@
             this.label18.TabIndex = 36;
             this.label18.Text = "Descrição:";
             // 
-            // Valor_IPTU0
+            // Valor_IPTU
             // 
-            this.Valor_IPTU0.Animated = true;
-            this.Valor_IPTU0.AutoRoundedCorners = true;
-            this.Valor_IPTU0.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Valor_IPTU0.DefaultText = "";
-            this.Valor_IPTU0.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Valor_IPTU0.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Valor_IPTU0.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Valor_IPTU0.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Valor_IPTU0.FillColor = System.Drawing.Color.DimGray;
-            this.Valor_IPTU0.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Valor_IPTU0.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Valor_IPTU0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Valor_IPTU0.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Valor_IPTU0.Location = new System.Drawing.Point(553, 188);
-            this.Valor_IPTU0.Margin = new System.Windows.Forms.Padding(6);
-            this.Valor_IPTU0.Name = "Valor_IPTU0";
-            this.Valor_IPTU0.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Valor_IPTU0.PlaceholderText = "R$ 0,00";
-            this.Valor_IPTU0.SelectedText = "";
-            this.Valor_IPTU0.Size = new System.Drawing.Size(216, 41);
-            this.Valor_IPTU0.TabIndex = 36;
-            this.Valor_IPTU0.TextChanged += new System.EventHandler(this.Valor_IPTU_TextChanged);
-            this.Valor_IPTU0.Enter += new System.EventHandler(this.Valor_IPTU_Enter);
-            this.Valor_IPTU0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valor_IPTU_KeyPress);
+            this.Valor_IPTU.Animated = true;
+            this.Valor_IPTU.AutoRoundedCorners = true;
+            this.Valor_IPTU.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Valor_IPTU.DefaultText = "";
+            this.Valor_IPTU.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Valor_IPTU.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Valor_IPTU.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_IPTU.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Valor_IPTU.FillColor = System.Drawing.Color.DimGray;
+            this.Valor_IPTU.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_IPTU.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Valor_IPTU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_IPTU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Valor_IPTU.Location = new System.Drawing.Point(553, 188);
+            this.Valor_IPTU.Margin = new System.Windows.Forms.Padding(6);
+            this.Valor_IPTU.Name = "Valor_IPTU";
+            this.Valor_IPTU.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_IPTU.PlaceholderText = "R$ 0,00";
+            this.Valor_IPTU.SelectedText = "";
+            this.Valor_IPTU.Size = new System.Drawing.Size(216, 41);
+            this.Valor_IPTU.TabIndex = 13;
+            this.Valor_IPTU.TextChanged += new System.EventHandler(this.Valor_IPTU_TextChanged);
+            this.Valor_IPTU.Enter += new System.EventHandler(this.Valor_IPTU_Enter);
+            this.Valor_IPTU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valor_IPTU_KeyPress);
             // 
             // label17
             // 
@@ -830,7 +813,7 @@
             this.Combo_Comissao.Location = new System.Drawing.Point(1456, 196);
             this.Combo_Comissao.Name = "Combo_Comissao";
             this.Combo_Comissao.Size = new System.Drawing.Size(263, 36);
-            this.Combo_Comissao.TabIndex = 38;
+            this.Combo_Comissao.TabIndex = 15;
             // 
             // label14
             // 
@@ -867,7 +850,7 @@
             this.Valor_Imovel.PlaceholderText = "R$ 0,00";
             this.Valor_Imovel.SelectedText = "";
             this.Valor_Imovel.Size = new System.Drawing.Size(208, 41);
-            this.Valor_Imovel.TabIndex = 35;
+            this.Valor_Imovel.TabIndex = 12;
             this.Valor_Imovel.TextChanged += new System.EventHandler(this.Valor_Imovel_TextChanged);
             this.Valor_Imovel.Enter += new System.EventHandler(this.Valor_Imovel_Enter);
             this.Valor_Imovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valor_Imovel_KeyPress);
@@ -904,7 +887,7 @@
             this.Combo_Pretensao.Location = new System.Drawing.Point(612, 62);
             this.Combo_Pretensao.Name = "Combo_Pretensao";
             this.Combo_Pretensao.Size = new System.Drawing.Size(247, 36);
-            this.Combo_Pretensao.TabIndex = 27;
+            this.Combo_Pretensao.TabIndex = 8;
             // 
             // label12
             // 
@@ -940,7 +923,7 @@
             this.Combo_Tipo_de_imovel.Location = new System.Drawing.Point(196, 61);
             this.Combo_Tipo_de_imovel.Name = "Combo_Tipo_de_imovel";
             this.Combo_Tipo_de_imovel.Size = new System.Drawing.Size(229, 36);
-            this.Combo_Tipo_de_imovel.TabIndex = 25;
+            this.Combo_Tipo_de_imovel.TabIndex = 7;
             // 
             // label11
             // 
@@ -960,6 +943,23 @@
             this.ERROR_Dados_Nulos.ContainerControl = this;
             this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
             // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GroupBox1.Controls.Add(this.Telefone_Prop);
+            this.guna2GroupBox1.Controls.Add(this.label1);
+            this.guna2GroupBox1.Controls.Add(this.Nome_Prop);
+            this.guna2GroupBox1.Controls.Add(this.label6);
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 63);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1939, 146);
+            this.guna2GroupBox1.TabIndex = 10;
+            this.guna2GroupBox1.Text = "Dados do Proprietário";
+            // 
             // Cadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -974,13 +974,13 @@
             this.Name = "Cadastros";
             this.Text = "Cadastro de imóveis e proprietários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             this.guna2GroupBox3.ResumeLayout(false);
             this.guna2GroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -988,7 +988,6 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TextBox Nome_Prop;
         private Guna.UI2.WinForms.Guna2TextBox Telefone_Prop;
         private System.Windows.Forms.Label label1;
@@ -1012,7 +1011,7 @@
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Tipo_de_imovel;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox Valor_IPTU0;
+        private Guna.UI2.WinForms.Guna2TextBox Valor_IPTU;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Comissao;
         private System.Windows.Forms.Label label14;
@@ -1032,5 +1031,6 @@
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2TextBox Area_Total;
         private System.Windows.Forms.Label label19;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }

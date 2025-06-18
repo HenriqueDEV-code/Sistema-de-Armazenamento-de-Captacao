@@ -18,7 +18,66 @@ namespace CapWeb.Captacao
             this.Status = Status;
             InitializeComponent();
             ON_OFF.Text = Status;
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
+
+
+        private void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+            /*// Acionar busca com F5
+            if (e.KeyCode == Keys.F5)
+            {
+                Button_Buscar_DBA.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }*/
+
+            if (e.KeyCode == Keys.F1)
+            {
+                Cadastro.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F2)
+            {
+                Cadastro_Imobiliarias.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+
+            if (e.KeyCode == Keys.F3)
+            {
+                Imobiliarias.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F4)
+            {
+                Detalhes.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F5)
+            {
+                Tabela.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F6)
+            {
+                Financa.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.F7)
+            {
+                Excluir.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+        }
+
+
+
+
 
         private void Cadastro_Click(object sender, EventArgs e)
         {

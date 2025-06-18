@@ -37,9 +37,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.Combo_Cidade_Busca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Nome_Prop_Busca = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Combo_Nome_Prop_Busca = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
             this.SuspendLayout();
@@ -50,13 +51,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.Combo_Nome_Prop_Busca);
             this.panel1.Controls.Add(this.extrair);
             this.panel1.Controls.Add(this.Button_Buscar_DBA);
             this.panel1.Controls.Add(this.Detalhes_Busca);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.Combo_Cidade_Busca);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.Nome_Prop_Busca);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(-1, 64);
             this.panel1.Name = "panel1";
@@ -79,11 +81,11 @@
             this.extrair.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.extrair.ForeColor = System.Drawing.Color.Black;
             this.extrair.IndicateFocus = true;
-            this.extrair.Location = new System.Drawing.Point(963, 632);
+            this.extrair.Location = new System.Drawing.Point(963, 615);
             this.extrair.Name = "extrair";
             this.extrair.Size = new System.Drawing.Size(153, 50);
             this.extrair.TabIndex = 41;
-            this.extrair.Text = "&Extrair";
+            this.extrair.Text = "Extrair - F6";
             this.extrair.UseTransparentBackground = true;
             this.extrair.Click += new System.EventHandler(this.extrair_Click);
             // 
@@ -107,7 +109,7 @@
             this.Button_Buscar_DBA.Name = "Button_Buscar_DBA";
             this.Button_Buscar_DBA.Size = new System.Drawing.Size(153, 41);
             this.Button_Buscar_DBA.TabIndex = 40;
-            this.Button_Buscar_DBA.Text = "&Buscar";
+            this.Button_Buscar_DBA.Text = "Buscar - F5";
             this.Button_Buscar_DBA.UseTransparentBackground = true;
             this.Button_Buscar_DBA.Click += new System.EventHandler(this.Button_Buscar_DBA_Click);
             // 
@@ -137,7 +139,7 @@
             this.Detalhes_Busca.PlaceholderText = "";
             this.Detalhes_Busca.ReadOnly = true;
             this.Detalhes_Busca.SelectedText = "";
-            this.Detalhes_Busca.Size = new System.Drawing.Size(924, 530);
+            this.Detalhes_Busca.Size = new System.Drawing.Size(924, 434);
             this.Detalhes_Busca.TabIndex = 39;
             this.Detalhes_Busca.Load += new System.EventHandler(this.Detalhes_Busca_Load);
             // 
@@ -187,32 +189,6 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Cidade:";
             // 
-            // Nome_Prop_Busca
-            // 
-            this.Nome_Prop_Busca.Animated = true;
-            this.Nome_Prop_Busca.AutoRoundedCorners = true;
-            this.Nome_Prop_Busca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Nome_Prop_Busca.DefaultText = "";
-            this.Nome_Prop_Busca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Nome_Prop_Busca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Nome_Prop_Busca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Prop_Busca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Prop_Busca.FillColor = System.Drawing.Color.DimGray;
-            this.Nome_Prop_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nome_Prop_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Nome_Prop_Busca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Nome_Prop_Busca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nome_Prop_Busca.Location = new System.Drawing.Point(114, 42);
-            this.Nome_Prop_Busca.Margin = new System.Windows.Forms.Padding(6);
-            this.Nome_Prop_Busca.Name = "Nome_Prop_Busca";
-            this.Nome_Prop_Busca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Nome_Prop_Busca.PlaceholderText = "Nome do proprietário";
-            this.Nome_Prop_Busca.SelectedText = "";
-            this.Nome_Prop_Busca.Size = new System.Drawing.Size(410, 41);
-            this.Nome_Prop_Busca.TabIndex = 14;
-            this.Nome_Prop_Busca.Load += new System.EventHandler(this.Nome_Prop_Busca_Load);
-            this.Nome_Prop_Busca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nome_Prop_Busca_KeyPress);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -230,6 +206,37 @@
             // 
             this.ERROR_Dados_Nulos.ContainerControl = this;
             this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
+            // 
+            // Combo_Nome_Prop_Busca
+            // 
+            this.Combo_Nome_Prop_Busca.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Nome_Prop_Busca.BorderRadius = 8;
+            this.Combo_Nome_Prop_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Nome_Prop_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Nome_Prop_Busca.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Nome_Prop_Busca.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Nome_Prop_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Nome_Prop_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Combo_Nome_Prop_Busca.ForeColor = System.Drawing.Color.White;
+            this.Combo_Nome_Prop_Busca.ItemHeight = 30;
+            this.Combo_Nome_Prop_Busca.Location = new System.Drawing.Point(128, 43);
+            this.Combo_Nome_Prop_Busca.Name = "Combo_Nome_Prop_Busca";
+            this.Combo_Nome_Prop_Busca.Size = new System.Drawing.Size(351, 36);
+            this.Combo_Nome_Prop_Busca.TabIndex = 42;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(27, 597);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(447, 90);
+            this.label16.TabIndex = 43;
+            this.label16.Text = " Atalhos:\r\n F5 - Buscar imóveis\r\n F6 - Extrair as informações para o .txt";
             // 
             // Detalhes
             // 
@@ -252,7 +259,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox Nome_Prop_Busca;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Cidade_Busca;
         private System.Windows.Forms.Label label11;
@@ -261,5 +267,7 @@
         private Guna.UI2.WinForms.Guna2Button Button_Buscar_DBA;
         private Guna.UI2.WinForms.Guna2Button extrair;
         private System.Windows.Forms.ErrorProvider ERROR_Dados_Nulos;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Nome_Prop_Busca;
+        private System.Windows.Forms.Label label16;
     }
 }

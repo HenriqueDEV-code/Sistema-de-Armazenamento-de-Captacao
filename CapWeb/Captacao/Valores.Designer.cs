@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneGroupBox2 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.cap_ImoveisDataSet = new CapWeb.Cap_ImoveisDataSet();
             this.proprietarioImobiliariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proprietario_ImobiliariaTableAdapter = new CapWeb.Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter();
+            this.label16 = new System.Windows.Forms.Label();
             this.siticonePanel1.SuspendLayout();
             this.siticoneGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DB_TABELA_VALORES_IMOBIIARIAS)).BeginInit();
@@ -137,7 +138,7 @@
             this.Pago.Name = "Pago";
             this.Pago.Size = new System.Drawing.Size(120, 42);
             this.Pago.TabIndex = 49;
-            this.Pago.Text = "&PAGO";
+            this.Pago.Text = "PAGO";
             this.Pago.UseTransparentBackground = true;
             this.Pago.Click += new System.EventHandler(this.Pago_Click);
             // 
@@ -251,24 +252,24 @@
             // 
             this.DB_TABELA_VALORES_IMOBIIARIAS.BackgroundColor = System.Drawing.Color.DimGray;
             this.DB_TABELA_VALORES_IMOBIIARIAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle5;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Location = new System.Drawing.Point(9, 102);
             this.DB_TABELA_VALORES_IMOBIIARIAS.Name = "DB_TABELA_VALORES_IMOBIIARIAS";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Size = new System.Drawing.Size(548, 302);
             this.DB_TABELA_VALORES_IMOBIIARIAS.TabIndex = 0;
             // 
@@ -277,6 +278,7 @@
             this.siticoneGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneGroupBox1.Controls.Add(this.label16);
             this.siticoneGroupBox1.Controls.Add(this.label12);
             this.siticoneGroupBox1.Controls.Add(this.Button_Pesquisar_DBA);
             this.siticoneGroupBox1.Controls.Add(this.Combo_Lista_Imobiliarias);
@@ -320,7 +322,7 @@
             this.Button_Pesquisar_DBA.Name = "Button_Pesquisar_DBA";
             this.Button_Pesquisar_DBA.Size = new System.Drawing.Size(120, 36);
             this.Button_Pesquisar_DBA.TabIndex = 48;
-            this.Button_Pesquisar_DBA.Text = "&PESQUISA";
+            this.Button_Pesquisar_DBA.Text = "PESQUISA";
             this.Button_Pesquisar_DBA.UseTransparentBackground = true;
             this.Button_Pesquisar_DBA.Click += new System.EventHandler(this.Button_Pesquisar_DBA_Click);
             // 
@@ -354,6 +356,20 @@
             // proprietario_ImobiliariaTableAdapter
             // 
             this.proprietario_ImobiliariaTableAdapter.ClearBeforeFill = true;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(2, 447);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(232, 66);
+            this.label16.TabIndex = 49;
+            this.label16.Text = " Atalhos:\r\n F1 - Pesquisar\r\n F2 - Marca que esta PAGO";
             // 
             // Valores
             // 
@@ -400,5 +416,6 @@
         private Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter proprietario_ImobiliariaTableAdapter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -20,7 +20,33 @@ namespace CapWeb.Captacao
         {
             this.DBA = DBA;
             InitializeComponent();
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
+
+        // <<< Novo método para detectar tecla pressionada
+        private void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Acionar busca com F5
+            if (e.KeyCode == Keys.F1)
+            {
+                Button_Pesquisar_DBA.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F2)
+            {
+                Pago.PerformClick();
+                e.Handled = true;
+            }
+
+        }
+
+
+
+
+
+
 
         private void Quantidade_Total_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -141,7 +167,8 @@ namespace CapWeb.Captacao
                 pi.ID_Proprietario,
                 pi.ID_Imobiliaria,
                 pi.Data_Vinculo,
-                pi.Valor
+                pi.Valor,
+                pi.Status
             FROM Proprietario_Imobiliaria pi
             INNER JOIN Imobiliaria i ON i.ID_Imobiliaria = pi.ID_Imobiliaria
             WHERE i.Nome_Imobiliaria = @Nome_Imobiliaria

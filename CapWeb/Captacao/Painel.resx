@@ -121,7 +121,7 @@
   <data name="Excluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABOVJREFUaEPtmltoHVUUhk8aL3jXJCcz/78nJxqCl1QUCYh4QUUURFArXh586YMo
+        DgAACw4BQL7hQQAABOVJREFUaEPtmltoHVUUhk8aL3jXJCcz/78nJxqCl1QUCYh4QUUURFArXh586YMo
         ldpWXxQfxCcVEQUviCIU26oI+mBBfdAHBfFRbBNNtQqiUp/UWmOpthj5w9phZ3GmmSSHOUfoB5sk8689
         s9aefZu102gc4xj/D7IsOxvAowA+AvAjyb9IzpKcBvCsdF+npxgbGzsDwFaSh0nOlRUAB0ne5ev3BEVR
         jAP4zpw9QvLNEMIdeZ6PAji52WyeGkK4jOQ2C+Yfku8CuKXRaPT5+3UFkoMA9loQUwDO9zYpAF50b+i9
@@ -148,7 +148,7 @@
   <data name="Financa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACKNJREFUeF7tnHuMXVUVxqcVH4AItMzc/X37zAyU4qM+UCu+glFEXhGjURHlD0I0
+        DgAACw4BQL7hQQAACKNJREFUeF7tnHuMXVUVxqcVH4AItMzc/X37zAyU4qM+UCu+glFEXhGjURHlD0I0
         agx/qEWsQaCoGAV8xJIgiPKMCCUSFExAKGqpBQxFhRKVh7TlDVahVKmg1HyTtZvt4sy95965hTl3zi/Z
         6cxZ6+wzZ921915r7X07NNTQ0NDQ0DDTAfBbktf7655+6w0MelmSK/x1T7/1Ghoa2lJ1LirTq3qtjKp6
         056qc1GZXtVrZVTVaxgkb6tKv194xnlb2QuXGbXqtYZJjFr1WsMUmXFe2e8XHmivLDNW2QvPmTPnZQCO
@@ -191,7 +191,7 @@
   <data name="Imobiliarias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAyJJREFUeF7tnEGOUzEMhosE7EDQbmov2n23XTHcARCngIPAMEeBGyCxYkCCE8AB
+        DgAACw4BQL7hQQAAAyJJREFUeF7tnEGOUzEMhosE7EDQbmov2n23XTHcARCngIPAMEeBGyCxYkCCE8AB
         gBPAGhTxgl7M+0Oe08QPjT/JUiexk6+ZV7errFaO4zjOYjgejzeY+SkRfWTmH8z8nYg+MPOT1Wp1XeY7
         I3a73V0ies/MP0G82+/3d2Sd85trRPRmOKhPRPRws9ncCkFEj4jo8zD3OuTK4itPOKR4eFNPWRgbHeID
         OX/lIaJX4XDCkyfnItvt9vGQ81LO/ZccDoebzHxBRN8m+pUqwkc2rj/0w8v493q9vi3ztUFEX5n5PLyH
@@ -301,6 +301,13 @@
         dSgUdN0Rbln+H1K0L/8PKBR0HQoFXYdCQdehUNB1KBR0HQoFXYdCQdcd4Zbl/yFF+/L/gEJB16FQ0HUo
         FHQdCgVdh0JB16FQ0HUoFHTdEW5Z/h9StC//DygUdB0KBV2HQkHXoVDQdSgUdB0KBV2HQkHXHeGW5f9h
         rfVO2bq11k/+f3j4Av/uaOZLQ9gDcwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value> Atalhos:
+ F1 - Cadastro de imóveis               F4 - Detalhes               F7 - Excluir imobiliárias 
+ F2 - Cadastro de imobiliárias         F5 - Tabela
+ F3 - Imobiliárias                              F6 - Valores
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

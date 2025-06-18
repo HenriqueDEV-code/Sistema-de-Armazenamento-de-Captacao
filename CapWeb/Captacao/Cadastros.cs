@@ -194,14 +194,14 @@ namespace CapWeb.Captacao
 
         private void Valor_IPTU_TextChanged(object sender, EventArgs e)
         {
-            Valor_IPTU0.TextChanged -= Valor_IPTU_TextChanged;
-            FormatarMoeda(Valor_IPTU0);
-            Valor_IPTU0.TextChanged += Valor_IPTU_TextChanged;
+            Valor_IPTU.TextChanged -= Valor_IPTU_TextChanged;
+            FormatarMoeda(Valor_IPTU);
+            Valor_IPTU.TextChanged += Valor_IPTU_TextChanged;
         }
 
         private void Valor_IPTU_Enter(object sender, EventArgs e)
         {
-            FormatarMoeda_Enter(Valor_IPTU0);
+            FormatarMoeda_Enter(Valor_IPTU);
         }
 
         private void Informe_Cep_TextChanged(object sender, EventArgs e)
@@ -505,7 +505,7 @@ namespace CapWeb.Captacao
             Cidade.Clear();
             UF.Clear();
             Valor_Imovel.Clear();
-            Valor_IPTU0.Clear();
+            Valor_IPTU.Clear();
             Descricao.Clear();
             valor_codominio.Clear();
             area_util1.Clear();
@@ -529,18 +529,6 @@ namespace CapWeb.Captacao
             if (string.IsNullOrWhiteSpace(Telefone_Prop.Text))
             {
                 ERROR_Dados_Nulos.SetError(Telefone_Prop, "Campo obrigatório.");
-                temErro = true;
-            }
-
-            if (string.IsNullOrWhiteSpace(Informe_Cep.Text))
-            {
-                ERROR_Dados_Nulos.SetError(Informe_Cep, "Campo obrigatório.");
-                temErro = true;
-            }
-
-            if (string.IsNullOrWhiteSpace(numero_residencia.Text))
-            {
-                ERROR_Dados_Nulos.SetError(numero_residencia, "Campo obrigatório.");
                 temErro = true;
             }
 
@@ -568,9 +556,9 @@ namespace CapWeb.Captacao
                 temErro = true;
             }
 
-            if (string.IsNullOrWhiteSpace(Valor_IPTU0.Text))
+            if (string.IsNullOrWhiteSpace(Valor_IPTU.Text))
             {
-                ERROR_Dados_Nulos.SetError(Valor_IPTU0, "Campo obrigatório.");
+                ERROR_Dados_Nulos.SetError(Valor_IPTU, "Campo obrigatório.");
                 temErro = true;
             }
 
@@ -620,7 +608,7 @@ namespace CapWeb.Captacao
                 Pretensao = Combo_Pretensao.Text,
                 Comissao = Combo_Comissao.Text,
                 Complemento = Complemento.Text,
-                IPTU = Valor_IPTU0.Text,                   // Ex: "R$ 987,65"
+                IPTU = Valor_IPTU.Text,                   // Ex: "R$ 987,65"
                 Valor_Condominio = valor_codominio.Text,  // Ex: "R$ 432,10"
                 Util = area_util1.Text,
                 Construida = area_construida.Text,
