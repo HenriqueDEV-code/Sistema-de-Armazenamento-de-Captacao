@@ -21,8 +21,22 @@ namespace CapWeb.Captacao
             this.DBA = DBA;
           
             InitializeComponent();
-            
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
+
+
+        private void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Acionar busca com F5
+            if (e.KeyCode == Keys.F5)
+            {
+                //Button_Buscar_DBA.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+        }
+
+
 
         private void Tabela_Load(object sender, EventArgs e)
         {

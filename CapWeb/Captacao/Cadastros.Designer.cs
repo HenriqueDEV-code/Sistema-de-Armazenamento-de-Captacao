@@ -48,7 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Logradouro = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Buscar_Cep = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Informe_Cep = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -75,6 +74,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Buscar_Cep = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
@@ -86,7 +86,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label6.Location = new System.Drawing.Point(11, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -104,15 +104,15 @@
             this.Telefone_Prop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Telefone_Prop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Telefone_Prop.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Telefone_Prop.FillColor = System.Drawing.Color.DimGray;
+            this.Telefone_Prop.FillColor = System.Drawing.Color.Gray;
             this.Telefone_Prop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Telefone_Prop.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Telefone_Prop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Telefone_Prop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Telefone_Prop.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Telefone_Prop.Location = new System.Drawing.Point(664, 67);
+            this.Telefone_Prop.Location = new System.Drawing.Point(663, 67);
             this.Telefone_Prop.Margin = new System.Windows.Forms.Padding(6);
             this.Telefone_Prop.Name = "Telefone_Prop";
-            this.Telefone_Prop.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Telefone_Prop.PlaceholderForeColor = System.Drawing.Color.White;
             this.Telefone_Prop.PlaceholderText = "Telefone do proprietário";
             this.Telefone_Prop.SelectedText = "";
             this.Telefone_Prop.Size = new System.Drawing.Size(391, 41);
@@ -127,8 +127,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(542, 69);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(524, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 30);
@@ -145,15 +145,15 @@
             this.Nome_Prop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Nome_Prop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Nome_Prop.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Prop.FillColor = System.Drawing.Color.DimGray;
+            this.Nome_Prop.FillColor = System.Drawing.Color.Gray;
             this.Nome_Prop.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nome_Prop.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Nome_Prop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Nome_Prop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Nome_Prop.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nome_Prop.Location = new System.Drawing.Point(98, 67);
+            this.Nome_Prop.Location = new System.Drawing.Point(120, 67);
             this.Nome_Prop.Margin = new System.Windows.Forms.Padding(6);
             this.Nome_Prop.Name = "Nome_Prop";
-            this.Nome_Prop.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Nome_Prop.PlaceholderForeColor = System.Drawing.Color.White;
             this.Nome_Prop.PlaceholderText = "Nome do proprietário";
             this.Nome_Prop.SelectedText = "";
             this.Nome_Prop.Size = new System.Drawing.Size(391, 41);
@@ -200,15 +200,15 @@
             this.nome_condominio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.nome_condominio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nome_condominio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nome_condominio.FillColor = System.Drawing.Color.DimGray;
+            this.nome_condominio.FillColor = System.Drawing.Color.Gray;
             this.nome_condominio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nome_condominio.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.nome_condominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nome_condominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nome_condominio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nome_condominio.Location = new System.Drawing.Point(1376, 255);
             this.nome_condominio.Margin = new System.Windows.Forms.Padding(6);
             this.nome_condominio.Name = "nome_condominio";
-            this.nome_condominio.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nome_condominio.PlaceholderForeColor = System.Drawing.Color.White;
             this.nome_condominio.PlaceholderText = "Informe o nome do condomínio";
             this.nome_condominio.SelectedText = "";
             this.nome_condominio.Size = new System.Drawing.Size(493, 41);
@@ -221,7 +221,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Location = new System.Drawing.Point(1100, 258);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -239,15 +239,15 @@
             this.Complemento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Complemento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Complemento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Complemento.FillColor = System.Drawing.Color.DimGray;
+            this.Complemento.FillColor = System.Drawing.Color.Gray;
             this.Complemento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Complemento.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Complemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Complemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Complemento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Complemento.Location = new System.Drawing.Point(606, 255);
             this.Complemento.Margin = new System.Windows.Forms.Padding(6);
             this.Complemento.Name = "Complemento";
-            this.Complemento.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Complemento.PlaceholderForeColor = System.Drawing.Color.White;
             this.Complemento.PlaceholderText = "Informe o complemento";
             this.Complemento.SelectedText = "";
             this.Complemento.Size = new System.Drawing.Size(453, 41);
@@ -260,7 +260,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label10.Location = new System.Drawing.Point(418, 258);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
@@ -323,7 +323,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label8.Location = new System.Drawing.Point(497, 192);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
@@ -361,7 +361,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label7.Location = new System.Drawing.Point(509, 132);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -379,15 +379,15 @@
             this.numero_residencia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.numero_residencia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.numero_residencia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.numero_residencia.FillColor = System.Drawing.Color.DimGray;
+            this.numero_residencia.FillColor = System.Drawing.Color.Gray;
             this.numero_residencia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.numero_residencia.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.numero_residencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numero_residencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.numero_residencia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.numero_residencia.Location = new System.Drawing.Point(1135, 68);
             this.numero_residencia.Margin = new System.Windows.Forms.Padding(6);
             this.numero_residencia.Name = "numero_residencia";
-            this.numero_residencia.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numero_residencia.PlaceholderForeColor = System.Drawing.Color.White;
             this.numero_residencia.PlaceholderText = "Informe o número";
             this.numero_residencia.SelectedText = "";
             this.numero_residencia.Size = new System.Drawing.Size(177, 41);
@@ -399,7 +399,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(1078, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -437,32 +437,13 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(450, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 30);
             this.label2.TabIndex = 12;
             this.label2.Text = "Logradouro: ";
-            // 
-            // Buscar_Cep
-            // 
-            this.Buscar_Cep.BackColor = System.Drawing.Color.Transparent;
-            this.Buscar_Cep.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Buscar_Cep.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.Image = ((System.Drawing.Image)(resources.GetObject("Buscar_Cep.Image")));
-            this.Buscar_Cep.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Buscar_Cep.ImageRotate = 0F;
-            this.Buscar_Cep.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.IndicateFocus = true;
-            this.Buscar_Cep.Location = new System.Drawing.Point(344, 72);
-            this.Buscar_Cep.Margin = new System.Windows.Forms.Padding(2);
-            this.Buscar_Cep.Name = "Buscar_Cep";
-            this.Buscar_Cep.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.Size = new System.Drawing.Size(34, 29);
-            this.Buscar_Cep.TabIndex = 11;
-            this.Buscar_Cep.UseTransparentBackground = true;
-            this.Buscar_Cep.Click += new System.EventHandler(this.Buscar_Cep_Click);
             // 
             // Informe_Cep
             // 
@@ -474,15 +455,15 @@
             this.Informe_Cep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Informe_Cep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Informe_Cep.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Informe_Cep.FillColor = System.Drawing.Color.DimGray;
+            this.Informe_Cep.FillColor = System.Drawing.Color.Gray;
             this.Informe_Cep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Informe_Cep.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Informe_Cep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Informe_Cep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Informe_Cep.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Informe_Cep.Location = new System.Drawing.Point(82, 66);
             this.Informe_Cep.Margin = new System.Windows.Forms.Padding(6);
             this.Informe_Cep.Name = "Informe_Cep";
-            this.Informe_Cep.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Informe_Cep.PlaceholderForeColor = System.Drawing.Color.White;
             this.Informe_Cep.PlaceholderText = "Informe o cep";
             this.Informe_Cep.SelectedText = "";
             this.Informe_Cep.Size = new System.Drawing.Size(226, 41);
@@ -497,7 +478,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(11, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -549,15 +530,15 @@
             this.Area_Total.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Area_Total.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Area_Total.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Area_Total.FillColor = System.Drawing.Color.DimGray;
+            this.Area_Total.FillColor = System.Drawing.Color.Gray;
             this.Area_Total.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Area_Total.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Area_Total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Area_Total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Area_Total.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Area_Total.Location = new System.Drawing.Point(1727, 63);
             this.Area_Total.Margin = new System.Windows.Forms.Padding(6);
             this.Area_Total.Name = "Area_Total";
-            this.Area_Total.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Area_Total.PlaceholderForeColor = System.Drawing.Color.White;
             this.Area_Total.PlaceholderText = "Área terreno";
             this.Area_Total.SelectedText = "";
             this.Area_Total.Size = new System.Drawing.Size(173, 41);
@@ -569,7 +550,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label19.Location = new System.Drawing.Point(1581, 68);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
@@ -590,12 +571,12 @@
             this.area_construida.FillColor = System.Drawing.Color.DimGray;
             this.area_construida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.area_construida.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.area_construida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_construida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.area_construida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.area_construida.Location = new System.Drawing.Point(1388, 64);
             this.area_construida.Margin = new System.Windows.Forms.Padding(6);
             this.area_construida.Name = "area_construida";
-            this.area_construida.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_construida.PlaceholderForeColor = System.Drawing.Color.White;
             this.area_construida.PlaceholderText = "Área construída";
             this.area_construida.SelectedText = "";
             this.area_construida.Size = new System.Drawing.Size(162, 41);
@@ -607,7 +588,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label16.Location = new System.Drawing.Point(1181, 69);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
@@ -625,15 +606,15 @@
             this.area_util1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.area_util1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.area_util1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_util1.FillColor = System.Drawing.Color.DimGray;
+            this.area_util1.FillColor = System.Drawing.Color.Gray;
             this.area_util1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.area_util1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.area_util1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_util1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.area_util1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.area_util1.Location = new System.Drawing.Point(1018, 63);
             this.area_util1.Margin = new System.Windows.Forms.Padding(6);
             this.area_util1.Name = "area_util1";
-            this.area_util1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.area_util1.PlaceholderForeColor = System.Drawing.Color.White;
             this.area_util1.PlaceholderText = "Área útil";
             this.area_util1.SelectedText = "";
             this.area_util1.Size = new System.Drawing.Size(140, 41);
@@ -645,7 +626,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label15.Location = new System.Drawing.Point(906, 67);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
@@ -663,15 +644,15 @@
             this.valor_codominio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.valor_codominio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.valor_codominio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.valor_codominio.FillColor = System.Drawing.Color.DimGray;
+            this.valor_codominio.FillColor = System.Drawing.Color.Gray;
             this.valor_codominio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.valor_codominio.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.valor_codominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.valor_codominio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.valor_codominio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.valor_codominio.Location = new System.Drawing.Point(1131, 193);
             this.valor_codominio.Margin = new System.Windows.Forms.Padding(6);
             this.valor_codominio.Name = "valor_codominio";
-            this.valor_codominio.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.valor_codominio.PlaceholderForeColor = System.Drawing.Color.White;
             this.valor_codominio.PlaceholderText = "R$ 0,00";
             this.valor_codominio.SelectedText = "";
             this.valor_codominio.Size = new System.Drawing.Size(164, 41);
@@ -685,7 +666,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label9.Location = new System.Drawing.Point(867, 197);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
@@ -704,15 +685,15 @@
             this.Button_Salvar_DBA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_Salvar_DBA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_Salvar_DBA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button_Salvar_DBA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Button_Salvar_DBA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Button_Salvar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.Black;
+            this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.White;
             this.Button_Salvar_DBA.IndicateFocus = true;
-            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1728, 453);
+            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1744, 453);
             this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
             this.Button_Salvar_DBA.Size = new System.Drawing.Size(180, 50);
             this.Button_Salvar_DBA.TabIndex = 17;
-            this.Button_Salvar_DBA.Text = "&SALVAR";
+            this.Button_Salvar_DBA.Text = "SALVAR";
             this.Button_Salvar_DBA.UseTransparentBackground = true;
             this.Button_Salvar_DBA.Click += new System.EventHandler(this.Button_Salvar_DBA_Click);
             // 
@@ -726,16 +707,16 @@
             this.Descricao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Descricao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Descricao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Descricao.FillColor = System.Drawing.Color.DimGray;
+            this.Descricao.FillColor = System.Drawing.Color.Gray;
             this.Descricao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Descricao.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Descricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Descricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Descricao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Descricao.Location = new System.Drawing.Point(154, 253);
             this.Descricao.Margin = new System.Windows.Forms.Padding(6);
             this.Descricao.Multiline = true;
             this.Descricao.Name = "Descricao";
-            this.Descricao.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Descricao.PlaceholderForeColor = System.Drawing.Color.White;
             this.Descricao.PlaceholderText = "Informe a descrição completa sobre o imóvel desse proprietário";
             this.Descricao.SelectedText = "";
             this.Descricao.Size = new System.Drawing.Size(1565, 255);
@@ -747,7 +728,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label18.Location = new System.Drawing.Point(11, 253);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
@@ -765,15 +746,15 @@
             this.Valor_IPTU.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Valor_IPTU.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Valor_IPTU.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Valor_IPTU.FillColor = System.Drawing.Color.DimGray;
+            this.Valor_IPTU.FillColor = System.Drawing.Color.Gray;
             this.Valor_IPTU.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor_IPTU.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Valor_IPTU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_IPTU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Valor_IPTU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor_IPTU.Location = new System.Drawing.Point(553, 188);
             this.Valor_IPTU.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_IPTU.Name = "Valor_IPTU";
-            this.Valor_IPTU.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_IPTU.PlaceholderForeColor = System.Drawing.Color.White;
             this.Valor_IPTU.PlaceholderText = "R$ 0,00";
             this.Valor_IPTU.SelectedText = "";
             this.Valor_IPTU.Size = new System.Drawing.Size(216, 41);
@@ -787,7 +768,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label17.Location = new System.Drawing.Point(478, 190);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -801,11 +782,11 @@
             this.Combo_Comissao.BorderRadius = 8;
             this.Combo_Comissao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Comissao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Comissao.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Comissao.FillColor = System.Drawing.Color.Gray;
             this.Combo_Comissao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Comissao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Comissao.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Comissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Combo_Comissao.ForeColor = System.Drawing.Color.White;
             this.Combo_Comissao.ItemHeight = 30;
             this.Combo_Comissao.Items.AddRange(new object[] {
             "COM COMISSÃO",
@@ -820,7 +801,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label14.Location = new System.Drawing.Point(1313, 197);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
@@ -838,15 +819,15 @@
             this.Valor_Imovel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Valor_Imovel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Valor_Imovel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Valor_Imovel.FillColor = System.Drawing.Color.DimGray;
+            this.Valor_Imovel.FillColor = System.Drawing.Color.Gray;
             this.Valor_Imovel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor_Imovel.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Valor_Imovel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_Imovel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Valor_Imovel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor_Imovel.Location = new System.Drawing.Point(217, 186);
             this.Valor_Imovel.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_Imovel.Name = "Valor_Imovel";
-            this.Valor_Imovel.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_Imovel.PlaceholderForeColor = System.Drawing.Color.White;
             this.Valor_Imovel.PlaceholderText = "R$ 0,00";
             this.Valor_Imovel.SelectedText = "";
             this.Valor_Imovel.Size = new System.Drawing.Size(208, 41);
@@ -860,7 +841,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label13.Location = new System.Drawing.Point(22, 190);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
@@ -874,11 +855,11 @@
             this.Combo_Pretensao.BorderRadius = 8;
             this.Combo_Pretensao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Pretensao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Pretensao.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Pretensao.FillColor = System.Drawing.Color.Gray;
             this.Combo_Pretensao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Pretensao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Pretensao.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Pretensao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Combo_Pretensao.ForeColor = System.Drawing.Color.White;
             this.Combo_Pretensao.ItemHeight = 30;
             this.Combo_Pretensao.Items.AddRange(new object[] {
             "VENDA",
@@ -894,7 +875,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(478, 64);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
@@ -908,11 +889,11 @@
             this.Combo_Tipo_de_imovel.BorderRadius = 8;
             this.Combo_Tipo_de_imovel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Tipo_de_imovel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Tipo_de_imovel.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Tipo_de_imovel.FillColor = System.Drawing.Color.Gray;
             this.Combo_Tipo_de_imovel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Tipo_de_imovel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Tipo_de_imovel.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Tipo_de_imovel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Combo_Tipo_de_imovel.ForeColor = System.Drawing.Color.White;
             this.Combo_Tipo_de_imovel.ItemHeight = 30;
             this.Combo_Tipo_de_imovel.Items.AddRange(new object[] {
             "CASA",
@@ -930,7 +911,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label11.Location = new System.Drawing.Point(11, 62);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
@@ -959,6 +940,25 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1939, 146);
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Dados do Proprietário";
+            // 
+            // Buscar_Cep
+            // 
+            this.Buscar_Cep.BackColor = System.Drawing.Color.Transparent;
+            this.Buscar_Cep.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Buscar_Cep.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Image = ((System.Drawing.Image)(resources.GetObject("Buscar_Cep.Image")));
+            this.Buscar_Cep.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Buscar_Cep.ImageRotate = 0F;
+            this.Buscar_Cep.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.IndicateFocus = true;
+            this.Buscar_Cep.Location = new System.Drawing.Point(340, 67);
+            this.Buscar_Cep.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscar_Cep.Name = "Buscar_Cep";
+            this.Buscar_Cep.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Size = new System.Drawing.Size(38, 37);
+            this.Buscar_Cep.TabIndex = 11;
+            this.Buscar_Cep.UseTransparentBackground = true;
+            this.Buscar_Cep.Click += new System.EventHandler(this.Buscar_Cep_Click);
             // 
             // Cadastros
             // 

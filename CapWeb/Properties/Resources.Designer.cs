@@ -63,6 +63,36 @@ namespace CapWeb.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_conexão_sem_fio_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-conexão-sem-fio-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_conexão_sem_fio_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-conexão-sem-fio-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_conexão_sem_fio_50__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-conexão-sem-fio-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_wi_fi_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-wi-fi-50", resourceCulture);
@@ -76,6 +106,16 @@ namespace CapWeb.Properties {
         internal static System.Drawing.Bitmap icons8_wi_fi_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-wi-fi-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_without_internet_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-without-internet-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

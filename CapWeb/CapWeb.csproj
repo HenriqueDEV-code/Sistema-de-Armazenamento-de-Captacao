@@ -246,5 +246,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-wi-fi-50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-without-internet-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conexão-sem-fio-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conexão-sem-fio-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conexão-sem-fio-50 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

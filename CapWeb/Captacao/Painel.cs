@@ -17,6 +17,7 @@ namespace CapWeb.Captacao
             this.DBA = DBA;
             this.Status = Status;
             InitializeComponent();
+            atalho.Focus();
             ON_OFF.Text = Status;
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
