@@ -165,6 +165,7 @@ namespace CapWeb.Captacao
                 string sql = @"
             SELECT 
                 pi.ID_Proprietario,
+              
                 pi.ID_Imobiliaria,
                 pi.Data_Vinculo,
                 pi.Valor,
@@ -172,7 +173,7 @@ namespace CapWeb.Captacao
             FROM Proprietario_Imobiliaria pi
             INNER JOIN Imobiliaria i ON i.ID_Imobiliaria = pi.ID_Imobiliaria
             WHERE i.Nome_Imobiliaria = @Nome_Imobiliaria
-              AND pi.Status = 'Nao Pago'
+              AND pi.Status = 'NAO PAGO'
         ";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
@@ -183,23 +184,14 @@ namespace CapWeb.Captacao
                 DB_TABELA_VALORES_IMOBIIARIAS.DataSource = tabela;
 
                 // --- CÁLCULO ---
-                int countDatas = 0;
+                int countDatas = tabela.Rows.Count;
                 decimal somaValor = 0;
 
                 foreach (DataRow row in tabela.Rows)
                 {
-                    if (row["Data_Vinculo"] != DBNull.Value)
-                        countDatas++;
-
                     if (row["Valor"] != DBNull.Value)
                     {
-                        string valorStr = row["Valor"].ToString().Replace("R$", "").Trim();
-
-                        if (decimal.TryParse(valorStr, System.Globalization.NumberStyles.Any,
-                            System.Globalization.CultureInfo.GetCultureInfo("pt-BR"), out decimal valor))
-                        {
-                            somaValor += valor;
-                        }
+                        somaValor += Convert.ToDecimal(row["Valor"]);
                     }
                 }
 
@@ -228,10 +220,10 @@ namespace CapWeb.Captacao
 
                 string sql = @"
             UPDATE Proprietario_Imobiliaria
-            SET Status = 'Pago'
+            SET Status = 'PAGO'
             WHERE ID_Proprietario = @ID_Proprietario
               AND ID_Imobiliaria = @ID_Imobiliaria
-              AND Status = 'Nao Pago'
+              AND Status = 'NAO PAGO'
         ";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -243,11 +235,11 @@ namespace CapWeb.Captacao
 
                     if (linhasAfetadas > 0)
                     {
-                        MessageBox.Show("Status alterado para 'Pago' com sucesso.");
+                        MessageBox.Show("Status alterado para 'PAGO' com sucesso.");
                     }
                     else
                     {
-                        MessageBox.Show("Nenhum registro foi atualizado. Verifique se o status já está como 'Pago'.");
+                        MessageBox.Show("Nenhum registro foi atualizado. Verifique se o status já está como 'PAGO'.");
                     }
 
                     // Recarrega a tabela após atualização

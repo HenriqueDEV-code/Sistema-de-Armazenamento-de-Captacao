@@ -325,10 +325,10 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 string SQL = @"
-            SELECT ISNULL(SUM(Valor), 0)
-            FROM Proprietario_Imobiliaria
-            WHERE Status = 'PAGO'
-        ";
+                    SELECT ISNULL(SUM(Valor), 0)
+                    FROM Proprietario_Imobiliaria
+                    WHERE Status = 'PAGO'
+                ";
 
                 using (SqlCommand cmd = new SqlCommand(SQL, conn))
                 {
@@ -336,8 +336,8 @@ namespace CapWeb.Captacao
                     {
                         conn.Open();
                         object result = cmd.ExecuteScalar();
-                        if (result != DBNull.Value)
-                            totalPago = Convert.ToDecimal(result);
+                        if (result != DBNull.Value && decimal.TryParse(result.ToString(), out decimal valor))
+                            totalPago = valor;
                     }
                     catch (Exception ex)
                     {
@@ -356,10 +356,10 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 string SQL = @"
-            SELECT ISNULL(SUM(Valor), 0)
-            FROM Proprietario_Imobiliaria
-            WHERE Status = 'NAO PAGO'
-        ";
+                    SELECT ISNULL(SUM(Valor), 0)
+                    FROM Proprietario_Imobiliaria
+                    WHERE Status = 'NAO PAGO'
+                ";
 
                 using (SqlCommand cmd = new SqlCommand(SQL, conn))
                 {
@@ -367,12 +367,12 @@ namespace CapWeb.Captacao
                     {
                         conn.Open();
                         object result = cmd.ExecuteScalar();
-                        if (result != DBNull.Value)
-                            totalNaoPago = Convert.ToDecimal(result);
+                        if (result != DBNull.Value && decimal.TryParse(result.ToString(), out decimal valor))
+                            totalNaoPago = valor;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao calcular valores pagos: " + ex.Message);
+                        MessageBox.Show("Erro ao calcular valores não pagos: " + ex.Message);
                     }
                 }
             }

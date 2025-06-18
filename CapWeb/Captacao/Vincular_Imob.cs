@@ -18,6 +18,7 @@ namespace CapWeb.Captacao
     {
         private string DBA;
         private bool carregando = false;
+        private bool precisaAtualizar = false;
 
         public Vincular_Imob(string DBA)
         {
@@ -25,6 +26,7 @@ namespace CapWeb.Captacao
             InitializeComponent();
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
+            this.FormClosing += Vincular_Imob_FormClosing; // Associa evento de fechamento
         }
 
         private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
@@ -128,6 +130,7 @@ namespace CapWeb.Captacao
                     });
                 }
                 SetStatus("Atualizado!", Color.LimeGreen);
+                precisaAtualizar = false; // Resetar flag após atualizar
             }
             catch (Exception ex)
             {
@@ -166,6 +169,7 @@ namespace CapWeb.Captacao
                     });
 
                     SetStatus(vinculado ? "Vinculado com sucesso!" : "Desvinculado com sucesso!", vinculado ? Color.LimeGreen : Color.OrangeRed);
+                    precisaAtualizar = true; // Marcar que precisa atualizar
                 }
                 catch (Exception ex)
                 {
@@ -173,7 +177,13 @@ namespace CapWeb.Captacao
                 }
                 finally
                 {
-                    dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
+                    if (e.RowIndex >= 0 && e.RowIndex < dgvVinculos.Rows.Count &&
+                        e.ColumnIndex >= 0 && e.ColumnIndex < dgvVinculos.Columns.Count)
+                    {
+                        dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
+                    }
+                    // Após a alteração, recarrega a tabela para garantir que o estado está correto
+                    await Carregar_VinculosAsync();
                 }
             }
         }
@@ -298,6 +308,15 @@ namespace CapWeb.Captacao
             else
             {
                 dgvVinculos.Enabled = enabled;
+            }
+        }
+
+        private void Vincular_Imob_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (precisaAtualizar)
+            {
+                MessageBox.Show("Você realizou alterações. Para garantir que a tabela esteja atualizada, pressione F5 antes de sair da tela.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Cancel = true;
             }
         }
     }
