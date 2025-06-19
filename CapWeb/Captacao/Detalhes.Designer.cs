@@ -82,6 +82,7 @@
             // Combo_Nome_Prop_Busca
             // 
             this.Combo_Nome_Prop_Busca.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Nome_Prop_Busca.BorderColor = System.Drawing.Color.Black;
             this.Combo_Nome_Prop_Busca.BorderRadius = 8;
             this.Combo_Nome_Prop_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Nome_Prop_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -126,7 +127,6 @@
             this.Button_Buscar_DBA.Animated = true;
             this.Button_Buscar_DBA.AutoRoundedCorners = true;
             this.Button_Buscar_DBA.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Buscar_DBA.BorderColor = System.Drawing.Color.Blue;
             this.Button_Buscar_DBA.BorderRadius = 19;
             this.Button_Buscar_DBA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Buscar_DBA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -150,6 +150,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Detalhes_Busca.Animated = true;
+            this.Detalhes_Busca.BorderColor = System.Drawing.Color.Black;
             this.Detalhes_Busca.BorderRadius = 10;
             this.Detalhes_Busca.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Detalhes_Busca.DefaultText = "";
@@ -159,7 +160,7 @@
             this.Detalhes_Busca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Detalhes_Busca.FillColor = System.Drawing.Color.DimGray;
             this.Detalhes_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Detalhes_Busca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Detalhes_Busca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.Detalhes_Busca.ForeColor = System.Drawing.Color.White;
             this.Detalhes_Busca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Detalhes_Busca.Location = new System.Drawing.Point(32, 142);
@@ -191,6 +192,7 @@
             // 
             this.Combo_Cidade_Busca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Combo_Cidade_Busca.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Cidade_Busca.BorderColor = System.Drawing.Color.Black;
             this.Combo_Cidade_Busca.BorderRadius = 8;
             this.Combo_Cidade_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Cidade_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

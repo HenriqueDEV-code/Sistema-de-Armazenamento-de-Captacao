@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneGroupBox2 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +51,8 @@
             this.cap_ImoveisDataSet = new CapWeb.Cap_ImoveisDataSet();
             this.proprietarioImobiliariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proprietario_ImobiliariaTableAdapter = new CapWeb.Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.siticonePanel1.SuspendLayout();
             this.siticoneGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DB_TABELA_VALORES_IMOBIIARIAS)).BeginInit();
@@ -65,7 +67,7 @@
             this.siticonePanel1.Controls.Add(this.siticoneGroupBox1);
             this.siticonePanel1.Location = new System.Drawing.Point(-2, 62);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(1061, 543);
+            this.siticonePanel1.Size = new System.Drawing.Size(1104, 543);
             this.siticonePanel1.TabIndex = 0;
             // 
             // siticoneGroupBox2
@@ -73,6 +75,8 @@
             this.siticoneGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneGroupBox2.Controls.Add(this.dateTimePicker1);
+            this.siticoneGroupBox2.Controls.Add(this.label5);
             this.siticoneGroupBox2.Controls.Add(this.label4);
             this.siticoneGroupBox2.Controls.Add(this.label3);
             this.siticoneGroupBox2.Controls.Add(this.Pago);
@@ -86,9 +90,9 @@
             this.siticoneGroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.siticoneGroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneGroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.siticoneGroupBox2.Location = new System.Drawing.Point(492, 3);
+            this.siticoneGroupBox2.Location = new System.Drawing.Point(470, 3);
             this.siticoneGroupBox2.Name = "siticoneGroupBox2";
-            this.siticoneGroupBox2.Size = new System.Drawing.Size(569, 537);
+            this.siticoneGroupBox2.Size = new System.Drawing.Size(631, 537);
             this.siticoneGroupBox2.TabIndex = 51;
             this.siticoneGroupBox2.Text = "                                                                              TAB" +
     "ELA";
@@ -99,7 +103,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(305, 427);
+            this.label4.Location = new System.Drawing.Point(305, 416);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 30);
@@ -112,7 +116,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(4, 428);
+            this.label3.Location = new System.Drawing.Point(4, 417);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(206, 30);
@@ -134,9 +138,9 @@
             this.Pago.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Pago.ForeColor = System.Drawing.Color.DarkGreen;
             this.Pago.IndicateFocus = true;
-            this.Pago.Location = new System.Drawing.Point(400, 485);
+            this.Pago.Location = new System.Drawing.Point(487, 485);
             this.Pago.Name = "Pago";
-            this.Pago.Size = new System.Drawing.Size(166, 42);
+            this.Pago.Size = new System.Drawing.Size(141, 42);
             this.Pago.TabIndex = 49;
             this.Pago.Text = "PAGO";
             this.Pago.UseTransparentBackground = true;
@@ -147,6 +151,7 @@
             this.Quantidade_Total.Animated = true;
             this.Quantidade_Total.AutoRoundedCorners = true;
             this.Quantidade_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Quantidade_Total.BorderColor = System.Drawing.Color.Black;
             this.Quantidade_Total.BorderRadius = 19;
             this.Quantidade_Total.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Quantidade_Total.DefaultText = "";
@@ -160,7 +165,7 @@
             this.Quantidade_Total.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Quantidade_Total.ForeColor = System.Drawing.Color.DimGray;
             this.Quantidade_Total.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Quantidade_Total.Location = new System.Drawing.Point(218, 423);
+            this.Quantidade_Total.Location = new System.Drawing.Point(218, 412);
             this.Quantidade_Total.Margin = new System.Windows.Forms.Padding(6);
             this.Quantidade_Total.Name = "Quantidade_Total";
             this.Quantidade_Total.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -186,7 +191,7 @@
             // 
             this.Nome_Imov.AutoRoundedCorners = true;
             this.Nome_Imov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Nome_Imov.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Nome_Imov.BorderColor = System.Drawing.Color.Black;
             this.Nome_Imov.BorderRadius = 17;
             this.Nome_Imov.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Imov.DefaultText = "";
@@ -194,7 +199,7 @@
             this.Nome_Imov.FillColor = System.Drawing.Color.Silver;
             this.Nome_Imov.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Nome_Imov.ForeColor = System.Drawing.Color.Black;
-            this.Nome_Imov.Location = new System.Drawing.Point(249, 54);
+            this.Nome_Imov.Location = new System.Drawing.Point(261, 54);
             this.Nome_Imov.Name = "Nome_Imov";
             this.Nome_Imov.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Nome_Imov.PlaceholderText = "";
@@ -207,6 +212,7 @@
             this.Valor_Total.Animated = true;
             this.Valor_Total.AutoRoundedCorners = true;
             this.Valor_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Valor_Total.BorderColor = System.Drawing.Color.Black;
             this.Valor_Total.BorderRadius = 19;
             this.Valor_Total.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Valor_Total.DefaultText = "";
@@ -220,7 +226,7 @@
             this.Valor_Total.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Valor_Total.ForeColor = System.Drawing.Color.DimGray;
             this.Valor_Total.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Valor_Total.Location = new System.Drawing.Point(446, 423);
+            this.Valor_Total.Location = new System.Drawing.Point(446, 412);
             this.Valor_Total.Margin = new System.Windows.Forms.Padding(6);
             this.Valor_Total.Name = "Valor_Total";
             this.Valor_Total.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -238,7 +244,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(305, 426);
+            this.label1.Location = new System.Drawing.Point(305, 415);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 30);
@@ -250,7 +256,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(1, 54);
+            this.label6.Location = new System.Drawing.Point(13, 54);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(248, 30);
@@ -261,25 +267,25 @@
             // 
             this.DB_TABELA_VALORES_IMOBIIARIAS.BackgroundColor = System.Drawing.Color.DimGray;
             this.DB_TABELA_VALORES_IMOBIIARIAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle1;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Location = new System.Drawing.Point(9, 102);
             this.DB_TABELA_VALORES_IMOBIIARIAS.Name = "DB_TABELA_VALORES_IMOBIIARIAS";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.Size = new System.Drawing.Size(548, 302);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.Size = new System.Drawing.Size(612, 302);
             this.DB_TABELA_VALORES_IMOBIIARIAS.TabIndex = 0;
             // 
             // siticoneGroupBox1
@@ -296,7 +302,7 @@
             this.siticoneGroupBox1.ForeColor = System.Drawing.Color.Black;
             this.siticoneGroupBox1.Location = new System.Drawing.Point(2, 2);
             this.siticoneGroupBox1.Name = "siticoneGroupBox1";
-            this.siticoneGroupBox1.Size = new System.Drawing.Size(489, 538);
+            this.siticoneGroupBox1.Size = new System.Drawing.Size(482, 538);
             this.siticoneGroupBox1.TabIndex = 50;
             this.siticoneGroupBox1.Text = "                                                           PESQUISA";
             // 
@@ -341,7 +347,7 @@
             this.Button_Pesquisar_DBA.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Button_Pesquisar_DBA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Button_Pesquisar_DBA.IndicateFocus = true;
-            this.Button_Pesquisar_DBA.Location = new System.Drawing.Point(352, 102);
+            this.Button_Pesquisar_DBA.Location = new System.Drawing.Point(333, 55);
             this.Button_Pesquisar_DBA.Name = "Button_Pesquisar_DBA";
             this.Button_Pesquisar_DBA.Size = new System.Drawing.Size(120, 36);
             this.Button_Pesquisar_DBA.TabIndex = 48;
@@ -352,6 +358,7 @@
             // Combo_Lista_Imobiliarias
             // 
             this.Combo_Lista_Imobiliarias.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Lista_Imobiliarias.BorderColor = System.Drawing.Color.Black;
             this.Combo_Lista_Imobiliarias.BorderRadius = 8;
             this.Combo_Lista_Imobiliarias.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Lista_Imobiliarias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -361,9 +368,9 @@
             this.Combo_Lista_Imobiliarias.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Combo_Lista_Imobiliarias.ForeColor = System.Drawing.Color.White;
             this.Combo_Lista_Imobiliarias.ItemHeight = 30;
-            this.Combo_Lista_Imobiliarias.Location = new System.Drawing.Point(3, 102);
+            this.Combo_Lista_Imobiliarias.Location = new System.Drawing.Point(3, 55);
             this.Combo_Lista_Imobiliarias.Name = "Combo_Lista_Imobiliarias";
-            this.Combo_Lista_Imobiliarias.Size = new System.Drawing.Size(331, 36);
+            this.Combo_Lista_Imobiliarias.Size = new System.Drawing.Size(311, 36);
             this.Combo_Lista_Imobiliarias.TabIndex = 29;
             // 
             // cap_ImoveisDataSet
@@ -380,12 +387,32 @@
             // 
             this.proprietario_ImobiliariaTableAdapter.ClearBeforeFill = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(6, 485);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(243, 30);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Data do pagamento:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(250, 491);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 50;
+            // 
             // Valores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1060, 604);
+            this.ClientSize = new System.Drawing.Size(1101, 604);
             this.Controls.Add(this.siticonePanel1);
             this.MaximizeBox = false;
             this.Name = "Valores";
@@ -426,5 +453,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

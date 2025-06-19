@@ -82,7 +82,7 @@ namespace CapWeb.Captacao
 
         private void Cadastro_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Cadastros janelaCadastro = new Cadastros(DBA);
             janelaCadastro.FormClosed += (s, args) => this.Show();
@@ -100,7 +100,7 @@ namespace CapWeb.Captacao
 
         private void Relatorio_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             Relatorio janelaRelatorio = new Relatorio(DBA);
             janelaRelatorio.FormClosed += (s, args) => this.Show();
@@ -325,9 +325,7 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 string SQL = @"
-                    SELECT ISNULL(SUM(Valor), 0)
-                    FROM Proprietario_Imobiliaria
-                    WHERE Status = 'PAGO'
+                    select sum(Valor) from Proprietario_Imobiliaria pi2 where pi2.Status = 'PAGO'
                 ";
 
                 using (SqlCommand cmd = new SqlCommand(SQL, conn))
@@ -356,9 +354,7 @@ namespace CapWeb.Captacao
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 string SQL = @"
-                    SELECT ISNULL(SUM(Valor), 0)
-                    FROM Proprietario_Imobiliaria
-                    WHERE Status = 'NAO PAGO'
+                    select sum(Valor) from Proprietario_Imobiliaria pi2 where pi2.Status = 'NAO PAGO'
                 ";
 
                 using (SqlCommand cmd = new SqlCommand(SQL, conn))

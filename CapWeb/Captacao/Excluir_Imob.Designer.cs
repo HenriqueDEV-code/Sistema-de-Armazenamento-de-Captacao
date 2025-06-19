@@ -117,7 +117,7 @@
             // Combo_Lista_Imobiliarias
             // 
             this.Combo_Lista_Imobiliarias.BackColor = System.Drawing.Color.Transparent;
-            this.Combo_Lista_Imobiliarias.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Combo_Lista_Imobiliarias.BorderColor = System.Drawing.Color.Black;
             this.Combo_Lista_Imobiliarias.BorderRadius = 8;
             this.Combo_Lista_Imobiliarias.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Lista_Imobiliarias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

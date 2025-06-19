@@ -20,6 +20,15 @@ namespace CapWeb.Captacao
         private bool carregando = false;
         private bool precisaAtualizar = false;
 
+        // Estrutura para armazenar alterações pendentes
+        private class AlteracaoVinculo
+        {
+            public int IdProprietario { get; set; }
+            public string NomeImobiliaria { get; set; }
+            public bool Vincular { get; set; }
+        }
+        private List<AlteracaoVinculo> alteracoesPendentes = new List<AlteracaoVinculo>();
+
         public Vincular_Imob(string DBA)
         {
             this.DBA = DBA;
@@ -27,6 +36,9 @@ namespace CapWeb.Captacao
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
             this.FormClosing += Vincular_Imob_FormClosing; // Associa evento de fechamento
+            this.dgvVinculos.MultiSelect = true; // Habilita seleção múltipla
+            this.dgvVinculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Seleção por linha
+            this.dgvVinculos.CellContentClick += dgvVinculos_CellContentClick; // Novo evento para seleção em lote
         }
 
         private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
@@ -34,13 +46,21 @@ namespace CapWeb.Captacao
             if (e.KeyCode == Keys.F5)
             {
                 this.Text = "Carregando...";
+                await Task.Run(() => AplicarAlteracoesPendentesAsync());
                 await Task.Run(() => Carregar_VinculosAsync());
+                this.Invoke((MethodInvoker)(() => this.Text = "Vinculação de imobiliárias"));
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.F6)
+            {
+                this.Text = "Filtrando...";
+                await Task.Run(() => AplicarFiltroAsync());
                 this.Invoke((MethodInvoker)(() => this.Text = "Vinculação de imobiliárias"));
                 e.Handled = true;
             }
         }
 
-        private async Task Carregar_VinculosAsync()
+        private async Task Carregar_VinculosAsync(string nomeProprietario = null, string nomeImobiliaria = null)
         {
             if (carregando) return;
             carregando = true;
@@ -61,7 +81,18 @@ namespace CapWeb.Captacao
 
                     // 2. Obter lista de Proprietários
                     string sqlProprietarios = "SELECT ID, Nome FROM Proprietarios ORDER BY ID DESC";
-                    SqlDataAdapter daProp = new SqlDataAdapter(sqlProprietarios, conn);
+                    if (!string.IsNullOrEmpty(nomeProprietario))
+                        sqlProprietarios = $"SELECT ID, Nome FROM Proprietarios WHERE Nome = @Nome ORDER BY ID DESC";
+                    SqlDataAdapter daProp = new SqlDataAdapter();
+                    if (!string.IsNullOrEmpty(nomeProprietario))
+                    {
+                        daProp.SelectCommand = new SqlCommand(sqlProprietarios, conn);
+                        daProp.SelectCommand.Parameters.AddWithValue("@Nome", nomeProprietario);
+                    }
+                    else
+                    {
+                        daProp.SelectCommand = new SqlCommand(sqlProprietarios, conn);
+                    }
                     DataTable dtProp = new DataTable();
                     daProp.Fill(dtProp);
 
@@ -79,8 +110,11 @@ namespace CapWeb.Captacao
                     // Adicionar colunas dinamicamente para cada imobiliária
                     foreach (DataRow row in dtImob.Rows)
                     {
-                        string nomeImobiliaria = row["Nome_Imobiliaria"].ToString();
-                        dtGrid.Columns.Add(nomeImobiliaria, typeof(bool));
+                        string nomeImob = row["Nome_Imobiliaria"].ToString();
+                        if (string.IsNullOrEmpty(nomeImobiliaria) || nomeImobiliaria == nomeImob)
+                        {
+                            dtGrid.Columns.Add(nomeImob, typeof(bool));
+                        }
                     }
 
                     // 5. Preencher linhas
@@ -92,13 +126,14 @@ namespace CapWeb.Captacao
 
                         foreach (DataRow imobRow in dtImob.Rows)
                         {
+                            string nomeImob = imobRow["Nome_Imobiliaria"].ToString();
+                            if (!string.IsNullOrEmpty(nomeImobiliaria) && nomeImobiliaria != nomeImob)
+                                continue;
                             int idProp = (int)propRow["ID"];
                             int idImob = (int)imobRow["ID_Imobiliaria"];
-
                             bool vinculado = dtVinc.Select($"ID_Proprietario = {idProp} AND ID_Imobiliaria = {idImob}").Length > 0;
-                            newRow[imobRow["Nome_Imobiliaria"].ToString()] = vinculado;
+                            newRow[nomeImob] = vinculado;
                         }
-
                         dtGrid.Rows.Add(newRow);
                     }
 
@@ -106,27 +141,28 @@ namespace CapWeb.Captacao
                     this.Invoke((MethodInvoker)delegate
                     {
                         dgvVinculos.DataSource = dtGrid;
-
                         // 7. Configurar CheckBox nas colunas de Imobiliária
                         foreach (DataRow row in dtImob.Rows)
                         {
                             string colName = row["Nome_Imobiliaria"].ToString();
+                            if (!string.IsNullOrEmpty(nomeImobiliaria) && nomeImobiliaria != colName)
+                                continue;
                             if (!(dgvVinculos.Columns[colName] is DataGridViewCheckBoxColumn))
                             {
                                 int colIndex = dgvVinculos.Columns[colName].Index;
-
                                 dgvVinculos.Columns.RemoveAt(colIndex);
-
                                 DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn
                                 {
                                     Name = colName,
                                     HeaderText = colName,
                                     DataPropertyName = colName
                                 };
-
                                 dgvVinculos.Columns.Insert(colIndex, chk);
                             }
                         }
+                        // Reforçar seleção múltipla após atualizar DataSource
+                        dgvVinculos.MultiSelect = true;
+                        dgvVinculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     });
                 }
                 SetStatus("Atualizado!", Color.LimeGreen);
@@ -143,7 +179,50 @@ namespace CapWeb.Captacao
             }
         }
 
-        private async void dgvVinculos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private async Task AplicarFiltroAsync()
+        {
+            string nomeProp = null;
+            string nomeImob = null;
+            if (Combo_Nome_Prop_Filtro_Vinculo.InvokeRequired)
+            {
+                Combo_Nome_Prop_Filtro_Vinculo.Invoke((MethodInvoker)(() => nomeProp = Combo_Nome_Prop_Filtro_Vinculo.SelectedItem as string));
+            }
+            else
+            {
+                nomeProp = Combo_Nome_Prop_Filtro_Vinculo.SelectedItem as string;
+            }
+            if (Combo_Imobiliaria_Filtro_Vinculo.InvokeRequired)
+            {
+                Combo_Imobiliaria_Filtro_Vinculo.Invoke((MethodInvoker)(() => nomeImob = Combo_Imobiliaria_Filtro_Vinculo.SelectedItem as string));
+            }
+            else
+            {
+                nomeImob = Combo_Imobiliaria_Filtro_Vinculo.SelectedItem as string;
+            }
+            await Carregar_VinculosAsync(nomeProp, nomeImob);
+        }
+
+        private void dgvVinculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+            string colName = dgvVinculos.Columns[e.ColumnIndex].Name;
+            if (colName == "ID_Proprietario" || colName == "Proprietario") return;
+            // Só faz em lote se houver mais de uma linha selecionada
+            if (dgvVinculos.SelectedRows.Count > 1 && dgvVinculos.Rows[e.RowIndex].Selected)
+            {
+                // O valor novo será o inverso do valor atual da célula clicada
+                bool novoValor = !(Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == true);
+                foreach (DataGridViewRow row in dgvVinculos.SelectedRows)
+                {
+                    if (row.IsNewRow) continue;
+                    row.Cells[e.ColumnIndex].Value = novoValor;
+                }
+                // Força commit para disparar CellValueChanged
+                dgvVinculos.EndEdit();
+            }
+        }
+
+        private void dgvVinculos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
@@ -151,40 +230,18 @@ namespace CapWeb.Captacao
                 if (colName == "ID_Proprietario" || colName == "Proprietario") return;
 
                 int idProprietario = Convert.ToInt32(dgvVinculos.Rows[e.RowIndex].Cells["ID_Proprietario"].Value);
+                bool vincular = Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
 
-                try
+                // Remove duplicidade: se já existe alteração para esse proprietário e imobiliária, remove
+                alteracoesPendentes.RemoveAll(a => a.IdProprietario == idProprietario && a.NomeImobiliaria == colName);
+                // Adiciona a alteração atual
+                alteracoesPendentes.Add(new AlteracaoVinculo
                 {
-                    SetStatus("Salvando...", Color.Gold);
-                    dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
-
-                    int idImobiliaria = await BuscarIdImobiliariaAsync(colName);
-                    bool vinculado = Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-
-                    await Task.Run(async () =>
-                    {
-                        if (vinculado)
-                            await VincularAsync(idProprietario, idImobiliaria);
-                        else
-                            await DesvincularAsync(idProprietario, idImobiliaria);
-                    });
-
-                    SetStatus(vinculado ? "Vinculado com sucesso!" : "Desvinculado com sucesso!", vinculado ? Color.LimeGreen : Color.OrangeRed);
-                    precisaAtualizar = true; // Marcar que precisa atualizar
-                }
-                catch (Exception ex)
-                {
-                    SetStatus($"Erro: {ex.Message}", Color.Red);
-                }
-                finally
-                {
-                    if (e.RowIndex >= 0 && e.RowIndex < dgvVinculos.Rows.Count &&
-                        e.ColumnIndex >= 0 && e.ColumnIndex < dgvVinculos.Columns.Count)
-                    {
-                        dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = false;
-                    }
-                    // Após a alteração, recarrega a tabela para garantir que o estado está correto
-                    await Carregar_VinculosAsync();
-                }
+                    IdProprietario = idProprietario,
+                    NomeImobiliaria = colName,
+                    Vincular = vincular
+                });
+                precisaAtualizar = true; // Marcar que precisa atualizar
             }
         }
 
@@ -273,11 +330,13 @@ namespace CapWeb.Captacao
 
         private async void timer1_Tick(object sender, EventArgs e)
         {
-            await Carregar_VinculosAsync();
+            
         }
 
         private async void Vincular_Imob_Load(object sender, EventArgs e)
         {
+            Preencher_ComboBox_Proprietarios();
+            Preencher_ComboBox_Cidades();
             await Carregar_VinculosAsync();
         }
 
@@ -319,5 +378,98 @@ namespace CapWeb.Captacao
                 e.Cancel = true;
             }
         }
+
+        /// <summary>
+        /// Criação de fitro
+        /// Começando com as buscar de informações
+        /// </summary>
+
+        private List<string> Obter_Nomes_Imobiliarias_Filtro()
+        {
+            List<string> imobiliarias = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT DISTINCT Nome_Imobiliaria FROM Imobiliaria ORDER BY Nome_Imobiliaria";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader["Nome_Imobiliaria"] != DBNull.Value)
+                            {
+                                imobiliarias.Add(reader["Nome_Imobiliaria"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            return imobiliarias;
+        }
+
+        private List<string> Obter_Nomes_Proprietarios_Filtro()
+        {
+            List<string> proprietarios = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = "SELECT DISTINCT Nome FROM Proprietarios ORDER BY Nome";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader["Nome"] != DBNull.Value)
+                            {
+                                proprietarios.Add(reader["Nome"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            return proprietarios;
+        }
+
+        private void Preencher_ComboBox_Proprietarios()
+        {
+            var nomes = Obter_Nomes_Proprietarios_Filtro();
+            Combo_Nome_Prop_Filtro_Vinculo.Items.Clear();
+            Combo_Nome_Prop_Filtro_Vinculo.Items.AddRange(nomes.ToArray());
+        }
+
+        private void Preencher_ComboBox_Cidades()
+        {
+            var Imobiliaria = Obter_Nomes_Imobiliarias_Filtro();
+            Combo_Imobiliaria_Filtro_Vinculo.Items.Clear();
+            Combo_Imobiliaria_Filtro_Vinculo.Items.AddRange(Imobiliaria.ToArray());
+        }
+
+        private async Task AplicarAlteracoesPendentesAsync()
+        {
+            if (alteracoesPendentes.Count == 0) return;
+            SetStatus("Salvando alterações...", Color.Gold);
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                await conn.OpenAsync();
+                foreach (var alt in alteracoesPendentes)
+                {
+                    int idImobiliaria = await BuscarIdImobiliariaAsync(alt.NomeImobiliaria);
+                    if (alt.Vincular)
+                        await VincularAsync(alt.IdProprietario, idImobiliaria);
+                    else
+                        await DesvincularAsync(alt.IdProprietario, idImobiliaria);
+                }
+            }
+            alteracoesPendentes.Clear();
+            SetStatus("Alterações salvas!", Color.LimeGreen);
+        }
+
     }
+
 }

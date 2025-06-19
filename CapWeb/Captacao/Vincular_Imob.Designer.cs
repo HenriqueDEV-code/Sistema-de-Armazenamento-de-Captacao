@@ -28,22 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVinculos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.LB_Status = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Combo_Telefone_Filtro = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Combo_Imobiliaria_Filtro_Vinculo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Combo_Nome_Prop_Filtro = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Combo_Nome_Prop_Filtro_Vinculo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,42 +53,41 @@
             // 
             // dgvVinculos
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvVinculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvVinculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvVinculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVinculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvVinculos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgvVinculos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVinculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVinculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVinculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVinculos.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvVinculos.Location = new System.Drawing.Point(-1, 177);
-            this.dgvVinculos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVinculos.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvVinculos.Location = new System.Drawing.Point(-1, 144);
             this.dgvVinculos.Name = "dgvVinculos";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVinculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvVinculos.Size = new System.Drawing.Size(1942, 796);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVinculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvVinculos.Size = new System.Drawing.Size(1456, 647);
             this.dgvVinculos.TabIndex = 0;
             this.dgvVinculos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVinculos_CellValueChanged);
             // 
@@ -100,7 +97,8 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(508, 36);
+            this.label6.Location = new System.Drawing.Point(381, 29);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 22);
             this.label6.TabIndex = 10;
@@ -112,7 +110,8 @@
             this.LB_Status.BackColor = System.Drawing.Color.Transparent;
             this.LB_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.LB_Status.ForeColor = System.Drawing.Color.White;
-            this.LB_Status.Location = new System.Drawing.Point(627, 36);
+            this.LB_Status.Location = new System.Drawing.Point(470, 27);
+            this.LB_Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Status.Name = "LB_Status";
             this.LB_Status.Size = new System.Drawing.Size(17, 22);
             this.LB_Status.TabIndex = 11;
@@ -123,33 +122,32 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.panel1.Controls.Add(this.Combo_Telefone_Filtro);
+            this.panel1.Controls.Add(this.Combo_Imobiliaria_Filtro_Vinculo);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Combo_Nome_Prop_Filtro);
+            this.panel1.Controls.Add(this.Combo_Nome_Prop_Filtro_Vinculo);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(-1, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(-1, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1942, 117);
+            this.panel1.Size = new System.Drawing.Size(1456, 95);
             this.panel1.TabIndex = 12;
             // 
-            // Combo_Telefone_Filtro
+            // Combo_Imobiliaria_Filtro_Vinculo
             // 
-            this.Combo_Telefone_Filtro.BackColor = System.Drawing.Color.Transparent;
-            this.Combo_Telefone_Filtro.BorderRadius = 8;
-            this.Combo_Telefone_Filtro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Combo_Telefone_Filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Telefone_Filtro.FillColor = System.Drawing.Color.DimGray;
-            this.Combo_Telefone_Filtro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Combo_Telefone_Filtro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Combo_Telefone_Filtro.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.Combo_Telefone_Filtro.ForeColor = System.Drawing.Color.White;
-            this.Combo_Telefone_Filtro.ItemHeight = 30;
-            this.Combo_Telefone_Filtro.Location = new System.Drawing.Point(732, 39);
-            this.Combo_Telefone_Filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Combo_Telefone_Filtro.Name = "Combo_Telefone_Filtro";
-            this.Combo_Telefone_Filtro.Size = new System.Drawing.Size(244, 36);
-            this.Combo_Telefone_Filtro.TabIndex = 54;
+            this.Combo_Imobiliaria_Filtro_Vinculo.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Imobiliaria_Filtro_Vinculo.BorderColor = System.Drawing.Color.Black;
+            this.Combo_Imobiliaria_Filtro_Vinculo.BorderRadius = 8;
+            this.Combo_Imobiliaria_Filtro_Vinculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Imobiliaria_Filtro_Vinculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Imobiliaria_Filtro_Vinculo.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Imobiliaria_Filtro_Vinculo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Imobiliaria_Filtro_Vinculo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Imobiliaria_Filtro_Vinculo.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
+            this.Combo_Imobiliaria_Filtro_Vinculo.ForeColor = System.Drawing.Color.White;
+            this.Combo_Imobiliaria_Filtro_Vinculo.ItemHeight = 30;
+            this.Combo_Imobiliaria_Filtro_Vinculo.Location = new System.Drawing.Point(549, 32);
+            this.Combo_Imobiliaria_Filtro_Vinculo.Name = "Combo_Imobiliaria_Filtro_Vinculo";
+            this.Combo_Imobiliaria_Filtro_Vinculo.Size = new System.Drawing.Size(184, 36);
+            this.Combo_Imobiliaria_Filtro_Vinculo.TabIndex = 54;
             // 
             // label1
             // 
@@ -157,29 +155,30 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(539, 39);
+            this.label1.Location = new System.Drawing.Point(404, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 30);
             this.label1.TabIndex = 53;
             this.label1.Text = "Imobiliária:";
             // 
-            // Combo_Nome_Prop_Filtro
+            // Combo_Nome_Prop_Filtro_Vinculo
             // 
-            this.Combo_Nome_Prop_Filtro.BackColor = System.Drawing.Color.Transparent;
-            this.Combo_Nome_Prop_Filtro.BorderRadius = 8;
-            this.Combo_Nome_Prop_Filtro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Combo_Nome_Prop_Filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Nome_Prop_Filtro.FillColor = System.Drawing.Color.DimGray;
-            this.Combo_Nome_Prop_Filtro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Combo_Nome_Prop_Filtro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Combo_Nome_Prop_Filtro.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.Combo_Nome_Prop_Filtro.ForeColor = System.Drawing.Color.White;
-            this.Combo_Nome_Prop_Filtro.ItemHeight = 30;
-            this.Combo_Nome_Prop_Filtro.Location = new System.Drawing.Point(279, 39);
-            this.Combo_Nome_Prop_Filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Combo_Nome_Prop_Filtro.Name = "Combo_Nome_Prop_Filtro";
-            this.Combo_Nome_Prop_Filtro.Size = new System.Drawing.Size(224, 36);
-            this.Combo_Nome_Prop_Filtro.TabIndex = 52;
+            this.Combo_Nome_Prop_Filtro_Vinculo.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Nome_Prop_Filtro_Vinculo.BorderColor = System.Drawing.Color.Black;
+            this.Combo_Nome_Prop_Filtro_Vinculo.BorderRadius = 8;
+            this.Combo_Nome_Prop_Filtro_Vinculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Combo_Nome_Prop_Filtro_Vinculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combo_Nome_Prop_Filtro_Vinculo.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Nome_Prop_Filtro_Vinculo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Nome_Prop_Filtro_Vinculo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Combo_Nome_Prop_Filtro_Vinculo.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
+            this.Combo_Nome_Prop_Filtro_Vinculo.ForeColor = System.Drawing.Color.White;
+            this.Combo_Nome_Prop_Filtro_Vinculo.ItemHeight = 30;
+            this.Combo_Nome_Prop_Filtro_Vinculo.Location = new System.Drawing.Point(209, 32);
+            this.Combo_Nome_Prop_Filtro_Vinculo.Name = "Combo_Nome_Prop_Filtro_Vinculo";
+            this.Combo_Nome_Prop_Filtro_Vinculo.Size = new System.Drawing.Size(169, 36);
+            this.Combo_Nome_Prop_Filtro_Vinculo.TabIndex = 52;
             // 
             // label5
             // 
@@ -187,7 +186,8 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(40, 39);
+            this.label5.Location = new System.Drawing.Point(30, 32);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 30);
             this.label5.TabIndex = 51;
@@ -199,10 +199,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Location = new System.Drawing.Point(0, 1202);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 977);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2588, 127);
+            this.panel2.Size = new System.Drawing.Size(1941, 103);
             this.panel2.TabIndex = 13;
             // 
             // label16
@@ -212,17 +211,12 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(15, 12);
+            this.label16.Location = new System.Drawing.Point(11, 10);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(175, 88);
             this.label16.TabIndex = 44;
             this.label16.Text = " Atalhos:\r\n F5 - Atualizar tabela\r\n F6 - Aplicar o filtro\r\n ";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 100000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label2
             // 
@@ -230,7 +224,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1160, 32);
+            this.label2.Location = new System.Drawing.Point(870, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(702, 22);
             this.label2.TabIndex = 14;
@@ -243,10 +238,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(-1, 973);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(-1, 791);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1942, 126);
+            this.panel3.Size = new System.Drawing.Size(1456, 102);
             this.panel3.TabIndex = 15;
             // 
             // label3
@@ -256,7 +250,8 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 15);
+            this.label3.Location = new System.Drawing.Point(11, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 88);
             this.label3.TabIndex = 44;
@@ -264,9 +259,9 @@
             // 
             // Vincular_Imob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(1455, 894);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -274,7 +269,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvVinculos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Vincular_Imob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -299,13 +293,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LB_Status;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox Combo_Telefone_Filtro;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Imobiliaria_Filtro_Vinculo;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox Combo_Nome_Prop_Filtro;
+        private Guna.UI2.WinForms.Guna2ComboBox Combo_Nome_Prop_Filtro_Vinculo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;

@@ -95,10 +95,10 @@ namespace CapWeb.Captacao
 
         private void nome_condominio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            /*if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
-            }
+            }*/
         }
 
         private void area_util_KeyPress(object sender, KeyPressEventArgs e)
@@ -376,30 +376,30 @@ namespace CapWeb.Captacao
 
         private void Nome_Prop_Load(object sender, EventArgs e)
         {
-            Nome_Prop.CharacterCasing = CharacterCasing.Upper;
+            //Nome_Prop.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void Logradouro_Load(object sender, EventArgs e)
         {
-            Logradouro.CharacterCasing = CharacterCasing.Upper;
+            //Logradouro.CharacterCasing = CharacterCasing.Upper;
 
         }
 
         private void Bairro_Load(object sender, EventArgs e)
         {
-            Bairro.CharacterCasing = CharacterCasing.Upper;
+            //Bairro.CharacterCasing = CharacterCasing.Upper;
 
         }
 
         private void Cidade_Load(object sender, EventArgs e)
         {
 
-            Cidade.CharacterCasing = CharacterCasing.Upper;
+            //Cidade.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void Complemento_Load(object sender, EventArgs e)
         {
-            Complemento.CharacterCasing = CharacterCasing.Upper;
+            //Complemento.CharacterCasing = CharacterCasing.Upper;
 
         }
 
@@ -411,12 +411,12 @@ namespace CapWeb.Captacao
 
         private void Descricao_Load(object sender, EventArgs e)
         {
-            Descricao.CharacterCasing = CharacterCasing.Upper;
+            //Descricao.CharacterCasing = CharacterCasing.Upper;
 
         }
         private void nome_condominio_Load(object sender, EventArgs e)
         {
-            nome_condominio.CharacterCasing = CharacterCasing.Upper;
+            //nome_condominio.CharacterCasing = CharacterCasing.Upper;
         }
 
         // -- Salvar Pessoas -- 

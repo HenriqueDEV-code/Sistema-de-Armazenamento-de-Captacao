@@ -164,12 +164,12 @@ namespace CapWeb.Captacao
             {
                 string sql = @"
             SELECT 
-                pi.ID_Proprietario,
-              
-                pi.ID_Imobiliaria,
-                pi.Data_Vinculo,
+                pi.ID_Proprietario AS [Proprietários],
+                pi.ID_Imobiliaria AS [Imobiliárias],
+                pi.Data_Vinculo AS [Enviados],
                 pi.Valor,
-                pi.Status
+                pi.Status,
+                pi.Data_do_Pagamento AS [Recebido]
             FROM Proprietario_Imobiliaria pi
             INNER JOIN Imobiliaria i ON i.ID_Imobiliaria = pi.ID_Imobiliaria
             WHERE i.Nome_Imobiliaria = @Nome_Imobiliaria

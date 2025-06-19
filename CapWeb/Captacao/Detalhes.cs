@@ -27,6 +27,7 @@ namespace CapWeb.Captacao
             this.DBA = DBA;
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
+            Combo_Cidade_Busca.StartIndex = 1;
 
         }
 
@@ -296,7 +297,7 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
-                detalhes.AppendLine("Número do Imóvel (quadra e lote/apartamento/casa):");
+                detalhes.AppendLine("Complemento (quadra e lote/apartamento/casa):");
                 detalhes.AppendLine(row["Complemento_Imovel"].ToString());
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));

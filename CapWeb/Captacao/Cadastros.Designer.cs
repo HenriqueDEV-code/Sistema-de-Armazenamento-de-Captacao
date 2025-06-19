@@ -48,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Logradouro = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Buscar_Cep = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Informe_Cep = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -74,7 +75,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.Buscar_Cep = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
@@ -98,6 +98,7 @@
             // 
             this.Telefone_Prop.Animated = true;
             this.Telefone_Prop.AutoRoundedCorners = true;
+            this.Telefone_Prop.BorderColor = System.Drawing.Color.Black;
             this.Telefone_Prop.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Telefone_Prop.DefaultText = "";
             this.Telefone_Prop.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -139,6 +140,7 @@
             // 
             this.Nome_Prop.Animated = true;
             this.Nome_Prop.AutoRoundedCorners = true;
+            this.Nome_Prop.BorderColor = System.Drawing.Color.Black;
             this.Nome_Prop.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Prop.DefaultText = "";
             this.Nome_Prop.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -194,6 +196,7 @@
             // 
             this.nome_condominio.Animated = true;
             this.nome_condominio.AutoRoundedCorners = true;
+            this.nome_condominio.BorderColor = System.Drawing.Color.Black;
             this.nome_condominio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nome_condominio.DefaultText = "";
             this.nome_condominio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -233,6 +236,7 @@
             // 
             this.Complemento.Animated = true;
             this.Complemento.AutoRoundedCorners = true;
+            this.Complemento.BorderColor = System.Drawing.Color.Black;
             this.Complemento.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Complemento.DefaultText = "";
             this.Complemento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -278,15 +282,15 @@
             this.UF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.UF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.UF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UF.Enabled = false;
+            this.UF.FillColor = System.Drawing.Color.Gray;
             this.UF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.UF.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.UF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.UF.Location = new System.Drawing.Point(1068, 191);
             this.UF.Margin = new System.Windows.Forms.Padding(6);
             this.UF.Name = "UF";
-            this.UF.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UF.PlaceholderForeColor = System.Drawing.Color.White;
             this.UF.PlaceholderText = "UF";
             this.UF.SelectedText = "";
             this.UF.Size = new System.Drawing.Size(56, 41);
@@ -297,22 +301,23 @@
             // 
             this.Cidade.Animated = true;
             this.Cidade.AutoRoundedCorners = true;
+            this.Cidade.BorderColor = System.Drawing.Color.Black;
             this.Cidade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Cidade.DefaultText = "";
             this.Cidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Cidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Cidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Cidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Cidade.Enabled = false;
+            this.Cidade.FillColor = System.Drawing.Color.Gray;
             this.Cidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cidade.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Cidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Cidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Cidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Cidade.Location = new System.Drawing.Point(606, 190);
             this.Cidade.Margin = new System.Windows.Forms.Padding(6);
             this.Cidade.Name = "Cidade";
-            this.Cidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Cidade.PlaceholderText = "";
+            this.Cidade.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Cidade.PlaceholderText = "Informe a cidade";
             this.Cidade.SelectedText = "";
             this.Cidade.Size = new System.Drawing.Size(450, 41);
             this.Cidade.TabIndex = 20;
@@ -335,22 +340,23 @@
             // 
             this.Bairro.Animated = true;
             this.Bairro.AutoRoundedCorners = true;
+            this.Bairro.BorderColor = System.Drawing.Color.Black;
             this.Bairro.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Bairro.DefaultText = "";
             this.Bairro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Bairro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Bairro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Bairro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Bairro.Enabled = false;
+            this.Bairro.FillColor = System.Drawing.Color.Gray;
             this.Bairro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Bairro.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Bairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Bairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Bairro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Bairro.Location = new System.Drawing.Point(606, 129);
             this.Bairro.Margin = new System.Windows.Forms.Padding(6);
             this.Bairro.Name = "Bairro";
-            this.Bairro.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Bairro.PlaceholderText = "";
+            this.Bairro.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Bairro.PlaceholderText = "Informe o bairro";
             this.Bairro.SelectedText = "";
             this.Bairro.Size = new System.Drawing.Size(450, 41);
             this.Bairro.TabIndex = 18;
@@ -373,6 +379,7 @@
             // 
             this.numero_residencia.Animated = true;
             this.numero_residencia.AutoRoundedCorners = true;
+            this.numero_residencia.BorderColor = System.Drawing.Color.Black;
             this.numero_residencia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numero_residencia.DefaultText = "";
             this.numero_residencia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -411,22 +418,23 @@
             // 
             this.Logradouro.Animated = true;
             this.Logradouro.AutoRoundedCorners = true;
+            this.Logradouro.BorderColor = System.Drawing.Color.Black;
             this.Logradouro.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Logradouro.DefaultText = "";
             this.Logradouro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Logradouro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Logradouro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Logradouro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Logradouro.Enabled = false;
+            this.Logradouro.FillColor = System.Drawing.Color.Gray;
             this.Logradouro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Logradouro.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Logradouro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Logradouro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Logradouro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Logradouro.Location = new System.Drawing.Point(603, 66);
             this.Logradouro.Margin = new System.Windows.Forms.Padding(6);
             this.Logradouro.Name = "Logradouro";
-            this.Logradouro.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Logradouro.PlaceholderText = "";
+            this.Logradouro.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Logradouro.PlaceholderText = "Informe o logradouro";
             this.Logradouro.SelectedText = "";
             this.Logradouro.Size = new System.Drawing.Size(453, 41);
             this.Logradouro.TabIndex = 13;
@@ -445,10 +453,30 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Logradouro: ";
             // 
+            // Buscar_Cep
+            // 
+            this.Buscar_Cep.BackColor = System.Drawing.Color.Transparent;
+            this.Buscar_Cep.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Buscar_Cep.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Image = ((System.Drawing.Image)(resources.GetObject("Buscar_Cep.Image")));
+            this.Buscar_Cep.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Buscar_Cep.ImageRotate = 0F;
+            this.Buscar_Cep.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.IndicateFocus = true;
+            this.Buscar_Cep.Location = new System.Drawing.Point(340, 67);
+            this.Buscar_Cep.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscar_Cep.Name = "Buscar_Cep";
+            this.Buscar_Cep.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.Buscar_Cep.Size = new System.Drawing.Size(38, 37);
+            this.Buscar_Cep.TabIndex = 11;
+            this.Buscar_Cep.UseTransparentBackground = true;
+            this.Buscar_Cep.Click += new System.EventHandler(this.Buscar_Cep_Click);
+            // 
             // Informe_Cep
             // 
             this.Informe_Cep.Animated = true;
             this.Informe_Cep.AutoRoundedCorners = true;
+            this.Informe_Cep.BorderColor = System.Drawing.Color.Black;
             this.Informe_Cep.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Informe_Cep.DefaultText = "";
             this.Informe_Cep.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -524,6 +552,7 @@
             // 
             this.Area_Total.Animated = true;
             this.Area_Total.AutoRoundedCorners = true;
+            this.Area_Total.BorderColor = System.Drawing.Color.Black;
             this.Area_Total.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Area_Total.DefaultText = "";
             this.Area_Total.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -562,13 +591,14 @@
             // 
             this.area_construida.Animated = true;
             this.area_construida.AutoRoundedCorners = true;
+            this.area_construida.BorderColor = System.Drawing.Color.Black;
             this.area_construida.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.area_construida.DefaultText = "";
             this.area_construida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.area_construida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.area_construida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.area_construida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.area_construida.FillColor = System.Drawing.Color.DimGray;
+            this.area_construida.FillColor = System.Drawing.Color.Gray;
             this.area_construida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.area_construida.Font = new System.Drawing.Font("Arial", 14.25F);
             this.area_construida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -600,6 +630,7 @@
             // 
             this.area_util1.Animated = true;
             this.area_util1.AutoRoundedCorners = true;
+            this.area_util1.BorderColor = System.Drawing.Color.Black;
             this.area_util1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.area_util1.DefaultText = "";
             this.area_util1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -638,6 +669,7 @@
             // 
             this.valor_codominio.Animated = true;
             this.valor_codominio.AutoRoundedCorners = true;
+            this.valor_codominio.BorderColor = System.Drawing.Color.Black;
             this.valor_codominio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.valor_codominio.DefaultText = "";
             this.valor_codominio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -679,7 +711,6 @@
             this.Button_Salvar_DBA.Animated = true;
             this.Button_Salvar_DBA.AutoRoundedCorners = true;
             this.Button_Salvar_DBA.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Salvar_DBA.BorderColor = System.Drawing.Color.Blue;
             this.Button_Salvar_DBA.BorderRadius = 24;
             this.Button_Salvar_DBA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Salvar_DBA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -687,11 +718,11 @@
             this.Button_Salvar_DBA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_Salvar_DBA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Button_Salvar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.White;
+            this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.Black;
             this.Button_Salvar_DBA.IndicateFocus = true;
-            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1744, 453);
+            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1728, 453);
             this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
-            this.Button_Salvar_DBA.Size = new System.Drawing.Size(180, 50);
+            this.Button_Salvar_DBA.Size = new System.Drawing.Size(161, 50);
             this.Button_Salvar_DBA.TabIndex = 17;
             this.Button_Salvar_DBA.Text = "SALVAR";
             this.Button_Salvar_DBA.UseTransparentBackground = true;
@@ -700,6 +731,7 @@
             // Descricao
             // 
             this.Descricao.Animated = true;
+            this.Descricao.BorderColor = System.Drawing.Color.Black;
             this.Descricao.BorderRadius = 8;
             this.Descricao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Descricao.DefaultText = "";
@@ -740,6 +772,7 @@
             // 
             this.Valor_IPTU.Animated = true;
             this.Valor_IPTU.AutoRoundedCorners = true;
+            this.Valor_IPTU.BorderColor = System.Drawing.Color.Black;
             this.Valor_IPTU.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Valor_IPTU.DefaultText = "";
             this.Valor_IPTU.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -779,6 +812,7 @@
             // Combo_Comissao
             // 
             this.Combo_Comissao.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Comissao.BorderColor = System.Drawing.Color.Black;
             this.Combo_Comissao.BorderRadius = 8;
             this.Combo_Comissao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Comissao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -789,11 +823,12 @@
             this.Combo_Comissao.ForeColor = System.Drawing.Color.White;
             this.Combo_Comissao.ItemHeight = 30;
             this.Combo_Comissao.Items.AddRange(new object[] {
-            "COM COMISSÃO",
-            "SEM COMISSÃO"});
+            "Com comissão",
+            "Sem comissão"});
             this.Combo_Comissao.Location = new System.Drawing.Point(1456, 196);
             this.Combo_Comissao.Name = "Combo_Comissao";
             this.Combo_Comissao.Size = new System.Drawing.Size(263, 36);
+            this.Combo_Comissao.StartIndex = 1;
             this.Combo_Comissao.TabIndex = 15;
             // 
             // label14
@@ -813,6 +848,7 @@
             // 
             this.Valor_Imovel.Animated = true;
             this.Valor_Imovel.AutoRoundedCorners = true;
+            this.Valor_Imovel.BorderColor = System.Drawing.Color.Black;
             this.Valor_Imovel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Valor_Imovel.DefaultText = "";
             this.Valor_Imovel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -852,6 +888,7 @@
             // Combo_Pretensao
             // 
             this.Combo_Pretensao.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Pretensao.BorderColor = System.Drawing.Color.Black;
             this.Combo_Pretensao.BorderRadius = 8;
             this.Combo_Pretensao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Pretensao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -862,9 +899,9 @@
             this.Combo_Pretensao.ForeColor = System.Drawing.Color.White;
             this.Combo_Pretensao.ItemHeight = 30;
             this.Combo_Pretensao.Items.AddRange(new object[] {
-            "VENDA",
-            "ALUGUEL",
-            "VENDA - ALUGUEL"});
+            "Venda",
+            "Aluguel",
+            "Venda - Aluguel"});
             this.Combo_Pretensao.Location = new System.Drawing.Point(612, 62);
             this.Combo_Pretensao.Name = "Combo_Pretensao";
             this.Combo_Pretensao.Size = new System.Drawing.Size(247, 36);
@@ -886,6 +923,7 @@
             // Combo_Tipo_de_imovel
             // 
             this.Combo_Tipo_de_imovel.BackColor = System.Drawing.Color.Transparent;
+            this.Combo_Tipo_de_imovel.BorderColor = System.Drawing.Color.Black;
             this.Combo_Tipo_de_imovel.BorderRadius = 8;
             this.Combo_Tipo_de_imovel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Tipo_de_imovel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -896,11 +934,11 @@
             this.Combo_Tipo_de_imovel.ForeColor = System.Drawing.Color.White;
             this.Combo_Tipo_de_imovel.ItemHeight = 30;
             this.Combo_Tipo_de_imovel.Items.AddRange(new object[] {
-            "CASA",
-            "APARTAMENTO",
-            "TERRENO",
-            "FLAT",
-            "KITNET"});
+            "Casa",
+            "Apartamento",
+            "Terreno",
+            "Flat",
+            "Kitnet"});
             this.Combo_Tipo_de_imovel.Location = new System.Drawing.Point(196, 61);
             this.Combo_Tipo_de_imovel.Name = "Combo_Tipo_de_imovel";
             this.Combo_Tipo_de_imovel.Size = new System.Drawing.Size(229, 36);
@@ -940,25 +978,6 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1939, 146);
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Dados do Proprietário";
-            // 
-            // Buscar_Cep
-            // 
-            this.Buscar_Cep.BackColor = System.Drawing.Color.Transparent;
-            this.Buscar_Cep.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Buscar_Cep.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.Image = ((System.Drawing.Image)(resources.GetObject("Buscar_Cep.Image")));
-            this.Buscar_Cep.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Buscar_Cep.ImageRotate = 0F;
-            this.Buscar_Cep.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.IndicateFocus = true;
-            this.Buscar_Cep.Location = new System.Drawing.Point(340, 67);
-            this.Buscar_Cep.Margin = new System.Windows.Forms.Padding(2);
-            this.Buscar_Cep.Name = "Buscar_Cep";
-            this.Buscar_Cep.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.Buscar_Cep.Size = new System.Drawing.Size(38, 37);
-            this.Buscar_Cep.TabIndex = 11;
-            this.Buscar_Cep.UseTransparentBackground = true;
-            this.Buscar_Cep.Click += new System.EventHandler(this.Buscar_Cep_Click);
             // 
             // Cadastros
             // 

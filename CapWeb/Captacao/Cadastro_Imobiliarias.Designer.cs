@@ -50,6 +50,7 @@
             this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Controls.Add(this.Salvar);
             this.guna2GroupBox1.Controls.Add(this.Valor);
             this.guna2GroupBox1.Controls.Add(this.label3);
@@ -95,6 +96,7 @@
             // 
             this.Valor.Animated = true;
             this.Valor.AutoRoundedCorners = true;
+            this.Valor.BorderColor = System.Drawing.Color.Black;
             this.Valor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Valor.DefaultText = "";
             this.Valor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -135,6 +137,7 @@
             // 
             this.Nome_Respon_Imobiliaria.Animated = true;
             this.Nome_Respon_Imobiliaria.AutoRoundedCorners = true;
+            this.Nome_Respon_Imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Nome_Respon_Imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Respon_Imobiliaria.DefaultText = "";
             this.Nome_Respon_Imobiliaria.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -174,6 +177,7 @@
             // 
             this.Telefone_imobiliaria.Animated = true;
             this.Telefone_imobiliaria.AutoRoundedCorners = true;
+            this.Telefone_imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Telefone_imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Telefone_imobiliaria.DefaultText = "";
             this.Telefone_imobiliaria.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -214,6 +218,7 @@
             // 
             this.Nome_Imobiliaria.Animated = true;
             this.Nome_Imobiliaria.AutoRoundedCorners = true;
+            this.Nome_Imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Nome_Imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Imobiliaria.DefaultText = "";
             this.Nome_Imobiliaria.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
