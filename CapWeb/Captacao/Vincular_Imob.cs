@@ -37,7 +37,7 @@ namespace CapWeb.Captacao
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
             this.FormClosing += Vincular_Imob_FormClosing; // Associa evento de fechamento
             this.dgvVinculos.MultiSelect = true; // Habilita seleção múltipla
-            this.dgvVinculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Seleção por linha
+            this.dgvVinculos.SelectionMode = DataGridViewSelectionMode.CellSelect; // Seleção por célula
             this.dgvVinculos.CellContentClick += dgvVinculos_CellContentClick; // Novo evento para seleção em lote
         }
 
@@ -162,7 +162,7 @@ namespace CapWeb.Captacao
                         }
                         // Reforçar seleção múltipla após atualizar DataSource
                         dgvVinculos.MultiSelect = true;
-                        dgvVinculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                        dgvVinculos.SelectionMode = DataGridViewSelectionMode.CellSelect;
                     });
                 }
                 SetStatus("Atualizado!", Color.LimeGreen);
@@ -221,24 +221,20 @@ namespace CapWeb.Captacao
                 return;
             }
 
-            // --- LOTE POR LINHA (NOVO, só com Shift) ---
+            // --- LOTE POR BLOCO DE CÉLULAS (NOVO, só com Shift) ---
             if (Control.ModifierKeys.HasFlag(Keys.Shift))
             {
                 if (dgvVinculos.SelectedCells.Count > 1)
                 {
-                    var selectedCells = dgvVinculos.SelectedCells.Cast<DataGridViewCell>()
-                        .Where(cell => cell.RowIndex == e.RowIndex && cell.ColumnIndex != dgvVinculos.Columns["ID_Proprietario"].Index && cell.ColumnIndex != dgvVinculos.Columns["Proprietario"].Index)
-                        .ToList();
-                    if (selectedCells.Count > 1)
+                    bool novoValor = !(Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == true);
+                    foreach (DataGridViewCell cell in dgvVinculos.SelectedCells)
                     {
-                        bool novoValor = !(Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == true);
-                        foreach (var cell in selectedCells)
-                        {
-                            dgvVinculos.Rows[e.RowIndex].Cells[cell.ColumnIndex].Value = novoValor;
-                        }
-                        dgvVinculos.EndEdit();
-                        return;
+                        string cellColName = dgvVinculos.Columns[cell.ColumnIndex].Name;
+                        if (cellColName == "ID_Proprietario" || cellColName == "Proprietario") continue;
+                        dgvVinculos.Rows[cell.RowIndex].Cells[cell.ColumnIndex].Value = novoValor;
                     }
+                    dgvVinculos.EndEdit();
+                    return;
                 }
             }
             // Caso contrário, comportamento padrão: só altera o checkbox clicado
