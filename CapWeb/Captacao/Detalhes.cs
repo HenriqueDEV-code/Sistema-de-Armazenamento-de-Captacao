@@ -170,6 +170,7 @@ namespace CapWeb.Captacao
                 E_Prop.CEP AS CEP_Proprietario,
                 E_Prop.Nome_Condominio AS NOME_Condominio,
                 I.Descricao,
+                I.Observacao,
                 I.Valor,
                 I.Tipo_de_Imovel,
                 I.Pretensao,
@@ -304,6 +305,11 @@ namespace CapWeb.Captacao
 
                 detalhes.AppendLine("Descrição do Imóvel:");
                 detalhes.AppendLine(row["Descricao"].ToString());
+                detalhes.AppendLine();
+                detalhes.AppendLine(new string('-', 100));
+
+                detalhes.AppendLine("Observações do Imóvel:");
+                detalhes.AppendLine(row["Observacao"].ToString());
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 

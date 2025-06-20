@@ -202,6 +202,8 @@
             this.Combo_Cidade_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Combo_Cidade_Busca.ForeColor = System.Drawing.Color.White;
             this.Combo_Cidade_Busca.ItemHeight = 30;
+            this.Combo_Cidade_Busca.Items.AddRange(new object[] {
+            ""});
             this.Combo_Cidade_Busca.Location = new System.Drawing.Point(654, 43);
             this.Combo_Cidade_Busca.Name = "Combo_Cidade_Busca";
             this.Combo_Cidade_Busca.Size = new System.Drawing.Size(293, 36);

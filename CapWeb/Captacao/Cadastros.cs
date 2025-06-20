@@ -461,11 +461,12 @@ namespace CapWeb.Captacao
                     int idProprietario = Convert.ToInt32(cmdProprietarios.ExecuteScalar());
 
                     // -- Inserir Imovel --
-                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida, Terreno)
-                                    VALUES (@Descricao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida, @Terreno);";
+                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Observacao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida, Terreno)
+                                    VALUES (@Descricao, @Observacao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida, @Terreno);";
 
                     SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
                     cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.Descricao);
+                    cmdImovel.Parameters.AddWithValue("@Observacao", imoveis.Observacao);
                     cmdImovel.Parameters.AddWithValue("@Valor", imoveis.Valor);
                     cmdImovel.Parameters.AddWithValue("@Tipo_de_Imovel", imoveis.Tipo_de_imovel);
                     cmdImovel.Parameters.AddWithValue("@Pretensao", imoveis.Pretensao);
@@ -513,6 +514,7 @@ namespace CapWeb.Captacao
             Area_Total.Clear();
             nome_condominio.Clear();
             Complemento.Clear();
+            Observacoes.Clear();
         }
 
         bool Error_Nulos()
@@ -603,6 +605,7 @@ namespace CapWeb.Captacao
             Imovel imovel = new Imovel
             {
                 Descricao = Descricao.Text,
+                Observacao = Observacoes.Text,
                 Valor = Valor_Imovel.Text,                // Ex: "R$ 1.234,56"
                 Tipo_de_imovel = Combo_Tipo_de_imovel.Text,
                 Pretensao = Combo_Pretensao.Text,

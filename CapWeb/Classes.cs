@@ -131,6 +131,7 @@ namespace CapWeb
     {
        
         private string descricao;
+        private string observacao;
         private string tipo_de_imovel;
         private string pretensao;
         private string comissao;
@@ -144,9 +145,15 @@ namespace CapWeb
 
         public string Descricao
         {
-            get { return  descricao; }
+            get { return  observacao; }
             set { descricao = value; }
         }
+        public string Observacao
+        {
+            get { return observacao; }
+            set { observacao = value; }
+        }
+
         public string Tipo_de_imovel
         {
             get { return tipo_de_imovel;}

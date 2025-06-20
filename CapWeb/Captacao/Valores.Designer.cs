@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneGroupBox2 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
+            this.Date_Time_Pagamento = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Pago = new Guna.UI2.WinForms.Guna2Button();
@@ -51,8 +53,6 @@
             this.cap_ImoveisDataSet = new CapWeb.Cap_ImoveisDataSet();
             this.proprietarioImobiliariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proprietario_ImobiliariaTableAdapter = new CapWeb.Cap_ImoveisDataSetTableAdapters.Proprietario_ImobiliariaTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.siticonePanel1.SuspendLayout();
             this.siticoneGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DB_TABELA_VALORES_IMOBIIARIAS)).BeginInit();
@@ -75,7 +75,7 @@
             this.siticoneGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneGroupBox2.Controls.Add(this.dateTimePicker1);
+            this.siticoneGroupBox2.Controls.Add(this.Date_Time_Pagamento);
             this.siticoneGroupBox2.Controls.Add(this.label5);
             this.siticoneGroupBox2.Controls.Add(this.label4);
             this.siticoneGroupBox2.Controls.Add(this.label3);
@@ -96,6 +96,26 @@
             this.siticoneGroupBox2.TabIndex = 51;
             this.siticoneGroupBox2.Text = "                                                                              TAB" +
     "ELA";
+            // 
+            // Date_Time_Pagamento
+            // 
+            this.Date_Time_Pagamento.Location = new System.Drawing.Point(250, 491);
+            this.Date_Time_Pagamento.Name = "Date_Time_Pagamento";
+            this.Date_Time_Pagamento.Size = new System.Drawing.Size(200, 23);
+            this.Date_Time_Pagamento.TabIndex = 50;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(6, 485);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(243, 30);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Data do pagamento:";
             // 
             // label4
             // 
@@ -267,24 +287,24 @@
             // 
             this.DB_TABELA_VALORES_IMOBIIARIAS.BackgroundColor = System.Drawing.Color.DimGray;
             this.DB_TABELA_VALORES_IMOBIIARIAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.DefaultCellStyle = dataGridViewCellStyle3;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Location = new System.Drawing.Point(9, 102);
             this.DB_TABELA_VALORES_IMOBIIARIAS.Name = "DB_TABELA_VALORES_IMOBIIARIAS";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DB_TABELA_VALORES_IMOBIIARIAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DB_TABELA_VALORES_IMOBIIARIAS.Size = new System.Drawing.Size(612, 302);
             this.DB_TABELA_VALORES_IMOBIIARIAS.TabIndex = 0;
             // 
@@ -387,26 +407,6 @@
             // 
             this.proprietario_ImobiliariaTableAdapter.ClearBeforeFill = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(6, 485);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 30);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Data do pagamento:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(250, 491);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 50;
-            // 
             // Valores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,6 +454,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Date_Time_Pagamento;
     }
 }

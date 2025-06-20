@@ -167,9 +167,9 @@ namespace CapWeb.Captacao
                 pi.ID_Proprietario AS [Proprietários],
                 pi.ID_Imobiliaria AS [Imobiliárias],
                 pi.Data_Vinculo AS [Enviados],
+                pi.Data_do_Pagamento AS [Recebido],
                 pi.Valor,
-                pi.Status,
-                pi.Data_do_Pagamento AS [Recebido]
+                pi.Status
             FROM Proprietario_Imobiliaria pi
             INNER JOIN Imobiliaria i ON i.ID_Imobiliaria = pi.ID_Imobiliaria
             WHERE i.Nome_Imobiliaria = @Nome_Imobiliaria
@@ -203,49 +203,65 @@ namespace CapWeb.Captacao
 
         private void Pago_Click(object sender, EventArgs e)
         {
+            // Permitir seleção múltipla
+            DB_TABELA_VALORES_IMOBIIARIAS.MultiSelect = true;
+
             if (DB_TABELA_VALORES_IMOBIIARIAS.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione uma linha para marcar como paga.");
+                MessageBox.Show("Selecione uma ou mais linhas para marcar como pagas.");
                 return;
             }
 
-            DataGridViewRow row = DB_TABELA_VALORES_IMOBIIARIAS.SelectedRows[0];
+            // Verifica se a data foi informada
+            if (Date_Time_Pagamento.Value == null || Date_Time_Pagamento.Value == DateTime.MinValue)
+            {
+                MessageBox.Show("Informe a data de pagamento antes de marcar como pago.");
+                return;
+            }
 
-            int idProprietario = Convert.ToInt32(row.Cells["ID_Proprietario"].Value);
-            int idImobiliaria = Convert.ToInt32(row.Cells["ID_Imobiliaria"].Value);
-
+            int totalAtualizados = 0;
             using (SqlConnection conn = new SqlConnection(DBA))
             {
                 conn.Open();
+                foreach (DataGridViewRow row in DB_TABELA_VALORES_IMOBIIARIAS.SelectedRows)
+                {
+                    int idProprietario = Convert.ToInt32(row.Cells["Proprietários"].Value);
+                    int idImobiliaria = Convert.ToInt32(row.Cells["Imobiliárias"].Value);
 
-                string sql = @"
+                    string sql = @"
             UPDATE Proprietario_Imobiliaria
-            SET Status = 'PAGO'
+            SET Status = 'PAGO', Data_do_Pagamento = @DataPagamento
             WHERE ID_Proprietario = @ID_Proprietario
               AND ID_Imobiliaria = @ID_Imobiliaria
               AND Status = 'NAO PAGO'
         ";
 
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ID_Proprietario", idProprietario);
-                    cmd.Parameters.AddWithValue("@ID_Imobiliaria", idImobiliaria);
-
-                    int linhasAfetadas = cmd.ExecuteNonQuery();
-
-                    if (linhasAfetadas > 0)
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
-                        MessageBox.Show("Status alterado para 'PAGO' com sucesso.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nenhum registro foi atualizado. Verifique se o status já está como 'PAGO'.");
-                    }
+                        cmd.Parameters.AddWithValue("@ID_Proprietario", idProprietario);
+                        cmd.Parameters.AddWithValue("@ID_Imobiliaria", idImobiliaria);
+                        cmd.Parameters.AddWithValue("@DataPagamento", Date_Time_Pagamento.Value);
 
-                    // Recarrega a tabela após atualização
-                    Button_Pesquisar_DBA_Click(null, null);
+                        int linhasAfetadas = cmd.ExecuteNonQuery();
+                        if (linhasAfetadas > 0)
+                        {
+                            totalAtualizados++;
+                        }
+                    }
                 }
             }
+
+            if (totalAtualizados > 0)
+            {
+                MessageBox.Show($"Status alterado para 'PAGO' em {totalAtualizados} registro(s) com sucesso.");
+            }
+            else
+            {
+                MessageBox.Show("Nenhum registro foi atualizado. Verifique se o status já está como 'PAGO'.");
+            }
+
+            // Recarrega a tabela após atualização
+            Button_Pesquisar_DBA_Click(null, null);
         }
     } // Fim da classe Valores
 } // FIm do namespace

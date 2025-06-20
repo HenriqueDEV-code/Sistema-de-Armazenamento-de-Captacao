@@ -207,19 +207,41 @@ namespace CapWeb.Captacao
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             string colName = dgvVinculos.Columns[e.ColumnIndex].Name;
             if (colName == "ID_Proprietario" || colName == "Proprietario") return;
-            // Só faz em lote se houver mais de uma linha selecionada
+
+            // --- LOTE POR COLUNA (já existente) ---
             if (dgvVinculos.SelectedRows.Count > 1 && dgvVinculos.Rows[e.RowIndex].Selected)
             {
-                // O valor novo será o inverso do valor atual da célula clicada
                 bool novoValor = !(Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == true);
                 foreach (DataGridViewRow row in dgvVinculos.SelectedRows)
                 {
                     if (row.IsNewRow) continue;
                     row.Cells[e.ColumnIndex].Value = novoValor;
                 }
-                // Força commit para disparar CellValueChanged
                 dgvVinculos.EndEdit();
+                return;
             }
+
+            // --- LOTE POR LINHA (NOVO, só com Shift) ---
+            if (Control.ModifierKeys.HasFlag(Keys.Shift))
+            {
+                if (dgvVinculos.SelectedCells.Count > 1)
+                {
+                    var selectedCells = dgvVinculos.SelectedCells.Cast<DataGridViewCell>()
+                        .Where(cell => cell.RowIndex == e.RowIndex && cell.ColumnIndex != dgvVinculos.Columns["ID_Proprietario"].Index && cell.ColumnIndex != dgvVinculos.Columns["Proprietario"].Index)
+                        .ToList();
+                    if (selectedCells.Count > 1)
+                    {
+                        bool novoValor = !(Convert.ToBoolean(dgvVinculos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) == true);
+                        foreach (var cell in selectedCells)
+                        {
+                            dgvVinculos.Rows[e.RowIndex].Cells[cell.ColumnIndex].Value = novoValor;
+                        }
+                        dgvVinculos.EndEdit();
+                        return;
+                    }
+                }
+            }
+            // Caso contrário, comportamento padrão: só altera o checkbox clicado
         }
 
         private void dgvVinculos_CellValueChanged(object sender, DataGridViewCellEventArgs e)

@@ -75,6 +75,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Observacoes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
@@ -518,6 +520,8 @@
             // 
             this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GroupBox3.Controls.Add(this.Observacoes);
+            this.guna2GroupBox3.Controls.Add(this.label20);
             this.guna2GroupBox3.Controls.Add(this.Area_Total);
             this.guna2GroupBox3.Controls.Add(this.label19);
             this.guna2GroupBox3.Controls.Add(this.area_construida);
@@ -720,10 +724,10 @@
             this.Button_Salvar_DBA.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_Salvar_DBA.ForeColor = System.Drawing.Color.Black;
             this.Button_Salvar_DBA.IndicateFocus = true;
-            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1728, 453);
+            this.Button_Salvar_DBA.Location = new System.Drawing.Point(1739, 423);
             this.Button_Salvar_DBA.Name = "Button_Salvar_DBA";
             this.Button_Salvar_DBA.Size = new System.Drawing.Size(161, 50);
-            this.Button_Salvar_DBA.TabIndex = 17;
+            this.Button_Salvar_DBA.TabIndex = 18;
             this.Button_Salvar_DBA.Text = "SALVAR";
             this.Button_Salvar_DBA.UseTransparentBackground = true;
             this.Button_Salvar_DBA.Click += new System.EventHandler(this.Button_Salvar_DBA_Click);
@@ -751,7 +755,7 @@
             this.Descricao.PlaceholderForeColor = System.Drawing.Color.White;
             this.Descricao.PlaceholderText = "Informe a descrição completa sobre o imóvel desse proprietário";
             this.Descricao.SelectedText = "";
-            this.Descricao.Size = new System.Drawing.Size(1565, 255);
+            this.Descricao.Size = new System.Drawing.Size(690, 220);
             this.Descricao.TabIndex = 16;
             this.Descricao.Load += new System.EventHandler(this.Descricao_Load);
             // 
@@ -979,6 +983,45 @@
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Dados do Proprietário";
             // 
+            // Observacoes
+            // 
+            this.Observacoes.Animated = true;
+            this.Observacoes.BorderColor = System.Drawing.Color.Black;
+            this.Observacoes.BorderRadius = 8;
+            this.Observacoes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Observacoes.DefaultText = "";
+            this.Observacoes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Observacoes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Observacoes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Observacoes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Observacoes.FillColor = System.Drawing.Color.Gray;
+            this.Observacoes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Observacoes.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Observacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Observacoes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Observacoes.Location = new System.Drawing.Point(1029, 253);
+            this.Observacoes.Margin = new System.Windows.Forms.Padding(6);
+            this.Observacoes.Multiline = true;
+            this.Observacoes.Name = "Observacoes";
+            this.Observacoes.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Observacoes.PlaceholderText = "Informe as observações";
+            this.Observacoes.SelectedText = "";
+            this.Observacoes.Size = new System.Drawing.Size(692, 220);
+            this.Observacoes.TabIndex = 17;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label20.Location = new System.Drawing.Point(865, 253);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(158, 30);
+            this.label20.TabIndex = 54;
+            this.label20.Text = "Observação:";
+            // 
             // Cadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1051,5 +1094,7 @@
         private Guna.UI2.WinForms.Guna2TextBox Area_Total;
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2TextBox Observacoes;
+        private System.Windows.Forms.Label label20;
     }
 }
