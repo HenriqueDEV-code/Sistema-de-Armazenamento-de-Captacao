@@ -58,6 +58,12 @@ namespace CapWeb.Captacao
                 this.Invoke((MethodInvoker)(() => this.Text = "Vinculação de imobiliárias"));
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
         }
 
         private async Task Carregar_VinculosAsync(string nomeProprietario = null, string nomeImobiliaria = null)
@@ -163,6 +169,11 @@ namespace CapWeb.Captacao
                         // Reforçar seleção múltipla após atualizar DataSource
                         dgvVinculos.MultiSelect = true;
                         dgvVinculos.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                        // Fixar as colunas "ID_Proprietario" e "Proprietario"
+                        if (dgvVinculos.Columns["ID_Proprietario"] != null)
+                            dgvVinculos.Columns["ID_Proprietario"].Frozen = true;
+                        if (dgvVinculos.Columns["Proprietario"] != null)
+                            dgvVinculos.Columns["Proprietario"].Frozen = true;
                     });
                 }
                 SetStatus("Atualizado!", Color.LimeGreen);

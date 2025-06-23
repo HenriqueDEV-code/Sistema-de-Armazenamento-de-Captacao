@@ -20,7 +20,10 @@ namespace CapWeb.Captacao
     {
         private string DBA;
         private DataTable resultado;
-        
+
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
         public Detalhes(string DBA)
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace CapWeb.Captacao
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
             Combo_Cidade_Busca.StartIndex = 1;
+            this.Load += Detalhes_Busca_Load;
 
         }
 
@@ -46,7 +50,13 @@ namespace CapWeb.Captacao
                 extrair.PerformClick();
                 e.Handled = true;
             }
-            
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
+
         }
 
         bool Error_Nulos()
@@ -71,6 +81,10 @@ namespace CapWeb.Captacao
         private void Detalhes_Busca_Load(object sender, EventArgs e)
         {
             Detalhes_Busca.CharacterCasing = CharacterCasing.Upper;
+            Detalhes_Busca.BorderStyle = BorderStyle.None;
+            Detalhes_Busca.Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, Detalhes_Busca.Width, Detalhes_Busca.Height, 15, 15)
+            );
 
         }
 
@@ -308,11 +322,6 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('-', 100));
 
-                detalhes.AppendLine("Observações do Imóvel:");
-                detalhes.AppendLine(row["Observacao"].ToString());
-                detalhes.AppendLine();
-                detalhes.AppendLine(new string('-', 100));
-
                 detalhes.AppendLine("Tamanho da área (útil | construída | terreno):");
                 detalhes.AppendLine($"Área útil: {row["util"]} m² | Área construída: {row["construida"]} m² | Área total: {row["terreno"]} m²");
                 detalhes.AppendLine();
@@ -331,6 +340,11 @@ namespace CapWeb.Captacao
                 detalhes.AppendLine("Valor do imóvel com ou sem comissão:");
                 detalhes.AppendLine($"{row["Valor"]} - {row["Comissao"]}");
                 detalhes.AppendLine($"{row["Tipo_de_Imovel"]} - {row["Pretensao"]}");
+                detalhes.AppendLine();
+                detalhes.AppendLine(new string('-', 100));
+
+                detalhes.AppendLine("Observações do Imóvel:");
+                detalhes.AppendLine(row["Observacao"].ToString());
                 detalhes.AppendLine();
                 detalhes.AppendLine(new string('=', 100));
                 detalhes.AppendLine();

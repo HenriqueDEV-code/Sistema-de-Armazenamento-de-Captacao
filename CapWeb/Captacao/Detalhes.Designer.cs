@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalhes));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Detalhes_Busca = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.Combo_Nome_Prop_Busca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.extrair = new Guna.UI2.WinForms.Guna2Button();
             this.Button_Buscar_DBA = new Guna.UI2.WinForms.Guna2Button();
-            this.Detalhes_Busca = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Combo_Cidade_Busca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,11 +51,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.Detalhes_Busca);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.Combo_Nome_Prop_Busca);
             this.panel1.Controls.Add(this.extrair);
             this.panel1.Controls.Add(this.Button_Buscar_DBA);
-            this.panel1.Controls.Add(this.Detalhes_Busca);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.Combo_Cidade_Busca);
             this.panel1.Controls.Add(this.label11);
@@ -65,19 +65,34 @@
             this.panel1.Size = new System.Drawing.Size(1128, 694);
             this.panel1.TabIndex = 0;
             // 
+            // Detalhes_Busca
+            // 
+            this.Detalhes_Busca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Detalhes_Busca.BackColor = System.Drawing.Color.Gainsboro;
+            this.Detalhes_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Detalhes_Busca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Detalhes_Busca.Location = new System.Drawing.Point(32, 161);
+            this.Detalhes_Busca.Multiline = true;
+            this.Detalhes_Busca.Name = "Detalhes_Busca";
+            this.Detalhes_Busca.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Detalhes_Busca.Size = new System.Drawing.Size(1066, 437);
+            this.Detalhes_Busca.TabIndex = 44;
+            // 
             // label16
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(28, 615);
+            this.label16.ForeColor = System.Drawing.Color.Yellow;
+            this.label16.Location = new System.Drawing.Point(28, 624);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(315, 66);
+            this.label16.Size = new System.Drawing.Size(493, 44);
             this.label16.TabIndex = 43;
-            this.label16.Text = " Atalhos:\r\n F5 - Buscar imóveis\r\n F6 - Extrair as informações para o .txt";
+            this.label16.Text = " Atalhos:\r\n F5 - Buscar imóveis    F6 - Extrair as informações para o .txt";
             // 
             // Combo_Nome_Prop_Busca
             // 
@@ -86,11 +101,11 @@
             this.Combo_Nome_Prop_Busca.BorderRadius = 8;
             this.Combo_Nome_Prop_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Nome_Prop_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Nome_Prop_Busca.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Nome_Prop_Busca.FillColor = System.Drawing.Color.Gainsboro;
             this.Combo_Nome_Prop_Busca.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Nome_Prop_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Nome_Prop_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Nome_Prop_Busca.ForeColor = System.Drawing.Color.White;
+            this.Combo_Nome_Prop_Busca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Nome_Prop_Busca.ItemHeight = 30;
             this.Combo_Nome_Prop_Busca.Location = new System.Drawing.Point(128, 43);
             this.Combo_Nome_Prop_Busca.Name = "Combo_Nome_Prop_Busca";
@@ -144,37 +159,6 @@
             this.Button_Buscar_DBA.UseTransparentBackground = true;
             this.Button_Buscar_DBA.Click += new System.EventHandler(this.Button_Buscar_DBA_Click);
             // 
-            // Detalhes_Busca
-            // 
-            this.Detalhes_Busca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Detalhes_Busca.Animated = true;
-            this.Detalhes_Busca.BorderColor = System.Drawing.Color.Black;
-            this.Detalhes_Busca.BorderRadius = 10;
-            this.Detalhes_Busca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Detalhes_Busca.DefaultText = "";
-            this.Detalhes_Busca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Detalhes_Busca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Detalhes_Busca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Detalhes_Busca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Detalhes_Busca.FillColor = System.Drawing.Color.DimGray;
-            this.Detalhes_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Detalhes_Busca.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.Detalhes_Busca.ForeColor = System.Drawing.Color.White;
-            this.Detalhes_Busca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Detalhes_Busca.Location = new System.Drawing.Point(32, 142);
-            this.Detalhes_Busca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Detalhes_Busca.Multiline = true;
-            this.Detalhes_Busca.Name = "Detalhes_Busca";
-            this.Detalhes_Busca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Detalhes_Busca.PlaceholderText = "";
-            this.Detalhes_Busca.ReadOnly = true;
-            this.Detalhes_Busca.SelectedText = "";
-            this.Detalhes_Busca.Size = new System.Drawing.Size(1056, 468);
-            this.Detalhes_Busca.TabIndex = 39;
-            this.Detalhes_Busca.Load += new System.EventHandler(this.Detalhes_Busca_Load);
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -196,11 +180,11 @@
             this.Combo_Cidade_Busca.BorderRadius = 8;
             this.Combo_Cidade_Busca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Cidade_Busca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Cidade_Busca.FillColor = System.Drawing.Color.DimGray;
+            this.Combo_Cidade_Busca.FillColor = System.Drawing.Color.Gainsboro;
             this.Combo_Cidade_Busca.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Cidade_Busca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Cidade_Busca.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Cidade_Busca.ForeColor = System.Drawing.Color.White;
+            this.Combo_Cidade_Busca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Cidade_Busca.ItemHeight = 30;
             this.Combo_Cidade_Busca.Items.AddRange(new object[] {
             ""});
@@ -265,12 +249,12 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Cidade_Busca;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox Detalhes_Busca;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2Button Button_Buscar_DBA;
         private Guna.UI2.WinForms.Guna2Button extrair;
         private System.Windows.Forms.ErrorProvider ERROR_Dados_Nulos;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Nome_Prop_Busca;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox Detalhes_Busca;
     }
 }

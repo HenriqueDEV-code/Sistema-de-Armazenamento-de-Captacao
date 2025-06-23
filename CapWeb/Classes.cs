@@ -22,9 +22,7 @@ namespace CapWeb
             get {  return nome; }
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Nome não pode ser vazio.");
-                nome = value.ToUpper(); 
+                nome = value;
             }
         }
 
@@ -129,8 +127,8 @@ namespace CapWeb
 
     public class Imovel
     {
-       
-        private string descricao;
+
+        private string Imov_Descricao;
         private string observacao;
         private string tipo_de_imovel;
         private string pretensao;
@@ -143,11 +141,13 @@ namespace CapWeb
         private string iptu;
         private string valor_condominio;
 
-        public string Descricao
+        public string IMOV_Descricao
         {
-            get { return  observacao; }
-            set { descricao = value; }
+            get { return  Imov_Descricao; }
+            set {  Imov_Descricao = value; }
         }
+
+
         public string Observacao
         {
             get { return observacao; }

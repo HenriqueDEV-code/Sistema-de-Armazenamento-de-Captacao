@@ -41,6 +41,7 @@
             this.Nome_Imobiliaria = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.atalho = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Controls.Add(this.atalho);
             this.guna2GroupBox1.Controls.Add(this.Salvar);
             this.guna2GroupBox1.Controls.Add(this.Valor);
             this.guna2GroupBox1.Controls.Add(this.label3);
@@ -96,6 +98,7 @@
             // 
             this.Valor.Animated = true;
             this.Valor.AutoRoundedCorners = true;
+            this.Valor.BackColor = System.Drawing.Color.Transparent;
             this.Valor.BorderColor = System.Drawing.Color.Black;
             this.Valor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Valor.DefaultText = "";
@@ -103,15 +106,15 @@
             this.Valor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Valor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Valor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Valor.FillColor = System.Drawing.Color.DimGray;
+            this.Valor.FillColor = System.Drawing.Color.Gainsboro;
             this.Valor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Valor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Valor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Valor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Valor.Location = new System.Drawing.Point(98, 195);
             this.Valor.Margin = new System.Windows.Forms.Padding(6);
             this.Valor.Name = "Valor";
-            this.Valor.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Valor.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Valor.PlaceholderText = "R$ 0,00";
             this.Valor.SelectedText = "";
             this.Valor.Size = new System.Drawing.Size(186, 41);
@@ -137,6 +140,7 @@
             // 
             this.Nome_Respon_Imobiliaria.Animated = true;
             this.Nome_Respon_Imobiliaria.AutoRoundedCorners = true;
+            this.Nome_Respon_Imobiliaria.BackColor = System.Drawing.Color.Transparent;
             this.Nome_Respon_Imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Nome_Respon_Imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Respon_Imobiliaria.DefaultText = "";
@@ -144,15 +148,15 @@
             this.Nome_Respon_Imobiliaria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Nome_Respon_Imobiliaria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Nome_Respon_Imobiliaria.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Respon_Imobiliaria.FillColor = System.Drawing.Color.DimGray;
+            this.Nome_Respon_Imobiliaria.FillColor = System.Drawing.Color.Gainsboro;
             this.Nome_Respon_Imobiliaria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nome_Respon_Imobiliaria.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Nome_Respon_Imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Nome_Respon_Imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Nome_Respon_Imobiliaria.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nome_Respon_Imobiliaria.Location = new System.Drawing.Point(98, 130);
             this.Nome_Respon_Imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Nome_Respon_Imobiliaria.Name = "Nome_Respon_Imobiliaria";
-            this.Nome_Respon_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Nome_Respon_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Nome_Respon_Imobiliaria.PlaceholderText = "Nome do responsável";
             this.Nome_Respon_Imobiliaria.SelectedText = "";
             this.Nome_Respon_Imobiliaria.Size = new System.Drawing.Size(391, 41);
@@ -177,6 +181,7 @@
             // 
             this.Telefone_imobiliaria.Animated = true;
             this.Telefone_imobiliaria.AutoRoundedCorners = true;
+            this.Telefone_imobiliaria.BackColor = System.Drawing.Color.Transparent;
             this.Telefone_imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Telefone_imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Telefone_imobiliaria.DefaultText = "";
@@ -184,15 +189,15 @@
             this.Telefone_imobiliaria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Telefone_imobiliaria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Telefone_imobiliaria.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Telefone_imobiliaria.FillColor = System.Drawing.Color.DimGray;
+            this.Telefone_imobiliaria.FillColor = System.Drawing.Color.Gainsboro;
             this.Telefone_imobiliaria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Telefone_imobiliaria.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Telefone_imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Telefone_imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Telefone_imobiliaria.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Telefone_imobiliaria.Location = new System.Drawing.Point(652, 67);
             this.Telefone_imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Telefone_imobiliaria.Name = "Telefone_imobiliaria";
-            this.Telefone_imobiliaria.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Telefone_imobiliaria.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Telefone_imobiliaria.PlaceholderText = "Telefone do corretor";
             this.Telefone_imobiliaria.SelectedText = "";
             this.Telefone_imobiliaria.Size = new System.Drawing.Size(391, 41);
@@ -218,6 +223,7 @@
             // 
             this.Nome_Imobiliaria.Animated = true;
             this.Nome_Imobiliaria.AutoRoundedCorners = true;
+            this.Nome_Imobiliaria.BackColor = System.Drawing.Color.Transparent;
             this.Nome_Imobiliaria.BorderColor = System.Drawing.Color.Black;
             this.Nome_Imobiliaria.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Nome_Imobiliaria.DefaultText = "";
@@ -225,15 +231,15 @@
             this.Nome_Imobiliaria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Nome_Imobiliaria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Nome_Imobiliaria.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Nome_Imobiliaria.FillColor = System.Drawing.Color.DimGray;
+            this.Nome_Imobiliaria.FillColor = System.Drawing.Color.Gainsboro;
             this.Nome_Imobiliaria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nome_Imobiliaria.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Nome_Imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Nome_Imobiliaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Nome_Imobiliaria.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nome_Imobiliaria.Location = new System.Drawing.Point(98, 67);
             this.Nome_Imobiliaria.Margin = new System.Windows.Forms.Padding(6);
             this.Nome_Imobiliaria.Name = "Nome_Imobiliaria";
-            this.Nome_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Nome_Imobiliaria.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Nome_Imobiliaria.PlaceholderText = "Nome da imobiliária";
             this.Nome_Imobiliaria.SelectedText = "";
             this.Nome_Imobiliaria.Size = new System.Drawing.Size(391, 41);
@@ -258,6 +264,20 @@
             // 
             this.ERROR_Dados_Nulos.ContainerControl = this;
             this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
+            // 
+            // atalho
+            // 
+            this.atalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.atalho.AutoSize = true;
+            this.atalho.BackColor = System.Drawing.Color.Transparent;
+            this.atalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.atalho.ForeColor = System.Drawing.Color.Yellow;
+            this.atalho.Location = new System.Drawing.Point(21, 289);
+            this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.atalho.Name = "atalho";
+            this.atalho.Size = new System.Drawing.Size(458, 44);
+            this.atalho.TabIndex = 56;
+            this.atalho.Text = " Atalhos:\r\n F1 - Limpar todos os campos       F5 - Salvar o cadastro";
             // 
             // Cadastro_Imobiliarias
             // 
@@ -290,5 +310,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button Salvar;
         private System.Windows.Forms.ErrorProvider ERROR_Dados_Nulos;
+        private System.Windows.Forms.Label atalho;
     }
 }

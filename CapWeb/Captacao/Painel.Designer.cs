@@ -49,11 +49,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LB_Imoveis_Cadastrados = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LB_Imoveis_Envi = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LB_Imobiliarias_Cadastradas = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -72,6 +72,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,10 +110,10 @@
             this.guna2Panel1.Controls.Add(this.Tabela);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(-1, 56);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 56);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1915, 177);
+            this.guna2Panel1.Size = new System.Drawing.Size(1914, 177);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -169,9 +175,9 @@
             this.label13.Location = new System.Drawing.Point(1129, 108);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 22);
+            this.label13.Size = new System.Drawing.Size(96, 22);
             this.label13.TabIndex = 11;
-            this.label13.Text = "Pagamento";
+            this.label13.Text = "Olha o PIX";
             // 
             // Imobiliarias
             // 
@@ -275,9 +281,9 @@
             this.label3.Location = new System.Drawing.Point(1581, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
+            this.label3.Size = new System.Drawing.Size(154, 22);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Relatório";
+            this.label3.Text = "Relatório semanal";
             // 
             // Relatorio
             // 
@@ -288,7 +294,7 @@
             this.Relatorio.ImageOffset = new System.Drawing.Point(0, 0);
             this.Relatorio.ImageRotate = 0F;
             this.Relatorio.IndicateFocus = true;
-            this.Relatorio.Location = new System.Drawing.Point(1585, 32);
+            this.Relatorio.Location = new System.Drawing.Point(1622, 32);
             this.Relatorio.Margin = new System.Windows.Forms.Padding(2);
             this.Relatorio.Name = "Relatorio";
             this.Relatorio.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -375,8 +381,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.LB_Imoveis_Cadastrados);
             this.panel1.Location = new System.Drawing.Point(15, 99);
             this.panel1.Name = "panel1";
@@ -387,20 +394,34 @@
             // 
             this.LB_Imoveis_Cadastrados.AutoSize = true;
             this.LB_Imoveis_Cadastrados.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imoveis_Cadastrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
-            this.LB_Imoveis_Cadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_Imoveis_Cadastrados.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imoveis_Cadastrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Imoveis_Cadastrados.ForeColor = System.Drawing.Color.Teal;
+            this.LB_Imoveis_Cadastrados.Location = new System.Drawing.Point(48, 48);
             this.LB_Imoveis_Cadastrados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imoveis_Cadastrados.Name = "LB_Imoveis_Cadastrados";
-            this.LB_Imoveis_Cadastrados.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imoveis_Cadastrados.Size = new System.Drawing.Size(32, 46);
             this.LB_Imoveis_Cadastrados.TabIndex = 9;
             this.LB_Imoveis_Cadastrados.Text = ".";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(12, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 22);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Imóveis cadastrados";
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.LB_Imoveis_Envi);
             this.panel2.Location = new System.Drawing.Point(964, 99);
             this.panel2.Name = "panel2";
@@ -411,12 +432,12 @@
             // 
             this.LB_Imoveis_Envi.AutoSize = true;
             this.LB_Imoveis_Envi.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imoveis_Envi.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
-            this.LB_Imoveis_Envi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_Imoveis_Envi.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imoveis_Envi.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Imoveis_Envi.ForeColor = System.Drawing.Color.Navy;
+            this.LB_Imoveis_Envi.Location = new System.Drawing.Point(43, 48);
             this.LB_Imoveis_Envi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imoveis_Envi.Name = "LB_Imoveis_Envi";
-            this.LB_Imoveis_Envi.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imoveis_Envi.Size = new System.Drawing.Size(32, 46);
             this.LB_Imoveis_Envi.TabIndex = 10;
             this.LB_Imoveis_Envi.Text = ".";
             // 
@@ -424,6 +445,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Pink;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.LB_Imobiliarias_Cadastradas);
             this.panel3.Location = new System.Drawing.Point(346, 99);
             this.panel3.Name = "panel3";
@@ -434,27 +456,14 @@
             // 
             this.LB_Imobiliarias_Cadastradas.AutoSize = true;
             this.LB_Imobiliarias_Cadastradas.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imobiliarias_Cadastradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
-            this.LB_Imobiliarias_Cadastradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_Imobiliarias_Cadastradas.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imobiliarias_Cadastradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Imobiliarias_Cadastradas.ForeColor = System.Drawing.Color.Maroon;
+            this.LB_Imobiliarias_Cadastradas.Location = new System.Drawing.Point(54, 48);
             this.LB_Imobiliarias_Cadastradas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imobiliarias_Cadastradas.Name = "LB_Imobiliarias_Cadastradas";
-            this.LB_Imobiliarias_Cadastradas.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imobiliarias_Cadastradas.Size = new System.Drawing.Size(32, 46);
             this.LB_Imobiliarias_Cadastradas.TabIndex = 10;
             this.LB_Imobiliarias_Cadastradas.Text = ".";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(16, 74);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 22);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Imóveis cadastrados";
             // 
             // label7
             // 
@@ -488,6 +497,7 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.LB_Imoveis_N_Envi);
             this.panel4.Location = new System.Drawing.Point(669, 99);
             this.panel4.Name = "panel4";
@@ -498,12 +508,12 @@
             // 
             this.LB_Imoveis_N_Envi.AutoSize = true;
             this.LB_Imoveis_N_Envi.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imoveis_N_Envi.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
+            this.LB_Imoveis_N_Envi.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Imoveis_N_Envi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_Imoveis_N_Envi.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imoveis_N_Envi.Location = new System.Drawing.Point(37, 48);
             this.LB_Imoveis_N_Envi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imoveis_N_Envi.Name = "LB_Imoveis_N_Envi";
-            this.LB_Imoveis_N_Envi.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imoveis_N_Envi.Size = new System.Drawing.Size(32, 46);
             this.LB_Imoveis_N_Envi.TabIndex = 10;
             this.LB_Imoveis_N_Envi.Text = ".";
             // 
@@ -528,10 +538,10 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.atalho);
             this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel4);
@@ -551,7 +561,7 @@
             this.atalho.AutoSize = true;
             this.atalho.BackColor = System.Drawing.Color.Transparent;
             this.atalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.atalho.ForeColor = System.Drawing.Color.White;
+            this.atalho.ForeColor = System.Drawing.Color.Yellow;
             this.atalho.Location = new System.Drawing.Point(11, 623);
             this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.atalho.Name = "atalho";
@@ -569,31 +579,32 @@
             this.label15.Location = new System.Drawing.Point(1278, 74);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(168, 22);
+            this.label15.Size = new System.Drawing.Size(207, 22);
             this.label15.TabIndex = 21;
-            this.label15.Text = "Imóveis NÃO pagos";
+            this.label15.Text = "Imóveis NÃO pagos total";
             // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.Red;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.LB_Imov_nao_Pago);
             this.panel6.Location = new System.Drawing.Point(1282, 99);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(274, 151);
+            this.panel6.Size = new System.Drawing.Size(282, 151);
             this.panel6.TabIndex = 20;
             // 
             // LB_Imov_nao_Pago
             // 
             this.LB_Imov_nao_Pago.AutoSize = true;
             this.LB_Imov_nao_Pago.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imov_nao_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
+            this.LB_Imov_nao_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Imov_nao_Pago.ForeColor = System.Drawing.Color.Maroon;
-            this.LB_Imov_nao_Pago.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imov_nao_Pago.Location = new System.Drawing.Point(33, 48);
             this.LB_Imov_nao_Pago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imov_nao_Pago.Name = "LB_Imov_nao_Pago";
-            this.LB_Imov_nao_Pago.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imov_nao_Pago.Size = new System.Drawing.Size(32, 46);
             this.LB_Imov_nao_Pago.TabIndex = 10;
             this.LB_Imov_nao_Pago.Text = ".";
             // 
@@ -602,22 +613,23 @@
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Lime;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.LB_Imov_Pago);
             this.panel7.Location = new System.Drawing.Point(1582, 99);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(297, 151);
+            this.panel7.Size = new System.Drawing.Size(307, 151);
             this.panel7.TabIndex = 18;
             // 
             // LB_Imov_Pago
             // 
             this.LB_Imov_Pago.AutoSize = true;
             this.LB_Imov_Pago.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Imov_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.8F);
+            this.LB_Imov_Pago.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Imov_Pago.ForeColor = System.Drawing.Color.Green;
-            this.LB_Imov_Pago.Location = new System.Drawing.Point(2, 48);
+            this.LB_Imov_Pago.Location = new System.Drawing.Point(42, 48);
             this.LB_Imov_Pago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Imov_Pago.Name = "LB_Imov_Pago";
-            this.LB_Imov_Pago.Size = new System.Drawing.Size(30, 44);
+            this.LB_Imov_Pago.Size = new System.Drawing.Size(32, 46);
             this.LB_Imov_Pago.TabIndex = 10;
             this.LB_Imov_Pago.Text = ".";
             // 
@@ -631,9 +643,9 @@
             this.label18.Location = new System.Drawing.Point(1580, 74);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 22);
+            this.label18.Size = new System.Drawing.Size(163, 22);
             this.label18.TabIndex = 19;
-            this.label18.Text = "Imóveis pagos";
+            this.label18.Text = "Imóveis pagos total";
             // 
             // ON_OFF
             // 
@@ -713,6 +725,84 @@
             this.Conectado_VPN.TabIndex = 12;
             this.Conectado_VPN.UseTransparentBackground = true;
             this.Conectado_VPN.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Teal;
+            this.label16.Location = new System.Drawing.Point(9, 48);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(44, 46);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "+";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Maroon;
+            this.label19.Location = new System.Drawing.Point(7, 48);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 46);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "+";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(7, 48);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(34, 46);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "-";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Navy;
+            this.label21.Location = new System.Drawing.Point(7, 48);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 46);
+            this.label21.TabIndex = 12;
+            this.label21.Text = "+";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            this.label22.Location = new System.Drawing.Point(7, 48);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 46);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "-";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Green;
+            this.label23.Location = new System.Drawing.Point(7, 48);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 46);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "+";
             // 
             // Painel
             // 
@@ -800,5 +890,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label atalho;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }

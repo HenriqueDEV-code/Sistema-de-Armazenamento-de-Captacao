@@ -19,8 +19,27 @@ namespace CapWeb.Captacao
         {
             InitializeComponent();
             this.DBA = DBA;
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
 
+
+        private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Delete)
+            {
+                Excluir.PerformClick();
+
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
+        }
 
         private List<string> Obter_Nomes_Imobiliarias()
         {

@@ -39,6 +39,12 @@ namespace CapWeb.Captacao
                 Pago.PerformClick();
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
 
         }
 

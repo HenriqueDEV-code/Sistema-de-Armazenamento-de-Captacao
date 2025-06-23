@@ -27,15 +27,61 @@ namespace CapWeb.Captacao
     public partial class Cadastros : MaterialForm
     {
         private string DBA;
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+
         public Cadastros(string DBA)
         {
             this.DBA = DBA;
             InitializeComponent();
+            this.Load += Cadastros_Load;
             Nome_Prop.Focus();
+
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
+        }
+
+
+        private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.F5)
+            {
+                Button_Salvar_DBA.PerformClick();
+                
+                e.Handled = true;
+            }
+
+
+            if (e.KeyCode == Keys.F1)
+            {
+                limpe();
+
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
         }
 
        
 
+        private void Cadastros_Load(object sender, EventArgs e)
+        {
+            descricao_cadastro.BorderStyle = BorderStyle.None;
+            Observacoes.BorderStyle = BorderStyle.None;
+
+            descricao_cadastro.Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, descricao_cadastro.Width, descricao_cadastro.Height,15, 15)
+            );
+            Observacoes.Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, Observacoes.Width, Observacoes.Height, 15, 15)
+            );
+        }
 
         private void Nome_Prop_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -58,6 +104,46 @@ namespace CapWeb.Captacao
             if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void Logradouro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Bairro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Cidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void UF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void UF_TextChanged(object sender, EventArgs e)
+        {
+            if (UF.Text.Length > 2)
+            {
+                UF.Text = UF.Text.Substring(0, 2);
+                UF.SelectionStart = UF.Text.Length; // Mantém o cursor no final
             }
         }
 
@@ -374,10 +460,7 @@ namespace CapWeb.Captacao
             }
         }
 
-        private void Nome_Prop_Load(object sender, EventArgs e)
-        {
-            //Nome_Prop.CharacterCasing = CharacterCasing.Upper;
-        }
+       
 
         private void Logradouro_Load(object sender, EventArgs e)
         {
@@ -465,9 +548,9 @@ namespace CapWeb.Captacao
                                     VALUES (@Descricao, @Observacao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida, @Terreno);";
 
                     SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
-                    cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.Descricao);
+                    cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.IMOV_Descricao);
                     cmdImovel.Parameters.AddWithValue("@Observacao", imoveis.Observacao);
-                    cmdImovel.Parameters.AddWithValue("@Valor", imoveis.Valor);
+                    cmdImovel.Parameters.AddWithValue("@Valor",imoveis.Valor);
                     cmdImovel.Parameters.AddWithValue("@Tipo_de_Imovel", imoveis.Tipo_de_imovel);
                     cmdImovel.Parameters.AddWithValue("@Pretensao", imoveis.Pretensao);
                     cmdImovel.Parameters.AddWithValue("@Comissao", imoveis.Comissao);
@@ -484,7 +567,8 @@ namespace CapWeb.Captacao
                     cmdImovel.ExecuteNonQuery();
 
                     transaction.Commit();
-
+                    MessageBox.Show("Descricao: " + imoveis.IMOV_Descricao); // DEBUG
+                    
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
                 catch (Exception ex)
@@ -495,7 +579,7 @@ namespace CapWeb.Captacao
             }
         }
 
-        void Clear()
+        void limpe()
         {
             Nome_Prop.Clear();
             Telefone_Prop.Clear();
@@ -507,7 +591,7 @@ namespace CapWeb.Captacao
             UF.Clear();
             Valor_Imovel.Clear();
             Valor_IPTU.Clear();
-            Descricao.Clear();
+            descricao_cadastro.Clear();
             valor_codominio.Clear();
             area_util1.Clear();
             area_construida.Clear();
@@ -564,9 +648,9 @@ namespace CapWeb.Captacao
                 temErro = true;
             }
 
-            if (string.IsNullOrWhiteSpace(Descricao.Text))
+            if (string.IsNullOrWhiteSpace(descricao_cadastro.Text))
             {
-                ERROR_Dados_Nulos.SetError(Descricao, "Campo obrigatório.");
+                ERROR_Dados_Nulos.SetError(descricao_cadastro, "Campo obrigatório.");
                 temErro = true;
             }
           
@@ -604,7 +688,7 @@ namespace CapWeb.Captacao
 
             Imovel imovel = new Imovel
             {
-                Descricao = Descricao.Text,
+                IMOV_Descricao = descricao_cadastro.Text,
                 Observacao = Observacoes.Text,
                 Valor = Valor_Imovel.Text,                // Ex: "R$ 1.234,56"
                 Tipo_de_imovel = Combo_Tipo_de_imovel.Text,
@@ -619,10 +703,45 @@ namespace CapWeb.Captacao
             };
 
             SalvarPessoa(pessoa, endereco, imovel);
-            Clear();
+            limpe();
         }
 
-     
+        private void area_construida_TextChanged(object sender, EventArgs e)
+        {
+            ValidarAreas();
+        }
+        private void Area_Total_TextChanged(object sender, EventArgs e)
+        {
+            ValidarAreas();
+        }
+
+
+
+        private void ValidarAreas()
+        {
+            if (double.TryParse(Area_Total.Text, out double areaTerreno) &&
+                double.TryParse(area_construida.Text, out double areaConstruida))
+            {
+                if (areaConstruida > areaTerreno)
+                {
+                    Area_Total.FillColor = Color.LightCoral;
+                    area_construida.FillColor = Color.LightCoral;
+                }
+                else
+                {
+                    Area_Total.FillColor = Color.White;
+                    area_construida.FillColor = Color.White;
+                }
+            }
+            else
+            {
+                // Se não for número, volta ao normal
+                Area_Total.FillColor = Color.White;
+                area_construida.FillColor = Color.White;
+            }
+        }
+
+        
     }
 }
 

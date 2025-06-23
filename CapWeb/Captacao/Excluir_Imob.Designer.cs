@@ -121,11 +121,11 @@
             this.Combo_Lista_Imobiliarias.BorderRadius = 8;
             this.Combo_Lista_Imobiliarias.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Combo_Lista_Imobiliarias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combo_Lista_Imobiliarias.FillColor = System.Drawing.Color.Silver;
+            this.Combo_Lista_Imobiliarias.FillColor = System.Drawing.Color.Gainsboro;
             this.Combo_Lista_Imobiliarias.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Lista_Imobiliarias.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Combo_Lista_Imobiliarias.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.Combo_Lista_Imobiliarias.ForeColor = System.Drawing.Color.White;
+            this.Combo_Lista_Imobiliarias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Lista_Imobiliarias.ItemHeight = 30;
             this.Combo_Lista_Imobiliarias.Location = new System.Drawing.Point(31, 103);
             this.Combo_Lista_Imobiliarias.Name = "Combo_Lista_Imobiliarias";

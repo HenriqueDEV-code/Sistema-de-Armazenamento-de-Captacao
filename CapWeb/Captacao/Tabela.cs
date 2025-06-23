@@ -43,6 +43,18 @@ namespace CapWeb.Captacao
                 Filtrar_Tabela();
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Delete)
+            {
+                Excluir_Cadastro.PerformClick();
+
+                e.Handled = true;
+            }
         }
 
         /// <summary>

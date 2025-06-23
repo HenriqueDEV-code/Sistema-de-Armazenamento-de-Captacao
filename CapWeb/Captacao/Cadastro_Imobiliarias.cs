@@ -22,9 +22,36 @@ namespace CapWeb.Captacao
         {
             this.DBA = DBA;
             InitializeComponent();
-           
+            this.KeyPreview = true; // <<< Permite que o formulário capture teclas
+            this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
 
+
+
+        private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.F5)
+            {
+                Salvar.PerformClick();
+
+                e.Handled = true;
+            }
+
+
+            if (e.KeyCode == Keys.F1)
+            {
+                limpar();
+
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+
+                e.Handled = true;
+            }
+        }
         private void Nome_Imobiliaria_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
@@ -232,7 +259,7 @@ namespace CapWeb.Captacao
         }
 
 
-        void Clear()
+        void limpar()
         {
             Nome_Imobiliaria.Clear();
             Nome_Respon_Imobiliaria.Clear();
@@ -288,7 +315,7 @@ namespace CapWeb.Captacao
             };
 
             Salvar_Imobiliaria(imob);
-            Clear();
+            limpar();
 
         }
     }
