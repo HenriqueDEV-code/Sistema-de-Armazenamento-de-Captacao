@@ -74,6 +74,11 @@ namespace CapWeb.Captacao
                 Excluir.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.F8)
+            {
+                Relatorio.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
         }
 
 

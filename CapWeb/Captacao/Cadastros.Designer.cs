@@ -569,9 +569,10 @@
             this.atalho.Location = new System.Drawing.Point(11, 462);
             this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.atalho.Name = "atalho";
-            this.atalho.Size = new System.Drawing.Size(458, 44);
+            this.atalho.Size = new System.Drawing.Size(640, 44);
             this.atalho.TabIndex = 55;
-            this.atalho.Text = " Atalhos:\r\n F1 - Limpar todos os campos       F5 - Salvar o cadastro";
+            this.atalho.Text = " Atalhos:\r\n F1 - Limpar todos os campos       F5 - Salvar o cadastro    ESC - Fec" +
+    "har janela";
             // 
             // descricao_cadastro
             // 

@@ -55,6 +55,12 @@ namespace CapWeb.Captacao
 
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.F1)
+            {
+                limpar();
+
+                e.Handled = true;
+            }
         }
 
         /// <summary>
@@ -415,5 +421,17 @@ namespace CapWeb.Captacao
                 }
             }
         }
+
+
+        public void limpar()
+        {
+            Nome_Prop_Filtro.Clear();
+            Telefone_Filtro.Clear();
+            Bairro_Filtro.Clear();
+            Combo_Pretensao_Filtro.SelectedIndex = -1;
+            Combo_Tipo_Imovel_Filtro.SelectedIndex = -1;
+            
+        }
+
     }
 }

@@ -87,12 +87,13 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label16.ForeColor = System.Drawing.Color.Yellow;
-            this.label16.Location = new System.Drawing.Point(28, 624);
+            this.label16.Location = new System.Drawing.Point(28, 635);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(493, 44);
+            this.label16.Size = new System.Drawing.Size(675, 44);
             this.label16.TabIndex = 43;
-            this.label16.Text = " Atalhos:\r\n F5 - Buscar imóveis    F6 - Extrair as informações para o .txt";
+            this.label16.Text = " Atalhos:\r\n F5 - Buscar imóveis    F6 - Extrair as informações para o .txt    ESC" +
+    " - Fechar janela";
             // 
             // Combo_Nome_Prop_Busca
             // 
@@ -231,6 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 760);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Detalhes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalhes dos imóveis";

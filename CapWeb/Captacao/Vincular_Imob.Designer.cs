@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vincular_Imob));
             this.dgvVinculos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.LB_Status = new System.Windows.Forms.Label();
@@ -144,9 +145,9 @@
             this.Combo_Imobiliaria_Filtro_Vinculo.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
             this.Combo_Imobiliaria_Filtro_Vinculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Imobiliaria_Filtro_Vinculo.ItemHeight = 30;
-            this.Combo_Imobiliaria_Filtro_Vinculo.Location = new System.Drawing.Point(549, 32);
+            this.Combo_Imobiliaria_Filtro_Vinculo.Location = new System.Drawing.Point(584, 32);
             this.Combo_Imobiliaria_Filtro_Vinculo.Name = "Combo_Imobiliaria_Filtro_Vinculo";
-            this.Combo_Imobiliaria_Filtro_Vinculo.Size = new System.Drawing.Size(184, 36);
+            this.Combo_Imobiliaria_Filtro_Vinculo.Size = new System.Drawing.Size(281, 36);
             this.Combo_Imobiliaria_Filtro_Vinculo.TabIndex = 54;
             // 
             // label1
@@ -155,7 +156,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(404, 32);
+            this.label1.Location = new System.Drawing.Point(439, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 30);
@@ -175,9 +176,9 @@
             this.Combo_Nome_Prop_Filtro_Vinculo.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
             this.Combo_Nome_Prop_Filtro_Vinculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Nome_Prop_Filtro_Vinculo.ItemHeight = 30;
-            this.Combo_Nome_Prop_Filtro_Vinculo.Location = new System.Drawing.Point(209, 32);
+            this.Combo_Nome_Prop_Filtro_Vinculo.Location = new System.Drawing.Point(188, 32);
             this.Combo_Nome_Prop_Filtro_Vinculo.Name = "Combo_Nome_Prop_Filtro_Vinculo";
-            this.Combo_Nome_Prop_Filtro_Vinculo.Size = new System.Drawing.Size(169, 36);
+            this.Combo_Nome_Prop_Filtro_Vinculo.Size = new System.Drawing.Size(246, 36);
             this.Combo_Nome_Prop_Filtro_Vinculo.TabIndex = 52;
             // 
             // label5
@@ -253,9 +254,10 @@
             this.label3.Location = new System.Drawing.Point(11, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(366, 88);
+            this.label3.Size = new System.Drawing.Size(548, 88);
             this.label3.TabIndex = 44;
-            this.label3.Text = " Atalhos:\r\n F5 - Atualizar a tabela      F6 - Aplicar o filtro\r\n\r\n ";
+            this.label3.Text = " Atalhos:\r\n F5 - Atualizar a tabela      F6 - Aplicar o filtro    ESC - Fechar ja" +
+    "nela\r\n\r\n ";
             // 
             // Vincular_Imob
             // 
@@ -269,6 +271,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvVinculos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Vincular_Imob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -599,6 +599,9 @@ namespace CapWeb.Captacao
             nome_condominio.Clear();
             Complemento.Clear();
             Observacoes.Clear();
+            Combo_Comissao.SelectedIndex = -1;
+            Combo_Pretensao.SelectedIndex = -1;
+            Combo_Tipo_de_imovel.SelectedIndex = -1;
         }
 
         bool Error_Nulos()

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Excluir_Imob));
             this.siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.Excluir = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.Button_Selecionar_DBA = new Guna.UI2.WinForms.Guna2Button();
@@ -41,6 +43,7 @@
             this.siticoneGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.siticoneGroupBox1.Controls.Add(this.label16);
             this.siticoneGroupBox1.Controls.Add(this.Excluir);
             this.siticoneGroupBox1.Controls.Add(this.label12);
             this.siticoneGroupBox1.Controls.Add(this.Button_Selecionar_DBA);
@@ -54,6 +57,20 @@
             this.siticoneGroupBox1.TabIndex = 51;
             this.siticoneGroupBox1.Text = "                                                                                P" +
     "ESQUISA";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label16.ForeColor = System.Drawing.Color.Yellow;
+            this.label16.Location = new System.Drawing.Point(2, 477);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(393, 44);
+            this.label16.TabIndex = 50;
+            this.label16.Text = " Atalhos:\r\n ESC - Fechar janela     Del - Exclui a imobiliária";
             // 
             // Excluir
             // 
@@ -106,7 +123,7 @@
             this.Button_Selecionar_DBA.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Button_Selecionar_DBA.ForeColor = System.Drawing.Color.Black;
             this.Button_Selecionar_DBA.IndicateFocus = true;
-            this.Button_Selecionar_DBA.Location = new System.Drawing.Point(219, 492);
+            this.Button_Selecionar_DBA.Location = new System.Drawing.Point(477, 374);
             this.Button_Selecionar_DBA.Name = "Button_Selecionar_DBA";
             this.Button_Selecionar_DBA.Size = new System.Drawing.Size(145, 36);
             this.Button_Selecionar_DBA.TabIndex = 48;
@@ -138,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 594);
             this.Controls.Add(this.siticoneGroupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Excluir_Imob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -156,5 +174,6 @@
         private Guna.UI2.WinForms.Guna2Button Button_Selecionar_DBA;
         private Guna.UI2.WinForms.Guna2ComboBox Combo_Lista_Imobiliarias;
         private Guna.UI2.WinForms.Guna2Button Excluir;
+        private System.Windows.Forms.Label label16;
     }
 }

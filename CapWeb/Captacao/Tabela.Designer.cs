@@ -327,13 +327,13 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label16.ForeColor = System.Drawing.Color.Yellow;
-            this.label16.Location = new System.Drawing.Point(2, 724);
+            this.label16.Location = new System.Drawing.Point(2, 762);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(890, 44);
+            this.label16.Size = new System.Drawing.Size(695, 44);
             this.label16.TabIndex = 0;
-            this.label16.Text = " Atalhos:\r\n F5 - Aplicar o filtro     Del - Excluir imóvel      F7 - Editar imóve" +
-    "l ( para editar, clique no imóvel e clica no atalho)\r\n";
+            this.label16.Text = " Atalhos:\r\n F5 - Aplicar o filtro     F1 - Limpe o filtro     Del - Excluir imóve" +
+    "l      ESC - Fechar janela";
             // 
             // Tabela
             // 

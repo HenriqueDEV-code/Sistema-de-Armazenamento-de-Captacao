@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_Imobiliarias));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.atalho = new System.Windows.Forms.Label();
             this.Salvar = new Guna.UI2.WinForms.Guna2Button();
             this.Valor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.Nome_Imobiliaria = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ERROR_Dados_Nulos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.atalho = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ERROR_Dados_Nulos)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,21 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1104, 344);
             this.guna2GroupBox1.TabIndex = 11;
             this.guna2GroupBox1.Text = "Dados das imobiliárias ou dos corretores";
+            // 
+            // atalho
+            // 
+            this.atalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.atalho.AutoSize = true;
+            this.atalho.BackColor = System.Drawing.Color.Transparent;
+            this.atalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.atalho.ForeColor = System.Drawing.Color.Yellow;
+            this.atalho.Location = new System.Drawing.Point(21, 289);
+            this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.atalho.Name = "atalho";
+            this.atalho.Size = new System.Drawing.Size(645, 44);
+            this.atalho.TabIndex = 56;
+            this.atalho.Text = " Atalhos:\r\n F1 - Limpar todos os campos       F5 - Salvar o cadastro     ESC - Fe" +
+    "char janela";
             // 
             // Salvar
             // 
@@ -265,26 +280,13 @@
             this.ERROR_Dados_Nulos.ContainerControl = this;
             this.ERROR_Dados_Nulos.Icon = ((System.Drawing.Icon)(resources.GetObject("ERROR_Dados_Nulos.Icon")));
             // 
-            // atalho
-            // 
-            this.atalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.atalho.AutoSize = true;
-            this.atalho.BackColor = System.Drawing.Color.Transparent;
-            this.atalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.atalho.ForeColor = System.Drawing.Color.Yellow;
-            this.atalho.Location = new System.Drawing.Point(21, 289);
-            this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.atalho.Name = "atalho";
-            this.atalho.Size = new System.Drawing.Size(458, 44);
-            this.atalho.TabIndex = 56;
-            this.atalho.Text = " Atalhos:\r\n F1 - Limpar todos os campos       F5 - Salvar o cadastro";
-            // 
             // Cadastro_Imobiliarias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 409);
             this.Controls.Add(this.guna2GroupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Cadastro_Imobiliarias";
             this.ShowIcon = false;

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Valores));
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneGroupBox2 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             this.Date_Time_Pagamento = new System.Windows.Forms.DateTimePicker();
@@ -90,7 +91,7 @@
             this.siticoneGroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.siticoneGroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneGroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.siticoneGroupBox2.Location = new System.Drawing.Point(470, 3);
+            this.siticoneGroupBox2.Location = new System.Drawing.Point(470, 2);
             this.siticoneGroupBox2.Name = "siticoneGroupBox2";
             this.siticoneGroupBox2.Size = new System.Drawing.Size(631, 537);
             this.siticoneGroupBox2.TabIndex = 51;
@@ -99,9 +100,9 @@
             // 
             // Date_Time_Pagamento
             // 
-            this.Date_Time_Pagamento.Location = new System.Drawing.Point(250, 491);
+            this.Date_Time_Pagamento.Location = new System.Drawing.Point(390, 495);
             this.Date_Time_Pagamento.Name = "Date_Time_Pagamento";
-            this.Date_Time_Pagamento.Size = new System.Drawing.Size(200, 23);
+            this.Date_Time_Pagamento.Size = new System.Drawing.Size(231, 23);
             this.Date_Time_Pagamento.TabIndex = 50;
             // 
             // label5
@@ -110,12 +111,12 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(6, 485);
+            this.label5.Location = new System.Drawing.Point(308, 491);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 30);
+            this.label5.Size = new System.Drawing.Size(74, 30);
             this.label5.TabIndex = 53;
-            this.label5.Text = "Data do pagamento:";
+            this.label5.Text = "Data:";
             // 
             // label4
             // 
@@ -158,9 +159,9 @@
             this.Pago.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Pago.ForeColor = System.Drawing.Color.DarkGreen;
             this.Pago.IndicateFocus = true;
-            this.Pago.Location = new System.Drawing.Point(487, 485);
+            this.Pago.Location = new System.Drawing.Point(14, 482);
             this.Pago.Name = "Pago";
-            this.Pago.Size = new System.Drawing.Size(141, 42);
+            this.Pago.Size = new System.Drawing.Size(141, 43);
             this.Pago.TabIndex = 49;
             this.Pago.Text = "PAGO";
             this.Pago.UseTransparentBackground = true;
@@ -322,7 +323,7 @@
             this.siticoneGroupBox1.ForeColor = System.Drawing.Color.Black;
             this.siticoneGroupBox1.Location = new System.Drawing.Point(2, 2);
             this.siticoneGroupBox1.Name = "siticoneGroupBox1";
-            this.siticoneGroupBox1.Size = new System.Drawing.Size(482, 538);
+            this.siticoneGroupBox1.Size = new System.Drawing.Size(472, 538);
             this.siticoneGroupBox1.TabIndex = 50;
             this.siticoneGroupBox1.Text = "                                                           PESQUISA";
             // 
@@ -333,12 +334,12 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label16.ForeColor = System.Drawing.Color.Yellow;
-            this.label16.Location = new System.Drawing.Point(11, 484);
+            this.label16.Location = new System.Drawing.Point(7, 465);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(379, 44);
+            this.label16.Size = new System.Drawing.Size(379, 66);
             this.label16.TabIndex = 49;
-            this.label16.Text = " Atalhos:\r\n F1 - Pesquisar      F2 - Marca que esta PAGO";
+            this.label16.Text = " Atalhos:\r\n F1 - Pesquisar      F2 - Marca que esta PAGO\r\n ESC - Fechar janela";
             // 
             // label12
             // 
@@ -388,7 +389,7 @@
             this.Combo_Lista_Imobiliarias.Font = new System.Drawing.Font("Arial", 14.25F);
             this.Combo_Lista_Imobiliarias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Combo_Lista_Imobiliarias.ItemHeight = 30;
-            this.Combo_Lista_Imobiliarias.Location = new System.Drawing.Point(3, 55);
+            this.Combo_Lista_Imobiliarias.Location = new System.Drawing.Point(16, 55);
             this.Combo_Lista_Imobiliarias.Name = "Combo_Lista_Imobiliarias";
             this.Combo_Lista_Imobiliarias.Size = new System.Drawing.Size(311, 36);
             this.Combo_Lista_Imobiliarias.TabIndex = 29;
@@ -414,6 +415,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(1101, 604);
             this.Controls.Add(this.siticonePanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Valores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
