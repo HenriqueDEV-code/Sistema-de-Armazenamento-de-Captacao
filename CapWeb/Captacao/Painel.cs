@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace CapWeb.Captacao
 {
@@ -57,24 +58,30 @@ namespace CapWeb.Captacao
                 Detalhes.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-
             if (e.KeyCode == Keys.F5)
             {
-                Tabela.PerformClick(); // Simula o clique do botão Buscar
+                AtualizarTotalProprietarios();
+                PreencherDataGridFaltaDePagamento();
                 e.Handled = true;
             }
 
             if (e.KeyCode == Keys.F6)
             {
+                Tabela.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+
+            if (e.KeyCode == Keys.F7)
+            {
                 Financa.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-            if (e.KeyCode == Keys.F7)
+            if (e.KeyCode == Keys.F8)
             {
                 Excluir.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-            if (e.KeyCode == Keys.F8)
+            if (e.KeyCode == Keys.F9)
             {
                 Relatorio.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
@@ -164,12 +171,54 @@ namespace CapWeb.Captacao
             timerLoad.Tick += TimerLoad_Tick;
             timerLoad.Start();
             
+            PreencherDataGridFaltaDePagamento();
         }
 
         private void TimerLoad_Tick(object sender, EventArgs e)
         {
             VerificarConexao();
             AtualizarTotalProprietarios();
+            PreencherDataGridFaltaDePagamento();
+        }
+
+        private void PreencherDataGridFaltaDePagamento()
+        {
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                string SQL = @"
+                    SELECT 
+                        i.ID_Imobiliaria AS [ID],
+                        i.Nome_Imobiliaria AS [Nome],
+                        COUNT(*) AS Quantidade,
+                        SUM(pi.Valor) AS Valor,
+                        MIN(pi.Data_Vinculo) AS [Data de envio],
+                        pi.Status
+                    FROM 
+                        Proprietario_Imobiliaria pi
+                    INNER JOIN 
+                        Imobiliaria i ON pi.ID_Imobiliaria = i.ID_Imobiliaria
+                    WHERE 
+                        pi.Status = 'NAO PAGO'
+                    GROUP BY 
+                        i.ID_Imobiliaria, i.Nome_Imobiliaria, pi.Status
+                ";
+
+                using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView_Falta_de_Pagamento.DataSource = dt;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao preencher a grid: " + ex.Message);
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -398,7 +447,5 @@ namespace CapWeb.Captacao
             LB_Imov_Pago.Text = $"R$ {total_Pagos}";
             LB_Imov_nao_Pago.Text = $"R$ {total_N_Pagos}";
         }
-
-        
     }
 }

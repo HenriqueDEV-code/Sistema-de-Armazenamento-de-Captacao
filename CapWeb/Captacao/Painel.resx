@@ -118,6 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="siticoneImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAA75JREFUeF7tm8uODVEUhtEYuLwAQ9FDiTQh4jIXj+ABxEwQJsZuQUx0jETcRUS3
+        hMdgKmHmMmEk7pdPdrKr8p/VtapXdZzsLc6XdE56/f/afrtKnapt17JlEyZMUIB9wD3gDfCTsnwHztqM
+        CZMz+dLnXWCv9YYAVgFXbYIK+LiEnLPJp32LEhi0BN+A00vMOat9veTTSXkEzACrrbckPTnXAtuAeaPv
+        sWN0AtyXpnmr10IkJ/BQPHes3km+gDTMWL0WIjnzmdDw2uqdmKt9Vae9EsmZ6uL5afVOpAGr1UQ0p/qA
+        l8B1YIf1tajbajURzak+4TdwCZiy/vDApYnmVF8Hl60/PHBpojnVB+wEHpvaLrdhRKiMaE7rA1aYe4Tb
+        vQ21Es3Z5cs3TA2jX48i9A5cmmjOLl/v16MIvQOXJprT83l1X6iMaE7P59V9oTKiOT2fV/eFyojm9Hxe
+        3RcqI5rT83l1X6iMaE7P59V9wQCcy+tv48Bd/2tQs9UUz+fVfcGQ1ufUOwZG1v8sarSa4vm8ui8YgDN5
+        nW4cLFj/s6jZaorn8+q+UBnRnJ7Pq/tCZURzej6v7guVEc3p+by6L1RGNKfn8+q+YACmgePAiTH8pHGn
+        7Z+pDMjZ6QNe5fJLrbsNFhlgXIwGM6jRaornAzYDR9Kn1t0Gy78+AS7RhjyDp/L9wN/+SeOOHhnDgJwh
+        X8vghkJEc0Z9LYMbChHNGfW1DG4oRDRn1NcyuKEQ0ZxRX0u0ATgKfFF/gB/p/+bsWAnzeD32x2GXaAPw
+        Qr0DWd8xnn28HuvjsEu0Id9EfFZ/gHQGXLNjJfLXX/N4PfbHYZfBDYWI5oz6WgY3FCKaM+prGdxQiGjO
+        qK9lcEMhojmjvpbBDYUwF+A1Vk8A68TzyeqdSEPtE/BWom6wegLYKJ63Vu9EGmqfgGcSdXSXRwbYLZ7n
+        Vu9EGmqfgBsS9ZDVE8Bh8dyyeifSUPsEHJOoN62eSH9p8Zy0eifSUPsEbJWoH4CVRp8C3otnm+ou0lD7
+        BCxP+3sk7n6jHxDtXdocpbqLNFU9AQnggsR9YrSnoi3cD+ghTf/CBGwCfuW4affnllzfkn9PJL13fXGE
+        yCbkmgDmJO+DXHsgtTnb00tkG3pN5C3xzdFOnwfN77GLX0N+2ahh2OwVwmx/1TP4sfUuSnrTSgZIpG2l
+        22v+52DOgobhR78hv2lVG73rhB2boIcf/Yb8OtoVM2ANuOuEHdeCpR19JT9M3Mk3HKVfnIysE54HvgIX
+        rfbfEL7jmzBhAX8AcLfgq0DzA+0AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Excluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -270,9 +292,9 @@
   </data>
   <data name="atalho.Text" xml:space="preserve">
     <value> Atalhos:
- F1 - Cadastro de imóveis               F4 - Detalhes               F7 - Excluir imobiliárias 
- F2 - Cadastro de imobiliárias         F5 - Tabela                  F8 - Relatório
- F3 - Imobiliárias                              F6 - Valores
+ F1 - Cadastro de imóveis               F4 - Detalhes                F7 - Valores                  
+ F2 - Cadastro de imobiliárias         F5 - Atualizar tela          F8 - Excluir imobiliárias 
+ F3 - Imobiliárias                              F6 - Tabela                   F9 - Relatório
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

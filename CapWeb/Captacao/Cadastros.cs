@@ -522,7 +522,7 @@ namespace CapWeb.Captacao
 
                     SqlCommand cmdEndereco = new SqlCommand(QUERY_ENDERECO, conn, transaction);
                     cmdEndereco.Parameters.AddWithValue("@Logradouro", end.Logradouro);
-                    cmdEndereco.Parameters.AddWithValue("@Numero", end.Numero);
+                    cmdEndereco.Parameters.AddWithValue("@Numero", end.Numero.HasValue ? (object)end.Numero.Value : DBNull.Value);
                     cmdEndereco.Parameters.AddWithValue("@Bairro", end.Bairro);
                     cmdEndereco.Parameters.AddWithValue("@Cidade", end.Cidade);
                     cmdEndereco.Parameters.AddWithValue("@UF", end.UF);
@@ -567,7 +567,7 @@ namespace CapWeb.Captacao
                     cmdImovel.ExecuteNonQuery();
 
                     transaction.Commit();
-                    MessageBox.Show("Descricao: " + imoveis.IMOV_Descricao); // DEBUG
+                    //MessageBox.Show("Descricao: " + imoveis.IMOV_Descricao); // DEBUG
                     
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
@@ -676,10 +676,20 @@ namespace CapWeb.Captacao
                 Telefone = Telefone_Prop.Text
             };
 
+            int? numeroResidencia = null;
+            if (!string.IsNullOrWhiteSpace(numero_residencia.Text))
+            {
+                int tempNum;
+                if (int.TryParse(numero_residencia.Text, out tempNum))
+                {
+                    numeroResidencia = tempNum;
+                }
+            }
+
             Endereco endereco = new Endereco
             {
                 Logradouro = Logradouro.Text,
-                Numero = int.Parse(numero_residencia.Text),
+                Numero = numeroResidencia,
                 Bairro = Bairro.Text,
                 Cidade = Cidade.Text,
                 UF = UF.Text,

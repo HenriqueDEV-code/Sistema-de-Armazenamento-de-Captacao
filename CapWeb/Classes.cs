@@ -47,7 +47,7 @@ namespace CapWeb
         private string cidade;
         private string uf;
         private string cep;
-        private int numero;
+        private int? numero;
         private string nome_condominio;
 
         public string Logradouro
@@ -84,7 +84,7 @@ namespace CapWeb
             set { nome_condominio = value; }
         }
 
-        public int Numero
+        public int? Numero
         {
             get { return numero; }
             set { numero = value; }
