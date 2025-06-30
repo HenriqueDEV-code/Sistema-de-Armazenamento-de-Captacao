@@ -61,7 +61,7 @@ namespace CapWeb.Captacao
                 e.Handled = true;
 
             }   
-            if (e.KeyCode == Keys.E)
+            if (e.KeyCode == Keys.F8)
             {
                 Editar();
 
