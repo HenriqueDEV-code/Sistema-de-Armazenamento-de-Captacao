@@ -118,6 +118,12 @@
     <Compile Include="Captacao\Excluir_Imob.Designer.cs">
       <DependentUpon>Excluir_Imob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Observacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Observacao.Designer.cs">
+      <DependentUpon>Observacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Painel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Excluir_Imob.resx">
       <DependentUpon>Excluir_Imob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Observacao.resx">
+      <DependentUpon>Observacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Painel.resx">
       <DependentUpon>Painel.cs</DependentUpon>

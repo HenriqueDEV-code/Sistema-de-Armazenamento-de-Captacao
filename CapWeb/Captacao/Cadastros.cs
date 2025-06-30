@@ -576,6 +576,7 @@ namespace CapWeb.Captacao
                     transaction.Rollback();
                     MessageBox.Show($"Erro ao inserir dados: {ex.Message}");
                 }
+                conn.Close();
             }
         }
 

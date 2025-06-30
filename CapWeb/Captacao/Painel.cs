@@ -86,6 +86,16 @@ namespace CapWeb.Captacao
                 Relatorio.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
+            if (e.KeyCode == Keys.F10)
+            {
+                Observacao.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+                e.Handled = true;
+            }
         }
 
 
@@ -162,23 +172,30 @@ namespace CapWeb.Captacao
             janelaExcluir.FormClosed += (s, args) => this.Show();
             janelaExcluir.Show();
         }
+        private void Observacao_Click(object sender, EventArgs e)
+        {
+            Observacao janelaObservacao = new Observacao(DBA);
+            janelaObservacao.FormClosed += (s, args) => this.Show();
+            janelaObservacao.Show();
+        }
 
 
         private void Painel_Load(object sender, EventArgs e)
         {
+            
             timerLoad = new Timer();
             timerLoad.Interval = 1000; // Tempo em milissegundos (1000ms = 1s)
             timerLoad.Tick += TimerLoad_Tick;
             timerLoad.Start();
             
-            PreencherDataGridFaltaDePagamento();
+            //PreencherDataGridFaltaDePagamento();
         }
 
         private void TimerLoad_Tick(object sender, EventArgs e)
         {
             VerificarConexao();
             AtualizarTotalProprietarios();
-            PreencherDataGridFaltaDePagamento();
+            //PreencherDataGridFaltaDePagamento();
         }
 
         private void PreencherDataGridFaltaDePagamento()
@@ -447,5 +464,7 @@ namespace CapWeb.Captacao
             LB_Imov_Pago.Text = $"R$ {total_Pagos}";
             LB_Imov_nao_Pago.Text = $"R$ {total_N_Pagos}";
         }
+
+        
     }
 }

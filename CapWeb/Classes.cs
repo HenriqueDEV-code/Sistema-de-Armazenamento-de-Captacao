@@ -209,4 +209,21 @@ namespace CapWeb
             set { total = value; }
         }
     }
+    public class Campo_De_Observacao
+    {
+        private string titulo;
+        private string descricao_obs;
+
+
+        public string Titulo_Obs
+        {
+            get { return titulo; }
+            set { titulo = value; }
+        }
+        public string Descricao_Obs
+        {
+            get { return descricao_obs; }
+            set { descricao_obs = value; }
+        }
+    }
 }

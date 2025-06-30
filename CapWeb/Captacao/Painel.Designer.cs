@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.siticoneImageButton1 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.Observacao = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Excluir = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label14 = new System.Windows.Forms.Label();
             this.Financa = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -67,7 +67,7 @@
             this.LB_Imoveis_N_Envi = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView_Falta_de_Pagamento = new System.Windows.Forms.DataGridView();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.atalho = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -77,24 +77,26 @@
             this.label23 = new System.Windows.Forms.Label();
             this.LB_Imov_Pago = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dataGridView_Falta_de_Pagamento = new System.Windows.Forms.DataGridView();
             this.ON_OFF = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).BeginInit();
+            this.guna2GroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -103,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.guna2Panel1.Controls.Add(this.label25);
-            this.guna2Panel1.Controls.Add(this.siticoneImageButton1);
+            this.guna2Panel1.Controls.Add(this.Observacao);
             this.guna2Panel1.Controls.Add(this.Excluir);
             this.guna2Panel1.Controls.Add(this.label14);
             this.guna2Panel1.Controls.Add(this.Financa);
@@ -121,10 +123,10 @@
             this.guna2Panel1.Controls.Add(this.Tabela);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(-1, 56);
+            this.guna2Panel1.Location = new System.Drawing.Point(-1, 52);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1914, 177);
+            this.guna2Panel1.Size = new System.Drawing.Size(2374, 177);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -141,22 +143,23 @@
             this.label25.TabIndex = 15;
             this.label25.Text = "Campo de observação";
             // 
-            // siticoneImageButton1
+            // Observacao
             // 
-            this.siticoneImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton1.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.siticoneImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton1.Image")));
-            this.siticoneImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.siticoneImageButton1.ImageRotate = 0F;
-            this.siticoneImageButton1.IndicateFocus = true;
-            this.siticoneImageButton1.Location = new System.Drawing.Point(1632, 32);
-            this.siticoneImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.siticoneImageButton1.Name = "siticoneImageButton1";
-            this.siticoneImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton1.Size = new System.Drawing.Size(71, 66);
-            this.siticoneImageButton1.TabIndex = 14;
-            this.siticoneImageButton1.UseTransparentBackground = true;
+            this.Observacao.BackColor = System.Drawing.Color.Transparent;
+            this.Observacao.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Observacao.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Observacao.Image = ((System.Drawing.Image)(resources.GetObject("Observacao.Image")));
+            this.Observacao.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Observacao.ImageRotate = 0F;
+            this.Observacao.IndicateFocus = true;
+            this.Observacao.Location = new System.Drawing.Point(1632, 32);
+            this.Observacao.Margin = new System.Windows.Forms.Padding(2);
+            this.Observacao.Name = "Observacao";
+            this.Observacao.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Observacao.Size = new System.Drawing.Size(71, 66);
+            this.Observacao.TabIndex = 14;
+            this.Observacao.UseTransparentBackground = true;
+            this.Observacao.Click += new System.EventHandler(this.Observacao_Click);
             // 
             // Excluir
             // 
@@ -426,7 +429,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.LB_Imoveis_Cadastrados);
-            this.panel1.Location = new System.Drawing.Point(71, 167);
+            this.panel1.Location = new System.Drawing.Point(353, 156);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 76);
             this.panel1.TabIndex = 5;
@@ -463,7 +466,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(74, 142);
+            this.label6.Location = new System.Drawing.Point(356, 131);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(199, 24);
@@ -477,7 +480,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.LB_Imoveis_Envi);
-            this.panel2.Location = new System.Drawing.Point(71, 316);
+            this.panel2.Location = new System.Drawing.Point(864, 158);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(302, 76);
             this.panel2.TabIndex = 6;
@@ -514,7 +517,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.LB_Imobiliarias_Cadastradas);
-            this.panel3.Location = new System.Drawing.Point(462, 167);
+            this.panel3.Location = new System.Drawing.Point(353, 349);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 76);
             this.panel3.TabIndex = 7;
@@ -551,7 +554,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(465, 142);
+            this.label7.Location = new System.Drawing.Point(356, 324);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(232, 24);
@@ -565,7 +568,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(74, 289);
+            this.label8.Location = new System.Drawing.Point(867, 131);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(171, 24);
@@ -579,7 +582,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.LB_Imoveis_N_Envi);
-            this.panel4.Location = new System.Drawing.Point(857, 169);
+            this.panel4.Location = new System.Drawing.Point(858, 353);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(301, 76);
             this.panel4.TabIndex = 11;
@@ -617,7 +620,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(859, 142);
+            this.label9.Location = new System.Drawing.Point(860, 326);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(222, 24);
@@ -632,21 +635,39 @@
             this.panel5.Controls.Add(this.guna2GroupBox2);
             this.panel5.Controls.Add(this.guna2GroupBox1);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel5.Location = new System.Drawing.Point(0, 230);
+            this.panel5.Location = new System.Drawing.Point(-1, 229);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1915, 721);
+            this.panel5.Size = new System.Drawing.Size(2375, 787);
             this.panel5.TabIndex = 13;
             // 
-            // dataGridView_Falta_de_Pagamento
+            // guna2GroupBox2
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_Falta_de_Pagamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView_Falta_de_Pagamento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView_Falta_de_Pagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Falta_de_Pagamento.Location = new System.Drawing.Point(3, 43);
-            this.dataGridView_Falta_de_Pagamento.Name = "dataGridView_Falta_de_Pagamento";
-            this.dataGridView_Falta_de_Pagamento.Size = new System.Drawing.Size(640, 669);
-            this.dataGridView_Falta_de_Pagamento.TabIndex = 23;
+            this.guna2GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GroupBox2.Controls.Add(this.guna2GroupBox3);
+            this.guna2GroupBox2.Controls.Add(this.label6);
+            this.guna2GroupBox2.Controls.Add(this.label7);
+            this.guna2GroupBox2.Controls.Add(this.panel3);
+            this.guna2GroupBox2.Controls.Add(this.label15);
+            this.guna2GroupBox2.Controls.Add(this.label8);
+            this.guna2GroupBox2.Controls.Add(this.panel2);
+            this.guna2GroupBox2.Controls.Add(this.panel6);
+            this.guna2GroupBox2.Controls.Add(this.panel4);
+            this.guna2GroupBox2.Controls.Add(this.panel7);
+            this.guna2GroupBox2.Controls.Add(this.panel1);
+            this.guna2GroupBox2.Controls.Add(this.label18);
+            this.guna2GroupBox2.Controls.Add(this.label9);
+            this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 7);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(1261, 777);
+            this.guna2GroupBox2.TabIndex = 26;
+            this.guna2GroupBox2.Text = "                                                                                 " +
+    "                                                                                " +
+    "              DASHBOARD";
             // 
             // atalho
             // 
@@ -655,10 +676,10 @@
             this.atalho.BackColor = System.Drawing.Color.Transparent;
             this.atalho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.atalho.ForeColor = System.Drawing.Color.Yellow;
-            this.atalho.Location = new System.Drawing.Point(9, 620);
+            this.atalho.Location = new System.Drawing.Point(26, 59);
             this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.atalho.Name = "atalho";
-            this.atalho.Size = new System.Drawing.Size(669, 88);
+            this.atalho.Size = new System.Drawing.Size(195, 484);
             this.atalho.TabIndex = 22;
             this.atalho.Text = resources.GetString("atalho.Text");
             // 
@@ -669,7 +690,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Silver;
-            this.label15.Location = new System.Drawing.Point(465, 289);
+            this.label15.Location = new System.Drawing.Point(356, 539);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(239, 24);
@@ -683,7 +704,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.LB_Imov_nao_Pago);
-            this.panel6.Location = new System.Drawing.Point(462, 316);
+            this.panel6.Location = new System.Drawing.Point(353, 566);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(301, 80);
             this.panel6.TabIndex = 20;
@@ -721,7 +742,7 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.LB_Imov_Pago);
-            this.panel7.Location = new System.Drawing.Point(857, 316);
+            this.panel7.Location = new System.Drawing.Point(858, 568);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(301, 80);
             this.panel7.TabIndex = 18;
@@ -759,12 +780,37 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Silver;
-            this.label18.Location = new System.Drawing.Point(860, 289);
+            this.label18.Location = new System.Drawing.Point(861, 541);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(188, 24);
             this.label18.TabIndex = 19;
             this.label18.Text = "Imóveis pagos total";
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Controls.Add(this.dataGridView_Falta_de_Pagamento);
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(1267, 7);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(646, 777);
+            this.guna2GroupBox1.TabIndex = 25;
+            this.guna2GroupBox1.Text = "                                                                    IMOBILIÁRIAS " +
+    "QUE ESTÃO DEVENDO";
+            // 
+            // dataGridView_Falta_de_Pagamento
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_Falta_de_Pagamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView_Falta_de_Pagamento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView_Falta_de_Pagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Falta_de_Pagamento.Location = new System.Drawing.Point(3, 43);
+            this.dataGridView_Falta_de_Pagamento.Name = "dataGridView_Falta_de_Pagamento";
+            this.dataGridView_Falta_de_Pagamento.RowHeadersWidth = 51;
+            this.dataGridView_Falta_de_Pagamento.Size = new System.Drawing.Size(640, 731);
+            this.dataGridView_Falta_de_Pagamento.TabIndex = 23;
             // 
             // ON_OFF
             // 
@@ -805,6 +851,25 @@
             this.label17.TabIndex = 14;
             this.label17.Text = "Wi-fi";
             // 
+            // Conectado_VPN
+            // 
+            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
+            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_conexão_sem_fio_50__1_;
+            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Conectado_VPN.ImageRotate = 0F;
+            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.Conectado_VPN.IndicateFocus = true;
+            this.Conectado_VPN.Location = new System.Drawing.Point(189, 24);
+            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
+            this.Conectado_VPN.Name = "Conectado_VPN";
+            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.Conectado_VPN.Size = new System.Drawing.Size(33, 32);
+            this.Conectado_VPN.TabIndex = 12;
+            this.Conectado_VPN.UseTransparentBackground = true;
+            this.Conectado_VPN.Visible = false;
+            // 
             // Nao_Conectado_VPN
             // 
             this.Nao_Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -816,7 +881,7 @@
             this.Nao_Conectado_VPN.ImageRotate = 0F;
             this.Nao_Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
             this.Nao_Conectado_VPN.IndicateFocus = true;
-            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(185, 20);
+            this.Nao_Conectado_VPN.Location = new System.Drawing.Point(189, 20);
             this.Nao_Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
             this.Nao_Conectado_VPN.Name = "Nao_Conectado_VPN";
             this.Nao_Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -825,70 +890,25 @@
             this.Nao_Conectado_VPN.UseTransparentBackground = true;
             this.Nao_Conectado_VPN.Visible = false;
             // 
-            // Conectado_VPN
+            // guna2GroupBox3
             // 
-            this.Conectado_VPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Conectado_VPN.BackColor = System.Drawing.Color.Transparent;
-            this.Conectado_VPN.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Conectado_VPN.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.Conectado_VPN.Image = global::CapWeb.Properties.Resources.icons8_conexão_sem_fio_50__1_;
-            this.Conectado_VPN.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Conectado_VPN.ImageRotate = 0F;
-            this.Conectado_VPN.ImageSize = new System.Drawing.Size(20, 20);
-            this.Conectado_VPN.IndicateFocus = true;
-            this.Conectado_VPN.Location = new System.Drawing.Point(185, 24);
-            this.Conectado_VPN.Margin = new System.Windows.Forms.Padding(2);
-            this.Conectado_VPN.Name = "Conectado_VPN";
-            this.Conectado_VPN.PressedState.ImageSize = new System.Drawing.Size(50, 50);
-            this.Conectado_VPN.Size = new System.Drawing.Size(33, 32);
-            this.Conectado_VPN.TabIndex = 12;
-            this.Conectado_VPN.UseTransparentBackground = true;
-            this.Conectado_VPN.Visible = false;
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.Controls.Add(this.dataGridView_Falta_de_Pagamento);
-            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(1266, 3);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(646, 715);
-            this.guna2GroupBox1.TabIndex = 25;
-            this.guna2GroupBox1.Text = "                                                                    IMOBILIÁRIAS " +
-    "QUE ESTÃO DEVENDO";
-            // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.Controls.Add(this.label6);
-            this.guna2GroupBox2.Controls.Add(this.label7);
-            this.guna2GroupBox2.Controls.Add(this.atalho);
-            this.guna2GroupBox2.Controls.Add(this.panel3);
-            this.guna2GroupBox2.Controls.Add(this.label15);
-            this.guna2GroupBox2.Controls.Add(this.label8);
-            this.guna2GroupBox2.Controls.Add(this.panel2);
-            this.guna2GroupBox2.Controls.Add(this.panel6);
-            this.guna2GroupBox2.Controls.Add(this.panel4);
-            this.guna2GroupBox2.Controls.Add(this.panel7);
-            this.guna2GroupBox2.Controls.Add(this.panel1);
-            this.guna2GroupBox2.Controls.Add(this.label18);
-            this.guna2GroupBox2.Controls.Add(this.label9);
-            this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(2, 3);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(1261, 715);
-            this.guna2GroupBox2.TabIndex = 26;
-            this.guna2GroupBox2.Text = "                                                                                 " +
-    "                                                                                " +
-    "              DASHBOARD";
+            this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2GroupBox3.Controls.Add(this.atalho);
+            this.guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(7, 50);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.Size = new System.Drawing.Size(255, 717);
+            this.guna2GroupBox3.TabIndex = 65;
+            this.guna2GroupBox3.Text = "             Atalhos";
             // 
             // Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 950);
+            this.ClientSize = new System.Drawing.Size(1915, 1015);
             this.Controls.Add(this.Conectado_VPN);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Nao_Conectado_VPN);
@@ -915,14 +935,16 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).EndInit();
+            this.guna2GroupBox2.ResumeLayout(false);
+            this.guna2GroupBox2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).EndInit();
+            this.guna2GroupBox3.ResumeLayout(false);
+            this.guna2GroupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -981,8 +1003,9 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DataGridView dataGridView_Falta_de_Pagamento;
         private System.Windows.Forms.Label label25;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton Observacao;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
     }
 }
