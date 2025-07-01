@@ -61,12 +61,7 @@ namespace CapWeb.Captacao
                 e.Handled = true;
 
             }   
-            if (e.KeyCode == Keys.F8)
-            {
-                Editar();
-
-                e.Handled = true;
-            }
+           
         }
 
         /// <summary>
@@ -441,17 +436,6 @@ namespace CapWeb.Captacao
 
 
 
-        // editar
-
-        private void Editar()
-        {
-            if (dataGridViewInfo.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione uma linha para editar o imóvel!");
-                return;
-            }
-
-            
-        }
+       
     }
 }

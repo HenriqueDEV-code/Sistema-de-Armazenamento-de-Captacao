@@ -112,6 +112,12 @@
     <Compile Include="Captacao\Detalhes.Designer.cs">
       <DependentUpon>Detalhes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Captacao\Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Captacao\Editar.Designer.cs">
+      <DependentUpon>Editar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Captacao\Excluir_Imob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Detalhes.resx">
       <DependentUpon>Detalhes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Captacao\Editar.resx">
+      <DependentUpon>Editar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Captacao\Excluir_Imob.resx">
       <DependentUpon>Excluir_Imob.cs</DependentUpon>

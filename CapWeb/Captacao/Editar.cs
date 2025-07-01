@@ -24,32 +24,33 @@ using System.Web.Util;
 
 namespace CapWeb.Captacao
 {
-    public partial class Cadastros : MaterialForm
+    public partial class Editar : MaterialForm
     {
         private string DBA;
-        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-
-        public Cadastros(string DBA)
+        private int? idProprietarioAtual = null;
+        public Editar(string DBA)
         {
-            this.DBA = DBA;
             InitializeComponent();
-            this.Load += Cadastros_Load;
+            this.DBA = DBA;
             Nome_Prop.Focus();
 
             this.KeyPreview = true; // <<< Permite que o formulário capture teclas
             this.KeyDown += new KeyEventHandler(this.Detalhes_KeyDown); // <<< Associa o evento de tecla
         }
 
-
         private async void Detalhes_KeyDown(object sender, KeyEventArgs e)
         {
-            
-            if (e.KeyCode == Keys.F5)
+
+            if (e.KeyCode == Keys.F6)
             {
                 Button_Salvar_DBA.PerformClick();
-                
+
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                Buscar_Proprietario();
+
                 e.Handled = true;
             }
 
@@ -66,21 +67,6 @@ namespace CapWeb.Captacao
 
                 e.Handled = true;
             }
-        }
-
-       
-
-        private void Cadastros_Load(object sender, EventArgs e)
-        {
-            descricao_cadastro.BorderStyle = BorderStyle.None;
-            Observacoes.BorderStyle = BorderStyle.None;
-
-            descricao_cadastro.Region = System.Drawing.Region.FromHrgn(
-                CreateRoundRectRgn(0, 0, descricao_cadastro.Width, descricao_cadastro.Height,15, 15)
-            );
-            Observacoes.Region = System.Drawing.Region.FromHrgn(
-                CreateRoundRectRgn(0, 0, Observacoes.Width, Observacoes.Height, 15, 15)
-            );
         }
 
         private void Nome_Prop_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,6 +124,7 @@ namespace CapWeb.Captacao
                 e.Handled = true;
             }
         }
+
         private void UF_TextChanged(object sender, EventArgs e)
         {
             if (UF.Text.Length > 2)
@@ -179,21 +166,14 @@ namespace CapWeb.Captacao
             }
         }
 
-        private void nome_condominio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            /*if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }*/
-        }
-
-        private void area_util_KeyPress(object sender, KeyPressEventArgs e)
+        private void area_util1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
+
         private void Area_Total_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -217,6 +197,7 @@ namespace CapWeb.Captacao
                 e.Handled = true;
             }
         }
+
 
         // Método genérico para formatação de moeda
         private void FormatarMoeda(Guna.UI2.WinForms.Guna2TextBox txt)
@@ -259,12 +240,10 @@ namespace CapWeb.Captacao
 
         private void valor_codominio_TextChanged(object sender, EventArgs e)
         {
-
             valor_codominio.TextChanged -= valor_codominio_TextChanged;
             FormatarMoeda(valor_codominio);
             valor_codominio.TextChanged += valor_codominio_TextChanged;
         }
-
 
         private void Valor_Imovel_Enter(object sender, EventArgs e)
         {
@@ -278,16 +257,16 @@ namespace CapWeb.Captacao
             Valor_Imovel.TextChanged += Valor_Imovel_TextChanged;
         }
 
+        private void Valor_IPTU_Enter(object sender, EventArgs e)
+        {
+            FormatarMoeda_Enter(Valor_IPTU);
+        }
+
         private void Valor_IPTU_TextChanged(object sender, EventArgs e)
         {
             Valor_IPTU.TextChanged -= Valor_IPTU_TextChanged;
             FormatarMoeda(Valor_IPTU);
             Valor_IPTU.TextChanged += Valor_IPTU_TextChanged;
-        }
-
-        private void Valor_IPTU_Enter(object sender, EventArgs e)
-        {
-            FormatarMoeda_Enter(Valor_IPTU);
         }
 
         private void Informe_Cep_TextChanged(object sender, EventArgs e)
@@ -318,6 +297,7 @@ namespace CapWeb.Captacao
                 Informe_Cep.SelectionStart = 0;
             }
         }
+
         private void Informe_Cep_Leave(object sender, EventArgs e)
         {
             if (Informe_Cep.Text == "_____-___")
@@ -334,7 +314,6 @@ namespace CapWeb.Captacao
             return cep.Trim().Replace(" ", "").Replace("-", "");
         }
 
- 
         private async void Buscar_Cep_Click(object sender, EventArgs e)
         {
             string cep = LimparCep(Informe_Cep.Text);
@@ -441,7 +420,9 @@ namespace CapWeb.Captacao
                 Telefone_Prop.SelectionStart = contador + (telefoneFormatado.Length - texto.Length);
             }
         }
-        private void Telefone_Enter(object sender, EventArgs e)
+
+
+        private void Telefone_Prop_Enter(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Telefone_Prop.Text))
             {
@@ -449,8 +430,7 @@ namespace CapWeb.Captacao
             }
             Telefone_Prop.SelectionStart = 1; // Coloca o cursor dentro do parêntese
         }
-
-        private void Telefone_Leave(object sender, EventArgs e)
+        private void Telefone_Prop_Leave(object sender, EventArgs e)
         {
             // Se não preencheu o telefone, limpa o campo
             string texto = new string(Telefone_Prop.Text.Where(char.IsDigit).ToArray());
@@ -460,125 +440,11 @@ namespace CapWeb.Captacao
             }
         }
 
-       
-
-        private void Logradouro_Load(object sender, EventArgs e)
-        {
-            //Logradouro.CharacterCasing = CharacterCasing.Upper;
-
-        }
-
-        private void Bairro_Load(object sender, EventArgs e)
-        {
-            //Bairro.CharacterCasing = CharacterCasing.Upper;
-
-        }
-
-        private void Cidade_Load(object sender, EventArgs e)
-        {
-
-            //Cidade.CharacterCasing = CharacterCasing.Upper;
-        }
-
-        private void Complemento_Load(object sender, EventArgs e)
-        {
-            //Complemento.CharacterCasing = CharacterCasing.Upper;
-
-        }
-
         private void UF_Load(object sender, EventArgs e)
         {
             UF.CharacterCasing = CharacterCasing.Upper;
-
         }
 
-        private void Descricao_Load(object sender, EventArgs e)
-        {
-            //Descricao.CharacterCasing = CharacterCasing.Upper;
-
-        }
-        private void nome_condominio_Load(object sender, EventArgs e)
-        {
-            //nome_condominio.CharacterCasing = CharacterCasing.Upper;
-        }
-
-        // -- Salvar Pessoas -- 
-
-
-        public void SalvarPessoa(Pessoas pessoa, Endereco end, Imovel imoveis)
-        {
-            using (SqlConnection conn = new SqlConnection(DBA))
-            {
-                conn.Open();
-
-                SqlTransaction transaction = conn.BeginTransaction();
-
-                try
-                {
-                    // -- Inserir Endereco --
-                    string QUERY_ENDERECO = @"INSERT INTO Endereco (Logradouro, Numero, Bairro, Cidade, UF, CEP, Nome_Condominio)
-                                      VALUES (@Logradouro, @Numero, @Bairro, @Cidade, @UF, @CEP, @Nome_Condominio);
-                                      SELECT SCOPE_IDENTITY();";
-
-                    SqlCommand cmdEndereco = new SqlCommand(QUERY_ENDERECO, conn, transaction);
-                    cmdEndereco.Parameters.AddWithValue("@Logradouro", end.Logradouro);
-                    cmdEndereco.Parameters.AddWithValue("@Numero", end.Numero.HasValue ? (object)end.Numero.Value : DBNull.Value);
-                    cmdEndereco.Parameters.AddWithValue("@Bairro", end.Bairro);
-                    cmdEndereco.Parameters.AddWithValue("@Cidade", end.Cidade);
-                    cmdEndereco.Parameters.AddWithValue("@UF", end.UF);
-                    cmdEndereco.Parameters.AddWithValue("@CEP", end.CEP);
-                    cmdEndereco.Parameters.AddWithValue("@Nome_Condominio", end.Nome_Condominio);
-
-                    int idEndereco = Convert.ToInt32(cmdEndereco.ExecuteScalar());
-
-                    // -- Inserir Proprietarios --
-                    string QUERY_PROPRIETARIO = @"INSERT INTO Proprietarios (Nome, Telefone, ID_Endereco)
-                                          VALUES (@Nome, @Telefone, @ID_Endereco);
-                                          SELECT SCOPE_IDENTITY();";
-
-                    SqlCommand cmdProprietarios = new SqlCommand(QUERY_PROPRIETARIO, conn, transaction);
-                    cmdProprietarios.Parameters.AddWithValue("@Nome", pessoa.Nome);
-                    cmdProprietarios.Parameters.AddWithValue("@Telefone", pessoa.Telefone);
-                    cmdProprietarios.Parameters.AddWithValue("@ID_Endereco", idEndereco);
-
-                    int idProprietario = Convert.ToInt32(cmdProprietarios.ExecuteScalar());
-
-                    // -- Inserir Imovel --
-                    string QUERY_IMOVEL = @"INSERT INTO Imovel (Descricao, Observacao, Valor, Tipo_de_Imovel, Pretensao,Comissao, Complemento, IPTU, ID_Endereco, ID_Proprietario, Valor_Condominio, Util, Contruida, Terreno)
-                                    VALUES (@Descricao, @Observacao, @Valor, @Tipo_de_Imovel, @Pretensao, @Comissao, @Complemento, @IPTU, @ID_Endereco, @ID_Proprietario, @Valor_Condominio, @Util, @Contruida, @Terreno);";
-
-                    SqlCommand cmdImovel = new SqlCommand(QUERY_IMOVEL, conn, transaction);
-                    cmdImovel.Parameters.AddWithValue("@Descricao", imoveis.IMOV_Descricao);
-                    cmdImovel.Parameters.AddWithValue("@Observacao", imoveis.Observacao);
-                    cmdImovel.Parameters.AddWithValue("@Valor",imoveis.Valor);
-                    cmdImovel.Parameters.AddWithValue("@Tipo_de_Imovel", imoveis.Tipo_de_imovel);
-                    cmdImovel.Parameters.AddWithValue("@Pretensao", imoveis.Pretensao);
-                    cmdImovel.Parameters.AddWithValue("@Comissao", imoveis.Comissao);
-                    cmdImovel.Parameters.AddWithValue("@Complemento", imoveis.Complemento);
-                    cmdImovel.Parameters.AddWithValue("@IPTU", imoveis.IPTU);
-                    cmdImovel.Parameters.AddWithValue("@ID_Endereco", idEndereco);
-                    cmdImovel.Parameters.AddWithValue("@ID_Proprietario", idProprietario);
-                    cmdImovel.Parameters.AddWithValue("@Valor_Condominio", imoveis.Valor_Condominio);
-                    cmdImovel.Parameters.AddWithValue("@Util", imoveis.Util);
-                    cmdImovel.Parameters.AddWithValue("@Contruida", imoveis.Construida);
-                    cmdImovel.Parameters.AddWithValue("@Terreno", imoveis.Total);
-                    
-
-                    cmdImovel.ExecuteNonQuery();
-
-                    transaction.Commit();
-                    //MessageBox.Show("Descricao: " + imoveis.IMOV_Descricao); // DEBUG
-                    
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    MessageBox.Show($"Erro ao inserir dados: {ex.Message}");
-                }
-                conn.Close();
-            }
-        }
 
         void limpe()
         {
@@ -657,11 +523,9 @@ namespace CapWeb.Captacao
                 ERROR_Dados_Nulos.SetError(descricao_cadastro, "Campo obrigatório.");
                 temErro = true;
             }
-          
+
             return temErro;
         }
-
-
 
         private void Button_Salvar_DBA_Click(object sender, EventArgs e)
         {
@@ -670,92 +534,178 @@ namespace CapWeb.Captacao
                 MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
                 return;  // Impede de salvar
             }
-
-            Pessoas pessoa = new Pessoas
+            
+            if (idProprietarioAtual == null)
             {
-                Nome = Nome_Prop.Text,
-                Telefone = Telefone_Prop.Text
-            };
-
-            int? numeroResidencia = null;
-            if (!string.IsNullOrWhiteSpace(numero_residencia.Text))
-            {
-                int tempNum;
-                if (int.TryParse(numero_residencia.Text, out tempNum))
-                {
-                    numeroResidencia = tempNum;
-                }
+                MessageBox.Show("Busque um proprietário antes de salvar alterações.");
+                return;
             }
 
-            Endereco endereco = new Endereco
+            using (SqlConnection conn = new SqlConnection(DBA))
             {
-                Logradouro = Logradouro.Text,
-                Numero = numeroResidencia,
-                Bairro = Bairro.Text,
-                Cidade = Cidade.Text,
-                UF = UF.Text,
-                CEP = Informe_Cep.Text,
-                Nome_Condominio = nome_condominio.Text
-            };
+                conn.Open();
+                SqlTransaction transaction = conn.BeginTransaction();
 
-           
-
-            Imovel imovel = new Imovel
-            {
-                IMOV_Descricao = descricao_cadastro.Text,
-                Observacao = Observacoes.Text,
-                Valor = Valor_Imovel.Text,                // Ex: "R$ 1.234,56"
-                Tipo_de_imovel = Combo_Tipo_de_imovel.Text,
-                Pretensao = Combo_Pretensao.Text,
-                Comissao = Combo_Comissao.Text,
-                Complemento = Complemento.Text,
-                IPTU = Valor_IPTU.Text,                   // Ex: "R$ 987,65"
-                Valor_Condominio = valor_codominio.Text,  // Ex: "R$ 432,10"
-                Util = area_util1.Text,
-                Construida = area_construida.Text,
-                Total = Area_Total.Text
-            };
-
-            SalvarPessoa(pessoa, endereco, imovel);
-            limpe();
-        }
-
-        private void area_construida_TextChanged(object sender, EventArgs e)
-        {
-            ValidarAreas();
-        }
-        private void Area_Total_TextChanged(object sender, EventArgs e)
-        {
-            ValidarAreas();
-        }
-
-
-
-        private void ValidarAreas()
-        {
-            if (double.TryParse(Area_Total.Text, out double areaTerreno) &&
-                double.TryParse(area_construida.Text, out double areaConstruida))
-            {
-                if (areaConstruida > areaTerreno)
+                try
                 {
-                    Area_Total.FillColor = Color.LightCoral;
-                    area_construida.FillColor = Color.LightCoral;
+                    // Atualiza Proprietario
+                    string sqlProprietario = @"
+                        UPDATE Proprietarios
+                        SET Nome = @Nome, Telefone = @Telefone
+                        WHERE ID = @ID";
+                    using (SqlCommand cmd = new SqlCommand(sqlProprietario, conn, transaction))
+                    {
+                        cmd.Parameters.AddWithValue("@Nome", Nome_Prop.Text);
+                        cmd.Parameters.AddWithValue("@Telefone", Telefone_Prop.Text);
+                        cmd.Parameters.AddWithValue("@ID", idProprietarioAtual.Value);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Atualiza Endereco
+                    // Primeiro, pegue o ID_Endereco do proprietário
+                    int? idEndereco = null;
+                    string sqlGetEndereco = "SELECT ID_Endereco FROM Proprietarios WHERE ID = @ID";
+                    using (SqlCommand cmd = new SqlCommand(sqlGetEndereco, conn, transaction))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", idProprietarioAtual.Value);
+                        object result = cmd.ExecuteScalar();
+                        if (result != DBNull.Value && result != null)
+                            idEndereco = Convert.ToInt32(result);
+                    }
+
+                    if (idEndereco != null)
+                    {
+                        string sqlEndereco = @"
+                            UPDATE Endereco
+                            SET Logradouro = @Logradouro, Numero = @Numero, Bairro = @Bairro, Cidade = @Cidade, UF = @UF, CEP = @CEP, Nome_Condominio = @Nome_Condominio
+                            WHERE ID_End = @ID_End";
+                        using (SqlCommand cmd = new SqlCommand(sqlEndereco, conn, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@Logradouro", Logradouro.Text);
+                            cmd.Parameters.AddWithValue("@Numero", string.IsNullOrWhiteSpace(numero_residencia.Text) ? (object)DBNull.Value : numero_residencia.Text);
+                            cmd.Parameters.AddWithValue("@Bairro", Bairro.Text);
+                            cmd.Parameters.AddWithValue("@Cidade", Cidade.Text);
+                            cmd.Parameters.AddWithValue("@UF", UF.Text);
+                            cmd.Parameters.AddWithValue("@CEP", Informe_Cep.Text);
+                            cmd.Parameters.AddWithValue("@Nome_Condominio", nome_condominio.Text);
+                            cmd.Parameters.AddWithValue("@ID_End", idEndereco.Value);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Atualiza Imovel (assumindo que só tem um imóvel por proprietário)
+                    string sqlImovel = @"
+                        UPDATE Imovel
+                        SET Descricao = @Descricao, Observacao = @Observacao, Valor = @Valor, Tipo_de_Imovel = @Tipo_de_Imovel, Pretensao = @Pretensao, Comissao = @Comissao, 
+                            Complemento = @Complemento, IPTU = @IPTU, Valor_Condominio = @Valor_Condominio, Util = @Util, Contruida = @Contruida, Terreno = @Terreno
+                        WHERE ID_Proprietario = @ID_Proprietario";
+                    using (SqlCommand cmd = new SqlCommand(sqlImovel, conn, transaction))
+                    {
+                        cmd.Parameters.AddWithValue("@Descricao", descricao_cadastro.Text);
+                        cmd.Parameters.AddWithValue("@Observacao", Observacoes.Text);
+                        cmd.Parameters.AddWithValue("@Valor", Valor_Imovel.Text);
+                        cmd.Parameters.AddWithValue("@Tipo_de_Imovel", Combo_Tipo_de_imovel.Text);
+                        cmd.Parameters.AddWithValue("@Pretensao", Combo_Pretensao.Text);
+                        cmd.Parameters.AddWithValue("@Comissao", Combo_Comissao.Text);
+                        cmd.Parameters.AddWithValue("@Complemento", Complemento.Text);
+                        cmd.Parameters.AddWithValue("@IPTU", Valor_IPTU.Text);
+                        cmd.Parameters.AddWithValue("@Valor_Condominio", valor_codominio.Text);
+                        cmd.Parameters.AddWithValue("@Util", area_util1.Text);
+                        cmd.Parameters.AddWithValue("@Contruida", area_construida.Text);
+                        cmd.Parameters.AddWithValue("@Terreno", Area_Total.Text);
+                        cmd.Parameters.AddWithValue("@ID_Proprietario", idProprietarioAtual.Value);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    MessageBox.Show("Cadastro alterado com sucesso!");
                 }
-                else
+                catch (Exception ex)
                 {
-                    Area_Total.FillColor = Color.White;
-                    area_construida.FillColor = Color.White;
+                    transaction.Rollback();
+                    MessageBox.Show("Erro ao alterar cadastro: " + ex.Message);
+                }
+                limpe();
+            }
+        }
+
+        // Busca o cadastro do proprietário pelo nome informado em Nome_Prop
+        private void Buscar_Proprietario()
+        {
+            string nomeProprietario = Nome_Prop.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nomeProprietario))
+            {
+                MessageBox.Show("Digite o nome do proprietário para buscar.");
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = @"
+                        SELECT TOP 1 
+                            p.ID,
+                            p.Nome, p.Telefone, 
+                            e.Logradouro, e.Numero, e.Bairro, e.Cidade, e.UF, e.CEP, e.Nome_Condominio,
+                            i.Descricao, i.Observacao, i.Valor, i.Tipo_de_Imovel, i.Pretensao, i.Comissao, i.Complemento, i.IPTU, i.Valor_Condominio, i.Util, i.Contruida, i.Terreno
+                        FROM Proprietarios p
+                        LEFT JOIN Endereco e ON p.ID_Endereco = e.ID_End
+                        LEFT JOIN Imovel i ON p.ID = i.ID_Proprietario
+                        WHERE p.Nome = @Nome";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Nome", nomeProprietario);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idProprietarioAtual = Convert.ToInt32(reader["ID"]);
+                                // Preenche os campos do formulário com os dados encontrados
+                                Nome_Prop.Text = reader["Nome"]?.ToString();
+                                Telefone_Prop.Text = reader["Telefone"]?.ToString();
+
+                                Logradouro.Text = reader["Logradouro"]?.ToString();
+                                numero_residencia.Text = reader["Numero"]?.ToString();
+                                Bairro.Text = reader["Bairro"]?.ToString();
+                                Cidade.Text = reader["Cidade"]?.ToString();
+                                UF.Text = reader["UF"]?.ToString();
+                                Informe_Cep.Text = reader["CEP"]?.ToString();
+                                nome_condominio.Text = reader["Nome_Condominio"]?.ToString();
+
+                                descricao_cadastro.Text = reader["Descricao"]?.ToString();
+                                Observacoes.Text = reader["Observacao"]?.ToString();
+                                Valor_Imovel.Text = reader["Valor"]?.ToString();
+                                Combo_Tipo_de_imovel.Text = reader["Tipo_de_Imovel"]?.ToString();
+                                Combo_Pretensao.Text = reader["Pretensao"]?.ToString();
+                                Combo_Comissao.Text = reader["Comissao"]?.ToString();
+                                Complemento.Text = reader["Complemento"]?.ToString();
+                                Valor_IPTU.Text = reader["IPTU"]?.ToString();
+                                valor_codominio.Text = reader["Valor_Condominio"]?.ToString();
+                                area_util1.Text = reader["Util"]?.ToString();
+                                area_construida.Text = reader["Contruida"]?.ToString();
+                                Area_Total.Text = reader["Terreno"]?.ToString();
+
+                                MessageBox.Show("Cadastro encontrado e carregado para edição.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Proprietário não encontrado.");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao buscar proprietário: " + ex.Message);
                 }
             }
-            else
-            {
-                // Se não for número, volta ao normal
-                Area_Total.FillColor = Color.White;
-                area_construida.FillColor = Color.White;
-            }
         }
 
-        
     }
 }
 

@@ -111,6 +111,15 @@ namespace CapWeb.Captacao
             janelaCadastro.Show();
         }
 
+        private void Campo_Editar_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+
+            Editar janelaEditar = new Editar(DBA);
+            janelaEditar.FormClosed += (s, args) => this.Show();
+            janelaEditar.Show();
+        }
+
         private void Tabela_Click(object sender, EventArgs e)
         {
             //this.Hide();
@@ -178,7 +187,6 @@ namespace CapWeb.Captacao
             janelaObservacao.FormClosed += (s, args) => this.Show();
             janelaObservacao.Show();
         }
-
 
         private void Painel_Load(object sender, EventArgs e)
         {
@@ -465,6 +473,6 @@ namespace CapWeb.Captacao
             LB_Imov_nao_Pago.Text = $"R$ {total_N_Pagos}";
         }
 
-        
+      
     }
 }

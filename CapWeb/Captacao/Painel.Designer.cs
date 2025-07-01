@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.Observacao = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -68,6 +68,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.atalho = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -84,7 +85,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Campo_Editar = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label24 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -92,11 +94,11 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            this.guna2GroupBox3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).BeginInit();
-            this.guna2GroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -104,6 +106,8 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.guna2Panel1.Controls.Add(this.Campo_Editar);
+            this.guna2Panel1.Controls.Add(this.label24);
             this.guna2Panel1.Controls.Add(this.label25);
             this.guna2Panel1.Controls.Add(this.Observacao);
             this.guna2Panel1.Controls.Add(this.Excluir);
@@ -136,7 +140,7 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label25.ForeColor = System.Drawing.Color.Silver;
-            this.label25.Location = new System.Drawing.Point(1576, 107);
+            this.label25.Location = new System.Drawing.Point(1651, 107);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(190, 22);
@@ -152,7 +156,7 @@
             this.Observacao.ImageOffset = new System.Drawing.Point(0, 0);
             this.Observacao.ImageRotate = 0F;
             this.Observacao.IndicateFocus = true;
-            this.Observacao.Location = new System.Drawing.Point(1632, 32);
+            this.Observacao.Location = new System.Drawing.Point(1705, 40);
             this.Observacao.Margin = new System.Windows.Forms.Padding(2);
             this.Observacao.Name = "Observacao";
             this.Observacao.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -170,7 +174,7 @@
             this.Excluir.ImageOffset = new System.Drawing.Point(0, 0);
             this.Excluir.ImageRotate = 0F;
             this.Excluir.IndicateFocus = true;
-            this.Excluir.Location = new System.Drawing.Point(1164, 32);
+            this.Excluir.Location = new System.Drawing.Point(1256, 32);
             this.Excluir.Margin = new System.Windows.Forms.Padding(2);
             this.Excluir.Name = "Excluir";
             this.Excluir.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -185,7 +189,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label14.ForeColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(1124, 107);
+            this.label14.Location = new System.Drawing.Point(1218, 105);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(158, 22);
@@ -201,7 +205,7 @@
             this.Financa.ImageOffset = new System.Drawing.Point(0, 0);
             this.Financa.ImageRotate = 0F;
             this.Financa.IndicateFocus = true;
-            this.Financa.Location = new System.Drawing.Point(963, 32);
+            this.Financa.Location = new System.Drawing.Point(1074, 38);
             this.Financa.Margin = new System.Windows.Forms.Padding(2);
             this.Financa.Name = "Financa";
             this.Financa.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -216,7 +220,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label13.ForeColor = System.Drawing.Color.Silver;
-            this.label13.Location = new System.Drawing.Point(950, 108);
+            this.label13.Location = new System.Drawing.Point(1060, 106);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 22);
@@ -232,7 +236,7 @@
             this.Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
             this.Imobiliarias.ImageRotate = 0F;
             this.Imobiliarias.IndicateFocus = true;
-            this.Imobiliarias.Location = new System.Drawing.Point(487, 32);
+            this.Imobiliarias.Location = new System.Drawing.Point(642, 40);
             this.Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
             this.Imobiliarias.Name = "Imobiliarias";
             this.Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -247,7 +251,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(480, 107);
+            this.label12.Location = new System.Drawing.Point(638, 105);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 22);
@@ -260,7 +264,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(649, 108);
+            this.label10.Location = new System.Drawing.Point(788, 106);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 22);
@@ -276,7 +280,7 @@
             this.Cadastro_Imobiliarias.ImageOffset = new System.Drawing.Point(0, 0);
             this.Cadastro_Imobiliarias.ImageRotate = 0F;
             this.Cadastro_Imobiliarias.IndicateFocus = true;
-            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(283, 32);
+            this.Cadastro_Imobiliarias.Location = new System.Drawing.Point(452, 40);
             this.Cadastro_Imobiliarias.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastro_Imobiliarias.Name = "Cadastro_Imobiliarias";
             this.Cadastro_Imobiliarias.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -291,7 +295,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(239, 107);
+            this.label4.Location = new System.Drawing.Point(407, 105);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 22);
@@ -307,7 +311,7 @@
             this.Detalhes.ImageOffset = new System.Drawing.Point(0, 0);
             this.Detalhes.ImageRotate = 0F;
             this.Detalhes.IndicateFocus = true;
-            this.Detalhes.Location = new System.Drawing.Point(652, 32);
+            this.Detalhes.Location = new System.Drawing.Point(792, 40);
             this.Detalhes.Margin = new System.Windows.Forms.Padding(2);
             this.Detalhes.Name = "Detalhes";
             this.Detalhes.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -322,7 +326,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(1355, 107);
+            this.label3.Location = new System.Drawing.Point(1435, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 22);
@@ -338,7 +342,7 @@
             this.Relatorio.ImageOffset = new System.Drawing.Point(0, 0);
             this.Relatorio.ImageRotate = 0F;
             this.Relatorio.IndicateFocus = true;
-            this.Relatorio.Location = new System.Drawing.Point(1394, 32);
+            this.Relatorio.Location = new System.Drawing.Point(1482, 40);
             this.Relatorio.Margin = new System.Windows.Forms.Padding(2);
             this.Relatorio.Name = "Relatorio";
             this.Relatorio.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -357,7 +361,7 @@
             this.Cadastro.ImageOffset = new System.Drawing.Point(0, 0);
             this.Cadastro.ImageRotate = 0F;
             this.Cadastro.IndicateFocus = true;
-            this.Cadastro.Location = new System.Drawing.Point(60, 32);
+            this.Cadastro.Location = new System.Drawing.Point(54, 40);
             this.Cadastro.Margin = new System.Windows.Forms.Padding(2);
             this.Cadastro.Name = "Cadastro";
             this.Cadastro.PressedState.ImageSize = new System.Drawing.Size(65, 65);
@@ -372,7 +376,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(806, 107);
+            this.label2.Location = new System.Drawing.Point(934, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 22);
@@ -388,7 +392,7 @@
             this.Tabela.ImageOffset = new System.Drawing.Point(0, 0);
             this.Tabela.ImageRotate = 0F;
             this.Tabela.IndicateFocus = true;
-            this.Tabela.Location = new System.Drawing.Point(802, 32);
+            this.Tabela.Location = new System.Drawing.Point(929, 40);
             this.Tabela.Margin = new System.Windows.Forms.Padding(2);
             this.Tabela.Name = "Tabela";
             this.Tabela.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -669,6 +673,20 @@
     "                                                                                " +
     "              DASHBOARD";
             // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2GroupBox3.Controls.Add(this.atalho);
+            this.guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(7, 50);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.Size = new System.Drawing.Size(255, 717);
+            this.guna2GroupBox3.TabIndex = 65;
+            this.guna2GroupBox3.Text = "             Atalhos";
+            // 
             // atalho
             // 
             this.atalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -802,8 +820,8 @@
             // 
             // dataGridView_Falta_de_Pagamento
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView_Falta_de_Pagamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView_Falta_de_Pagamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Falta_de_Pagamento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_Falta_de_Pagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Falta_de_Pagamento.Location = new System.Drawing.Point(3, 43);
@@ -890,19 +908,36 @@
             this.Nao_Conectado_VPN.UseTransparentBackground = true;
             this.Nao_Conectado_VPN.Visible = false;
             // 
-            // guna2GroupBox3
+            // Campo_Editar
             // 
-            this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2GroupBox3.Controls.Add(this.atalho);
-            this.guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox3.Location = new System.Drawing.Point(7, 50);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(255, 717);
-            this.guna2GroupBox3.TabIndex = 65;
-            this.guna2GroupBox3.Text = "             Atalhos";
+            this.Campo_Editar.BackColor = System.Drawing.Color.Transparent;
+            this.Campo_Editar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Campo_Editar.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Campo_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Campo_Editar.Image")));
+            this.Campo_Editar.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Campo_Editar.ImageRotate = 0F;
+            this.Campo_Editar.IndicateFocus = true;
+            this.Campo_Editar.Location = new System.Drawing.Point(255, 38);
+            this.Campo_Editar.Margin = new System.Windows.Forms.Padding(2);
+            this.Campo_Editar.Name = "Campo_Editar";
+            this.Campo_Editar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Campo_Editar.Size = new System.Drawing.Size(71, 66);
+            this.Campo_Editar.TabIndex = 16;
+            this.Campo_Editar.UseTransparentBackground = true;
+            this.Campo_Editar.Click += new System.EventHandler(this.Campo_Editar_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label24.ForeColor = System.Drawing.Color.Silver;
+            this.label24.Location = new System.Drawing.Point(226, 106);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(131, 22);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Editar cadastro";
             // 
             // Painel
             // 
@@ -937,14 +972,14 @@
             this.panel5.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
+            this.guna2GroupBox3.ResumeLayout(false);
+            this.guna2GroupBox3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Falta_de_Pagamento)).EndInit();
-            this.guna2GroupBox3.ResumeLayout(false);
-            this.guna2GroupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1007,5 +1042,7 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private Siticone.Desktop.UI.WinForms.SiticoneImageButton Campo_Editar;
+        private System.Windows.Forms.Label label24;
     }
 }
