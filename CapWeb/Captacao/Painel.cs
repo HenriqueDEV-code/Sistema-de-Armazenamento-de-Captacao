@@ -42,51 +42,57 @@ namespace CapWeb.Captacao
 
             if (e.KeyCode == Keys.F2)
             {
+                Campo_Editar.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.F3)
+            {
                 Cadastro_Imobiliarias.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
 
 
-            if (e.KeyCode == Keys.F3)
+            if (e.KeyCode == Keys.F4)
             {
                 Imobiliarias.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
 
-            if (e.KeyCode == Keys.F4)
-            {
-                Detalhes.PerformClick(); // Simula o clique do botão Buscar
-                e.Handled = true;
-            }
             if (e.KeyCode == Keys.F5)
             {
                 AtualizarTotalProprietarios();
                 PreencherDataGridFaltaDePagamento();
                 e.Handled = true;
             }
-
             if (e.KeyCode == Keys.F6)
+            {
+                Detalhes.PerformClick(); // Simula o clique do botão Buscar
+                e.Handled = true;
+            }
+          
+
+            if (e.KeyCode == Keys.F7)
             {
                 Tabela.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
 
-            if (e.KeyCode == Keys.F7)
+            if (e.KeyCode == Keys.F8)
             {
                 Financa.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-            if (e.KeyCode == Keys.F8)
+            if (e.KeyCode == Keys.F9)
             {
                 Excluir.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-            if (e.KeyCode == Keys.F9)
+            if (e.KeyCode == Keys.F10)
             {
                 Relatorio.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
             }
-            if (e.KeyCode == Keys.F10)
+            if (e.KeyCode == Keys.F11)
             {
                 Observacao.PerformClick(); // Simula o clique do botão Buscar
                 e.Handled = true;
@@ -212,20 +218,20 @@ namespace CapWeb.Captacao
             {
                 string SQL = @"
                     SELECT 
-                        i.ID_Imobiliaria AS [ID],
-                        i.Nome_Imobiliaria AS [Nome],
-                        COUNT(*) AS Quantidade,
-                        SUM(pi.Valor) AS Valor,
-                        MIN(pi.Data_Vinculo) AS [Data de envio],
-                        pi.Status
-                    FROM 
-                        Proprietario_Imobiliaria pi
-                    INNER JOIN 
-                        Imobiliaria i ON pi.ID_Imobiliaria = i.ID_Imobiliaria
-                    WHERE 
-                        pi.Status = 'NAO PAGO'
-                    GROUP BY 
-                        i.ID_Imobiliaria, i.Nome_Imobiliaria, pi.Status
+    i.ID_Imobiliaria AS [ID],
+    i.Nome_Imobiliaria AS [Nome],
+    COUNT(*) AS Quantidade,
+    SUM(pi.Valor) AS Valor,
+    CAST(pi.Data_Vinculo AS DATE) AS [Data de envio],
+    pi.Status
+FROM 
+    Proprietario_Imobiliaria pi
+INNER JOIN 
+    Imobiliaria i ON pi.ID_Imobiliaria = i.ID_Imobiliaria
+WHERE 
+    pi.Status = 'NAO PAGO'
+GROUP BY 
+    i.ID_Imobiliaria, i.Nome_Imobiliaria, CAST(pi.Data_Vinculo AS DATE), pi.Status
                 ";
 
                 using (SqlCommand cmd = new SqlCommand(SQL, conn))
@@ -275,7 +281,7 @@ namespace CapWeb.Captacao
             {
                 using (var ping = new Ping())
                 {
-                    var reply = ping.Send(ip, 1000);   // Timeout de 1 segundo
+                    var reply = ping.Send(ip, 10000000);   // Timeout de 1 segundo (1000 ms)
                     return reply.Status == IPStatus.Success;
                 }
             }

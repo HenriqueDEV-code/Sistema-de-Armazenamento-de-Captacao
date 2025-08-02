@@ -7,7 +7,7 @@ namespace CapWeb
 {
     internal static class Program
     {
-        private const string servidor = "26.31.45.203\\SQLEXPRESS"; //Ainda da falhas de conexao mesmo sendo pc local
+        private const string servidor = "26.141.238.26\\SQLEXPRESS"; //Ainda da falhas de conexao mesmo sendo pc local
         private const string usuario = "sa";
         private const string senha = "Sfc@196722";
 
@@ -45,7 +45,7 @@ namespace CapWeb
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao conectar: {ex.Message}");
+                Console.WriteLine($"Erro ao conectar.");
                 return false;
             }
         }

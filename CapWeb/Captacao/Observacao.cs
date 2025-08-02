@@ -35,12 +35,19 @@ namespace CapWeb.Captacao
             if (e.KeyCode == Keys.F6)
             {
 
-                Salvar();
+                 Salvar();
                 e.Handled = true;
-            } if (e.KeyCode == Keys.F5)
+            } 
+            if (e.KeyCode == Keys.F5)
             {
 
                 PreencherCombo_Titulo_Obs();
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Delete)
+            {
+
+                excluir_Observacao();
                 e.Handled = true;
             }
 
@@ -281,5 +288,56 @@ namespace CapWeb.Captacao
             Combo_Titulo_Obs.Items.Clear();
             Combo_Titulo_Obs.Items.AddRange(titulos.ToArray());
         }
+
+
+
+        private void excluir_Observacao()
+        {
+            if (dataGridView_Tabela_Obs.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma linha para excluir a observação!");
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Tem certeza que deseja excluir esta informação? Essa ação é irreversível.",
+                "Confirmação da Exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirm != DialogResult.Yes)
+            {
+                return;
+            }
+
+            string titulo = dataGridView_Tabela_Obs.SelectedRows[0].Cells["Titulo"].Value.ToString();
+
+            using (SqlConnection conn = new SqlConnection(DBA))
+            {
+                conn.Open();
+                string sql = "DELETE FROM Observacao WHERE Titulo = @Titulo";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Titulo", titulo);
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        MessageBox.Show("Observação excluída com sucesso.");
+                        // Recarregue a tabela aqui ou remova a linha da grid, por exemplo:
+                        dataGridView_Tabela_Obs.Rows.RemoveAt(dataGridView_Tabela_Obs.SelectedRows[0].Index);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma observação foi excluída. Verifique o título.");
+                    }
+                }
+            }
+
+        }
+
+
     }
 }

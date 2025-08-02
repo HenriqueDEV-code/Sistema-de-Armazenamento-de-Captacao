@@ -121,7 +121,7 @@
   <data name="Campo_Editar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABfJJREFUeF7tnUmoHFUUhqMLcdo4oi4cwU0CxkSNguCwEBTBhagLowFBQdCFAwlx
+        EAAACxABrSO9dQAABfJJREFUeF7tnUmoHFUUhqMLcdo4oi4cwU0CxkSNguCwEBTBhagLowFBQdCFAwlx
         ABPFjRBN1JU7RReJQyArpyzMQkVxIAoaEBUEURyjC+dP/uTUo/rwXne96nerTjXng9B5dW5X/adP3+nc
         ++5btixJkiRJkiRJkiRJkiRJkiRJkiRJkmTJAVYATwCfAL8zfOSDfJFPK7y/YQEOA54G/vUezRD/AE/K
         V+9/KCwYb5roP4CtwBrgKF92aMgH80WB+NN8fCN0UKxmiG+Ac7x9VgBWmo9im7eHwPoMVWXVjJkNRgVw
@@ -325,23 +325,25 @@
     <value> 
  F1 - Proprietários 
 
- F2 - Imobiliárias 
+ F2 - Editar cadastro
 
- F3 - Envios   
+ F3 - Imobiliárias 
 
- F4 - Detalhes 
+ F4 - Envios   
 
- F5 - Atualizar tabela
+ F5 - Atualizar tabela 
 
- F6 - Tabela
+ F6 - Detalhes
 
- F7 - Olha o Pix   
+ F7 - Tabela
+
+ F8 - Olha o Pix   
   
- F8 - Excluir imoiliárias 
+ F9 - Excluir imoiliárias 
     
- F9 - Relatório   
+ F10 - Relatório   
   
- F10 - Observação
+ F11 - Observação
 
 ESC - Fecha o sistema</value>
   </data>

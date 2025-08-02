@@ -97,7 +97,7 @@
             this.atalho.Name = "atalho";
             this.atalho.Size = new System.Drawing.Size(489, 44);
             this.atalho.TabIndex = 62;
-            this.atalho.Text = " Atalhos:\r\n F1 - Limpa tudo     F5 - Salva tudo     ESC - Fechar a janela";
+            this.atalho.Text = " Atalhos:\r\n F1 - Limpa tudo     F6 - Salva tudo     ESC - Fechar a janela";
             // 
             // Campo_Descricao_Obs
             // 
@@ -272,10 +272,10 @@
             this.label1.Location = new System.Drawing.Point(7, 423);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(623, 44);
+            this.label1.Size = new System.Drawing.Size(746, 44);
             this.label1.TabIndex = 63;
-            this.label1.Text = " Atalhos:\r\n F1 - Limpa tudo     F5 - Atualiza tabela     F6 - Filtra     ESC - Fe" +
-    "char a janela";
+            this.label1.Text = " Atalhos:\r\n F1 - Limpa tudo     F5 - Atualiza tabela     F6 - Filtra    DEL - Del" +
+    "ete     ESC - Fechar a janela";
             // 
             // dataGridView_Tabela_Obs
             // 

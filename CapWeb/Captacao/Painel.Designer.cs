@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Painel));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Campo_Editar = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.Observacao = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Excluir = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
@@ -85,8 +87,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.Nao_Conectado_VPN = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.Campo_Editar = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label24 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -133,6 +133,37 @@
             this.guna2Panel1.Size = new System.Drawing.Size(2374, 177);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // Campo_Editar
+            // 
+            this.Campo_Editar.BackColor = System.Drawing.Color.Transparent;
+            this.Campo_Editar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Campo_Editar.HoverState.ImageSize = new System.Drawing.Size(74, 74);
+            this.Campo_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Campo_Editar.Image")));
+            this.Campo_Editar.ImageOffset = new System.Drawing.Point(0, 0);
+            this.Campo_Editar.ImageRotate = 0F;
+            this.Campo_Editar.IndicateFocus = true;
+            this.Campo_Editar.Location = new System.Drawing.Point(255, 38);
+            this.Campo_Editar.Margin = new System.Windows.Forms.Padding(2);
+            this.Campo_Editar.Name = "Campo_Editar";
+            this.Campo_Editar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.Campo_Editar.Size = new System.Drawing.Size(71, 66);
+            this.Campo_Editar.TabIndex = 16;
+            this.Campo_Editar.UseTransparentBackground = true;
+            this.Campo_Editar.Click += new System.EventHandler(this.Campo_Editar_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label24.ForeColor = System.Drawing.Color.Silver;
+            this.label24.Location = new System.Drawing.Point(226, 106);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(131, 22);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Editar cadastro";
             // 
             // label25
             // 
@@ -697,7 +728,7 @@
             this.atalho.Location = new System.Drawing.Point(26, 59);
             this.atalho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.atalho.Name = "atalho";
-            this.atalho.Size = new System.Drawing.Size(195, 484);
+            this.atalho.Size = new System.Drawing.Size(195, 528);
             this.atalho.TabIndex = 22;
             this.atalho.Text = resources.GetString("atalho.Text");
             // 
@@ -907,37 +938,6 @@
             this.Nao_Conectado_VPN.TabIndex = 13;
             this.Nao_Conectado_VPN.UseTransparentBackground = true;
             this.Nao_Conectado_VPN.Visible = false;
-            // 
-            // Campo_Editar
-            // 
-            this.Campo_Editar.BackColor = System.Drawing.Color.Transparent;
-            this.Campo_Editar.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Campo_Editar.HoverState.ImageSize = new System.Drawing.Size(74, 74);
-            this.Campo_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Campo_Editar.Image")));
-            this.Campo_Editar.ImageOffset = new System.Drawing.Point(0, 0);
-            this.Campo_Editar.ImageRotate = 0F;
-            this.Campo_Editar.IndicateFocus = true;
-            this.Campo_Editar.Location = new System.Drawing.Point(255, 38);
-            this.Campo_Editar.Margin = new System.Windows.Forms.Padding(2);
-            this.Campo_Editar.Name = "Campo_Editar";
-            this.Campo_Editar.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.Campo_Editar.Size = new System.Drawing.Size(71, 66);
-            this.Campo_Editar.TabIndex = 16;
-            this.Campo_Editar.UseTransparentBackground = true;
-            this.Campo_Editar.Click += new System.EventHandler(this.Campo_Editar_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label24.ForeColor = System.Drawing.Color.Silver;
-            this.label24.Location = new System.Drawing.Point(226, 106);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(131, 22);
-            this.label24.TabIndex = 17;
-            this.label24.Text = "Editar cadastro";
             // 
             // Painel
             // 
