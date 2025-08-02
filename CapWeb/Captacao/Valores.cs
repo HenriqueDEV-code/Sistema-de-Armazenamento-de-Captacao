@@ -152,6 +152,7 @@ namespace CapWeb.Captacao
         private void Valores_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'cap_ImoveisDataSet.Proprietario_Imobiliaria'. Você pode movê-la ou removê-la conforme necessário.
+            this.proprietario_ImobiliariaTableAdapter.Connection = new SqlConnection(DBA);
             this.proprietario_ImobiliariaTableAdapter.Fill(this.cap_ImoveisDataSet.Proprietario_Imobiliaria);
             Preencher_ComboBox_Imobiliarias();
             Combo_Lista_Imobiliarias.Text = "Selecione o nome da imobiliária.";
