@@ -7,11 +7,11 @@ namespace CapWeb
 {
     internal static class Program
     {
-        private const string servidor = "26.137.210.111\\SQLEXPRESS"; //Ainda da falhas de conexao mesmo sendo pc local VPN maquina Local
+        private const string servidor = "26.141.238.26\\SQLEXPRESS"; //Ainda da falhas de conexao mesmo sendo pc local VPN maquina Local
         private const string usuario = "sa";
         private const string senha = "Sfc@196722";
 
-        public static readonly string DBA = $"Data Source={servidor};Initial Catalog=Cap_Imoveis;Persist Security Info=True;User ID={usuario};Password={senha};Encrypt=False;";
+        public static readonly string DBA = $"Data Source={servidor};Initial Catalog=Cap_Imoveis;Persist Security Info=True;User ID={usuario};Password={senha};Encrypt=False";
 
         [STAThread]
         static void Main(string[] args)
