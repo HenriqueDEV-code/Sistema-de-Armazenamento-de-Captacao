@@ -7,9 +7,9 @@ namespace CapWeb
 {
     internal static class Program
     {
-        
 
-        public static readonly string DBA = @"Data Source=.\SQLEXPRESS;Initial Catalog=Cap_Imoveis;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;";
+
+        public static readonly string DBA = @"Data Source=Henrique\SQLEXPRESS;Initial Catalog=Cap_Imoveis;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;";
 
         [STAThread]
         static void Main(string[] args)
